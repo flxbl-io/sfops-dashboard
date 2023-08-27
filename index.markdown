@@ -172,18 +172,18 @@ function showTab(hash) {
     iframe.style.display = 'block';
 
     if(hash === 'apexTests') {
-        var selectedOrg = document.getElementById('orgSelect').value;
+        var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
         iframe.src = tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
          document.getElementById('domainSelector').style.display = 'none';
     } else if(hash === 'releasedefns') {
-        var selectedDomain = document.getElementById('domainSelect').value;
+        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
         iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     } else if (hash === 'releases')
     {
-        var selectedDomain = document.getElementById('domainSelect').value;
+        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
         iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
