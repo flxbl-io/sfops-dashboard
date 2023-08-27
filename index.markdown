@@ -115,6 +115,8 @@ var rotateInterval;
 
 {% assign dashboard = site.data.dashboard %}
 
+var baseUrl = window.location.origin;
+
 var tabs = {
     'cicd': {
         iframeId: 'iframe1',
@@ -170,26 +172,26 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
-
+    iframe.src=baseUrl;
     if(hash === 'apexTests') {
         var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
-        iframe.src = tab.url + selectedOrg + '.html';
+        iframe.src += tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
          document.getElementById('domainSelector').style.display = 'none';
     } else if(hash === 'releasedefns') {
         var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
-        iframe.src = tab.url + selectedDomain + '.html';
+        iframe.src += tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     } else if (hash === 'releases')
     {
         var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
-        iframe.src = tab.url + selectedDomain + '.html';
+        iframe.src += tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     }
     else {
-        iframe.src = tab.url;
+        iframe.src += tab.url;
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
     }
