@@ -116,6 +116,7 @@ var rotateInterval;
 {% assign dashboard = site.data.dashboard %}
 
 var baseUrl = window.location.origin;
+var pathArray = window.location.pathname.split('/');
 
 var tabs = {
     'cicd': {
@@ -172,7 +173,9 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
-    iframe.src=baseUrl;
+    iframe.src=baseUrl+pathArray[1]
+    console.log(pathArray[1]);
+    console.log(iframe.src);
     if(hash === 'apexTests') {
         var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
         iframe.src += tab.url + selectedOrg + '.html';
