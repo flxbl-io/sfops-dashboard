@@ -13,10 +13,10 @@ Unable to fetch any sfpowerscripts artifacts in the org
   },
   {
     "name": "feature-management",
-    "version": "1.0.0.8",
+    "version": "1.0.1.1",
     "commitId": "N/A",
     "type": "OrgDependendent",
-    "subscriberVersion": "04t2w000009RdjyAAC",
+    "subscriberVersion": "04t2w000009Rdk3AAC",
     "isInstalledBySfpowerscripts": false
   },
   {
