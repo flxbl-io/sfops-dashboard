@@ -173,7 +173,10 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
-    iframe.src=baseUrl+pathArray[1]
+    if(pathArray[1])
+      iframe.src=baseUrl+"/"+pathArray[1]
+    else
+       iframe.src=baseUrl;
     console.log(pathArray[1]);
     console.log(iframe.src);
     if(hash === 'apexTests') {
