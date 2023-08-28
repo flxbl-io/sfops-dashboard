@@ -1,1 +1,1 @@
-["{{steps.getAllReleaseNames.outputs.releaseNames}}"]
+["frameworks"]
