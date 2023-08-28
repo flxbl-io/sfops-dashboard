@@ -1,16 +1,16 @@
 [
   {
     "name": "feature-management",
-    "version": "1.0.4.2",
-    "commitId": "acb5d183209fb7a5bc0f8d4b1081c63f3bb6e36c",
+    "version": "1.0.5.1",
+    "commitId": "10c1b98b0c6c5a218afb5e77b2a9c85352cecc08",
     "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009RdlpAAC",
+    "subscriberVersion": "04t2w000009RdluAAC",
     "type": "OrgDependendent"
   },
   {
     "name": "unpackaged",
-    "version": "1.0.4.6001064971",
-    "commitId": "acb5d183209fb7a5bc0f8d4b1081c63f3bb6e36c",
+    "version": "1.0.5.6001333856",
+    "commitId": "10c1b98b0c6c5a218afb5e77b2a9c85352cecc08",
     "isInstalledBySfpowerscripts": true,
     "subscriberVersion": "N/A",
     "type": "Source/Data"
