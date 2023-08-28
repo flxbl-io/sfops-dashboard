@@ -117,6 +117,11 @@ var rotateInterval;
 
 var baseUrl = window.location.origin;
 var pathArray = window.location.pathname.split('/');
+console.log(pathArray);
+let siteSuffix=`/${pathArray[1]}/`
+if(siteSuffix='//')
+  siteSuffix='';
+
 
 var tabs = {
     'cicd': {
@@ -125,11 +130,11 @@ var tabs = {
     },
     'apexTests': {
         iframeId: 'iframe2',
-        url: '/apextestResults/'
+        url: `${siteSuffix}/apextestResults/`
     },
     'pmdReport': {
         iframeId: 'iframe3',
-        url: '/pmd/pmdReport.html'
+        url: `${siteSuffix}/pmd/pmdReport.html`
     },
     'packageSummary': {
         iframeId: 'iframe4',
@@ -141,15 +146,15 @@ var tabs = {
     },
     'packageVersions': {
         iframeId: 'iframe6',
-        url: 'packageVersionReports/packageVersionReport.html'
+        url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
     },
     'releasedefns': {
         iframeId: 'iframe7',
-        url: '/changelog/changelog-' // url will be completed in showTab function
+        url: `${siteSuffix}/changelog/changelog-` // url will be completed in showTab function
     },
     'releases': {
         iframeId: 'iframe8',
-        url: '/release-pipeline-view/release-pipeline-' // url will be completed in showTab function
+        url: `${siteSuffix}/release-pipeline-view/release-pipeline-` // url will be completed in showTab function
     }
 };
 
@@ -173,31 +178,25 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
-    if(pathArray[1])
-      iframe.src=baseUrl+"/"+pathArray[1]
-    else
-       iframe.src=baseUrl;
-    console.log(pathArray[1]);
-    console.log(iframe.src);
     if(hash === 'apexTests') {
         var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
-        iframe.src += tab.url + selectedOrg + '.html';
+        iframe.src = tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
          document.getElementById('domainSelector').style.display = 'none';
     } else if(hash === 'releasedefns') {
         var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
-        iframe.src += tab.url + selectedDomain + '.html';
+        iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     } else if (hash === 'releases')
     {
         var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
-        iframe.src += tab.url + selectedDomain + '.html';
+        iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     }
     else {
-        iframe.src += tab.url;
+        iframe.src = tab.url;
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
     }
