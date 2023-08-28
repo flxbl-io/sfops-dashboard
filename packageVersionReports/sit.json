@@ -1,0 +1,70 @@
+Unable to fetch any sfpowerscripts artifacts in the org
+1. sfpowerscripts package is not installed in the org
+2. The required prerequisite object is not deployed to this org
+
+[
+  {
+    "name": "Org Expiry Notifier",
+    "version": "1.0.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1n0000028OJ6AAM",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "feature-management",
+    "version": "1.0.0.6",
+    "commitId": "N/A",
+    "type": "OrgDependendent",
+    "subscriberVersion": "04t2w000009RdjjAAC",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "License Management App",
+    "version": "1.21.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t30000001DX1FAAW",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Checkout Management App",
+    "version": "1.14.0.3",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1Q000000kYiVQAU",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "pmcPartner",
+    "version": "1.68.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t4x000000eOrWAAU",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "PBO Guide",
+    "version": "1.4.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t5w000003Vj4iAAC",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "DevOps Center",
+    "version": "5.7.0.5",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t6g000008b3LcAAI",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "SFDC Channel Order",
+    "version": "3.65.0.2",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t2K000000AgwXQAS",
+    "isInstalledBySfpowerscripts": false
+  }
+]
