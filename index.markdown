@@ -119,7 +119,7 @@ var baseUrl = window.location.origin;
 var pathArray = window.location.pathname.split('/');
 console.log(pathArray);
 let siteSuffix=`/${pathArray[1]}/`
-if(siteSuffix='//')
+if(siteSuffix=='//')
   siteSuffix='';
 
 
