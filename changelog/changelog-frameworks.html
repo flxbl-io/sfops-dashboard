@@ -376,6 +376,16 @@ async function copyToClipboard(text) {
       <ul id="releaseList">
     
         <li>
+            <button class="collapsible" onclick="toggleCollapsible(event)">Sprint-1-29-08</button>
+            <div class="content-detail">
+                <button class="release-button" onclick="showDetails('-print-1-29-08-6006206698')">
+                <div class="navigationLink">
+                    <a href="#-print-1-29-08-6006206698">Sprint-1-29-08-6006206698</a>
+                </div>
+                </button>
+            </div>
+        </li>
+        <li>
             <button class="collapsible" onclick="toggleCollapsible(event)">-28-08-6001333856</button>
             <div class="content-detail">
                 <button class="release-button" onclick="showDetails('-28-08-6001333856')">
@@ -419,6 +429,30 @@ async function copyToClipboard(text) {
     </div>
     
             <div id="content" class="content">
+        <div id="-print-1-29-08-6006206698" class="hidden release-content">
+            <h2>Sprint-1-29-08-6006206698
+              
+            <a href="https://github.com/flxbl-io/sf-core/issues/new?assignees=&labels=ops%2Cops-release-request&projects=&template=request-a-release-staging-prod.yml&title=Ops+-+Release+a+domain+into+staging%2Fprod+frameworks+Sprint-1-29-08-6006206698&releasedefn=Sprint-1-29-08-6006206698&domain=frameworks" class="github-issue-url" target="_blank">Promote this release</a>    
+            <a href="https://github.com/flxbl-io/sf-core/issues/new?assignees=&labels=ops%2Cops-release-request-non-pipeline-env&projects=&template=request-a-release.yml&title=Ops+-+Request+a+release+into+org+frameworks+Sprint-1-29-08-6006206698&releasedefn=Sprint-1-29-08-6006206698&domain=frameworks&envprofile=ci" class="get-on-my-sbx" target="_blank">Get It on my Sandbox</a>
+            <button class="copy-button" onclick="copyToClipboard('Sprint-1-29-08-6006206698')">
+            <i class="fas fa-copy"></i>
+            </button> 
+            </h2>
+            <h3>Work Items:</h3>
+            <ul>
+                
+            </ul>
+            <h3>Artifacts:</h3>
+            <div>
+                        <button class="collapsible-content" onclick="toggleCollapsible(event)">
+                        <span class="plus">+</span> feature-management (Version: 1.0.6.1)
+                        </button>
+                        <div class="content-detail">
+                            <h4>No diff/commit id's to display. The package build was triggered manually or some other process created a new version of the package, such as a change in sfdx-project.json or a runbook.</h4>
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                    </div>
+        </div>
         <div id="-28-08-6001333856" class="hidden release-content">
             <h2>-28-08-6001333856
               
