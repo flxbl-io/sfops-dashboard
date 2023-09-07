@@ -1,0 +1,317 @@
+{
+    "orgs": [],
+    "releases": [
+        {
+            "names": [
+                "-28-08-5999803337"
+            ],
+            "buildNumber": 1,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "to": "c6630c99",
+                    "version": "1.0.3.5999803337",
+                    "latestCommitId": "ede68574",
+                    "commits": [
+                        {
+                            "commitId": "ede68574",
+                            "date": "2023-08-28T04:58:47+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "fix: add feature-management as unlocked",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "a36242a5",
+                            "date": "2023-08-28T02:44:44+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "fix: add dummy unpackaged",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "4fe77e4a",
+                            "date": "2023-08-27T10:39:04+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add default directory",
+                            "body": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "feature-management",
+                    "to": "c6630c99",
+                    "version": "1.0.3.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": [
+                        {
+                            "commitId": "55ef8227",
+                            "date": "2023-08-27T11:57:41+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add new package feature-management",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "1e6dfa7068e3e3f42c45e09b23cbdc418145ae38",
+            "date": "Mon Aug 28 2023 12:37:51 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "-28-08-6000031953"
+            ],
+            "buildNumber": 2,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "c6630c99",
+                    "to": "8d7b2572",
+                    "version": "1.0.4.6000031953",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "c6630c99",
+                    "to": "8d7b2572",
+                    "version": "1.0.4.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "a5564c71dc3c32f85b4c9ab183b30fbf65fedfac",
+            "date": "Mon Aug 28 2023 13:00:17 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "-28-08-6001064971"
+            ],
+            "buildNumber": 3,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "8d7b2572",
+                    "to": "acb5d183",
+                    "version": "1.0.4.6001064971",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "8d7b2572",
+                    "to": "acb5d183",
+                    "version": "1.0.4.2",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "8942965656447026dc19909c72122cdaaab92167",
+            "date": "Mon Aug 28 2023 14:30:53 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "-28-08-6001333856"
+            ],
+            "buildNumber": 4,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "acb5d183",
+                    "to": "10c1b98b",
+                    "version": "1.0.5.6001333856",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "acb5d183",
+                    "to": "10c1b98b",
+                    "version": "1.0.5.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "c6bc37c7d8e67bc651949340a10b5fac27515c66",
+            "date": "Mon Aug 28 2023 14:55:03 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-29-08-6006206698"
+            ],
+            "buildNumber": 5,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "10c1b98b",
+                    "to": "2c224bb0",
+                    "version": "1.0.6.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "246f3f39490018a5a77d0c80204dcfb39663bdca",
+            "date": "Tue Aug 29 2023 00:13:35 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-29-08-6006351811"
+            ],
+            "buildNumber": 6,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "2c224bb0",
+                    "to": "357455a2",
+                    "version": "1.0.7.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "836c3c415c62e87517a08df8d98a6c8ed11fd1c2",
+            "date": "Tue Aug 29 2023 00:29:47 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-29-08-6006497556"
+            ],
+            "buildNumber": 7,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "357455a2",
+                    "to": "ffed9ffe",
+                    "version": "1.0.8.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "f1330c091f1ef30add9804bb86e4d75b184fc6bf",
+            "date": "Tue Aug 29 2023 00:49:07 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-31-08-6032421597"
+            ],
+            "buildNumber": 8,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "10c1b98b",
+                    "to": "1742faf1",
+                    "version": "1.0.6.6032421597",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "ffed9ffe",
+                    "to": "1742faf1",
+                    "version": "1.0.9.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "e6c68149f0f493f3b5ddeb982c2d1e1d4451a75e",
+            "date": "Thu Aug 31 2023 02:54:10 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-31-08-6032426683"
+            ],
+            "buildNumber": 9,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "1742faf1",
+                    "to": "12e07dec",
+                    "version": "1.0.6.6032426683",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "1742faf1",
+                    "to": "12e07dec",
+                    "version": "1.0.9.2",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "354cbae8a1601c34e12224108fcf40ecd3cf1f5a",
+            "date": "Thu Aug 31 2023 02:56:19 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-31-08-6032571156"
+            ],
+            "buildNumber": 10,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "12e07dec",
+                    "to": "06b31ab6",
+                    "version": "1.0.6.6032571156",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "12e07dec",
+                    "to": "06b31ab6",
+                    "version": "1.0.9.3",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "a5a8d160a7453de8ee8b37bc598f2903d7fff1b9",
+            "date": "Thu Aug 31 2023 03:19:05 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-04-09-6067558908"
+            ],
+            "buildNumber": 11,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "06b31ab6",
+                    "to": "3d66d9d7",
+                    "version": "1.0.11.2",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "4d9c573ec332652452cd2c2a68ba63efa5c7d584",
+            "date": "Mon Sep 04 2023 00:25:39 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-07-09-6108465619"
+            ],
+            "buildNumber": 12,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "3d66d9d7",
+                    "to": "d18323fa",
+                    "version": "1.0.12.1",
+                    "latestCommitId": "55ef8227",
+                    "commits": []
+                }
+            ],
+            "hashId": "14a20996e05dd6b7eb7111255e622e9c83567f57",
+            "date": "Thu Sep 07 2023 10:42:14 GMT+0000 (Coordinated Universal Time)"
+        }
+    ]
+}
