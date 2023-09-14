@@ -1,0 +1,147 @@
+---
+layout: default
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js" integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    html, body, #packageTable_wrapper,#packageTable {
+      height: 100%;
+      margin: 0;
+    }
+    #packageTable {
+      height: 90%;
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      heigh:100%
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 0px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    th-black {
+      background-color: #4CAF50;
+      color: black;
+    }
+
+    .modal-dialog {
+        max-width: 70%;
+      }
+
+  </style>
+</head>
+<body>
+  <table id="packageTable" class="display">
+    <thead>
+      <tr>
+        <th>Package</th>
+        <th>Domains</th>
+        <th>Current Version Number</th>
+        <th>Description</th>
+      </tr>
+      <tr id="filterRow"> <!-- New row for filters -->
+        <th></th>
+        <th></th>
+        <th></th>
+         <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for package in site.data.sfdx-project.packageDirectories %}
+      <tr>
+        <td>{{ package.package }}</td>
+        <td>
+          {% assign domains = "" %}
+          {% for domain in site.data.domains %}
+             
+            {% assign domain_data = site.data.releaseconfigs[domain] %}
+            {% if domain_data.includeOnlyArtifacts contains package.package %}
+              {% if domains != "" %}
+               {% assign domains = domains | append: ", " %}
+              {% endif %}
+                {% assign domains = domains | append: domain %}
+              {% endif %}
+          {% endfor %}
+          {{ domains | remove_last: ", " }}
+        </td>
+        <td>{{ package.versionNumber }}</td>
+         <td>{{ package.versionDescription }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="packageModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Release Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+         <div><b>Package Info</b></div>
+        <pre><code id="jsonData" class="language-json"></code></pre>
+        <div><b>Release Configuration</b></div>
+        <pre><code id="yamlData" class="language-yaml"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+var packageData = {
+  {% for package in site.data.sfdx-project.packageDirectories %}
+    "{{ package.package | slugify }}": {
+      "packageInfo": {{ package | jsonify }},
+      "domainData": [
+        {% for domain in site.data.domains %}
+          {% assign domain_data = site.data.releaseconfigs[domain] %}
+          {% if domain_data.includeOnlyArtifacts contains package.package %}
+            {{ domain_data | jsonify }},
+          {% endif %}
+        {% endfor %}
+      ]
+    },
+  {% endfor %}
+};
+</script>
+
+
+
+<!-- Include main script -->
+<script src="{{ site.baseurl }}/packageviewer/main.js"></script>
+
+</body>
+</html>

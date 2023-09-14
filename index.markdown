@@ -67,13 +67,14 @@ iframe {
 
 <ul id="navBar">
     <li><a href="#cicd">CI CD Performance</a></li>
+    <li><a href="#domains">Domains</a></li>
+    <li><a href="#packageVersions">Package Versions</a></li>
+    <li><a href="#releasedefns">Release Candidates</a></li>
+    <li><a href="#releases">Releases</a></li>
     <li><a href="#apexTests">Test Reports</a></li>
     <li><a href="#pmdReport">PMD Reports</a></li>
-    <li><a href="#packageSummary">Package Summary</a></li>
+    <li><a href="#packageSummary">Package Metrics</a></li>
     <li><a href="#platformOverview">Platform Overview</a></li>
-    <li><a href="#packageVersions">Package Versions</a></li>
-    <li><a href="#releasedefns">Release Defns</a></li>
-    <li><a href="#releases">Release</a></li>
 </ul>
 
 <div id="orgSelector" style="text-align: right; display: none;">
@@ -107,6 +108,7 @@ iframe {
 <iframe id="iframe6"></iframe>
 <iframe id="iframe7"></iframe>
 <iframe id="iframe8"></iframe>
+<iframe id="iframe9"></iframe>
 
 <script>
 var fullscreen = false;
@@ -115,47 +117,44 @@ var rotateInterval;
 
 {% assign dashboard = site.data.dashboard %}
 
-var baseUrl = window.location.origin;
-var pathArray = window.location.pathname.split('/');
-console.log(pathArray);
-let siteSuffix=`/${pathArray[1]}/`
-if(siteSuffix=='//')
-  siteSuffix='';
-
-
 var tabs = {
     'cicd': {
         iframeId: 'iframe1',
         url: '{{ dashboard.cicd_performance_dashboard_url }}'
     },
-    'apexTests': {
+     'domains': {
         iframeId: 'iframe2',
-        url: `${siteSuffix}/apextestResults/`
+        url: 'packageviewer/packageviewer.html'
+    },
+    'packageVersions': {
+        iframeId: 'iframe3',
+        url: 'packageVersionReports/packageVersionReport.html'
+    },
+      'releasedefns': {
+        iframeId: 'iframe4',
+        url: '/releasedefns/' // url will be completed in showTab function
+    },
+    'releases': {
+        iframeId: 'iframe5',
+        url: '/releaselogs/' // url will be completed in showTab function
+    },
+    'apexTests': {
+        iframeId: 'iframe6',
+        url: '/apextestResults/'
     },
     'pmdReport': {
-        iframeId: 'iframe3',
-        url: `${siteSuffix}/pmd/pmdReport.html`
+        iframeId: 'iframe7',
+        url: '/pmd/pmdReport.html'
     },
     'packageSummary': {
-        iframeId: 'iframe4',
+        iframeId: 'iframe8',
         url: '{{ dashboard.package_summary_dasbhoard_url }}'
     },
     'platformOverview': {
-        iframeId: 'iframe5',
+        iframeId: 'iframe9',
         url: '{{ dashboard.platform_overview_dashboard_url }}'
-    },
-    'packageVersions': {
-        iframeId: 'iframe6',
-        url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
-    },
-    'releasedefns': {
-        iframeId: 'iframe7',
-        url: `${siteSuffix}/changelog/changelog-` // url will be completed in showTab function
-    },
-    'releases': {
-        iframeId: 'iframe8',
-        url: `${siteSuffix}/release-pipeline-view/release-pipeline-` // url will be completed in showTab function
     }
+  
 };
 
 
@@ -178,19 +177,20 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
+
     if(hash === 'apexTests') {
-        var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
+        var selectedOrg = document.getElementById('orgSelect').value;
         iframe.src = tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
          document.getElementById('domainSelector').style.display = 'none';
     } else if(hash === 'releasedefns') {
-        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
+        var selectedDomain = document.getElementById('domainSelect').value;
         iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     } else if (hash === 'releases')
     {
-        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
+        var selectedDomain = document.getElementById('domainSelect').value;
         iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
@@ -270,6 +270,10 @@ window.onload = function() {
         if (window.location.hash.substring(1) === 'releasedefns') {
             showTab('releasedefns');
         }
+        else if (window.location.hash.substring(1) === 'releases') {
+            showTab('releases');
+        }
+        
     });
 
 
@@ -282,4 +286,5 @@ window.onhashchange = function() {
 window.onhashchange = function() {
             initializePage();
 };
+
 </script>
