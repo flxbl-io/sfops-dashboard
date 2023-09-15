@@ -1,0 +1,11 @@
+release: Sprint-1-31-08-6032421597
+skipIfAlreadyInstalled: true
+skipArtifactUpdate: false
+artifacts:
+  unpackaged: 1.0.5-6001333856
+promotePackagesBeforeDeploymentToOrg: prod
+changelog:
+  workItemFilters:
+    - (FGK|FFK)-[0-9]{3,4}
+  workItemUrl: https://adiza.atlassian.net/browse
+  limit: 30
