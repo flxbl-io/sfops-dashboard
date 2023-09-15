@@ -1,0 +1,82 @@
+[
+  {
+    "name": "feature-management",
+    "version": "1.0.12.1",
+    "commitId": "d18323fa38cd3e52c0367b18c4055de11444ce64",
+    "isInstalledBySfpowerscripts": true,
+    "subscriberVersion": "04t2w000009RdzYAAS",
+    "type": "OrgDependendent"
+  },
+  {
+    "name": "unpackaged",
+    "version": "1.0.7.6193945318",
+    "commitId": "371fd0a598faf3d4d97a390859c74e1bef7237e3",
+    "isInstalledBySfpowerscripts": true,
+    "subscriberVersion": "N/A",
+    "type": "Source/Data"
+  },
+  {
+    "name": "sfpowerscripts-artifact",
+    "version": "2.0.0.1",
+    "commitId": "N/A",
+    "type": "Unlocked",
+    "subscriberVersion": "04t1P000000ka9mQAA",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Org Expiry Notifier",
+    "version": "1.0.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1n0000028OJ6AAM",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "License Management App",
+    "version": "1.21.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t30000001DX1FAAW",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Checkout Management App",
+    "version": "1.14.0.3",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1Q000000kYiVQAU",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "pmcPartner",
+    "version": "1.68.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t4x000000eOrWAAU",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "PBO Guide",
+    "version": "1.4.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t5w000003Vj4iAAC",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "DevOps Center",
+    "version": "6.0.0.1129",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t6g000008KRomAAG",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "SFDC Channel Order",
+    "version": "3.65.0.2",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t2K000000AgwXQAS",
+    "isInstalledBySfpowerscripts": false
+  }
+]
