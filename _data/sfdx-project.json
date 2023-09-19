@@ -9,7 +9,7 @@
     {
       "path": "unpackaged",
       "package": "unpackaged",
-      "versionNumber": "1.0.7.NEXT",
+      "versionNumber": "1.0.8.NEXT",
       "type": "diff",
       "default": true
     }
