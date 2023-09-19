@@ -9,8 +9,8 @@
   },
   {
     "name": "unpackaged",
-    "version": "1.0.7.6193945318",
-    "commitId": "371fd0a598faf3d4d97a390859c74e1bef7237e3",
+    "version": "1.0.8.6232630054",
+    "commitId": "6addb46e31aff568f014ffb3383b33184d11bbee",
     "isInstalledBySfpowerscripts": true,
     "subscriberVersion": "N/A",
     "type": "Source/Data"
