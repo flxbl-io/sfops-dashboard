@@ -358,6 +358,47 @@
             ],
             "hashId": "e90251b337d5863f6b14d536a2ac47ba86226654",
             "date": "Thu Oct 26 2023 03:05:01 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-1-26-10-6648876506"
+            ],
+            "buildNumber": 15,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "e40a2566",
+                    "to": "310e7809",
+                    "version": "1.0.13.5",
+                    "latestCommitId": "b6d8a989",
+                    "commits": [
+                        {
+                            "commitId": "b6d8a989",
+                            "date": "2023-10-26T13:52:29+11:00",
+                            "author": "Azlam",
+                            "message": "fix: disable disable feature",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "404718af",
+                            "date": "2023-10-26T13:50:28+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to true",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "138e23c5",
+                            "date": "2023-10-26T13:49:57+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to false",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "74509de13f33d39a1668eee56d6bd3ca988fc4dd",
+            "date": "Thu Oct 26 2023 03:08:20 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
