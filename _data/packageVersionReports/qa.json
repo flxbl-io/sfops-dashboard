@@ -1,10 +1,10 @@
 [
   {
     "name": "feature-management",
-    "version": "1.0.13.1",
-    "commitId": "371fd0a598faf3d4d97a390859c74e1bef7237e3",
+    "version": "1.0.13.4",
+    "commitId": "e40a2566567641ce306ac5f1e9c97664badf5b58",
     "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009Re6KAAS",
+    "subscriberVersion": "04t2w000009RekmAAC",
     "type": "OrgDependendent"
   },
   {
@@ -65,10 +65,10 @@
   },
   {
     "name": "DevOps Center",
-    "version": "6.0.0.1129",
+    "version": "6.1.0.44",
     "commitId": "N/A",
     "type": "Managed",
-    "subscriberVersion": "04t6g000008KRomAAG",
+    "subscriberVersion": "04t6g000008KSUVAA4",
     "isInstalledBySfpowerscripts": false
   },
   {
