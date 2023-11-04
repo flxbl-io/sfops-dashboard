@@ -3,13 +3,13 @@
     {
       "path": "src/frameworks/feature-management",
       "package": "feature-management",
-      "versionNumber": "1.0.13.NEXT",
+      "versionNumber": "1.0.15.NEXT",
       "default": false
     },
     {
       "path": "unpackaged",
       "package": "unpackaged",
-      "versionNumber": "1.0.8.NEXT",
+      "versionNumber": "1.0.5.NEXT",
       "type": "diff",
       "default": true
     }
@@ -19,6 +19,5 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "58.0",
   "packageAliases": {
-    "feature-management": "0Ho2w0000004DaWCAU"
   }
 }

@@ -1,5 +1,5 @@
 releaseName: unpackaged
-domainNameUsedForPools: CORE
+pool: CORE
 excludeAllPackageDependencies: true 
 includeOnlyArtifacts:
   - unpackaged

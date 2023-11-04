@@ -1,5 +1,5 @@
 releaseName: frameworks
-domainNameUsedForPools: CORE
+pool: CORE
 excludeAllPackageDependencies: true 
 includeOnlyArtifacts:
   - feature-management
