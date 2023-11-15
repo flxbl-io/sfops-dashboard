@@ -1,0 +1,126 @@
+{
+    "orgs": [],
+    "releases": [
+        {
+            "names": [
+                "Sprint-2-15-11-6873440382"
+            ],
+            "buildNumber": 1,
+            "workItems": {
+                "": [
+                    "ede68574",
+                    "a36242a5",
+                    "4fe77e4a",
+                    "b6d8a989",
+                    "404718af",
+                    "138e23c5",
+                    "22db52e0",
+                    "55ef8227"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "to": "37f0182b",
+                    "version": "1.0.21.6873440382",
+                    "latestCommitId": "ede68574",
+                    "commits": [
+                        {
+                            "commitId": "ede68574",
+                            "date": "2023-08-28T04:58:47+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "fix: add feature-management as unlocked",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "a36242a5",
+                            "date": "2023-08-28T02:44:44+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "fix: add dummy unpackaged",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "4fe77e4a",
+                            "date": "2023-08-27T10:39:04+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add default directory",
+                            "body": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "feature-management",
+                    "to": "37f0182b",
+                    "version": "1.0.20.6873440382",
+                    "latestCommitId": "b6d8a989",
+                    "commits": [
+                        {
+                            "commitId": "b6d8a989",
+                            "date": "2023-10-26T13:52:29+11:00",
+                            "author": "Azlam",
+                            "message": "fix: disable disable feature",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "404718af",
+                            "date": "2023-10-26T13:50:28+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to true",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "138e23c5",
+                            "date": "2023-10-26T13:49:57+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to false",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "22db52e0",
+                            "date": "2023-10-26T13:47:47+11:00",
+                            "author": "Azlam",
+                            "message": "fix: test-pr",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "55ef8227",
+                            "date": "2023-08-27T11:57:41+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add new package feature-management",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "b532facb66010ad78c6bfb474d73d66369b90019",
+            "date": "Wed Nov 15 2023 05:48:18 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-15-11-6873888667"
+            ],
+            "buildNumber": 2,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "37f0182b",
+                    "to": "a4964c5d",
+                    "version": "1.0.22.6873888667",
+                    "latestCommitId": "ede68574",
+                    "commits": []
+                },
+                {
+                    "name": "feature-management",
+                    "from": "37f0182b",
+                    "to": "a4964c5d",
+                    "version": "1.0.21.6873888667",
+                    "latestCommitId": "b6d8a989",
+                    "commits": []
+                }
+            ],
+            "hashId": "d302bec4002468119859bb341a8f985175ba75c4",
+            "date": "Wed Nov 15 2023 06:51:39 GMT+0000 (Coordinated Universal Time)"
+        }
+    ]
+}
