@@ -37,7 +37,7 @@ layout: default
     </tr>
   </thead>
   <tbody>
-    {% assign domain_data = site.data.releasechangelog[page.domain]    %}
+    {% assign domain_data = site.data.releasechangelog[page.branch][page.domain]    %}
     {% assign accumulatedWorkItems = "" %}
     {% assign reversed_releases = domain_data.releases | reverse %}
 
@@ -146,7 +146,9 @@ layout: default
          <span><b>Last Deployed Release,Check Release Tab</b></span>
          {% else %}
           {% for artifact in release.artifacts %}
-          <li>{{ artifact.name }}:{{ artifact.version }}</li>
+            {% unless artifact.commits.size == 0 %}
+             <li>{{ artifact.name }}:{{ artifact.version }}</li>
+            {% endunless %}
           {% endfor %}
         {% endif %}
         </ul>
@@ -191,7 +193,7 @@ layout: default
 
   var yamlDataMap = {};
   var latestReleaseInProd; 
-  {% assign domain_data = site.data.releasechangelog[page.domain] %}
+  {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
   {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
   {% assign reversed_releases = domain_data.releases | reverse %}
   {% assign releaseNamesInProd = "" %}

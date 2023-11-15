@@ -46,6 +46,10 @@ jobs:
       - name: Generate Release Logs
         run: ./_scripts/create-release-logs.sh
           
+
+      - name: Generate Release Logs
+        run: ./_scripts/create-package-view.sh
+
           
       - name: Setup Pages
         id: pages

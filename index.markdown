@@ -42,7 +42,7 @@ iframe {
     right: 50px;
 }
 
-#orgSelector, #domainSelector {
+#orgSelector, #domainSelector #branchSelector {
     text-align: right;
     display: none;
     color: #34bdeb;
@@ -50,16 +50,17 @@ iframe {
     border-radius: 5px;
 }
 
-#orgSelector span, #domainSelector span {
+#orgSelector span, #domainSelector span, #branchSelector span{
     margin-right: 10px;
     font-weight: bold;
 }
 
-#orgSelector select, #domainSelector select {
+#orgSelector select, #domainSelector select, #branchSelector select {
     border: none;
     background: #0056b3;
     color: #fff;
-    padding: 5px;
+    padding: 10px;
+    margin: 5px;
     border-radius: 5px;
 }
 
@@ -67,8 +68,8 @@ iframe {
 
 <ul id="navBar">
     <li><a href="#cicd">CI CD Performance</a></li>
-    <li><a href="#domains">Domains</a></li>
-    <li><a href="#packageVersions">Package Versions</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#orgComparison">Org Comparison</a></li>
     <li><a href="#releasedefns">Release Candidates</a></li>
     <li><a href="#releases">Releases</a></li>
     <li><a href="#apexTests">Test Reports</a></li>
@@ -86,6 +87,15 @@ iframe {
     </select>
 </div>
 
+<div id="branchSelector" style="text-align: right; display: none;">
+    <span>Select a Branch:</span>
+      <select id="branchSelect">
+        {% for branch in site.data.branches %}
+        <option value="{{ branch }}">{{ branch }}</option>
+        {% endfor %}
+    </select>
+</div>
+
 <div id="domainSelector" style="text-align: right; display: none;">
     <span>Select a Domain/Release config:</span>
       <select id="domainSelect">
@@ -94,6 +104,8 @@ iframe {
         {% endfor %}
     </select>
 </div>
+
+
 
 <!-- Icons -->
 <i id="fullscreenIcon" class="fas fa-expand-arrows-alt" onclick="toggleFullscreen()"></i>
@@ -117,43 +129,34 @@ var rotateInterval;
 
 {% assign dashboard = site.data.dashboard %}
 
-var baseUrl = window.location.origin;
-var pathArray = window.location.pathname.split('/');
-console.log(pathArray);
-let siteSuffix=`/${pathArray[1]}/`
-if(siteSuffix=='//')
-  siteSuffix='';
-
-
-
 var tabs = {
     'cicd': {
         iframeId: 'iframe1',
         url: '{{ dashboard.cicd_performance_dashboard_url }}'
     },
-     'domains': {
+     'packages': {
         iframeId: 'iframe2',
-        url: `${siteSuffix}/packageviewer/packageviewer.html`
+        url: '/packageviewer/'
     },
-    'packageVersions': {
+    'orgComparison': {
         iframeId: 'iframe3',
-        url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
+        url: 'packageVersionReports/packageVersionReport.html'
     },
       'releasedefns': {
         iframeId: 'iframe4',
-        url: `${siteSuffix}/releasedefns/` // url will be completed in showTab function
+        url: '/releasedefns/' // url will be completed in showTab function
     },
     'releases': {
         iframeId: 'iframe5',
-        url: `${siteSuffix}/releaselogs/` // url will be completed in showTab function
+        url: '/releaselogs/' // url will be completed in showTab function
     },
     'apexTests': {
         iframeId: 'iframe6',
-        url: `${siteSuffix}/apextestResults/`
+        url: '/apextestResults/'
     },
     'pmdReport': {
         iframeId: 'iframe7',
-        url: `${siteSuffix}/pmd/pmdReport.html`
+        url: '/pmd/pmdReport.html'
     },
     'packageSummary': {
         iframeId: 'iframe8',
@@ -186,26 +189,38 @@ function showTab(hash) {
     // Show the selected iframe and set its src
     var iframe = document.getElementById(tab.iframeId);
     iframe.style.display = 'block';
+
     if(hash === 'apexTests') {
-        var selectedOrg = document.getElementById('orgSelect').value.toLowerCase();
+        var selectedOrg = document.getElementById('orgSelect').value;
         iframe.src = tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
-         document.getElementById('domainSelector').style.display = 'none';
-    } else if(hash === 'releasedefns') {
-        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
-        iframe.src = tab.url + selectedDomain + '.html';
+        document.getElementById('domainSelector').style.display = 'none';
+    } else if(hash === 'packages') {
+        var selectedBranch = document.getElementById('branchSelect').value;
+        iframe.src = tab.url + selectedBranch+ '.html';
         document.getElementById('orgSelector').style.display = 'none';
+        document.getElementById('branchSelector').style.display = 'block';
+        document.getElementById('domainSelector').style.display = 'none';
+    } 
+    else if(hash === 'releasedefns') {
+        var selectedDomain = document.getElementById('domainSelect').value;
+        var selectedBranch = document.getElementById('branchSelect').value;
+        iframe.src = tab.url + selectedBranch + "/"+ selectedDomain + '.html';
+        document.getElementById('orgSelector').style.display = 'none';
+        document.getElementById('branchSelector').style.display = 'block';
         document.getElementById('domainSelector').style.display = 'block';
     } else if (hash === 'releases')
     {
-        var selectedDomain = document.getElementById('domainSelect').value.toLowerCase();
+        var selectedDomain = document.getElementById('domainSelect').value;
         iframe.src = tab.url + selectedDomain + '.html';
         document.getElementById('orgSelector').style.display = 'none';
+        document.getElementById('branchSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
     }
     else {
         iframe.src = tab.url;
         document.getElementById('orgSelector').style.display = 'none';
+        document.getElementById('branchSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
     }
 
@@ -281,7 +296,15 @@ window.onload = function() {
         else if (window.location.hash.substring(1) === 'releases') {
             showTab('releases');
         }
-        
+    });
+
+      document.getElementById('branchSelect').addEventListener('change', function() {
+        if (window.location.hash.substring(1) === 'releasedefns') {
+            showTab('releasedefns');
+        }
+        else if (window.location.hash.substring(1) === 'domains') {
+            showTab('domains');
+        }
     });
 
 
@@ -294,4 +317,5 @@ window.onhashchange = function() {
 window.onhashchange = function() {
             initializePage();
 };
+
 </script>

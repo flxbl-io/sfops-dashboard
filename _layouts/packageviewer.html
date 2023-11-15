@@ -1,0 +1,230 @@
+---
+layout: default
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-json.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+      integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      html, body, #packageTable_wrapper,#packageTable {
+        height: 100%;
+        margin: 0;
+      }
+      #packageTable {
+        height: 90%;
+        margin: 0;
+      }
+      table {
+        width: 100%;
+        heigh:100%
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th, td {
+        padding: 0px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        font-size: 14px;
+      }
+
+      th {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      th-black {
+        background-color: #4CAF50;
+        color: black;
+      }
+
+      .modal-dialog {
+          max-width: 70%;
+        }
+    </style>
+  </head>
+  <body>
+    <table id="packageTable" class="display">
+      <thead>
+        <tr>
+          <th>Package</th>
+          <th>Domains/ReleaseConfigs</th>
+          <th>Current Version Number</th>
+          <th>Description</th>
+        </tr>
+        <tr id="filterRow">
+          <!-- New row for filters -->
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for package in
+        site.data.manifest[page.branch].sfdx-project.packageDirectories %}
+        <tr>
+          <td>{{ package.package }}</td>
+          <td>
+             {% assign domains = "" %}
+            {% for domain in site.data.domains %} {%
+            assign domain_data = site.data.releaseconfigs[page.branch][domain]%}
+            {% if domain_data.includeOnlyArtifacts contains package.package %}
+            {% if domains != "" %} {% assign domains = domains | append: ", " %}
+            {% endif %} {% assign domains = domains | append: domain %} {% endif
+            %} {% endfor %} {{ domains | remove_last: ", " }}
+          </td>
+          <td>{{ package.versionNumber }}</td>
+          <td>{{ package.versionDescription }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="modal" tabindex="-1" role="dialog" id="packageModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Release Details</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <div><b>Package Info</b></div>
+            <pre><code id="jsonData" class="language-json"></code></pre>
+            <div><b>Release Configuration</b></div>
+            <pre><code id="yamlData" class="language-yaml"></code></pre>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var packageData = {
+        {% for package in site.data.manifest[page.branch].sfdx-project.packageDirectories %}
+          "{{ package.package | slugify }}": {
+            "packageInfo": {{ package | jsonify }},
+            "domainData": [
+              {% for domain in site.data.domains %}
+                {% assign domain_data = site.data.releaseconfigs[page.branch][domain] %}
+                {% if domain_data.includeOnlyArtifacts contains package.package %}
+                  {{ domain_data | jsonify }},
+                {% endif %}
+              {% endfor %}
+            ]
+          },
+        {% endfor %}
+      };
+    </script>
+
+    <!-- Include main script -->
+    <script>
+      $(document).ready(function () {
+        var table = $("#packageTable").DataTable({
+          scrollY: "100%",
+          scrollCollapse: true,
+          paginate: false,
+          initComplete: function () {
+            // Attach package info to each row after DataTable initialization
+            this.api()
+              .rows()
+              .every(function () {
+                var data = this.data();
+                var id = data[0]; // Assuming package name is in the first column
+                var slugifiedId = id
+                  .replace(/[^a-zA-Z0-9]/g, "-")
+                  .toLowerCase(); // Basic slugify
+                $(this.node()).attr(
+                  "data-package-info",
+                  JSON.stringify(packageData[slugifiedId])
+                );
+              });
+
+            // Add dropdown filter for second column
+            var column = this.api().column(1);
+            var select = $('<select><option value=""></option></select>')
+              .appendTo($("#filterRow th").eq(column.index()))
+              .on("change", function () {
+                var val = $.fn.dataTable.util.escapeRegex($(this).val());
+                column.search(val ? "^" + val + "$" : "", true, false).draw();
+              });
+            column
+              .data()
+              .unique()
+              .sort()
+              .each(function (d, j) {
+                select.append('<option value="' + d + '">' + d + "</option>");
+              });
+          },
+        });
+
+        // Row click to show modal with package info
+        $("#packageTable tbody").on("click", "tr", function () {
+          var packageInfo = $(this).attr("data-package-info");
+          if (packageInfo) {
+            var parsedInfo = JSON.parse(packageInfo); // Assuming packageInfo is a JSON string
+            $("#jsonData").text(
+              JSON.stringify(parsedInfo.packageInfo, null, 2)
+            );
+            Prism.highlightElement(document.getElementById("jsonData"));
+
+            // Convert domainData to YAML and display
+            if (parsedInfo.domainData) {
+              var domainDataYAML = jsyaml.dump(parsedInfo.domainData);
+              $("#yamlData").text(domainDataYAML); // Assuming you have an element with id="yamlData"
+              Prism.highlightElement(
+                document.getElementById("yamlData"),
+                "language-yaml"
+              );
+            }
+
+            $("#packageModal").modal("show");
+          }
+        });
+
+        // Close modal
+        $(".modal-close").click(function () {
+          $("#packageModal").hide();
+        });
+      });
+    </script>
+  </body>
+</html>

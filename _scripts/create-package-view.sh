@@ -12,15 +12,14 @@ domains=$(jq -r '.[]' _data/domains.json)
 # Read the branches from branches.json in the _data folder
 branches=$(jq -r '.[]' _data/branches.json)
 
+mkdir -p packageviewer
 
 # Loop through each domain and create the corresponding .md file
 for branch in $branches; do
- mkdir -p releasedefns/${branch}
  for domain in $domains; do
-  echo "---" > "releasedefns/${branch}/${domain}.md"
-  echo "layout: changelog" >> "releasedefns/${branch}/${domain}.md"
-  echo "domain: ${domain}" >> "releasedefns/${branch}/${domain}.md"
-  echo "branch: ${branch}" >> "releasedefns/${branch}/${domain}.md"
-  echo "---" >> "releasedefns/${branch}/${domain}.md"
+  echo "---" > "packageviewer/${branch}.md"
+  echo "layout: packageviewer" >> "packageviewer/${branch}.md"
+  echo "branch: ${branch}" >> "packageviewer/${branch}.md"
+  echo "---" >> "packageviewer/${branch}.md"
  done
 done
