@@ -3,13 +3,13 @@
     {
       "path": "src/frameworks/feature-management",
       "package": "feature-management",
-      "versionNumber": "1.0.23.NEXT",
+      "versionNumber": "1.0.24.NEXT",
       "default": false
     },
     {
       "path": "unpackaged",
       "package": "unpackaged",
-      "versionNumber": "1.0.24.NEXT",
+      "versionNumber": "1.0.25.NEXT",
       "type": "diff",
       "default": true
     }
