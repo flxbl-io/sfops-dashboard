@@ -1,0 +1,14 @@
+releaseName: all
+pool: ci
+excludeAllPackageDependencies: true 
+includeOnlyArtifacts:
+  - feature-management
+  - unpackaged
+releasedefinitionProperties:
+  promotePackagesBeforeDeploymentToOrg: prod
+  skipIfAlreadyInstalled: true
+  changelog:
+    workItemFilters:
+      -  (FGK|FFK)-[0-9]{3,4}
+    workItemUrl: https://adiza.atlassian.net/browse
+    limit: 30
