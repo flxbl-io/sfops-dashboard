@@ -143,7 +143,7 @@ var tabs = {
     },
      'packages': {
         iframeId: 'iframe2',
-        url: `${siteSuffix}/packageviewer/packageviewer.html`
+        url: `${siteSuffix}/packageviewer/`
     },
     'orgComparison': {
         iframeId: 'iframe3',
