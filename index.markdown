@@ -129,6 +129,13 @@ var rotateInterval;
 
 {% assign dashboard = site.data.dashboard %}
 
+var baseUrl = window.location.origin;
+var pathArray = window.location.pathname.split('/');
+let siteSuffix=`/${pathArray[1]}/`
+if(siteSuffix=='//')
+  siteSuffix='';
+
+
 var tabs = {
     'cicd': {
         iframeId: 'iframe1',
@@ -136,27 +143,27 @@ var tabs = {
     },
      'packages': {
         iframeId: 'iframe2',
-        url: '/packageviewer/'
+        url: `${siteSuffix}/packageviewer/packageviewer.html`
     },
     'orgComparison': {
         iframeId: 'iframe3',
-        url: 'packageVersionReports/packageVersionReport.html'
+        url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
     },
       'releasedefns': {
         iframeId: 'iframe4',
-        url: '/releasedefns/' // url will be completed in showTab function
+        url: `${siteSuffix}/releasedefns/`  // url will be completed in showTab function
     },
     'releases': {
         iframeId: 'iframe5',
-        url: '/releaselogs/' // url will be completed in showTab function
+        url: `${siteSuffix}/releaselogs/`  // url will be completed in showTab function
     },
     'apexTests': {
         iframeId: 'iframe6',
-        url: '/apextestResults/'
+        url: `${siteSuffix}/apextestResults/`
     },
     'pmdReport': {
         iframeId: 'iframe7',
-        url: '/pmd/pmdReport.html'
+        url: `${siteSuffix}/pmd/pmdReport.html`
     },
     'packageSummary': {
         iframeId: 'iframe8',
