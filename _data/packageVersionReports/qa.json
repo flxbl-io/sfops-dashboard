@@ -1,16 +1,16 @@
 [
   {
     "name": "feature-management",
-    "version": "1.0.13.5",
-    "commitId": "310e7809e55f33531bb7476eff8c1a9264b03d9a",
+    "version": "1.0.16.6752309596",
+    "commitId": "dfe77304ee2756ad1ca4e941b1038010d20b0263",
     "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009RekrAAC",
+    "subscriberVersion": "04t2w000009RfBYAA0",
     "type": "OrgDependendent"
   },
   {
     "name": "unpackaged",
-    "version": "1.0.8.6232630054",
-    "commitId": "6addb46e31aff568f014ffb3383b33184d11bbee",
+    "version": "1.0.26.6925099698",
+    "commitId": "2b88583c5609d7bb3cd604a91146c85f91cb8593",
     "isInstalledBySfpowerscripts": true,
     "subscriberVersion": "N/A",
     "type": "Source/Data"
@@ -49,10 +49,10 @@
   },
   {
     "name": "pmcPartner",
-    "version": "1.68.0.1",
+    "version": "1.89.0.1",
     "commitId": "N/A",
     "type": "Managed",
-    "subscriberVersion": "04t4x000000eOrWAAU",
+    "subscriberVersion": "04t4x000000vVTwAAM",
     "isInstalledBySfpowerscripts": false
   },
   {
@@ -77,6 +77,14 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t2K000000AgwXQAS",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Genesys Cloud for Salesforce",
+    "version": "4.14.0.5",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t3a000000PnXsAAK",
     "isInstalledBySfpowerscripts": false
   }
 ]
