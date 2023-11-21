@@ -1,0 +1,23 @@
+{
+  "packageDirectories": [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "versionNumber": "1.0.26.NEXT",
+      "default": false
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "versionNumber": "1.0.26.NEXT",
+      "type": "diff",
+      "default": true
+    }
+  ],
+  "name": "sf-core",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "58.0",
+  "packageAliases": {
+  }
+}
