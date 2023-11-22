@@ -31,9 +31,10 @@ layout: default
     <tr>
       <th>Issue Number</th>
       <th>Issue Title</th>
+      <th>Branch</th>
       <th>Author</th>
       <th>Status</th>
-      <th>Branch</th>
+      <th>Test Environment(s) Status</th>
       <th>Elapsed Time</th>
       <th>Link</th>
     </tr>
@@ -45,10 +46,10 @@ layout: default
         <td>{{ issue.issue_number }}</td>
          <td>{{ issue.issue_details.title }}</td>
          <td>{{ issue.issue_details.user.login }}</td>
+         <td>{{ issue.branch }}</td>
          <td>
           {% case issue.status %}
             {% when 'locked/applying patches' %}
-              <i class="fas fa-lock status-icon"></i>
               <i class="fas fa-vials status-icon"></i>
               <i class="fas fa-tasks status-icon"></i>
                Patching in test work item
@@ -56,23 +57,29 @@ layout: default
               <i class="fas fa-tasks status-icon"></i>
                In Review
             {% when 'validated' %}
-              <i class="fas fa-check status-icon"></i>
+              <i class="fas fa-tasks status-icon"></i>
               {{ issue.status | capitalize }}
             {% when 'locked' %}
-              <i class="fas fa-lock status-icon"></i>
               <i class="fas fa-vials status-icon"></i>
-              Locked for testing
+              In Testing
              {% when 'unlocked' %}
               <i class="fas fa-check status-icon"></i>
               In Review
             {% when 'build' %}
-              <i class="fas fa-lock status-icon"></i>
               <i class="fas fa-hammer status-icon"></i>
               {{ issue.status | capitalize }}
           {% endcase %}
-         
         </td>
-        <td>{{ issue.branch }}</td>
+         <td>
+          {% case issue.status %}
+            {% when 'locked/applying patches' %}
+             <i class="fas fa-lock status-icon"></i>
+               Locked for Testing
+            {% when 'locked' %}
+              <i class="fas fa-lock status-icon"></i>
+              Locked for Testing
+          {% endcase %}
+        </td>
         <td><span id="elapsed-time-{{ forloop.index }}"></span></td>
         <td>
           <a href="{{ issue.issue_details.html_url }}" target="_blank">View Issue</a>
