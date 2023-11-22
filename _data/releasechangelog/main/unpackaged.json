@@ -54,6 +54,37 @@
             ],
             "hashId": "39a0e8d21d7494de4c3939c83b53ee9a2b82460e",
             "date": "Wed Nov 22 2023 00:52:00 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-22-11-6951456304"
+            ],
+            "buildNumber": 2,
+            "workItems": {
+                "": [
+                    "c0530149"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "f31b152a",
+                    "to": "c0530149",
+                    "version": "1.0.26.6951456304",
+                    "latestCommitId": "c0530149",
+                    "commits": [
+                        {
+                            "commitId": "c0530149",
+                            "date": "2023-11-22T12:01:13+11:00",
+                            "author": "Azlam",
+                            "message": "Update FeatureSetting__mdt.object-meta.xml (#71)",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "be5cd9a1d8f67524e095f17bb89d2f596110f92a",
+            "date": "Wed Nov 22 2023 01:07:08 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
