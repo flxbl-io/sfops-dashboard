@@ -34,6 +34,7 @@ fs.readdir(issuesDir, (err, files) => {
     .filter(file => file.endsWith('.json') && file !== 'locked.json')
     .map(file => JSON.parse(fs.readFileSync(path.join(issuesDir, file), 'utf8')))
     .map(updateIssueStatus)
+    .filter(issue => issue.issue_details.state !== 'closed')
     .filter(issue => issue.status !== 'ready'); 
 
   // Write the combined data to the output file
