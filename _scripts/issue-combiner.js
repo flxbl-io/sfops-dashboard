@@ -6,8 +6,14 @@ const lockedFile = './_data/locked.json';
 const outputFile = './_data/issueStatusCombin ed.json';
 
 // Read the locked issue data
+let lockedIssueNumber=0;
+try
+{
 const lockedIssueData = JSON.parse(fs.readFileSync(lockedFile, 'utf8'));
 const lockedIssueNumber = lockedIssueData.issue_number;
+} catch(error)
+{
+}
 
 // Function to update issue status based on your workflow
 function updateIssueStatus(issue) {
