@@ -3,7 +3,7 @@ const path = require('path');
 
 const issuesDir = './_data/issueStatus';
 const lockedFile = './_data/locked.json';
-const outputFile = './_data/issueStatusCombin ed.json';
+const outputFile = './_data/issueStatusCombined.json';
 
 // Read the locked issue data
 let lockedIssueNumber=0;
