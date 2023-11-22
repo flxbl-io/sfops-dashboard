@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<style>
+  #issueTable tr {
+    height: 50px; /* Fixed row height */
+  }
+
+  #issueTable td {
+    vertical-align: middle; /* Align content in the middle */
+  }
+
+  #issueTable .fas {
+    margin-right: 10px; /* Space between icon and text */
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<table id="issueTable" class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Issue Number</th>
+      <th>Issue Title</th>
+      <th>Status</th>
+      <th>Branch</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign sorted_issues = site.data.issueStatusCombined | sort: 'issue_number' | reverse %}
+    {% for issue in sorted_issues %}
+      <tr>
+        <td>{{ issue.issue_number }}</td>
+         <td>{{ issue.issue_details.title }}</td>
+         <td>
+          {% case issue.status %}
+            {% when 'locked/applying patches' %}
+              <i class="fas fa-lock status-icon"></i>
+              <i class="fas fa-vials status-icon"></i>
+              <i class="fas fa-tasks status-icon"></i>
+               Patching in test work item
+            {% when 'validation' %}
+              <i class="fas fa-tasks status-icon"></i>
+              {{ issue.status | capitalize }}
+            {% when 'validated' %}
+              <i class="fas fa-check status-icon"></i>
+              {{ issue.status | capitalize }}
+            {% when 'locked' %}
+              <i class="fas fa-lock status-icon"></i>
+              <i class="fas fa-vials status-icon"></i>
+              Locked to test
+             {% when 'unlocked' %}
+              <i class="fas fa-check status-icon"></i>
+              Validated
+            {% when 'build' %}
+              <i class="fas fa-lock status-icon"></i>
+              <i class="fas fa-hammer status-icon"></i>
+              {{ issue.status | capitalize }}
+          {% endcase %}
+         
+        </td>
+        <td>{{ issue.branch }}</td>
+        <td>
+          <a href="{{ issue.issue_details.html_url }}" target="_blank">View Issue</a>
+        </td>
+      </tr>   
+    {% endfor %}
+  </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+   $(document).ready(function() {
+    $('#issueTable').DataTable({
+      "order": [[0, "desc"]] ,
+      "paging":false,
+    });
+  });
+</script>

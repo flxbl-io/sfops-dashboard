@@ -68,6 +68,7 @@ iframe {
 
 <ul id="navBar">
     <li><a href="#cicd">CI CD Performance</a></li>
+    <li><a href="#workItems">WorkItems</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#orgComparison">Org Comparison</a></li>
     <li><a href="#releasedefns">Release Candidates</a></li>
@@ -121,6 +122,7 @@ iframe {
 <iframe id="iframe7"></iframe>
 <iframe id="iframe8"></iframe>
 <iframe id="iframe9"></iframe>
+<iframe id="iframe10"></iframe>
 
 <script>
 var fullscreen = false;
@@ -140,6 +142,10 @@ var tabs = {
     'cicd': {
         iframeId: 'iframe1',
         url: '{{ dashboard.cicd_performance_dashboard_url }}'
+    },
+    'workItems': {
+        iframeId: 'iframe10',
+        url: `${siteSuffix}/workitems/workitems.html`
     },
      'packages': {
         iframeId: 'iframe2',
@@ -202,7 +208,8 @@ function showTab(hash) {
         iframe.src = tab.url + selectedOrg + '.html';
         document.getElementById('orgSelector').style.display = 'block';
         document.getElementById('domainSelector').style.display = 'none';
-    } else if(hash === 'packages') {
+    } 
+    else if(hash === 'packages') {
         var selectedBranch = document.getElementById('branchSelect').value;
         iframe.src = tab.url + selectedBranch+ '.html';
         document.getElementById('orgSelector').style.display = 'none';

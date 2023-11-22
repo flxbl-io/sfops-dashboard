@@ -50,7 +50,12 @@ jobs:
       - name: Generate Release Logs
         run: ./_scripts/create-package-view.sh
 
-          
+
+      - name: Generate Release Logs
+        run: node _scripts/issue-combiner.js  
+
+
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
