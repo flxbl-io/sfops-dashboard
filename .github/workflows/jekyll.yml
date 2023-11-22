@@ -51,7 +51,7 @@ jobs:
         run: ./_scripts/create-package-view.sh
 
 
-      - name: Generate Release Logs
+      - name: Combine Issue Status
         run: node _scripts/issue-combiner.js  
 
 
