@@ -1,0 +1,75 @@
+{
+    "orgs": [],
+    "releases": [
+        {
+            "names": [
+                "Sprint-2-22-11-6951737115"
+            ],
+            "buildNumber": 1,
+            "workItems": {
+                "": [
+                    "50a3e4d6",
+                    "b6d8a989",
+                    "404718af",
+                    "138e23c5",
+                    "22db52e0",
+                    "55ef8227"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "to": "50a3e4d6",
+                    "version": "1.0.26.6951737115",
+                    "latestCommitId": "50a3e4d6",
+                    "commits": [
+                        {
+                            "commitId": "50a3e4d6",
+                            "date": "2023-11-22T12:39:07+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change parallel to false (#72)",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "b6d8a989",
+                            "date": "2023-10-26T13:52:29+11:00",
+                            "author": "Azlam",
+                            "message": "fix: disable disable feature",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "404718af",
+                            "date": "2023-10-26T13:50:28+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to true",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "138e23c5",
+                            "date": "2023-10-26T13:49:57+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to false",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "22db52e0",
+                            "date": "2023-10-26T13:47:47+11:00",
+                            "author": "Azlam",
+                            "message": "fix: test-pr",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "55ef8227",
+                            "date": "2023-08-27T11:57:41+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add new package feature-management",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "978d1b64efa7bee6602d1a4365d75a31a7600f10",
+            "date": "Wed Nov 22 2023 01:44:41 GMT+0000 (Coordinated Universal Time)"
+        }
+    ]
+}
