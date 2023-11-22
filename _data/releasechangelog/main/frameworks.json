@@ -70,6 +70,37 @@
             ],
             "hashId": "978d1b64efa7bee6602d1a4365d75a31a7600f10",
             "date": "Wed Nov 22 2023 01:44:41 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-22-11-6963296317"
+            ],
+            "buildNumber": 2,
+            "workItems": {
+                "": [
+                    "d8358629"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "50a3e4d6",
+                    "to": "d8358629",
+                    "version": "1.0.26.6963296317",
+                    "latestCommitId": "d8358629",
+                    "commits": [
+                        {
+                            "commitId": "d8358629",
+                            "date": "2023-11-23T09:22:38+11:00",
+                            "author": "Azlam",
+                            "message": "fix: fix update comments (#76)",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "f7955aede8b255845e9153c248becdbf956791c9",
+            "date": "Wed Nov 22 2023 22:28:30 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
