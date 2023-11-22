@@ -31,8 +31,10 @@ layout: default
     <tr>
       <th>Issue Number</th>
       <th>Issue Title</th>
+      <th>Author</th>
       <th>Status</th>
       <th>Branch</th>
+      <th>Elapsed Time</th>
       <th>Link</th>
     </tr>
   </thead>
@@ -42,6 +44,7 @@ layout: default
       <tr>
         <td>{{ issue.issue_number }}</td>
          <td>{{ issue.issue_details.title }}</td>
+         <td>{{ issue.issue_details.user.login }}</td>
          <td>
           {% case issue.status %}
             {% when 'locked/applying patches' %}
@@ -51,17 +54,17 @@ layout: default
                Patching in test work item
             {% when 'validation' %}
               <i class="fas fa-tasks status-icon"></i>
-              {{ issue.status | capitalize }}
+               In Review
             {% when 'validated' %}
               <i class="fas fa-check status-icon"></i>
               {{ issue.status | capitalize }}
             {% when 'locked' %}
               <i class="fas fa-lock status-icon"></i>
               <i class="fas fa-vials status-icon"></i>
-              Locked to test
+              Locked for testing
              {% when 'unlocked' %}
               <i class="fas fa-check status-icon"></i>
-              Validated
+              In Review
             {% when 'build' %}
               <i class="fas fa-lock status-icon"></i>
               <i class="fas fa-hammer status-icon"></i>
@@ -70,6 +73,7 @@ layout: default
          
         </td>
         <td>{{ issue.branch }}</td>
+        <td><span id="elapsed-time-{{ forloop.index }}"></span></td>
         <td>
           <a href="{{ issue.issue_details.html_url }}" target="_blank">View Issue</a>
         </td>
@@ -88,4 +92,28 @@ layout: default
       "paging":false,
     });
   });
+ function formatElapsedTime(milliseconds) {
+    var seconds = Math.floor(milliseconds / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    seconds = seconds % 60;
+    minutes = minutes % 60;
+    hours = hours % 24;
+
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  function updateElapsedTimes() {
+    var now = new Date();
+    {% for issue in site.data.issueStatusCombined%}
+      var createdTime = new Date("{{ issue.issue_details.created_at }}");
+      var elapsedTime = now - createdTime;
+      document.getElementById('elapsed-time-{{ forloop.index }}').innerText = formatElapsedTime(elapsedTime);
+    {% endfor %}
+  }
+
+  // Update elapsed time every second
+  setInterval(updateElapsedTimes, 1000);
 </script>
