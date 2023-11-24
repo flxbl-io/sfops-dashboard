@@ -1,4 +1,0 @@
----
-layout: changelog
-domain: frameworks
----

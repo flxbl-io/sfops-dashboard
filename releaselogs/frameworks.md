@@ -1,4 +1,0 @@
----
-layout: releaselogs
-domain: frameworks
----

@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+# Welcome to sfops dashboard This site is built on jekyll so all jeky configs apply!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -22,14 +22,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 disable_disk_cache: true
 
-
 collections:
   releasedefns:
     output: true
   releaselogs:
     output: true
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

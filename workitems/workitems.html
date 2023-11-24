@@ -45,8 +45,8 @@ layout: default
       <tr>
         <td>{{ issue.issue_number }}</td>
          <td>{{ issue.issue_details.title }}</td>
-         <td>{{ issue.issue_details.user.login }}</td>
          <td>{{ issue.branch }}</td>
+         <td>{{ issue.issue_details.user.login }}</td>
          <td>
           {% case issue.status %}
             {% when 'locked/applying patches' %}
@@ -63,7 +63,7 @@ layout: default
               <i class="fas fa-vials status-icon"></i>
               In Testing
              {% when 'unlocked' %}
-              <i class="fas fa-check status-icon"></i>
+              <i class="fas fa-tasks status-icon"></i>
               In Review
             {% when 'build' %}
               <i class="fas fa-hammer status-icon"></i>
