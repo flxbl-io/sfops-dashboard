@@ -78,7 +78,7 @@ layout: default
                Locked for Testing
             {% when 'locked' %}
               <i class="fas fa-lock status-icon"></i>
-              Locked for Testing
+              Locked for Testing ( {{ issue.domain }} )
           {% endcase %}
         </td>
         <td><span id="elapsed-time-{{ forloop.index }}"></span></td>
