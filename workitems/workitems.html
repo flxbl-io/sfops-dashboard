@@ -40,7 +40,8 @@ layout: default
     </tr>
   </thead>
   <tbody>
-    {% assign sorted_issues = site.data.issueStatusCombined | sort: 'issue_number' | reverse %}
+  {% if site.data.issueStatusCombined %}
+    {% assign sorted_issues = site.data.issueStatusCombined | sortBy: 'issue_number' | reverse %}
     {% for issue in sorted_issues %}
       <tr>
         <td>{{ issue.issue_number }}</td>
@@ -86,6 +87,7 @@ layout: default
         </td>
       </tr>   
     {% endfor %}
+   {% endif %}
   </tbody>
 </table>
 
