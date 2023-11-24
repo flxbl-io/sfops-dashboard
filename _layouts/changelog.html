@@ -240,7 +240,7 @@ layout: default
   let releaseDataMap = []
   $(document).ready(function () {
 
-    {% assign domain_data = site.data.releasechangelog[page.domain] %}
+    {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
     {% for release in domain_data.releases %}
       releaseDataMap["{{ release.hashId }}"] = {{ release | jsonify }};
     {% endfor %}
