@@ -124,6 +124,7 @@ iframe {
 <iframe id="iframe9"></iframe>
 <iframe id="iframe10"></iframe>
 
+
 <script>
 var fullscreen = false;
 var rotating = false;
@@ -332,4 +333,14 @@ window.onhashchange = function() {
             initializePage();
 };
 
+function reloadIframes() {
+    var iframes = document.getElementsByTagName('iframe');
+    for (var i = 0; i < iframes.length; i++) {
+        var iframeSrc = iframes[i].src;
+        iframes[i].src = iframeSrc;
+    }
+}
+
+// Set the interval to reload iframes every 30 seconds
+setInterval(reloadIframes, 30000);
 </script>
