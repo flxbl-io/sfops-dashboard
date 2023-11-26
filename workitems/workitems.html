@@ -60,6 +60,9 @@ layout: default
             {% when 'validated' %}
               <i class="fas fa-tasks status-icon"></i>
               {{ issue.status | capitalize }}
+             {% when 'forced' %}
+              <i class="fas fa-muscle status-icon"></i>
+              Force Pushed
             {% when 'locked' %}
               <i class="fas fa-vials status-icon"></i>
               In Testing
@@ -73,6 +76,9 @@ layout: default
         </td>
          <td>
           {% case issue.status %}
+            {% when 'forced' %}
+              <i class="fas fa-lock status-icon"></i>
+              Force Pushed
             {% when 'locked/applying patches' %}
              <i class="fas fa-lock status-icon"></i>
                Locked for Testing
