@@ -56,10 +56,10 @@ layout: default
                Patching in test work item
             {% when 'validation' %}
               <i class="fas fa-tasks status-icon"></i>
-               In Review
+               Checks In Progress
             {% when 'validated' %}
               <i class="fas fa-tasks status-icon"></i>
-              {{ issue.status | capitalize }}
+              In Review
              {% when 'forced' %}
               <i class="fas fa-person-through-window status-icon"></i>
               Force Pushed
