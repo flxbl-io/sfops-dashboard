@@ -41,8 +41,7 @@ layout: default
   </thead>
   <tbody>
   {% if site.data.issueStatusCombined %}
-    {% assign sorted_issues = site.data.issueStatusCombined | sortBy: 'issue_number' | reverse %}
-    {% for issue in sorted_issues %}
+    {% for issue in site.data.issueStatusCombined %}
       <tr>
         <td>{{ issue.issue_number }}</td>
          <td>{{ issue.issue_details.title }}</td>
@@ -56,7 +55,7 @@ layout: default
                Patching in test work item
             {% when 'validation' %}
               <i class="fas fa-tasks status-icon"></i>
-               Checks In Progress
+               Checks In Progress / Failed
             {% when 'validated' %}
               <i class="fas fa-tasks status-icon"></i>
               In Review
