@@ -42,7 +42,7 @@ iframe {
     right: 50px;
 }
 
-#orgSelector, #domainSelector #branchSelector {
+#orgSelector, #testOrgSelector, #domainSelector, #branchSelector {
     text-align: right;
     display: none;
     color: #34bdeb;
@@ -50,12 +50,12 @@ iframe {
     border-radius: 5px;
 }
 
-#orgSelector span, #domainSelector span, #branchSelector span{
+#orgSelector span, #testOrgSelector span, #domainSelector span, #branchSelector span{
     margin-right: 10px;
     font-weight: bold;
 }
 
-#orgSelector select, #domainSelector select, #branchSelector select {
+#orgSelector select,#testOrgSelector select, #domainSelector select, #branchSelector select {
     border: none;
     background: #0056b3;
     color: #fff;
@@ -83,6 +83,15 @@ iframe {
     <span>Select an Org:</span>
     <select id="orgSelect">
         {% for org in site.data.orgs %}
+        <option value="{{ org }}">{{ org }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<div id="testOrgSelector" style="text-align: right; display: none;">
+    <span>Select an Org:</span>
+    <select id="testOrgSelect">
+        {% for org in site.data.testorgs %}
         <option value="{{ org }}">{{ org }}</option>
         {% endfor %}
     </select>
@@ -205,38 +214,46 @@ function showTab(hash) {
     iframe.style.display = 'block';
 
     if(hash === 'apexTests') {
-        var selectedOrg = document.getElementById('orgSelect').value;
-        iframe.src = tab.url + selectedOrg + '.html';
-        document.getElementById('orgSelector').style.display = 'block';
+        document.getElementById('testOrgSelector').style.display = 'block';
+        document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
+        var selectedOrg = document.getElementById('testOrgSelect').value;
+        iframe.src = tab.url + selectedOrg + '.html';
     } 
     else if(hash === 'packages') {
         var selectedBranch = document.getElementById('branchSelect').value;
         iframe.src = tab.url + selectedBranch+ '.html';
+       
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('branchSelector').style.display = 'block';
         document.getElementById('domainSelector').style.display = 'none';
+        document.getElementById('testOrgSelector').style.display = 'none';
     } 
     else if(hash === 'releasedefns') {
         var selectedDomain = document.getElementById('domainSelect').value;
         var selectedBranch = document.getElementById('branchSelect').value;
-        iframe.src = tab.url + selectedBranch + "/"+ selectedDomain + '.html';
+        iframe.src = tab.url + selectedBranch + "/"+ selectedDomain + '.html';       
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('branchSelector').style.display = 'block';
         document.getElementById('domainSelector').style.display = 'block';
+        document.getElementById('testOrgSelector').style.display = 'none';
     } else if (hash === 'releases')
     {
         var selectedDomain = document.getElementById('domainSelect').value;
         iframe.src = tab.url + selectedDomain + '.html';
+       
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('branchSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'block';
+        document.getElementById('testOrgSelector').style.display = 'none';
     }
     else {
         iframe.src = tab.url;
+       
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('branchSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
+        document.getElementById('testOrgSelector').style.display = 'none';
     }
 
     // Highlight the selected link
