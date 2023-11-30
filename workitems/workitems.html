@@ -42,6 +42,7 @@ layout: default
   <tbody>
   {% if site.data.issueStatusCombined %}
     {% for issue in site.data.issueStatusCombined %}
+     {% unless issue.status == 'ready' %}
       <tr>
         <td>{{ issue.issue_number }}</td>
          <td>{{ issue.issue_details.title }}</td>
@@ -91,6 +92,7 @@ layout: default
           <a href="{{ issue.issue_details.html_url }}" target="_blank">View Issue</a>
         </td>
       </tr>   
+      {% unless %}
     {% endfor %}
    {% endif %}
   </tbody>
