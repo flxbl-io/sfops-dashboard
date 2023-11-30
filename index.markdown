@@ -316,7 +316,7 @@ window.onload = function() {
     initializePage();
 
      // Event listener for org selection dropdown
-    document.getElementById('orgSelect').addEventListener('change', function() {
+    document.getElementById('testOrgSelect').addEventListener('change', function() {
         if (window.location.hash.substring(1) === 'apexTests') {
             showTab('apexTests');
         }
