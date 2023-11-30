@@ -215,6 +215,7 @@ function showTab(hash) {
 
     if(hash === 'apexTests') {
         document.getElementById('testOrgSelector').style.display = 'block';
+        document.getElementById('branchSelector').style.display = 'none';
         document.getElementById('orgSelector').style.display = 'none';
         document.getElementById('domainSelector').style.display = 'none';
         var selectedOrg = document.getElementById('testOrgSelect').value;
