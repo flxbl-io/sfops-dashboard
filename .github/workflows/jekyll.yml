@@ -44,7 +44,7 @@ jobs:
         run: ./_scripts/create-package-view.sh
 
       - name: Migrate package visualisaton
-        run: cp _data/packageVisualisation/data.js packageVisualisation/data.js
+        run: ./_scripts/copy-package-visualisation.sh
 
 
       - name: Combine Issue Status
