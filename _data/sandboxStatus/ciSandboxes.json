@@ -1,0 +1,170 @@
+[
+  {
+    "name": "328158359",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "336740161",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "405062460",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "445119872",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "541125885",
+    "status": "Available",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "562606654",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "744555599",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "932070297",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "971072707",
+    "status": "Available",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "152831827",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "160122859",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "227443121",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "305573903",
+    "status": "Available",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "353338645",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "745144043",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "858108824",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "914442822",
+    "status": "Available",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "189291495",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "279207077",
+    "status": "Available",
+    "isActive": "true",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "287681490",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "361310503",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "405317982",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "455346601",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "600505941",
+    "status": "Expired",
+    "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  }
+]
