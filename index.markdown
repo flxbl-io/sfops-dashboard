@@ -68,6 +68,7 @@ iframe {
 
 <ul id="navBar">
     <li><a href="#cicd">CI CD Performance</a></li>
+    <li><a href="#evolution">Package Evolution</a></li>
     <li><a href="#workItems">WorkItems</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#orgComparison">Org Comparison</a></li>
@@ -132,6 +133,7 @@ iframe {
 <iframe id="iframe8"></iframe>
 <iframe id="iframe9"></iframe>
 <iframe id="iframe10"></iframe>
+<iframe id="iframe11"></iframe>
 
 
 <script>
@@ -152,6 +154,10 @@ var tabs = {
     'cicd': {
         iframeId: 'iframe1',
         url: '{{ dashboard.cicd_performance_dashboard_url }}'
+    },
+    'evolution': {
+        iframeId: 'iframe11',
+        url: `${siteSuffix}/packageVisualisation/index.html`
     },
     'workItems': {
         iframeId: 'iframe10',

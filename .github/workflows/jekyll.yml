@@ -43,6 +43,9 @@ jobs:
       - name: Generate Package View
         run: ./_scripts/create-package-view.sh
 
+      - name: Migrate package visualisaton
+        run: cp _data/packageVisualisation/data.js packageVisualisation/data.js
+
 
       - name: Combine Issue Status
         run: node _scripts/issue-combiner.js  
