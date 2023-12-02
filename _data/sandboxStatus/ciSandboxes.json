@@ -141,15 +141,15 @@
   },
   {
     "name": "558955723",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
   },
   {
     "name": "563017820",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "HOTFIX",
     "type": "CI"
   },
