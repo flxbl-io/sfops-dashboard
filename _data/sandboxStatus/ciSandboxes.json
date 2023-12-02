@@ -106,15 +106,15 @@
   },
   {
     "name": "726663612",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
   {
     "name": "846828188",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "CORE",
     "type": "CI"
   },
