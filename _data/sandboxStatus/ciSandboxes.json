@@ -43,8 +43,8 @@
   },
   {
     "name": "688744981",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "CORE",
     "type": "CI"
   },
@@ -57,7 +57,7 @@
   },
   {
     "name": "995094726",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
@@ -134,7 +134,7 @@
   },
   {
     "name": "343612128",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
@@ -148,8 +148,8 @@
   },
   {
     "name": "553956403",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "HOTFIX",
     "type": "CI"
   },
