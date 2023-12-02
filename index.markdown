@@ -1,359 +1,411 @@
 ---
-layout: homepage
+layout: default
 ---
 
-<style>
-ul {
-    list-style-type: none;
-    padding: 20px 0;
-    background: #007bff;
-    text-align: center;
-    margin-bottom: 20px;
-}
-ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-ul li a {
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-}
-ul li a.selected {
-    background-color: #0056b3;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-iframe {
-    width: 100%;
-    height: calc(100vh - 5vh - 60px);
-    border: none;
-    display: none;
-}
-#fullscreenIcon, #rotateIcon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #007bff;
-    font-size: 24px;
-}
-#rotateIcon {
-    right: 50px;
-}
+<head>
+    <meta charset="UTF-8">
+    <title>sfops dev centre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevents scrolling */
+        }
 
-#orgSelector, #testOrgSelector, #domainSelector, #branchSelector {
-    text-align: right;
-    display: none;
-    color: #34bdeb;
-    padding: 10px;
-    border-radius: 5px;
-}
+        .vertical-nav {
+            width: 250px;
+            height: 100vh; /* Full height */
+            position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+            z-index: 1; /* Stay on top */
+            top: 0; /* Stay at the top */
+            left: 0;
+            background-color: #007bff;
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 20px;
+        }
 
-#orgSelector span, #testOrgSelector span, #domainSelector span, #branchSelector span{
-    margin-right: 10px;
-    font-weight: bold;
-}
+        .vertical-nav header {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-#orgSelector select,#testOrgSelector select, #domainSelector select, #branchSelector select {
-    border: none;
-    background: #0056b3;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-}
+        .vertical-nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-</style>
+        .vertical-nav ul li {
+            padding: 10px 20px;
+        }
 
-<ul id="navBar">
-    <li><a href="#cicd">CI CD Performance</a></li>
-    <li><a href="#evolution">Package Evolution</a></li>
-    <li><a href="#workItems">WorkItems</a></li>
-    <li><a href="#packages">Packages</a></li>
-    <li><a href="#orgComparison">Org Comparison</a></li>
-    <li><a href="#releasedefns">Release Candidates</a></li>
-    <li><a href="#releases">Releases</a></li>
-    <li><a href="#apexTests">Test Reports</a></li>
-    <li><a href="#pmdReport">PMD Reports</a></li>
-    <li><a href="#packageSummary">Package Metrics</a></li>
-    <li><a href="#platformOverview">Platform Overview</a></li>
-</ul>
+        .vertical-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
 
-<div id="orgSelector" style="text-align: right; display: none;">
-    <span>Select an Org:</span>
-    <select id="orgSelect">
-        {% for org in site.data.orgs %}
-        <option value="{{ org }}">{{ org }}</option>
-        {% endfor %}
-    </select>
-</div>
+        .vertical-nav ul li a.selected,
+        .vertical-nav ul li a:hover {
+            background-color: #0056b3;
+            border-radius: 5px;
+        }
 
-<div id="testOrgSelector" style="text-align: right; display: none;">
-    <span>Select an Org:</span>
-    <select id="testOrgSelect">
-        {% for org in site.data.testorgs %}
-        <option value="{{ org }}">{{ org }}</option>
-        {% endfor %}
-    </select>
-</div>
+        .vertical-nav ul li i {
+            margin-right: 10px;
+        }
 
-<div id="branchSelector" style="text-align: right; display: none;">
-    <span>Select a Branch:</span>
-      <select id="branchSelect">
-        {% for branch in site.data.branches %}
-        <option value="{{ branch }}">{{ branch }}</option>
-        {% endfor %}
-    </select>
-</div>
+        .vertical-nav .submenu {
+            display: block;
+            padding-left: 20px; /* Indent submenus */
+        }
+        .content-area {
+            margin-left: 250px; /* Same as the width of the sidebar */
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
 
-<div id="domainSelector" style="text-align: right; display: none;">
-    <span>Select a Domain/Release config:</span>
-      <select id="domainSelect">
-        {% for domain in site.data.domains %}
-        <option value="{{ domain }}">{{ domain }}</option>
-        {% endfor %}
-    </select>
-</div>
+        iframe {
+            width: 100%;
+            height: calc(100vh - 100px);
+            border: none;
+        }
+        .selectors-container {
+            display: flex;
+            justify-content: flex-end; /* Align selectors to the right */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            padding: 10px 15px;
+            background-color: #ffffff;
+        }
 
+        .selector-container {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 10px; /* Space between selectors */
+            padding: 5px 10px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+     
 
+        .selector-container span {
+            margin-right: 10px;
+            font-weight: bold;
+            color: #333; /* Darker text for better readability */
+        }
 
-<!-- Icons -->
-<i id="fullscreenIcon" class="fas fa-expand-arrows-alt" onclick="toggleFullscreen()"></i>
-<i id="rotateIcon" class="fas fa-sync-alt" onclick="toggleRotation()"></i>
+        .selector-container select {
+            border: 1px solid #ddd; /* Subtle border */
+            background: white;
+            color: #333;
+            padding: 8px 12px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
 
-<!-- Iframes -->
-<iframe id="iframe1"></iframe>
-<iframe id="iframe2"></iframe>
-<iframe id="iframe3"></iframe>
-<iframe id="iframe4"></iframe>
-<iframe id="iframe5"></iframe>
-<iframe id="iframe6"></iframe>
-<iframe id="iframe7"></iframe>
-<iframe id="iframe8"></iframe>
-<iframe id="iframe9"></iframe>
-<iframe id="iframe10"></iframe>
-<iframe id="iframe11"></iframe>
+        .selector-container select:hover,
+        .selector-container select:focus {
+            border-color: #0056b3; /* Blue border on hover/focus */
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
 
+        #orgSelector, #testOrgSelector, #domainSelector, #branchSelector {
+            text-align: right;
+            display: none;
+            color: #34bdeb;
+            padding: 10px;
+            border-radius: 5px;
+        }
 
+        #orgSelector span, #testOrgSelector span, #domainSelector span, #branchSelector span{
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        #orgSelector select,#testOrgSelector select, #domainSelector select, #branchSelector select {
+            border: none;
+            background: #0056b3;
+            color: #fff;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical-nav">
+        <header>sfops dev centre</header>
+        <ul>
+            <li><span><i class="fas fa-laptop-code"></i> Development</span>
+                <ul class='submenu'>
+                    <li><a href="#workItems">Work Items</a></li>
+                    <li><a href="#evolution">Package Evolution</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                </ul>
+            </li>
+            <li><span><i class="fas fa-network-wired"></i> Environments</span>
+                 <ul class='submenu'>
+                    <li><a href="#sandboxes">Development Environments</a></li>
+                    <li><a href="#orgComparison">Org Comparison</a></li>
+                </ul>
+            </li>
+            <li><span><i class="fas fa-chart-bar"></i> Quality Reports</span>
+                 <ul class='submenu'>
+                    <li><a href="#apexTests">Test Reports</a></li>
+                    <li><a href="#pmdReport">PMD Reports</a></li>
+                </ul>
+            </li>
+            <li><span><i class="fas fa-tasks"></i> Release Management</span>
+                <ul class='submenu'>
+                    <li><a href="#releasedefns">Release Candidates</a></li>
+                    <li><a href="#releases">Releases</a></li>
+                </ul>
+            </li>
+            <li><span><i class="fas fa-chart-line"></i> Dashboards</span>
+                 <ul class='submenu'>
+                    <li><a href="#cicd">CI/CD Performance</a></li>
+                    <li><a href="#platformOverview">Platform Overview</a></li>
+                    <li><a href="#packageSummary">Package Metrics</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content-area">
+    <div class="selectors-container">
+        <div class="selector-container" id="orgSelector" style="text-align: right; display: none;">
+            <span>Select an Org:</span>
+            <select id="orgSelect">
+                {% for org in site.data.orgs %}
+                <option value="{{ org }}">{{ org }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="selector-container" id="testOrgSelector" style="text-align: right; display: none;">
+            <span>Select an Org:</span>
+            <select id="testOrgSelect">
+                {% for org in site.data.testorgs %}
+                <option value="{{ org }}">{{ org }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="selector-container" id="branchSelector" style="text-align: right; display: none;">
+            <span>Select a Branch:</span>
+            <select id="branchSelect">
+                {% for branch in site.data.branches %}
+                <option value="{{ branch }}">{{ branch }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="selector-container" id="domainSelector" style="text-align: right; display: none;">
+            <span>Select a Domain/Release config:</span>
+            <select id="domainSelect">
+                {% for domain in site.data.domains %}
+                <option value="{{ domain }}">{{ domain }}</option>
+                {% endfor %}
+            </select>
+        </div>
+      </div>
+
+        <!-- Iframes and other elements here -->
+        <iframe id="iframe1"></iframe>
+        <iframe id="iframe2"></iframe>
+        <iframe id="iframe3"></iframe>
+        <iframe id="iframe4"></iframe>
+        <iframe id="iframe5"></iframe>
+        <iframe id="iframe6"></iframe>
+        <iframe id="iframe7"></iframe>
+        <iframe id="iframe8"></iframe>
+        <iframe id="iframe9"></iframe>
+        <iframe id="iframe10"></iframe>
+        <iframe id="iframe11"></iframe>
+        <iframe id="iframe12"></iframe>
+    </div>
+<body>
 <script>
-var fullscreen = false;
-var rotating = false;
-var rotateInterval;
-
-{% assign dashboard = site.data.dashboard %}
-
-var baseUrl = window.location.origin;
-var pathArray = window.location.pathname.split('/');
-let siteSuffix=`/${pathArray[1]}/`
-if(siteSuffix=='//')
-  siteSuffix='';
-
-
-var tabs = {
-    'cicd': {
-        iframeId: 'iframe1',
-        url: '{{ dashboard.cicd_performance_dashboard_url }}'
-    },
-    'evolution': {
-        iframeId: 'iframe11',
-        url: `${siteSuffix}/packageVisualisation/index.html`
-    },
-    'workItems': {
-        iframeId: 'iframe10',
-        url: `${siteSuffix}/workitems/workitems.html`
-    },
-     'packages': {
-        iframeId: 'iframe2',
-        url: `${siteSuffix}/packageviewer/`
-    },
-    'orgComparison': {
-        iframeId: 'iframe3',
-        url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
-    },
-      'releasedefns': {
-        iframeId: 'iframe4',
-        url: `${siteSuffix}/releasedefns/`  // url will be completed in showTab function
-    },
-    'releases': {
-        iframeId: 'iframe5',
-        url: `${siteSuffix}/releaselogs/`  // url will be completed in showTab function
-    },
-    'apexTests': {
-        iframeId: 'iframe6',
-        url: `${siteSuffix}/apextestResults/`
-    },
-    'pmdReport': {
-        iframeId: 'iframe7',
-        url: `${siteSuffix}/pmd/pmdReport.html`
-    },
-    'packageSummary': {
-        iframeId: 'iframe8',
-        url: '{{ dashboard.package_summary_dasbhoard_url }}'
-    },
-    'platformOverview': {
-        iframeId: 'iframe9',
-        url: '{{ dashboard.platform_overview_dashboard_url }}'
-    }
-  
-};
-
-
-
-function showTab(hash) {
-    var tab = tabs[hash];
-
-    if (!tab) {
-        console.error('Invalid hash: ' + hash);
-        return;
-    }
-
-    // Hide all iframes
-    var iframes = document.getElementsByTagName('iframe');
-    for (var i = 0; i < iframes.length; i++) {
-        iframes[i].style.display = 'none';
-        iframes[i].src = '';
-    }
-
-    // Show the selected iframe and set its src
-    var iframe = document.getElementById(tab.iframeId);
-    iframe.style.display = 'block';
-
-    if(hash === 'apexTests') {
-        document.getElementById('testOrgSelector').style.display = 'block';
-        document.getElementById('branchSelector').style.display = 'none';
-        document.getElementById('orgSelector').style.display = 'none';
-        document.getElementById('domainSelector').style.display = 'none';
-        var selectedOrg = document.getElementById('testOrgSelect').value;
-        iframe.src = tab.url + selectedOrg + '.html';
-    } 
-    else if(hash === 'packages') {
-        var selectedBranch = document.getElementById('branchSelect').value;
-        iframe.src = tab.url + selectedBranch+ '.html';
        
-        document.getElementById('orgSelector').style.display = 'none';
-        document.getElementById('branchSelector').style.display = 'block';
-        document.getElementById('domainSelector').style.display = 'none';
-        document.getElementById('testOrgSelector').style.display = 'none';
-    } 
-    else if(hash === 'releasedefns') {
-        var selectedDomain = document.getElementById('domainSelect').value;
-        var selectedBranch = document.getElementById('branchSelect').value;
-        iframe.src = tab.url + selectedBranch + "/"+ selectedDomain + '.html';       
-        document.getElementById('orgSelector').style.display = 'none';
-        document.getElementById('branchSelector').style.display = 'block';
-        document.getElementById('domainSelector').style.display = 'block';
-        document.getElementById('testOrgSelector').style.display = 'none';
-    } else if (hash === 'releases')
-    {
-        var selectedDomain = document.getElementById('domainSelect').value;
-        iframe.src = tab.url + selectedDomain + '.html';
-       
-        document.getElementById('orgSelector').style.display = 'none';
-        document.getElementById('branchSelector').style.display = 'none';
-        document.getElementById('domainSelector').style.display = 'block';
-        document.getElementById('testOrgSelector').style.display = 'none';
-    }
-    else {
-        iframe.src = tab.url;
-       
-        document.getElementById('orgSelector').style.display = 'none';
-        document.getElementById('branchSelector').style.display = 'none';
-        document.getElementById('domainSelector').style.display = 'none';
-        document.getElementById('testOrgSelector').style.display = 'none';
-    }
+       {% assign dashboard = site.data.dashboard %}
 
-    // Highlight the selected link
-    var links = document.querySelectorAll('ul#navBar li a');
-    for (var i = 0; i < links.length; i++) {
-        links[i].classList.remove('selected');
-    }
-    var link = document.querySelector('ul#navBar li a[href="#' + hash + '"]');
-    link.classList.add('selected');
-}
-
- function initializePage() {
-            var hash = window.location.hash.substring(1);
-            showTab(hash || 'cicd');
-}
-
-function toggleFullscreen() {
-    if (!fullscreen) {
-        if (document.documentElement.requestFullscreen) {
-            document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
-            document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            document.documentElement.webkitRequestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) { /* IE/Edge */
-            document.documentElement.msRequestFullscreen();
-        }
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        } else if (document.mozCancelFullScreen) { /* Firefox */
-            document.mozCancelFullScreen();
-        } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-            document.webkitExitFullscreen();
-        } else if (document.msExitFullscreen) { /* IE/Edge */
-            document.msExitFullscreen();
-        }
-    }
-    fullscreen = !fullscreen;
-}
-
-function toggleRotation() {
-    if (rotating) {
-        clearInterval(rotateInterval);
-    } else {
-        rotateInterval = setInterval(function() {
-            var selectedLink = document.querySelector('ul#navBar li a.selected');
-            var nextLink = selectedLink.parentElement.nextSibling;
-            if (!nextLink) {
-                nextLink = document.querySelector('ul#navBar li a:first-child');
+        var baseUrl = window.location.origin;
+        var pathArray = window.location.pathname.split('/');
+        let siteSuffix=`/${pathArray[1]}/`
+        if(siteSuffix=='//')
+        siteSuffix='';
+        var tabs = {
+            'cicd': {
+                iframeId: 'iframe1',
+                url: '{{ dashboard.cicd_performance_dashboard_url }}'
+            },
+            'sandboxes': {
+                iframeId: 'iframe11',
+                url: `${siteSuffix}/sandboxes/index.html`
+            },
+            'evolution': {
+                iframeId: 'iframe11',
+                url: `${siteSuffix}/packageVisualisation/index.html`
+            },
+            'workItems': {
+                iframeId: 'iframe10',
+                url: `${siteSuffix}/workitems/workitems.html`
+            },
+             'packages': {
+                iframeId: 'iframe2',
+                urlTemplate: `${siteSuffix}/packageviewer/{branch}.html`,
+            },
+            'orgComparison': {
+                iframeId: 'iframe3',
+                url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
+            },
+              'releasedefns': {
+                iframeId: 'iframe4',
+                urlTemplate: `${siteSuffix}/releasedefns/{branch}/{domain}.html`,
+                showBranchSelector: true,
+                showDomainSelector: true,
+                showOrgSelector: false,
+                showTestOrgSelector: false
+            },
+            'releases': {
+                iframeId: 'iframe5',
+                urlTemplate: `${siteSuffix}/releaselogs/{domain}.html`,
+                showBranchSelector: false,
+                showDomainSelector: true,
+                showOrgSelector: false,
+                showTestOrgSelector: false
+            },
+            'apexTests': {
+                iframeId: 'iframe6',
+                urlTemplate: `${siteSuffix}/apextestResults/{testOrg}.html`,
+                showTestOrgSelector: true
+     
+            },
+            'pmdReport': {
+                iframeId: 'iframe7',
+                url: `${siteSuffix}/pmd/pmdReport.html`
+            },
+            'packageSummary': {
+                iframeId: 'iframe8',
+                url: '{{ dashboard.package_summary_dasbhoard_url }}'
+            },
+            'platformOverview': {
+                iframeId: 'iframe9',
+                url: '{{ dashboard.platform_overview_dashboard_url }}'
             }
-            window.location.hash = nextLink.getAttribute("href").substring(1);
-        }, 2 * 60 * 1000); // every 2 minutes
-    }
-    rotating = !rotating;
-}
+          
+        };
 
-window.onload = function() {
-    initializePage();
+       
 
-     // Event listener for org selection dropdown
-    document.getElementById('testOrgSelect').addEventListener('change', function() {
-        if (window.location.hash.substring(1) === 'apexTests') {
-            showTab('apexTests');
+        function showTab(hash) {
+            window.location.hash = hash;
+            var tab = tabs[hash];
+            if (!tab) {
+                console.error('Invalid hash: ' + hash);
+                return;
+            }
+
+            var iframes = document.getElementsByTagName('iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                iframes[i].style.display = 'none';
+            }
+
+            document.getElementById('branchSelector').style.display = tab.showBranchSelector ? 'block' : 'none';
+            document.getElementById('domainSelector').style.display = tab.showDomainSelector ? 'block' : 'none';
+            document.getElementById('orgSelector').style.display = tab.showOrgSelector ? 'block' : 'none';
+            document.getElementById('testOrgSelector').style.display = tab.showTestOrgSelector ? 'block' : 'none';
+
+
+            var iframe = document.getElementById(tab.iframeId);
+            iframe.style.display = 'block';
+
+            if (!tab.urlTemplate) {
+                iframe.src = tab.url;
+            }
+            else
+            {
+                console.log(`urlTemplate: ${tab.urlTemplate}`);
+              
+                let url = tab.urlTemplate;
+                if (url.includes('{branch}')) {
+                    let selectedBranch = document.getElementById('branchSelect').value;
+                    url = url.replace('{branch}', selectedBranch);
+                    console.log(`selectedBranch`, selectedBranch);
+                    console.log(`url`, url);
+                }
+                if (url.includes('{domain}')) {
+                    let selectedDomain = document.getElementById('domainSelect').value;
+                    url = url.replace('{domain}', selectedDomain);
+                } 
+                if (url.includes('{org}')) {
+                    let selectedOrg = document.getElementById('orgSelect').value;
+                    url = url.replace('{org}', selectedOrg);
+                } 
+                if (url.includes('{testOrg}')) {
+                    let selectedOrg = document.getElementById('testOrgSelect').value;
+                    url = url.replace('{testOrg}', selectedOrg);
+                } 
+
+                iframe.src = url;    
+            }
+        
+            
         }
-    });
 
-     document.getElementById('domainSelect').addEventListener('change', function() {
-        if (window.location.hash.substring(1) === 'releasedefns') {
-            showTab('releasedefns');
-        }
-        else if (window.location.hash.substring(1) === 'releases') {
-            showTab('releases');
-        }
-    });
+        window.onload = function() {
 
-      document.getElementById('branchSelect').addEventListener('change', function() {
-        if (window.location.hash.substring(1) === 'releasedefns') {
-            showTab('releasedefns');
-        }
-        else if (window.location.hash.substring(1) === 'domains') {
-            showTab('domains');
-        }
-    });
+            var links = document.querySelectorAll('.vertical-nav ul li ul li a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function(event) {
+                    var hash = this.getAttribute('href').substring(1);
+                    showTab(hash);
 
+                    var selectedLinks = document.querySelectorAll('.vertical-nav ul li ul li a.selected');
+                    for (var j = 0; j < selectedLinks.length; j++) {
+                        selectedLinks[j].classList.remove('selected');
+                    }
+                    this.classList.add('selected');
 
-};
+                    event.preventDefault();
+                });
+            }
+            var currentHash = window.location.hash.substring(1);
+            showTab(currentHash);
+        };
 
-window.onhashchange = function() {
-    var hash = window.location.hash.substring(1);
-    showTab(hash);
-};
-window.onhashchange = function() {
-            initializePage();
-};
+        window.onhashchange = function() {
+            var hash = window.location.hash.substring(1);
+            showTab(hash);
+        };
+
+        document.getElementById('testOrgSelect')?.addEventListener('change', function() {
+            var currentHash = window.location.hash.substring(1);
+            showTab(currentHash);
+           
+            if (tabs[currentHash] && tabs[currentHash].showTestOrgSelector) {
+                
+            }
+        });
+
+        document.getElementById('branchSelect')?.addEventListener('change', function() {
+            var currentHash = window.location.hash.substring(1);
+             showTab(currentHash);
+        });
+
+        document.getElementById('domainSelect')?.addEventListener('change', function() {
+            var currentHash = window.location.hash.substring(1);
+             showTab(currentHash);
+            if (tabs[currentHash] && tabs[currentHash].showDomainSelector) {
+               
+            }
+        });
 </script>
