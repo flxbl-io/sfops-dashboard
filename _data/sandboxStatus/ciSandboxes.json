@@ -134,7 +134,7 @@
   },
   {
     "name": "372883373",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
@@ -148,8 +148,8 @@
   },
   {
     "name": "489866457",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "HOTFIX",
     "type": "CI"
   },
