@@ -22,14 +22,14 @@
   },
   {
     "name": "450173076",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "CORE",
     "type": "CI"
   },
   {
     "name": "479784770",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
@@ -85,7 +85,7 @@
   },
   {
     "name": "224095067",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
@@ -106,8 +106,8 @@
   },
   {
     "name": "726663612",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "CORE",
     "type": "CI"
   },
