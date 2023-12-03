@@ -5,7 +5,7 @@ layout: default
 <head>
     <meta charset="UTF-8">
     <title>sfops dev centre</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             display: flex;
@@ -148,13 +148,14 @@ layout: default
             <li><span><i class="fas fa-laptop-code"></i> Development</span>
                 <ul class='submenu'>
                     <li><a href="#workItems">Work Items</a></li>
-                    <li><a href="#evolution">Package Evolution</a></li>
                     <li><a href="#packages">Packages</a></li>
                 </ul>
             </li>
             <li><span><i class="fas fa-network-wired"></i> Environments</span>
                  <ul class='submenu'>
-                    <li><a href="#sandboxes">Development Environments</a></li>
+                    <li><a href="#devSandboxes">Dev Sandboxes</a></li>
+                    <li><a href="#reviewSandboxes">Review Sandboxes</a></li>
+                    <li><a href="#scratchOrgPools">Scratch Org Pools</a></li>
                     <li><a href="#orgComparison">Org Comparison</a></li>
                 </ul>
             </li>
@@ -172,9 +173,17 @@ layout: default
             </li>
             <li><span><i class="fas fa-chart-line"></i> Dashboards</span>
                  <ul class='submenu'>
+                    <li><a href="#evolution">Package Evolution</a></li>
                     <li><a href="#cicd">CI/CD Performance</a></li>
                     <li><a href="#platformOverview">Platform Overview</a></li>
                     <li><a href="#packageSummary">Package Metrics</a></li>
+                </ul>
+            </li>
+             <li><span><i class="fas fa-circle-info"></i> Support</span>
+                 <ul class='submenu'>
+                    <li><a href="#flxblKnowledge">Reference Guide</a></li>
+                    <li><a href="#flxblSupport">Chat with us</a></li>
+                    <li><a href="#flxblIssue">Log an issue</a></li>
                 </ul>
             </li>
         </ul>
@@ -219,18 +228,9 @@ layout: default
       </div>
 
         <!-- Iframes and other elements here -->
-        <iframe id="iframe1"></iframe>
-        <iframe id="iframe2"></iframe>
-        <iframe id="iframe3"></iframe>
-        <iframe id="iframe4"></iframe>
-        <iframe id="iframe5"></iframe>
-        <iframe id="iframe6"></iframe>
-        <iframe id="iframe7"></iframe>
-        <iframe id="iframe8"></iframe>
-        <iframe id="iframe9"></iframe>
-        <iframe id="iframe10"></iframe>
-        <iframe id="iframe11"></iframe>
-        <iframe id="iframe12"></iframe>
+        <iframe id="iframe"></iframe>
+         <!-- Iframes and other elements here -->
+        <iframe id="iframePMD"></iframe>
     </div>
 <body>
 <script>
@@ -244,31 +244,27 @@ layout: default
         siteSuffix='';
         var tabs = {
             'cicd': {
-                iframeId: 'iframe1',
                 url: '{{ dashboard.cicd_performance_dashboard_url }}'
             },
-            'sandboxes': {
-                iframeId: 'iframe11',
-                url: `${siteSuffix}/sandboxes/index.html`
+            'devSandboxes': {
+                url: `${siteSuffix}/sandboxes/devSandboxes.html`
+            },
+            'reviewSandboxes': {
+                url: `${siteSuffix}/sandboxes/reviewSandboxes.html`
             },
             'evolution': {
-                iframeId: 'iframe11',
                 url: `${siteSuffix}/packageVisualisation/index.html`
             },
             'workItems': {
-                iframeId: 'iframe10',
                 url: `${siteSuffix}/workitems/workitems.html`
             },
              'packages': {
-                iframeId: 'iframe2',
                 urlTemplate: `${siteSuffix}/packageviewer/{branch}.html`,
             },
             'orgComparison': {
-                iframeId: 'iframe3',
                 url: `${siteSuffix}/packageVersionReports/packageVersionReport.html`
             },
               'releasedefns': {
-                iframeId: 'iframe4',
                 urlTemplate: `${siteSuffix}/releasedefns/{branch}/{domain}.html`,
                 showBranchSelector: true,
                 showDomainSelector: true,
@@ -276,7 +272,6 @@ layout: default
                 showTestOrgSelector: false
             },
             'releases': {
-                iframeId: 'iframe5',
                 urlTemplate: `${siteSuffix}/releaselogs/{domain}.html`,
                 showBranchSelector: false,
                 showDomainSelector: true,
@@ -284,22 +279,31 @@ layout: default
                 showTestOrgSelector: false
             },
             'apexTests': {
-                iframeId: 'iframe6',
                 urlTemplate: `${siteSuffix}/apextestResults/{testOrg}.html`,
                 showTestOrgSelector: true
      
             },
             'pmdReport': {
-                iframeId: 'iframe7',
+                iframeId: 'iframePMD',
                 url: `${siteSuffix}/pmd/pmdReport.html`
             },
             'packageSummary': {
-                iframeId: 'iframe8',
                 url: '{{ dashboard.package_summary_dasbhoard_url }}'
             },
             'platformOverview': {
-                iframeId: 'iframe9',
                 url: '{{ dashboard.platform_overview_dashboard_url }}'
+            },
+            'flxblKnowledge': {
+                url: 'https://docs.dxatscale.io/sfops/overview',
+                openInNewWindow:true
+            },
+            'flxblIssue': {
+                url: 'https://github.com/flxbl-io/sfops-issues',
+                openInNewWindow:true
+            },
+            'flxblSupport': {
+                url: 'https://flxbl-io.slack.com',
+                openInNewWindow:true
             }
           
         };
@@ -307,6 +311,11 @@ layout: default
        
 
         function showTab(hash) {
+              if (!hash || hash=='default') {
+                // Default page to show when no hash is present
+                hash=`workItems`;
+            }
+
             window.location.hash = hash;
             var tab = tabs[hash];
             if (!tab) {
@@ -325,10 +334,25 @@ layout: default
             document.getElementById('testOrgSelector').style.display = tab.showTestOrgSelector ? 'block' : 'none';
 
 
+           if(tab.iframeId)
+           {
             var iframe = document.getElementById(tab.iframeId);
             iframe.style.display = 'block';
+           }
+           else
+           {
+            var iframe = document.getElementById('iframe');
+            iframe.style.display = 'block';
+           }
 
-            if (!tab.urlTemplate) {
+            if(tab.openInNewWindow)
+            {
+                window.open(tab.url, '_blank');
+                iframe.style.display = 'block';
+                iframe.srcdoc = createPlaceholderMessage("This content has been opened in a new window.");
+
+            }
+            else if (!tab.urlTemplate) {
                 iframe.src = tab.url;
             }
             else
@@ -361,7 +385,7 @@ layout: default
             
         }
 
-        window.onload = function() {
+        window.onload = function() {    
 
             var links = document.querySelectorAll('.vertical-nav ul li ul li a');
             for (var i = 0; i < links.length; i++) {
@@ -378,12 +402,12 @@ layout: default
                     event.preventDefault();
                 });
             }
-            var currentHash = window.location.hash.substring(1);
+            var currentHash = window.location.hash.substring(1) || 'default'; // default page when no hash
             showTab(currentHash);
         };
 
         window.onhashchange = function() {
-            var hash = window.location.hash.substring(1);
+            var hash = window.location.hash.substring(1) || 'default'; // default page when no hash changes
             showTab(hash);
         };
 
@@ -408,4 +432,7 @@ layout: default
                
             }
         });
+         function createPlaceholderMessage(message) {
+                 return `<div style="text-align: center; padding: 20px;"><p>${message}</p></div>`;
+        }
 </script>
