@@ -1,12 +1,5 @@
 [
   {
-    "name": "287959516",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
     "name": "328158359",
     "status": "Expired",
     "isActive": "false",
@@ -35,6 +28,13 @@
     "type": "CI"
   },
   {
+    "name": "479784770",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "606870581",
     "status": "Available",
     "isActive": "true",
@@ -42,9 +42,9 @@
     "type": "CI"
   },
   {
-    "name": "688744981",
-    "status": "Expired",
-    "isActive": "false",
+    "name": "796587982",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
@@ -77,14 +77,21 @@
     "type": "CI"
   },
   {
-    "name": "227443121",
-    "status": "Expired",
-    "isActive": "false",
+    "name": "162937074",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
   {
-    "name": "247393840",
+    "name": "224095067",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "227443121",
     "status": "Expired",
     "isActive": "false",
     "domain": "CORE",
@@ -112,13 +119,6 @@
     "type": "CI"
   },
   {
-    "name": "853868972",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
     "name": "858108824",
     "status": "Expired",
     "isActive": "false",
@@ -129,6 +129,13 @@
     "name": "343612128",
     "status": "Expired",
     "isActive": "false",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "372883373",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
   },
@@ -148,13 +155,6 @@
   },
   {
     "name": "553956403",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "558955723",
     "status": "Expired",
     "isActive": "false",
     "domain": "HOTFIX",
