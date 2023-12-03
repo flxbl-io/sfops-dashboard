@@ -27,10 +27,17 @@ layout: default
             padding-top: 20px;
         }
 
-        .vertical-nav header {
-            font-size: 24px;
-            text-align: center;
-            padding: 10px 0;
+        .vertical-nav .logo-image {
+            display: block;
+            max-width: 20%; /* Adjust as needed */
+            height: auto;
+            margin: 5px auto; /* Center the image */
+        }
+        
+        .vertical-nav header, .vertical-nav .header2 {
+            font-weight:bold;
+            text-align:center;
+            font-size: 20px;
         }
 
         .vertical-nav ul {
@@ -143,7 +150,9 @@ layout: default
 </head>
 <body>
     <div class="vertical-nav">
-        <header>sfops dev centre</header>
+         <img src="assets/logo.png" alt="Logo" class="logo-image">
+        <header>sfops</header>
+        <div class="header2">Dev Central</div>
         <ul>
             <li><span><i class="fas fa-laptop-code"></i> Development</span>
                 <ul class='submenu'>
