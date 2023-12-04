@@ -278,7 +278,7 @@ $(document).ready(function() {
 
     function updateInfoCards() {
         let sandboxes = {{ site.data.sandboxStatus.ciSandboxes | jsonify }};
-        let totalAvailable = sandboxes.filter(s => s.status != 'Expired').length;
+        let totalAvailable = sandboxes.filter(s => s.status != 'Expired' && s=> s.status != 'InProgress').length;
         let totalInUse = sandboxes.filter(s => s.status === 'InUse' || ( s.status === 'Available' && s.issue )).length;
 
         let inUsePerPool = sandboxes.reduce((acc, sandbox) => {
