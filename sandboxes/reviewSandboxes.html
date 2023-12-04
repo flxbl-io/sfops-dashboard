@@ -102,6 +102,25 @@ input:checked + .slider:before {
   margin-right: 10px; /* Space between buttons */
   margin-bottom: 10px; /* Space above the table */
 }
+.status-label {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status-Available {
+  background-color: #28a745; /* Green for Available */
+}
+
+.status-Expired {
+  background-color: #dc3545; /* Red for Expired */
+}
+
+.status-InUse {
+  background-color: #007bff; /* Blue for InUse */
+}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -115,6 +134,15 @@ input:checked + .slider:before {
 
 
 <div class="container-fluid">
+ <div class="row justify-content-end align-items-center mb-2">
+    <div class="col-auto">
+      <span class="mr-2 align-middle">Display yet to be deleted</span>
+      <label class="switch align-middle">
+        <input type="checkbox" id="toggleExpired">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-12">
         <table id="sandboxTable" class="table table-striped w-100">
@@ -132,9 +160,18 @@ input:checked + .slider:before {
                 <tr>
                 <td>{{ sandbox.domain }}</td>
                 <td>{{ sandbox.name }}</td>
-                <td>{{ sandbox.status }}</td>
-                <td>{{ sandbox.issue }}</td>
-                <td></td>
+                <td><span class="status-label status-{{ sandbox.status }}">{{ sandbox.status }}</span></td>
+                <td>
+                  {% if sandbox.issue %}
+                      <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank">#{{sandbox.issue}}<a>
+                  {% endif %}
+                </td>
+                 <td>
+                  {% if sandbox.status == 'InUse' and  sandbox.issue %}
+                    <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
+                    <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Renew</a>
+                   {% endif %}
+                </td>
                 </tr>
             {% endfor %}
             </tbody>
@@ -153,15 +190,37 @@ function openUrlInNewTab(url) {
 const repoData = {{ site.data.project | jsonify}}
 const repoUrl = repoData.url;
 
+
+
 $(document).ready(function() {
-    
-    var table = $('#sandboxTable').DataTable({
-        "order": [[2, "desc"]],
-        "paging": false,
-        "info": false
+    var showExpired = true; // Initially do not show expired sandboxes
+    var table = $('#sandboxTable').DataTable({ "paging": false,});
+
+    // Function to update table data
+    function updateTableData(sandboxData) {
+        let reviewSandboxes = {{ site.data.sandboxStatus.ciSandboxes | jsonify }};
+        table.clear(); // Clear existing data
+        table.rows.add(reviewSandboxes); // Add new data
+        table.draw(); // Redraw the table
+    }
+
+    // Apply the search functionality for expired sandboxes
+    $.fn.dataTable.ext.search = [
+        function(settings, data, dataIndex) {
+            if (showExpired) return true;
+            return data[2] !== 'Expired';
+        }
+    ];
+
+
+    // Toggle for showing expired sandboxes
+    $('#toggleExpired').on('change', function () {
+        showExpired = $(this).is(':checked');
+        table.draw();
     });
+
+     $('#toggleExpired').prop('checked', true);
+
 });
-
-
 
 </script>
