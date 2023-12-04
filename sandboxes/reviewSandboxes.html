@@ -123,8 +123,13 @@ input:checked + .slider:before {
 }
 
 .status-InProgress {
-  background-color: light-grey; /* Green for Available */
+  background-color: darkgrey; 
 }
+
+.status-Assigned {
+  background-color: teal; 
+}
+
 
 .card.rounded {
   border-radius: 15px;
@@ -210,7 +215,15 @@ input:checked + .slider:before {
                 <tr>
                 <td>{{ sandbox.domain }}</td>
                 <td>{{ sandbox.name }}</td>
-                <td><span class="status-label status-{{ sandbox.status }}">{{ sandbox.status }}</span></td>
+                <td>
+                {% if sandbox.status == 'Available' and  sandbox.issue %}
+                  <span class="status-label status-Assigned">Assigned</span>
+                {% elsif sandbox.status == 'InUse' %}
+                  <span class="status-label status-Checks">Checks In Progress</span>
+                {% else %}
+                    <span class="status-label status-{{ sandbox.status }}">{{sandbox.status}}</span>
+                {% endif %}
+                </td>
                 <td>
                   {% if sandbox.issue %}
                       <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank">#{{sandbox.issue}}<a>
@@ -299,4 +312,7 @@ $(document).ready(function() {
      $('#toggleExpired').prop('checked', true);
 
 });
+
+
+
 </script>
