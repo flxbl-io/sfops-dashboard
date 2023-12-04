@@ -232,7 +232,7 @@ input:checked + .slider:before {
                  <td>
                   {% if (sandbox.status == 'InUse' or  sandbox.status == 'Available') and  sandbox.issue %}
                     <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
-                    <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Renew</a>
+                    <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Unassign</a>
                    {% endif %}
                 </td>
                 </tr>
