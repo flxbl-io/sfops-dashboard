@@ -122,6 +122,10 @@ input:checked + .slider:before {
   background-color: #007bff; /* Blue for InUse */
 }
 
+.status-InProgress {
+  background-color: light-grey; /* Green for Available */
+}
+
 .card.rounded {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
@@ -139,8 +143,8 @@ input:checked + .slider:before {
 
 
 <div class="container-fluid">
-<div class="row mb-4">
-  <div class="col-md-4">
+<div class="row mb-2">
+  <div class="col-md-2">
     <div class="card rounded">
       <div class="card-body">
         <h5 class="card-title">Free to Use Sandboxes</h5>
@@ -148,7 +152,7 @@ input:checked + .slider:before {
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-2">
     <div class="card rounded">
       <div class="card-body">
         <h5 class="card-title">Assigned Sandboxes</h5>
@@ -162,10 +166,14 @@ input:checked + .slider:before {
         <h5 class="card-title">Availability Per Pool</h5>
         <p class="card-text" id="availabilityPerPool"></p>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Future vailability Per Pool</h5>
-        <p class="card-text" id="futureAvailabilityPerPool"></p>
-      </div>
+    </div>
+  </div>
+    <div class="col-md-4">
+     <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Future Availability Per Pool</h5>
+          <p class="card-text" id="futureAvailabilityPerPool"></p>
+        </div>
     </div>
   </div>
 </div>
@@ -202,7 +210,7 @@ input:checked + .slider:before {
                   {% endif %}
                 </td>
                  <td>
-                  {% if sandbox.status == 'InUse' and  sandbox.issue %}
+                  {% if (sandbox.status == 'InUse' or  sandbox.status == 'Available') and  sandbox.issue %}
                     <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
                     <a href="{{ site.data.project.url. }}/pull/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Renew</a>
                    {% endif %}
