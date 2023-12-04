@@ -143,7 +143,7 @@ input:checked + .slider:before {
   <div class="col-md-4">
     <div class="card rounded">
       <div class="card-body">
-        <h5 class="card-title">Total Available Sandboxes</h5>
+        <h5 class="card-title">Free to Use Sandboxes</h5>
         <p class="card-text" id="totalAvailable"></p>
       </div>
     </div>
@@ -151,7 +151,7 @@ input:checked + .slider:before {
   <div class="col-md-4">
     <div class="card rounded">
       <div class="card-body">
-        <h5 class="card-title">Total In-Use Sandboxes</h5>
+        <h5 class="card-title">Assigned Sandboxes</h5>
         <p class="card-text" id="totalInUse"></p>
       </div>
     </div>
@@ -161,6 +161,10 @@ input:checked + .slider:before {
       <div class="card-body">
         <h5 class="card-title">Availability Per Pool</h5>
         <p class="card-text" id="availabilityPerPool"></p>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Future vailability Per Pool</h5>
+        <p class="card-text" id="futureAvailabilityPerPool"></p>
       </div>
     </div>
   </div>
@@ -246,17 +250,22 @@ $(document).ready(function() {
 
     function updateInfoCards() {
         let sandboxes = {{ site.data.sandboxStatus.ciSandboxes | jsonify }};
-        let totalAvailable = sandboxes.filter(s => s.status === 'Available').length;
-        let totalInUse = sandboxes.filter(s => s.status === 'InUse').length;
+        let totalAvailable = sandboxes.filter(s => s.status === 'Available' && !s.issue ).length;
+        let totalInUse = sandboxes.filter(s => s.status === 'InUse' || ( s.status === 'Available' && s.issue )).length;
         
         let availabilityPerPool = sandboxes.reduce((acc, sandbox) => {
-            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + (sandbox.status === 'Available' ? 1 : 0);
+            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + (sandbox.status === 'Available' ? 1 : 0)+(sandbox.status === 'InUse' ? 1 : 0);
+            return acc;
+        }, {});
+        let futureAvailabilityPerPool = sandboxes.reduce((acc, sandbox) => {
+            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + (sandbox.status === 'InProgress' ? 1 : 0);
             return acc;
         }, {});
 
         $('#totalAvailable').text(totalAvailable);
         $('#totalInUse').text(totalInUse);
         $('#availabilityPerPool').html(Object.entries(availabilityPerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
+        $('#futureAvailabilityPerPool').html(Object.entries(futureAvailabilityPerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
     }
 
     updateInfoCards();
