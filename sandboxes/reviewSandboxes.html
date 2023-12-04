@@ -130,6 +130,13 @@ input:checked + .slider:before {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
 }
+
+.card-text-custom{
+    font-size:40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -143,35 +150,35 @@ input:checked + .slider:before {
 
 
 <div class="container-fluid">
-<div class="row mb-2">
-  <div class="col-md-2">
+<div class="row mb-">
+  <div class="col-md-3">
     <div class="card rounded">
       <div class="card-body">
-        <h5 class="card-title">Free to Use Sandboxes</h5>
-        <p class="card-text" id="totalAvailable"></p>
+        <h5 class="card-title">Active Review Sandboxes</h5>
+        <p class="card-text-custom" id="totalAvailable"></p>
       </div>
     </div>
   </div>
-  <div class="col-md-2">
+  <div class="col-md-3">
     <div class="card rounded">
       <div class="card-body">
-        <h5 class="card-title">Assigned Sandboxes</h5>
+        <h5 class="card-title">Assigned Review Sandboxes</h5>
         <p class="card-text" id="totalInUse"></p>
       </div>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <div class="card rounded">
       <div class="card-body">
-        <h5 class="card-title">Availability Per Pool</h5>
+        <h5 class="card-title">Available Review Sandboxes</h5>
         <p class="card-text" id="availabilityPerPool"></p>
       </div>
     </div>
   </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
      <div class="card rounded">
         <div class="card-body">
-          <h5 class="card-title">Future Availability Per Pool</h5>
+          <h5 class="card-title">Provisioning in Progress</h5>
           <p class="card-text" id="futureAvailabilityPerPool"></p>
         </div>
     </div>
@@ -258,11 +265,16 @@ $(document).ready(function() {
 
     function updateInfoCards() {
         let sandboxes = {{ site.data.sandboxStatus.ciSandboxes | jsonify }};
-        let totalAvailable = sandboxes.filter(s => s.status === 'Available' && !s.issue ).length;
+        let totalAvailable = sandboxes.filter(s => s.status != 'Expired').length;
         let totalInUse = sandboxes.filter(s => s.status === 'InUse' || ( s.status === 'Available' && s.issue )).length;
+
+        let inUsePerPool = sandboxes.reduce((acc, sandbox) => {
+            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + ((sandbox.status === 'Available' && sandbox.issue) ? 1 : 0) + ((sandbox.status === 'InUse' && sandbox.issue) ? 1 : 0);
+            return acc;
+        }, {});
         
         let availabilityPerPool = sandboxes.reduce((acc, sandbox) => {
-            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + (sandbox.status === 'Available' ? 1 : 0)+(sandbox.status === 'InUse' ? 1 : 0);
+            acc[sandbox.domain] = (acc[sandbox.domain] || 0) + ((sandbox.status === 'Available' && !sandbox.issue) ? 1 : 0);
             return acc;
         }, {});
         let futureAvailabilityPerPool = sandboxes.reduce((acc, sandbox) => {
@@ -271,7 +283,7 @@ $(document).ready(function() {
         }, {});
 
         $('#totalAvailable').text(totalAvailable);
-        $('#totalInUse').text(totalInUse);
+        $('#totalInUse').html(Object.entries(inUsePerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
         $('#availabilityPerPool').html(Object.entries(availabilityPerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
         $('#futureAvailabilityPerPool').html(Object.entries(futureAvailabilityPerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
     }
@@ -287,7 +299,4 @@ $(document).ready(function() {
      $('#toggleExpired').prop('checked', true);
 
 });
-
-
-
 </script>
