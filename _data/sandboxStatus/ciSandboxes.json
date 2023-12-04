@@ -1,5 +1,12 @@
 [
   {
+    "name": "164125488",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "328158359",
     "status": "Expired",
     "isActive": "false",
@@ -22,20 +29,13 @@
   },
   {
     "name": "424330982",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
   {
     "name": "445119872",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "450173076",
     "status": "Expired",
     "isActive": "false",
     "domain": "CORE",
@@ -49,16 +49,16 @@
     "type": "CI"
   },
   {
-    "name": "606870581",
-    "status": "Expired",
-    "isActive": "false",
+    "name": "794750506",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
   {
     "name": "796587982",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "CORE",
     "type": "CI"
   },
@@ -66,6 +66,13 @@
     "name": "160122859",
     "status": "Expired",
     "isActive": "false",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "161884170",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
@@ -91,13 +98,6 @@
     "type": "CI"
   },
   {
-    "name": "300560023",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
     "name": "358513699",
     "status": "Available",
     "isActive": "true",
@@ -105,9 +105,9 @@
     "type": "CI"
   },
   {
-    "name": "726663612",
-    "status": "Expired",
-    "isActive": "false",
+    "name": "479224775",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
@@ -126,9 +126,9 @@
     "type": "CI"
   },
   {
-    "name": "343612128",
-    "status": "Expired",
-    "isActive": "false",
+    "name": "200389403",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
   },
