@@ -164,7 +164,7 @@ layout: default
                  <ul class='submenu'>
                     <li><a href="#devSandboxes">Dev Sandboxes</a></li>
                     <li><a href="#reviewSandboxes">Review Sandboxes</a></li>
-                    <li><a href="#scratchOrgPools">Scratch Org Pools</a></li>
+                    <li><a href="#scratchOrgs">Scratch Orgs</a></li>
                     <li><a href="#orgComparison">Org Comparison</a></li>
                 </ul>
             </li>
@@ -260,6 +260,9 @@ layout: default
             },
             'reviewSandboxes': {
                 url: `${siteSuffix}/sandboxes/reviewSandboxes.html`
+            },
+            'scratchOrgs': {
+                url: `${siteSuffix}/scratchorgs/index.html`
             },
             'evolution': {
                 url: `${siteSuffix}/packageVisualisation/index.html`
