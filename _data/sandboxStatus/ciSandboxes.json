@@ -141,8 +141,8 @@
   },
   {
     "name": "200910129",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "HOTFIX",
     "type": "CI"
   },
@@ -169,7 +169,7 @@
   },
   {
     "name": "677087949",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
