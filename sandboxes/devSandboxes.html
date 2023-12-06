@@ -142,8 +142,8 @@ input:checked + .slider:before {
                 <td>{{ sandbox.requester }}</td>
                 <td>{{ sandbox.expiry }}</td>
                 <td>
-                    <a href="{{ sandbox.url }}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
-                    <a href="{{ sandbox.url }}" target="_blank" class="btn btn-danger btn-sm"><i class="fas fa-external-link-alt"></i> Delete</a>
+                    <a href="{{ site.data.project.url. }}/issues/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
+                    <a href="{{ site.data.project.url. }}/issues/{{sandbox.issue}}" target="_blank" class="btn btn-danger btn-sm"><i class="fas fa-external-link-alt"></i> Delete</a>
                 </td>
                 </tr>
             {% endfor %}

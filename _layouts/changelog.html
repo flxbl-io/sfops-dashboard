@@ -26,155 +26,160 @@ layout: default
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.js"></script>
 
-
-<table id="releasesTable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>
-        Work Items
-      </br>
-      (Compared to Last Deployed in Production)
-      </th>
-      <th>Changed Artifacts
-          </br>
-        (Compared to Previous Release Candidate)
-      </th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign domain_data = site.data.releasechangelog[page.branch][page.domain]    %}
-    {% assign accumulatedWorkItems = "" %}
-    {% assign reversed_releases = domain_data.releases | reverse %}
-
-
-    {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
-    {% assign releaseNamesInProd = "" %}
-    {% for release in releasesInProd %}
-      {% for name in release.names %}
-        {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
-      {% endfor %}
-    {% endfor %}
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+        <table id="releasesTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>
+                Work Items
+              </br>
+              (Compared to Last Deployed in Production)
+              </th>
+              <th>Changed Artifacts
+                  </br>
+                (Compared to Previous Release Candidate)
+              </th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% assign domain_data = site.data.releasechangelog[page.branch][page.domain]    %}
+            {% assign accumulatedWorkItems = "" %}
+            {% assign reversed_releases = domain_data.releases | reverse %}
 
 
-    <!-- First Pass ..Accumulate Work Items   -->
-    {% for release in domain_data.releases %}
-      {% assign releaseWorkItems = release.workItems %}
-  
-      {% for workItem in releaseWorkItems %}
-           {% assign accumulatedWorkItems = accumulatedWorkItems | append: workItem[0] | append: "," %}
-      {% endfor %}
-  
-      {% capture accumulatedWorkItemsList %}{{ accumulatedWorkItemsList }}{{ accumulatedWorkItems }}|{% endcapture %}
-    {% endfor %}
-     
-    {% assign accumulatedWorkItemsArray = accumulatedWorkItemsList | split: "|" %} 
-    {% assign accumulatedWorkItemsArray = accumulatedWorkItemsArray| reverse %}
- 
-   
- <!-- Second Pass ..Accumulate Shipped Work Items   -->
-    {% assign latestShippedWorkItems = "" %}
-    {% for release in reversed_releases %}
-      {% assign releaseName = release.names[0] %}
-      {% assign index = forloop.index0 %}
-      {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
-
-      {% if releaseNamesInProd contains releaseName %}
-        {% for workItem in newAccumulatedWorkItems %}
-          {% assign latestShippedWorkItems = latestShippedWorkItems | append: workItem| append: "," %}
-         {% endfor %}
-        {% break %}
-      {% endif %}
-    {% endfor %}      
+            {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
+            {% assign releaseNamesInProd = "" %}
+            {% for release in releasesInProd %}
+              {% for name in release.names %}
+                {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
+              {% endfor %}
+            {% endfor %}
 
 
-    {% assign latestShippedWorkItemArray = latestShippedWorkItems | split: "," %}
-   
-    {% for release in reversed_releases %}
-       
-       {% assign index = forloop.index0 %}
-       {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
+            <!-- First Pass ..Accumulate Work Items   -->
+            {% for release in domain_data.releases %}
+              {% assign releaseWorkItems = release.workItems %}
+          
+              {% for workItem in releaseWorkItems %}
+                  {% assign accumulatedWorkItems = accumulatedWorkItems | append: workItem[0] | append: "," %}
+              {% endfor %}
+          
+              {% capture accumulatedWorkItemsList %}{{ accumulatedWorkItemsList }}{{ accumulatedWorkItems }}|{% endcapture %}
+            {% endfor %}
+            
+            {% assign accumulatedWorkItemsArray = accumulatedWorkItemsList | split: "|" %} 
+            {% assign accumulatedWorkItemsArray = accumulatedWorkItemsArray| reverse %}
+        
+          
+        <!-- Second Pass ..Accumulate Shipped Work Items   -->
+            {% assign latestShippedWorkItems = "" %}
+            {% for release in reversed_releases %}
+              {% assign releaseName = release.names[0] %}
+              {% assign index = forloop.index0 %}
+              {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
+
+              {% if releaseNamesInProd contains releaseName %}
+                {% for workItem in newAccumulatedWorkItems %}
+                  {% assign latestShippedWorkItems = latestShippedWorkItems | append: workItem| append: "," %}
+                {% endfor %}
+                {% break %}
+              {% endif %}
+            {% endfor %}      
 
 
-       {% assign filtered_array = "" %}   
-       {% assign unique_array = "" | split: "," %}
-
-       {% for item in newAccumulatedWorkItems %}
-         {% unless latestShippedWorkItemArray contains item %}
-           {% unless unique_array contains item %}
-             {% assign unique_array = unique_array | push: item %}
-             {% assign filtered_array = filtered_array | append: item | append: "," %}
-           {% endunless %}
-         {% endunless %}
-       {% endfor %}
-       
-
-       {% assign filtered_array = filtered_array | split: ","  %}
+            {% assign latestShippedWorkItemArray = latestShippedWorkItems | split: "," %}
+          
+            {% for release in reversed_releases %}
+              
+              {% assign index = forloop.index0 %}
+              {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
 
 
-    {% assign releaseName = release.names[0] %}
-    {% if releaseNamesInProd contains releaseName  %}
-      {% break %}
-    {% endif %}
+              {% assign filtered_array = "" %}   
+              {% assign unique_array = "" | split: "," %}
 
-    <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
-      <td>
-        <strong>{{ release.names[0] }}</strong>
-        <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
-          <i class="fas fa-copy"></i>
-        </button>
-      </td>
-      <td>{{ release.date | date: "%Y-%m-%d %H:%M"  }}</td>
-      <td>
-        <ul class="action-links" >
-          {% assign hasItems = false %}
-          {% for workItem in filtered_array %}
-            {% unless workItem == "" %}
-                {% unless latestShippedWorkItemArray contains workItem %}
-                 <li><a href="{{ site.data.project.workItemUrl }}/{{ workItem }}" target="_blank">{{ workItem }}</a></li>
-                 {% assign hasItems = true %}
+              {% for item in newAccumulatedWorkItems %}
+                {% unless latestShippedWorkItemArray contains item %}
+                  {% unless unique_array contains item %}
+                    {% assign unique_array = unique_array | push: item %}
+                    {% assign filtered_array = filtered_array | append: item | append: "," %}
+                  {% endunless %}
                 {% endunless %}
-            {% endunless %}
-        {% endfor %}
+              {% endfor %}
+              
 
-        {% unless hasItems %}
-         {% if releaseNamesInProd contains releaseName %}
-           <span><b>Last Deployed Release,Check Release Tab</b></span>
-          {% else %}
-            <span>No work items detected,Click to probe!</span>
-          {% endif %}
-        {% endunless %}
-        </ul>
-      </td>
-      <td>
-        <ul class="action-links">
-         {% if releaseNamesInProd contains releaseName %}
-         <span><b>Last Deployed Release,Check Release Tab</b></span>
-         {% else %}
-          {% for artifact in release.artifacts %}
-            {% unless artifact.commits.size == 0 %}
-             <li>{{ artifact.name }}:{{ artifact.version }}</li>
-            {% endunless %}
-          {% endfor %}
-        {% endif %}
-        </ul>
-      </td>
-      <td>
-        <ul class="action-links">
-        {% if releaseNamesInProd contains releaseName %}
-          <li><a class="rollback-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">🔄 Attempt a patch</a></li>
-         {% else %}
-            <li><a class="initiate-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">✅ Initiate Release</a></li>
-         {% endif %}
-          <li><a class="sandbox-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}"> 🌵 Get it on my Sandbox</a></li>
-        </ul>
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+              {% assign filtered_array = filtered_array | split: ","  %}
+
+
+            {% assign releaseName = release.names[0] %}
+            {% if releaseNamesInProd contains releaseName  %}
+              {% break %}
+            {% endif %}
+
+            <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
+              <td>
+                <strong>{{ release.names[0] }}</strong>
+                <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
+                  <i class="fas fa-copy"></i>
+                </button>
+              </td>
+              <td>{{ release.date | date: "%Y-%m-%d %H:%M"  }}</td>
+              <td>
+                <ul class="action-links" >
+                  {% assign hasItems = false %}
+                  {% for workItem in filtered_array %}
+                    {% unless workItem == "" %}
+                        {% unless latestShippedWorkItemArray contains workItem %}
+                        <li><a href="{{ site.data.project.workItemUrl }}/{{ workItem }}" target="_blank">{{ workItem }}</a></li>
+                        {% assign hasItems = true %}
+                        {% endunless %}
+                    {% endunless %}
+                {% endfor %}
+
+                {% unless hasItems %}
+                {% if releaseNamesInProd contains releaseName %}
+                  <span><b>Last Deployed Release,Check Release Tab</b></span>
+                  {% else %}
+                    <span>No work items detected,Click to probe!</span>
+                  {% endif %}
+                {% endunless %}
+                </ul>
+              </td>
+              <td>
+                <ul class="action-links">
+                {% if releaseNamesInProd contains releaseName %}
+                <span><b>Last Deployed Release,Check Release Tab</b></span>
+                {% else %}
+                  {% for artifact in release.artifacts %}
+                    {% unless artifact.commits.size == 0 %}
+                    <li>{{ artifact.name }}:{{ artifact.version }}</li>
+                    {% endunless %}
+                  {% endfor %}
+                {% endif %}
+                </ul>
+              </td>
+              <td>
+                <ul class="action-links">
+                {% if releaseNamesInProd contains releaseName %}
+                  <li><a class="rollback-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">🔄 Attempt a patch</a></li>
+                {% else %}
+                    <li><a class="initiate-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">✅ Initiate Release</a></li>
+                {% endif %}
+                  <li><a class="sandbox-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}"> 🌵 Get it on my Sandbox</a></li>
+                </ul>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
 
 <div class="modal" tabindex="-1" role="dialog" id="releaseModal">
   <div class="modal-dialog" role="document">

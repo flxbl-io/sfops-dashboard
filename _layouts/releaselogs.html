@@ -37,82 +37,88 @@ layout: default
   href="{{ '/assets/css/releasetable.css' | relative_url }}"
 />
 
-<table id="releasesTable">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Work Items</th>
-      <th>Changed Artifacts</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% assign domain_data = site.data.releaselogs.prod[page.domain] %} {% assign
-    reversed_releases = domain_data.releases %} {% assign prev_artifacts = nil
-    %} {% for release in reversed_releases %} {% assign index = forloop.index0
-    %}
-    <tr
-      data-hashid="{{ release.hashId }}"
-      data-workitems="{{ release.workItems | jsonify | escape  }}"
-    >
-      <td>
-        <strong>{{ release.names[0] }}</strong>
-        <button
-          class="copy-button"
-          onclick="copyToClipboard(event, '{{ release.names[0] }}')"
-        >
-          <i class="fas fa-copy"></i>
-        </button>
-      </td>
-      <td>{{ release.date |  date: "%b %d, %y" }}</td>
-      <td>
-        <ul class="action-links">
-          {% assign hasItems = false %} {% for workItem in release.workItems %}
-          {% unless workItem == "" %}
-          <li>
-            <a
-              href="{{ site.data.project.workItemUrl }}/{{ workItem[0] }}"
-              target="_blank"
-              >{{ workItem[0] }}</a
-            >
-          </li>
-          {% assign hasItems = true %} {% endunless %} {% endfor %} {% unless
-          hasItems %}
-          <span>No work items detected,Click to probe!</span>
-          {% endunless %}
-        </ul>
-      </td>
-      <td>
-        <ul class="action-links">
-          {% for artifact in release.artifacts %} {% assign artifact_changed =
-          true %} {% if prev_artifacts != nil %} {% for prev_artifact in
-          prev_artifacts %} {% if prev_artifact.name == artifact.name and
-          prev_artifact.version == artifact.version %} {% assign
-          artifact_changed = false %} {% endif %} {% endfor %} {% endif %} {% if
-          artifact_changed %}
-          <li>{{ artifact.name }}:{{ artifact.version }}</li>
-          {% endif %} {% endfor %}
-        </ul>
-      </td>
-      <td>
-        {% if forloop.last %}
-        <ul class="action-links">
-          <li>
-            <a
-              class="rollback-release"
-              data-name="{{ release.names[0] }}"
-              data-domain="{{ page.domain }}"
-              >🔄 Attempt a patch</a
-            >
-          </li>
-        </ul>
-        {% endif %}
-      </td>
-    </tr>
-    {% assign prev_artifacts = release.artifacts %} {% endfor %}
-  </tbody>
-</table>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <table id="releasesTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Work Items</th>
+            <th>Changed Artifacts</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% assign domain_data = site.data.releaselogs.prod[page.domain] %} {% assign
+          reversed_releases = domain_data.releases %} {% assign prev_artifacts = nil
+          %} {% for release in reversed_releases %} {% assign index = forloop.index0
+          %}
+          <tr
+            data-hashid="{{ release.hashId }}"
+            data-workitems="{{ release.workItems | jsonify | escape  }}"
+          >
+            <td>
+              <strong>{{ release.names[0] }}</strong>
+              <button
+                class="copy-button"
+                onclick="copyToClipboard(event, '{{ release.names[0] }}')"
+              >
+                <i class="fas fa-copy"></i>
+              </button>
+            </td>
+            <td>{{ release.date |  date: "%b %d, %y" }}</td>
+            <td>
+              <ul class="action-links">
+                {% assign hasItems = false %} {% for workItem in release.workItems %}
+                {% unless workItem == "" %}
+                <li>
+                  <a
+                    href="{{ site.data.project.workItemUrl }}/{{ workItem[0] }}"
+                    target="_blank"
+                    >{{ workItem[0] }}</a
+                  >
+                </li>
+                {% assign hasItems = true %} {% endunless %} {% endfor %} {% unless
+                hasItems %}
+                <span>No work items detected,Click to probe!</span>
+                {% endunless %}
+              </ul>
+            </td>
+            <td>
+              <ul class="action-links">
+                {% for artifact in release.artifacts %} {% assign artifact_changed =
+                true %} {% if prev_artifacts != nil %} {% for prev_artifact in
+                prev_artifacts %} {% if prev_artifact.name == artifact.name and
+                prev_artifact.version == artifact.version %} {% assign
+                artifact_changed = false %} {% endif %} {% endfor %} {% endif %} {% if
+                artifact_changed %}
+                <li>{{ artifact.name }}:{{ artifact.version }}</li>
+                {% endif %} {% endfor %}
+              </ul>
+            </td>
+            <td>
+              {% if forloop.last %}
+              <ul class="action-links">
+                <li>
+                  <a
+                    class="rollback-release"
+                    data-name="{{ release.names[0] }}"
+                    data-domain="{{ page.domain }}"
+                    >🔄 Attempt a patch</a
+                  >
+                </li>
+              </ul>
+              {% endif %}
+            </td>
+          </tr>
+          {% assign prev_artifacts = release.artifacts %} {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 <div class="modal" tabindex="-1" role="dialog" id="releaseModal">
   <div class="modal-dialog" role="document">
@@ -157,7 +163,7 @@ layout: default
      };
 
      $('#releasesTable').DataTable({
-       paginate: false,
+       paginate: true,
        columnDefs: [
        {
           "type": "customDate", // Use the custom sorting type
