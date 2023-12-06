@@ -257,7 +257,7 @@ const repoUrl = repoData.url;
 
 $(document).ready(function() {
     var showExpired = true; // Initially do not show expired sandboxes
-    var table = $('#sandboxTable').DataTable({ "paging": false,});
+    var table = $('#sandboxTable').DataTable({"paging": false,"order": [[2, "asc"]]});
 
     // Function to update table data
     function updateTableData(sandboxData) {
