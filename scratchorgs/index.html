@@ -133,7 +133,7 @@ input:checked + .slider:before {
 
 .card.rounded {
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .card-text-custom{
@@ -141,6 +141,50 @@ input:checked + .slider:before {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.request-scratchorg-group {
+  width: auto; /* Ensures the group only takes as much width as needed */
+  background: #f8f9fa; /* Example background color, change as needed */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+}
+
+.input-group .custom-select, .input-group .btn {
+  border-radius: 0.25rem;
+}
+
+/* Optional: additional styling for better visual integration */
+.input-group .custom-select:focus, .input-group .btn:focus {
+  box-shadow: none; /* Removes the default focus shadow to match the design */
+}
+
+.input-group .btn {
+  border-color: #ced4da; /* Matches the Bootstrap default for input borders */
+}
+
+/* Additional responsiveness */
+@media (max-width: 768px) {
+  .request-scratchorg-group {
+    width: 100%; /* Full width on smaller screens for better usability */
+  }
+}
+
+pre {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background-color: #333;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 4px;
 }
 </style>
 
@@ -154,105 +198,153 @@ input:checked + .slider:before {
 <link rel="stylesheet"  type="text/css" href="{{ '/assets/css/releasetable.css' | relative_url }}">
 
 
+
+
 <div class="container-fluid">
-<div class="row mb-">
-  <div class="col-md-3">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">Active ScratchOrg</h5>
-        <p class="card-text-custom" id="totalAvailable"></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">Assigned ScratchOrgs</h5>
-        <p class="card-text" id="totalInUse"></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">Available ScratchOrgs</h5>
-        <p class="card-text" id="availabilityPerPool"></p>
-      </div>
-    </div>
-  </div>
+  <div class="row mb-">
     <div class="col-md-3">
-     <div class="card rounded">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Active ScratchOrg</h5>
+          <p class="card-text-custom" id="totalAvailable"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Assigned ScratchOrgs</h5>
+          <p class="card-text" id="totalInUse"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Available ScratchOrgs</h5>
+          <p class="card-text" id="availabilityPerPool"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card rounded">
         <div class="card-body">
           <h5 class="card-title">Provisioning in Progress</h5>
           <p class="card-text" id="futureAvailabilityPerPool"></p>
         </div>
+      </div>
     </div>
   </div>
-</div>
+
+ <div class="row justify-content-end align-items-center mb-3">
+  <div class="col-md-auto text-right">
+    <div class="input-group request-scratchorg-group">
+      <select id="poolSelector" class="custom-select">
+        <!-- Options will be populated dynamically -->
+      </select>
+      <div class="input-group-append">
+        <button id="requestNewScratchOrg" class="btn btn-outline-primary" type="button">
+          <i class="fas fa-plus-circle"></i> Request a new ScratchOrg
+        </button>
+      </div>
+    </div>
+  </div>
+ </div>
+
+
   <div class="row">
     <div class="col-md-12">
-        <table id="sandboxTable" class="table table-striped w-100">
-            <thead>
-            <tr>
-                <th>Pool</th>
-                <th>OrgId</th>
-                <th>Status</th>
-                <th>Assigned To</th>
-                <th>Expiry</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for scratchOrg in site.data.scratchOrgStatus.scratchOrgStatus.scratchOrgDetails %}
-                <tr>
-                <td>{{ scratchOrg.tag }}</td>
-                <td>{{ scratchOrg.orgId }}</td>
-                <td>
-                {% if scratchOrg.status == 'In use' %}
-                  <span class="status-label status-Assigned">Assigned</span>
-                {% elsif scratchOrg.status == 'Provisioning in progress' %}
-                  <span class="status-label status-InProgress">Provisioning In Progress</span>
-                {% else %}
-                    <span class="status-label status-{{ scratchOrg.status }}">{{scratchOrg.status}}</span>
-                {% endif %}
-                </td>
-                <td>
-                  {% if scratchOrg.email %}
-                      <span>{{scratchOrg.email}}( <a href="{{ site.data.project.url. }}/issues/{{scratchOrg.issueNumber}}" target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
-                  {% elsif scratchOrg.issueNumber %}
-                      <span>Review( <a href="{{ site.data.project.url. }}/pull/{{scratchOrg.issueNumber}}" target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
-                   {% elsif scratchOrg.status == 'In use' %}
-                    <span>CLI User</span>
-                  {% endif %}
-                </td>
-                <td>{{ scratchOrg.expiryDate }}</td>
-                 <td>
-                  {% if scratchOrg.issueNumber and scratchOrg.email == '' %}
-                    <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
-                    <a href="{{ site.data.project.url }}/pull/{{scratchOrg.issueNumber}}}" target="_blank" class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt"></i> Unassign</a>
-                   {% elsif scratchOrg.issueNumber  and scratchOrg.email %}    
-                        <a href="{{ site.data.project.url }}/issues/{{scratchOrg.issueNumber}}" target="_blank" class="btn btn-danger btn-sm"><i class="fas fa-external-link-alt"></i> Delete</a>
-                   {% endif %}
-                </td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+      <table id="sandboxTable" class="table table-striped w-100">
+        <thead>
+          <tr>
+            <th>Pool</th>
+            <th>OrgId</th>
+            <th>Status</th>
+            <th>Assigned To</th>
+            <th>Expiry</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for scratchOrg in site.data.scratchOrgStatus.scratchOrgStatus.scratchOrgDetails %}
+          <tr>
+            <td>{{ scratchOrg.tag }}</td>
+            <td>{{ scratchOrg.orgId }}</td>
+            <td>
+              {% if scratchOrg.status == 'In use' %}
+              <span class="status-label status-Assigned">Assigned</span>
+              {% elsif scratchOrg.status == 'Provisioning in progress' %}
+              <span class="status-label status-InProgress">Provisioning In Progress</span>
+              {% else %}
+              <span class="status-label status-{{ scratchOrg.status }}">{{scratchOrg.status}}</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if scratchOrg.email %}
+              <span>{{scratchOrg.email}}( <a href="{{ site.data.project.url. }}/issues/{{scratchOrg.issueNumber}}"
+                  target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
+              {% elsif scratchOrg.issueNumber %}
+              <span>Review( <a href="{{ site.data.project.url. }}/pull/{{scratchOrg.issueNumber}}"
+                  target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
+              {% elsif scratchOrg.status == 'In use' %}
+              <span>CLI User</span>
+              {% endif %}
+            </td>
+            <td>{{ scratchOrg.expiryDate }}</td>
+            <td>
+              {% if scratchOrg.issueNumber and scratchOrg.email == '' %}
+              <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i
+                  class="fas fa-external-link-alt"></i> Open</a>
+              <a href="{{ site.data.project.url }}/pull/{{scratchOrg.issueNumber}}}" target="_blank"
+                class="btn btn-secondary btn-sm"><i class="fas fa-external-link-alt"></i> Unassign</a>
+              {% elsif scratchOrg.issueNumber and scratchOrg.email %}
+              <a href="{{ site.data.project.url }}/issues/{{scratchOrg.issueNumber}}" target="_blank"
+                class="btn btn-danger btn-sm"><i class="fas fa-external-link-alt"></i> Delete</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-</div>
+
+
 
 <script>
+const repoData = {{ site.data.project | jsonify}}
+const repoUrl = repoData.url;
+
+function populatePoolDropdown() {
+  const poolSelector = $('#poolSelector');
+  const uniquePools = new Set();
+
+  // Iterate over each row in the table and get the pool names
+  $('#sandboxTable tbody tr').each(function() {
+    const poolName = $(this).find('td:first').text();
+    uniquePools.add(poolName);
+  });
+
+  // Add each unique pool name to the dropdown
+  uniquePools.forEach(pool => {
+    poolSelector.append(new Option(pool, pool));
+  });
+}
 
 function openUrlInNewTab(url) {
   window.open(url, '_blank');
 }
 
-const repoData = {{ site.data.project | jsonify}}
-const repoUrl = repoData.url;
-
-
+function generateUrl(name) {
+      const repoData = {{ site.data.project | jsonify}}
+      const repoUrl = repoData.url;
+      let issueTemplate = 'request-scratchorg.yml';
+      let labels="ops";
+      let title=`Ops+-+Request+a+new+scratch+org+from+pool`;
+      let additionalParams = `tag=${name}&daysToKeep=10`;
+      return `${repoUrl}/issues/new?labels=${labels}&template=${issueTemplate}&title=${title}&${additionalParams}`;
+  }
 
 $(document).ready(function() {
     var showExpired = true; // Initially do not show expired sandboxes
@@ -283,11 +375,16 @@ $(document).ready(function() {
         $('#futureAvailabilityPerPool').html(Object.entries(futureAvailabilityPerPool).map(([pool, count]) => `${pool}: ${count}`).join('<br>'));
     }
 
+
+    $('#requestNewScratchOrg').click(function() {
+      const selectedPool = $('#poolSelector').val();
+      const url =  generateUrl(selectedPool);
+      //open url in a new window
+      window.open(url, '_blank');
+      
+    });
+
     updateInfoCards();
-
-
+    populatePoolDropdown();
 });
-
-
-
 </script>
