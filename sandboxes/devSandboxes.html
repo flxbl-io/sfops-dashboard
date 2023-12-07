@@ -102,6 +102,43 @@ input:checked + .slider:before {
   margin-right: 10px; /* Space between buttons */
   margin-bottom: 10px; /* Space above the table */
 }
+.near-expiry {
+    background-color: #ffcccc; 
+  }
+
+.card.rounded {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
+}
+
+.card-text-custom{
+    font-size:40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.status-label {
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status-InProgress {
+  background-color: darkgrey; 
+}
+
+.status-Assigned {
+  background-color: teal; 
+}
+
+.card-text-custom{
+    font-size:40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -115,7 +152,36 @@ input:checked + .slider:before {
 
 
 <div class="container-fluid">
-  <div class="row">
+
+  <div class="row mb-3">
+    <!-- Card 1: Active Developer Sandboxes -->
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Active Developer Sandboxes</h5>
+          <p class="card-text-custom" id="totalAvailable"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2: In Progress Sandboxes -->
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">In Progress Sandboxes</h5>
+          <p class="card-text-custom" id="totalInProgress"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">Marked for Deletion</h5>
+          <p class="card-text-custom" id="totalMarkedForDeletion"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-end align-items-center mb-3">
     <div class="col-md-12 text-right">
      <button id="requestSandboxBtn" class="btn btn-primary btn-lg btn-create-sandbox" type="button">
         <i class="fas fa-plus-circle"></i> Request a new sandbox
@@ -126,7 +192,6 @@ input:checked + .slider:before {
     <div class="col-md-12">
         <table id="sandboxTable" class="table table-striped w-100">
             <thead>
-            <tr>
                 <th>Name</th>
                 <th>Status</th>
                 <th>Assigned To</th>
@@ -136,11 +201,11 @@ input:checked + .slider:before {
             </thead>
             <tbody>
             {% for sandbox in site.data.sandboxStatus.developerSandboxes %}
-                <tr>
+                <tr data-created-at="{{ sandbox.created_at }}" data-expiry="{{ sandbox.expiry }}">
                 <td>{{ sandbox.name }}</td>
-                <td>{{ sandbox.status }}</td>
+                <td> <span class="status-label status-{{ sandbox.status }}">{{sandbox.status}}</span></td>
                 <td>{{ sandbox.requester }}</td>
-                <td>{{ sandbox.expiry }}</td>
+                <td></td>
                 <td>
                     <a href="{{ site.data.project.url. }}/issues/{{sandbox.issueNumber}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
                     <a href="{{ site.data.project.url. }}/issues/{{sandbox.issueNumber}}" target="_blank" class="btn btn-danger btn-sm"><i class="fas fa-external-link-alt"></i> Delete</a>
@@ -152,9 +217,47 @@ input:checked + .slider:before {
     </div>
   </div>
 </div>
-</div>
 
 <script>
+
+    function updateInfoCards() {
+        let sandboxes = {{ site.data.sandboxStatus.developerSandboxes | jsonify }};
+        let totalAvailable = sandboxes.filter(s => s.status === 'Assigned').length;
+        let totalInProgress = sandboxes.filter(s =>  s.status === 'InProgress').length;
+        let totalMarkedForDeletion = sandboxes.filter(s =>  s.status === 'Expired').length;
+
+        $('#totalAvailable').text(totalAvailable);
+        $('#totalInProgress').text(totalInProgress);
+         $('#totalMarkedForDeletion').text(totalMarkedForDeletion);
+  
+    }
+
+
+function updateExpiryDisplay() {
+    $('#sandboxTable tbody tr').each(function() {
+        var createdAt = new Date($(this).data('created-at'));
+        var expiryDays = parseInt($(this).data('expiry'));
+        var expiryDate = new Date(createdAt.setDate(createdAt.getDate() + expiryDays));
+        var today = new Date();
+        var timeDiff = expiryDate - today;
+        var daysToExpiry = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+        // Update expiry column with days to expiry
+        $('td:eq(3)', this).text(`${daysToExpiry} days`);
+
+        // Change row color if expiry is within 3 days
+        if(daysToExpiry <= 3) {
+            $('td:eq(3)', this).text(`Expired`);
+            $('td:eq(4)', this).find('a').hide();
+            $(this).css('background-color', '#ffcccc');
+        } else {
+            $('td:eq(3)', this).text(`${daysToExpiry} days`);
+            $(this).css('background-color', ''); // Reset to default
+        }
+    });
+}
+
+
 
 function openUrlInNewTab(url) {
   window.open(url, '_blank');
@@ -171,11 +274,14 @@ $(document).ready(function() {
         "paging": false,
         "info": false
     });
+
+    updateExpiryDisplay();
+    updateInfoCards();
+
+
 });
 
  document.getElementById('requestSandboxBtn').addEventListener('click', function() {
     openUrlInNewTab(createNewSandboxUrl);
   });
-
-
 </script>
