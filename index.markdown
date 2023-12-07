@@ -4,6 +4,29 @@ layout: default
 
 <head>
     <meta charset="UTF-8">
+    <head>
+    <meta
+        name="description"
+        content="sfops dev central is one stop dashboard for your #flxbl project"
+    />
+    <meta name="robots" content="noodp" />
+    <meta name="og:site_name" content="sfops dev central" />
+    <meta
+        name="og:title"
+        content="sfops dev central"
+    />
+    <meta
+        name="og:description"
+        content="sfops dev central is one stop dashboard for your #flxbl project"
+    />
+    <title>sfops dev central</title>
+    <meta
+        name="og:image"
+        content="https://flxbl.io/images/flxbl.webp"
+    />
+    <meta name="og:url" content="https://flxbl.io" />
+    <meta name="og:type" content="website" />
+    </head>
     <title>sfops dev centre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
