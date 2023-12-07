@@ -195,7 +195,7 @@ input:checked + .slider:before {
                 <th>Name</th>
                 <th>Status</th>
                 <th>Assigned To</th>
-                <th>Expiry In</th>
+                <th>Expiry Date</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -241,9 +241,9 @@ function updateExpiryDisplay() {
         var today = new Date();
         var timeDiff = expiryDate - today;
         var daysToExpiry = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
+        var formattedExpiryDate = expiryDate.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
         // Update expiry column with days to expiry
-        $('td:eq(3)', this).text(`${daysToExpiry} days`);
+        $('td:eq(3)', this).text(formattedExpiryDate);
 
         // Change row color if expiry is within 3 days
         if(daysToExpiry <= 3) {
@@ -251,7 +251,7 @@ function updateExpiryDisplay() {
             $('td:eq(4)', this).find('a').hide();
             $(this).css('background-color', '#ffcccc');
         } else {
-            $('td:eq(3)', this).text(`${daysToExpiry} days`);
+            $('td:eq(3)', this).text(formattedExpiryDate);
             $(this).css('background-color', ''); // Reset to default
         }
     });
@@ -284,4 +284,6 @@ $(document).ready(function() {
  document.getElementById('requestSandboxBtn').addEventListener('click', function() {
     openUrlInNewTab(createNewSandboxUrl);
   });
+
+
 </script>
