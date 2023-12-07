@@ -7,7 +7,7 @@ layout: default
     <head>
     <meta
         name="description"
-        content="sfops dev central is one stop dashboard for your #flxbl project"
+        content="sfops dev central is the destination for your #flxbl project"
     />
     <meta name="robots" content="noodp" />
     <meta name="og:site_name" content="sfops dev central" />
