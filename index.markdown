@@ -329,14 +329,17 @@ layout: default
                 url: '{{ dashboard.platform_overview_dashboard_url }}'
             },
             'flxblKnowledge': {
+                stageUrl: `${siteSuffix}/stage/`,
                 url: 'https://docs.dxatscale.io/sfops/overview',
                 openInNewWindow:true
             },
             'flxblIssue': {
+                stageUrl: `${siteSuffix}/stage/`,
                 url: 'https://github.com/flxbl-io/sfops-issues',
                 openInNewWindow:true
             },
             'flxblSupport': {
+                stageUrl: `${siteSuffix}/stage/`,
                 url: 'https://flxbl-io.slack.com',
                 openInNewWindow:true
             }
@@ -380,14 +383,15 @@ layout: default
             iframe.style.display = 'block';
            }
 
+
             if(tab.openInNewWindow)
             {
+                iframe.src=tab.stageUrl;
                 window.open(tab.url, '_blank');
-                iframe.style.display = 'block';
-                iframe.srcdoc = createPlaceholderMessage("This content has been opened in a new window.");
 
             }
             else if (!tab.urlTemplate) {
+
                 iframe.src = tab.url;
             }
             else
@@ -413,8 +417,7 @@ layout: default
                     let selectedOrg = document.getElementById('testOrgSelect').value;
                     url = url.replace('{testOrg}', selectedOrg);
                 } 
-
-                iframe.src = url;    
+                 iframe.src = url;    
             }
         
             
