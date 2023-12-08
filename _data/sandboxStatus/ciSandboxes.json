@@ -1,177 +1,43 @@
 [
   {
-    "name": "134990915",
-    "status": "InProgress",
+    "name": "195427701",
     "isActive": "true",
+    "status": "InUse",
+    "issue": "80",
     "domain": "CORE",
+    "created_at": "2023-12-07T06:13:35Z",
     "type": "CI"
   },
   {
-    "name": "143488691",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "164125488",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "303590885",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "328158359",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "336740161",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "423292802",
+    "name": "248274991",
     "status": "Available",
     "isActive": "true",
     "domain": "CORE",
+    "created_at": "2023-12-07T06:13:35Z",
     "type": "CI"
   },
   {
-    "name": "445119872",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "589431377",
+    "name": "189878637",
     "status": "Available",
     "isActive": "true",
     "domain": "CORE",
+    "created_at": "2023-12-07T06:13:34Z",
     "type": "CI"
   },
   {
-    "name": "794750506",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "160122859",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "161884170",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "221030366",
+    "name": "197165646",
     "status": "Available",
     "isActive": "true",
     "domain": "CORE",
+    "created_at": "2023-12-07T06:13:34Z",
     "type": "CI"
   },
   {
-    "name": "227443121",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "451430157",
-    "status": "InProgress",
-    "isActive": "true",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "479224775",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "526684291",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "680602349",
-    "status": "Available",
-    "isActive": "true",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "858108824",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "200389403",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "200910129",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "233579287",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "455346601",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "600505941",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "677087949",
+    "name": "130539695",
     "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
+    "created_at": "2023-12-07T06:13:33Z",
     "type": "CI"
   }
 ]
