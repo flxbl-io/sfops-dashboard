@@ -36,7 +36,7 @@ permalink: /stage/
 </head>
 <body>
 <div class="message-box">
-  <img src="/assets/new_tab_.gif" alt="New Tab Icon" />
+  <img src="https://cdn.dribbble.com/users/2138/screenshots/4309982/new_tab_.gif" alt="New Tab Icon" />
   <h1>Check the New Tab</h1>
   <p>The content you are looking for has been opened in a new window.</p>
   <p>The image used is (c) of https://dribbble.com/shots/4309982-New-tab#</p>
