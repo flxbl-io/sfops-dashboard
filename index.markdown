@@ -177,6 +177,14 @@ layout: default
         <header>sfops</header>
         <div class="header2">Dev Central</div>
         <ul>
+            <li><span><i class="fas fa-chart-line"></i> Dashboards</span>
+                 <ul class='submenu'>
+                    <li><a href="#cicd">CI/CD Performance</a></li>
+                    <li><a href="#evolution">Package Evolution</a></li>
+                    <li><a href="#platformOverview">Platform Overview</a></li>
+                    <li><a href="#packageSummary">Package Metrics</a></li>
+                </ul>
+            </li>        
             <li><span><i class="fas fa-laptop-code"></i> Development</span>
                 <ul class='submenu'>
                     <li><a href="#workItems">Work Items</a></li>
@@ -201,14 +209,6 @@ layout: default
                 <ul class='submenu'>
                     <li><a href="#releasedefns">Release Candidates</a></li>
                     <li><a href="#releases">Releases</a></li>
-                </ul>
-            </li>
-            <li><span><i class="fas fa-chart-line"></i> Dashboards</span>
-                 <ul class='submenu'>
-                    <li><a href="#evolution">Package Evolution</a></li>
-                    <li><a href="#cicd">CI/CD Performance</a></li>
-                    <li><a href="#platformOverview">Platform Overview</a></li>
-                    <li><a href="#packageSummary">Package Metrics</a></li>
                 </ul>
             </li>
              <li><span><i class="fas fa-circle-info"></i> Support</span>
@@ -351,7 +351,7 @@ layout: default
         function showTab(hash) {
               if (!hash || hash=='default') {
                 // Default page to show when no hash is present
-                hash=`workItems`;
+                hash=`cicd`;
             }
 
             window.location.hash = hash;
