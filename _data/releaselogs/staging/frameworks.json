@@ -9,16 +9,23 @@
                     ],
                     "buildNumber": 1,
                     "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c"
+                },
+                {
+                    "names": [
+                        "hotfix-Sprint-2-10-12-7155491388"
+                    ],
+                    "buildNumber": 2,
+                    "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea"
                 }
             ],
             "latestRelease": {
                 "names": [
-                    "Sprint-2-10-12-7154632894"
+                    "hotfix-Sprint-2-10-12-7155491388"
                 ],
-                "buildNumber": 1,
-                "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c"
+                "buildNumber": 2,
+                "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea"
             },
-            "retryCount": 1
+            "retryCount": 0
         }
     ],
     "releases": [
@@ -89,6 +96,33 @@
             ],
             "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c",
             "date": "Sun Dec 10 2023 02:05:18 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "hotfix-Sprint-2-10-12-7155491388"
+            ],
+            "buildNumber": 2,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "eaf86cf6",
+                    "to": "480768c9",
+                    "version": "1.1.0.2",
+                    "latestCommitId": "480768c9",
+                    "commits": [
+                        {
+                            "commitId": "480768c9",
+                            "date": "2023-12-10T15:03:26+11:00",
+                            "author": "Azlam",
+                            "message": "fix: increment version to test hotfix (#91)",
+                            "body": "* fix: increment version to test hotfix\r\n\r\n* Update CustMetadataFeatureSettingsProviderTest.cls"
+                        }
+                    ]
+                }
+            ],
+            "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea",
+            "date": "Sun Dec 10 2023 04:25:11 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
