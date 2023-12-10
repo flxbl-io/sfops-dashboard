@@ -16,14 +16,21 @@
                     ],
                     "buildNumber": 2,
                     "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea"
+                },
+                {
+                    "names": [
+                        "Sprint-2-10-12-7155075675"
+                    ],
+                    "buildNumber": 3,
+                    "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7"
                 }
             ],
             "latestRelease": {
                 "names": [
-                    "hotfix-Sprint-2-10-12-7155491388"
+                    "Sprint-2-10-12-7155075675"
                 ],
-                "buildNumber": 2,
-                "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea"
+                "buildNumber": 3,
+                "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7"
             },
             "retryCount": 0
         }
@@ -123,6 +130,25 @@
             ],
             "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea",
             "date": "Sun Dec 10 2023 04:25:08 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-10-12-7155075675"
+            ],
+            "buildNumber": 3,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "480768c9",
+                    "to": "3940829a",
+                    "version": "1.2.0.1",
+                    "latestCommitId": "3940829a",
+                    "commits": []
+                }
+            ],
+            "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7",
+            "date": "Sun Dec 10 2023 04:35:17 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
