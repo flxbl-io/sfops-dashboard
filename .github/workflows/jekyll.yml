@@ -34,7 +34,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
       - name: Generate Release Definitions
-        run: ./_scripts/create-release-defns.sh
+        run: node ./_scripts/create-release-defns.js
 
       - name: Generate Release Logs
         run: ./_scripts/create-release-logs.sh
