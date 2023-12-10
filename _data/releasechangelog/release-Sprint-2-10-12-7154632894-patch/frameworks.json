@@ -1,0 +1,91 @@
+{
+    "orgs": [],
+    "releases": [
+        {
+            "names": [
+                "hotfix-Sprint-2-10-12-7155491388"
+            ],
+            "buildNumber": 1,
+            "workItems": {
+                "": [
+                    "480768c9",
+                    "d8358629",
+                    "50a3e4d6",
+                    "b6d8a989",
+                    "404718af",
+                    "138e23c5",
+                    "22db52e0",
+                    "55ef8227"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "to": "480768c9",
+                    "version": "1.1.0.2",
+                    "latestCommitId": "480768c9",
+                    "commits": [
+                        {
+                            "commitId": "480768c9",
+                            "date": "2023-12-10T15:03:26+11:00",
+                            "author": "Azlam",
+                            "message": "fix: increment version to test hotfix (#91)",
+                            "body": "* fix: increment version to test hotfix\r\n\r\n* Update CustMetadataFeatureSettingsProviderTest.cls"
+                        },
+                        {
+                            "commitId": "d8358629",
+                            "date": "2023-11-23T09:22:38+11:00",
+                            "author": "Azlam",
+                            "message": "fix: fix update comments (#76)",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "50a3e4d6",
+                            "date": "2023-11-22T12:39:07+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change parallel to false (#72)",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "b6d8a989",
+                            "date": "2023-10-26T13:52:29+11:00",
+                            "author": "Azlam",
+                            "message": "fix: disable disable feature",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "404718af",
+                            "date": "2023-10-26T13:50:28+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to true",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "138e23c5",
+                            "date": "2023-10-26T13:49:57+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to false",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "22db52e0",
+                            "date": "2023-10-26T13:47:47+11:00",
+                            "author": "Azlam",
+                            "message": "fix: test-pr",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "55ef8227",
+                            "date": "2023-08-27T11:57:41+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add new package feature-management",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "a29bd19575b0978418dbed1999c9f0e1339a43ea",
+            "date": "Sun Dec 10 2023 04:09:37 GMT+0000 (Coordinated Universal Time)"
+        }
+    ]
+}
