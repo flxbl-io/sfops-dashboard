@@ -1,5 +1,5 @@
 {
-  "status": "validation",
+  "status": "validated",
   "issue_number": "95",
   "branch": "chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Description:\n    \n    This pr will always exclude any change to\n    - sfdx-project.json\n    This is an automatically generated PR, Cherry pick auto created from commit id at https://github.com/flxbl-io/sf-core/commit/205597acf27745109067fb5499c7af9d1662fb81",
     "created_at": "2023-12-10T04:51:47Z",
-    "updated_at": "2023-12-10T04:51:59Z",
+    "updated_at": "2023-12-10T05:01:39Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "595d9415b51d620f7b1db60894d405d5c5ee7d6d",
@@ -164,7 +164,7 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2023-12-06T21:20:49Z",
-        "pushed_at": "2023-12-10T04:51:47Z",
+        "pushed_at": "2023-12-10T04:54:37Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
@@ -184,7 +184,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 9,
+        "open_issues_count": 10,
         "license": {
           "key": "other",
           "name": "Other",
@@ -198,7 +198,7 @@
         "topics": [],
         "visibility": "public",
         "forks": 0,
-        "open_issues": 9,
+        "open_issues": 10,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -295,7 +295,7 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2023-12-06T21:20:49Z",
-        "pushed_at": "2023-12-10T04:51:47Z",
+        "pushed_at": "2023-12-10T04:54:37Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
@@ -315,7 +315,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 9,
+        "open_issues_count": 10,
         "license": {
           "key": "other",
           "name": "Other",
@@ -329,7 +329,7 @@
         "topics": [],
         "visibility": "public",
         "forks": 0,
-        "open_issues": 9,
+        "open_issues": 10,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -368,7 +368,7 @@
     "rebaseable": true,
     "mergeable_state": "blocked",
     "merged_by": null,
-    "comments": 1,
+    "comments": 2,
     "review_comments": 0,
     "maintainer_can_modify": false,
     "commits": 2,
