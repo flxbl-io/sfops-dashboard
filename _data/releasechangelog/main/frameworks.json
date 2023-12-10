@@ -120,6 +120,37 @@
             ],
             "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c",
             "date": "Sun Dec 10 2023 01:07:22 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-10-12-7155075675"
+            ],
+            "buildNumber": 4,
+            "workItems": {
+                "": [
+                    "3940829a"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "eaf86cf6",
+                    "to": "3940829a",
+                    "version": "1.2.0.1",
+                    "latestCommitId": "3940829a",
+                    "commits": [
+                        {
+                            "commitId": "3940829a",
+                            "date": "2023-12-10T13:25:21+11:00",
+                            "author": "sfopsbot",
+                            "message": "fix: test hotfix workflow",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7",
+            "date": "Sun Dec 10 2023 02:30:51 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
