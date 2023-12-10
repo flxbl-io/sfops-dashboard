@@ -58,42 +58,48 @@ layout: default
     </style>
   </head>
   <body>
-    <table id="packageTable" class="display">
-      <thead>
-        <tr>
-          <th>Package</th>
-          <th>Domains/ReleaseConfigs</th>
-          <th>Current Version Number</th>
-          <th>Description</th>
-        </tr>
-        <tr id="filterRow">
-          <!-- New row for filters -->
-          <th></th>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for package in
-        site.data.manifest[page.branch].sfdx-project.packageDirectories %}
-        <tr>
-          <td>{{ package.package }}</td>
-          <td>
-             {% assign domains = "" %}
-            {% for domain in site.data.domains %} {%
-            assign domain_data = site.data.releaseconfigs[page.branch][domain]%}
-            {% if domain_data.includeOnlyArtifacts contains package.package %}
-            {% if domains != "" %} {% assign domains = domains | append: ", " %}
-            {% endif %} {% assign domains = domains | append: domain %} {% endif
-            %} {% endfor %} {{ domains | remove_last: ", " }}
-          </td>
-          <td>{{ package.versionNumber }}</td>
-          <td>{{ package.versionDescription }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <div class="container-fluid">
+   <div class="row">
+      <div class="col-md-12">
+        <table id="packageTable" class="display">
+          <thead>
+            <tr>
+              <th>Package</th>
+              <th>Domains/ReleaseConfigs</th>
+              <th>Current Version Number</th>
+              <th>Description</th>
+            </tr>
+            <tr id="filterRow">
+              <!-- New row for filters -->
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for package in
+            site.data.manifest[page.branch].sfdx-project.packageDirectories %}
+            <tr>
+              <td>{{ package.package }}</td>
+              <td>
+                {% assign domains = "" %}
+                {% for domain in site.data.domains %} {%
+                assign domain_data = site.data.releaseconfigs[page.branch][domain]%}
+                {% if domain_data.includeOnlyArtifacts contains package.package %}
+                {% if domains != "" %} {% assign domains = domains | append: ", " %}
+                {% endif %} {% assign domains = domains | append: domain %} {% endif
+                %} {% endfor %} {{ domains | remove_last: ", " }}
+              </td>
+              <td>{{ package.versionNumber }}</td>
+              <td>{{ package.versionDescription }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+   </div>
+  </div>
 
     <div class="modal" tabindex="-1" role="dialog" id="packageModal">
       <div class="modal-dialog" role="document">
