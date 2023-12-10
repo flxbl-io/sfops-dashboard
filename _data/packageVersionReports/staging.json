@@ -1,0 +1,74 @@
+[
+  {
+    "name": "feature-management",
+    "version": "1.0.27.2",
+    "commitId": "eaf86cf6f90acb699e859ebf303e0519b4aa7950",
+    "isInstalledBySfpowerscripts": true,
+    "subscriberVersion": "04t2w000009Rg7kAAC",
+    "type": "OrgDependendent"
+  },
+  {
+    "name": "sfpowerscripts-artifact",
+    "version": "2.0.0.1",
+    "commitId": "N/A",
+    "type": "Unlocked",
+    "subscriberVersion": "04t1P000000ka9mQAA",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Org Expiry Notifier",
+    "version": "1.0.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1n0000028OJ6AAM",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "License Management App",
+    "version": "1.21.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t30000001DX1FAAW",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "Checkout Management App",
+    "version": "1.14.0.3",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t1Q000000kYiVQAU",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "pmcPartner",
+    "version": "1.89.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t4x000000vVTwAAM",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "PBO Guide",
+    "version": "1.4.0.1",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t5w000003Vj4iAAC",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "DevOps Center",
+    "version": "6.1.0.44",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t6g000008KSUVAA4",
+    "isInstalledBySfpowerscripts": false
+  },
+  {
+    "name": "SFDC Channel Order",
+    "version": "3.65.0.2",
+    "commitId": "N/A",
+    "type": "Managed",
+    "subscriberVersion": "04t2K000000AgwXQAS",
+    "isInstalledBySfpowerscripts": false
+  }
+]
