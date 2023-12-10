@@ -1,0 +1,94 @@
+{
+    "orgs": [
+        {
+            "name": "staging",
+            "releases": [
+                {
+                    "names": [
+                        "Sprint-2-10-12-7154632894"
+                    ],
+                    "buildNumber": 1,
+                    "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c"
+                }
+            ],
+            "latestRelease": {
+                "names": [
+                    "Sprint-2-10-12-7154632894"
+                ],
+                "buildNumber": 1,
+                "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c"
+            },
+            "retryCount": 0
+        }
+    ],
+    "releases": [
+        {
+            "names": [
+                "Sprint-2-10-12-7154632894"
+            ],
+            "buildNumber": 1,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "to": "eaf86cf6",
+                    "version": "1.0.27.2",
+                    "latestCommitId": "d8358629",
+                    "commits": [
+                        {
+                            "commitId": "d8358629",
+                            "date": "2023-11-23T09:22:38+11:00",
+                            "author": "Azlam",
+                            "message": "fix: fix update comments (#76)",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "50a3e4d6",
+                            "date": "2023-11-22T12:39:07+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change parallel to false (#72)",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "b6d8a989",
+                            "date": "2023-10-26T13:52:29+11:00",
+                            "author": "Azlam",
+                            "message": "fix: disable disable feature",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "404718af",
+                            "date": "2023-10-26T13:50:28+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to true",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "138e23c5",
+                            "date": "2023-10-26T13:49:57+11:00",
+                            "author": "Azlam",
+                            "message": "fix: change return to false",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "22db52e0",
+                            "date": "2023-10-26T13:47:47+11:00",
+                            "author": "Azlam",
+                            "message": "fix: test-pr",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "55ef8227",
+                            "date": "2023-08-27T11:57:41+10:00",
+                            "author": "azlam-abdulsalam",
+                            "message": "feat: add new package feature-management",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "401b15183e6bf7bc765b10f5bfc169fb0c5be20c",
+            "date": "Sun Dec 10 2023 02:05:18 GMT+0000 (Coordinated Universal Time)"
+        }
+    ]
+}
