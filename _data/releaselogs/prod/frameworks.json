@@ -23,14 +23,21 @@
                     ],
                     "buildNumber": 3,
                     "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7"
+                },
+                {
+                    "names": [
+                        "hotfix-Sprint-2-10-12-7155672878"
+                    ],
+                    "buildNumber": 4,
+                    "hashId": "e300a940b2de2840c8ac872d97d622cca3f18895"
                 }
             ],
             "latestRelease": {
                 "names": [
-                    "Sprint-2-10-12-7155075675"
+                    "hotfix-Sprint-2-10-12-7155672878"
                 ],
-                "buildNumber": 3,
-                "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7"
+                "buildNumber": 4,
+                "hashId": "e300a940b2de2840c8ac872d97d622cca3f18895"
             },
             "retryCount": 0
         }
@@ -149,6 +156,51 @@
             ],
             "hashId": "18d937b50faffbba5ad0fa023ec5c18e768ad7c7",
             "date": "Sun Dec 10 2023 04:35:17 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "hotfix-Sprint-2-10-12-7155672878"
+            ],
+            "buildNumber": 4,
+            "workItems": {
+                "FGK-1234": [
+                    "39bfb589"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "3940829a",
+                    "to": "39bfb589",
+                    "version": "1.2.2.1",
+                    "latestCommitId": "39bfb589",
+                    "commits": [
+                        {
+                            "commitId": "39bfb589",
+                            "date": "2023-12-10T15:46:10+11:00",
+                            "author": "sfopsbot",
+                            "message": "fix(frameworks): test hotfix flow [FGK-1234]",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "b036a149",
+                            "date": "2023-12-10T04:42:46+00:00",
+                            "author": "sfpowerscripts",
+                            "message": "Reset feature-management to 1.2.0.1",
+                            "body": ""
+                        },
+                        {
+                            "commitId": "98b851bb",
+                            "date": "2023-12-10T15:36:24+11:00",
+                            "author": "sfopsbot",
+                            "message": "Add v3 to test hotfix",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "e300a940b2de2840c8ac872d97d622cca3f18895",
+            "date": "Sun Dec 10 2023 05:08:23 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
