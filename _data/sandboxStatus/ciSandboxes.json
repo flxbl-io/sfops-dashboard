@@ -33,8 +33,9 @@
   },
   {
     "name": "261352886",
-    "status": "Available",
     "isActive": "true",
+    "status": "InUse",
+    "issue": "99",
     "domain": "HOTFIX",
     "created_at": "2023-12-10T06:08:28Z",
     "type": "CI"
