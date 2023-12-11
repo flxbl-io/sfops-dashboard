@@ -10,17 +10,5 @@
     "domain": "",
     "created_at": "2023-12-01T04:46:33Z",
     "type": "Developer"
-  },
-  {
-    "email": "sivanand.jothy@gmail.com",
-    "expiry": "2",
-    "isActive": "true",
-    "issueNumber": "85",
-    "name": "siva688105",
-    "requester": "sivanandjothy",
-    "status": "Assigned",
-    "domain": "",
-    "created_at": "2023-12-08T05:39:49Z",
-    "type": "Developer"
   }
 ]
