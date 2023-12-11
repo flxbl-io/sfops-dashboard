@@ -68,7 +68,7 @@ layout: default
                 <i class="fas fa-copy"></i>
               </button>
             </td>
-            <td>{{ release.date |  date: "%b %d, %y" }}</td>
+             <td>{{ release.date | date: "%Y-%m-%d %H:%M"  }}</td>
             <td>
               <ul class="action-links">
                 {% assign hasItems = false %} {% for workItem in release.workItems %}
