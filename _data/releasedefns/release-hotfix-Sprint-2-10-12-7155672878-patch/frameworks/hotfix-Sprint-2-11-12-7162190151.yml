@@ -1,0 +1,11 @@
+release: hotfix-Sprint-2-11-12-7162190151
+skipIfAlreadyInstalled: true
+skipArtifactUpdate: false
+artifacts:
+  feature-management: 1.2.2-3
+promotePackagesBeforeDeploymentToOrg: prod
+changelog:
+  workItemFilters:
+    - (FGK|FFK)-[0-9]{3,4}
+  workItemUrl: https://adiza.atlassian.net/browse
+  limit: 30
