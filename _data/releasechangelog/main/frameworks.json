@@ -382,6 +382,37 @@
             ],
             "hashId": "af5942e5022ba30fbdf437271aa247c69bb885bd",
             "date": "Mon Dec 11 2023 06:07:22 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-11-12-7163544813"
+            ],
+            "buildNumber": 14,
+            "workItems": {
+                "FGK-401": [
+                    "9e2db3fe"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "120847eb",
+                    "to": "9e2db3fe",
+                    "version": "1.4.0.1",
+                    "latestCommitId": "9e2db3fe",
+                    "commits": [
+                        {
+                            "commitId": "9e2db3fe",
+                            "date": "2023-12-11T17:02:26+11:00",
+                            "author": "sfopsbot",
+                            "message": "[FGK-401] refactor(feature): refactor custom data provisioner",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "5f2dd5ef0726cce855c774f956c7e72eb05f93a7",
+            "date": "Mon Dec 11 2023 06:07:41 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
