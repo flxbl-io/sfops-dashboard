@@ -351,6 +351,37 @@
             ],
             "hashId": "c7473e507aba60a55091f1559be2fa0caf126833",
             "date": "Mon Dec 11 2023 05:43:10 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-11-12-7163539445"
+            ],
+            "buildNumber": 13,
+            "workItems": {
+                "FGK-400": [
+                    "120847eb"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "f60ca9e6",
+                    "to": "120847eb",
+                    "version": "1.3.8.1",
+                    "latestCommitId": "120847eb",
+                    "commits": [
+                        {
+                            "commitId": "120847eb",
+                            "date": "2023-12-11T17:01:50+11:00",
+                            "author": "sfopsbot",
+                            "message": "[FGK-400] fix(feature): bug in custom data provisioner",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "af5942e5022ba30fbdf437271aa247c69bb885bd",
+            "date": "Mon Dec 11 2023 06:07:22 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
