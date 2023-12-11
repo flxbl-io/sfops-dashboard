@@ -258,6 +258,37 @@
             ],
             "hashId": "ee7bf1df9b7a8b373b71f7dcc6630ce9ea3b9308",
             "date": "Mon Dec 11 2023 05:14:23 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-11-12-7163390755"
+            ],
+            "buildNumber": 10,
+            "workItems": {
+                "": [
+                    "9a3c817b"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "b80208c2",
+                    "to": "9a3c817b",
+                    "version": "1.3.5.1",
+                    "latestCommitId": "9a3c817b",
+                    "commits": [
+                        {
+                            "commitId": "9a3c817b",
+                            "date": "2023-12-11T16:36:32+11:00",
+                            "author": "sfopsbot",
+                            "message": "[FGK-300] fix(feature): add new toggle implementor",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "aa1f8df30a857f35ec5c72d2242f0f1482a39ec9",
+            "date": "Mon Dec 11 2023 05:41:35 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
