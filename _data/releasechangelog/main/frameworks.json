@@ -289,6 +289,37 @@
             ],
             "hashId": "aa1f8df30a857f35ec5c72d2242f0f1482a39ec9",
             "date": "Mon Dec 11 2023 05:41:35 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-11-12-7163395065"
+            ],
+            "buildNumber": 11,
+            "workItems": {
+                "": [
+                    "32edf2ec"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "9a3c817b",
+                    "to": "32edf2ec",
+                    "version": "1.3.6.1",
+                    "latestCommitId": "32edf2ec",
+                    "commits": [
+                        {
+                            "commitId": "32edf2ec",
+                            "date": "2023-12-11T16:37:16+11:00",
+                            "author": "sfopsbot",
+                            "message": "[FGK-301] fix(feature): add new custom data provisioner",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "8c5e06878d191f1429ce15c8378c200b2524412d",
+            "date": "Mon Dec 11 2023 05:42:24 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
