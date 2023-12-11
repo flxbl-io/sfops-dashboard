@@ -413,6 +413,37 @@
             ],
             "hashId": "5f2dd5ef0726cce855c774f956c7e72eb05f93a7",
             "date": "Mon Dec 11 2023 06:07:41 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-11-12-7163552483"
+            ],
+            "buildNumber": 15,
+            "workItems": {
+                "FGK-402": [
+                    "9bb0aa59"
+                ]
+            },
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "9e2db3fe",
+                    "to": "9bb0aa59",
+                    "version": "1.4.1.1",
+                    "latestCommitId": "9bb0aa59",
+                    "commits": [
+                        {
+                            "commitId": "9bb0aa59",
+                            "date": "2023-12-11T17:03:21+11:00",
+                            "author": "sfopsbot",
+                            "message": "[FGK-402] fix(feature): fix toggler in cusom data",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "cd73349d97cf08b98897be36115375187616965f",
+            "date": "Mon Dec 11 2023 06:08:34 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
