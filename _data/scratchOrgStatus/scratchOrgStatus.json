@@ -54,17 +54,17 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1y0000004E4C",
-      "loginURL": "https://power-customization-4775-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-jmw59sntzw3x@example.com",
+      "orgId": "00DH40000008fBJ",
+      "loginURL": "https://drive-agility-6758-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-fqneeagfmaln@example.com",
       "expiryDate": "2023-12-14",
       "status": "In use"
     },
     {
       "tag": "dev",
-      "orgId": "00DH40000008fBJ",
-      "loginURL": "https://drive-agility-6758-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-fqneeagfmaln@example.com",
+      "orgId": "00D1y0000004E4C",
+      "loginURL": "https://power-customization-4775-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-jmw59sntzw3x@example.com",
       "expiryDate": "2023-12-14",
       "status": "In use"
     },
@@ -86,14 +86,6 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1y0000004E3b",
-      "loginURL": "https://fun-innovation-8614-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-vlvhlhtstfja@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
       "orgId": "00DH40000008fAI",
       "loginURL": "https://java-connect-9567-dev-ed.scratch.my.salesforce.com/",
       "username": "test-rdsftkdcpxun@example.com",
@@ -105,6 +97,14 @@
       "orgId": "00D1y0000003uFv",
       "loginURL": "https://business-power-65213-dev-ed.scratch.my.salesforce.com/",
       "username": "test-ckmqrwmieyu9@example.com",
+      "expiryDate": "2023-12-14",
+      "status": "In use"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1y0000004E3b",
+      "loginURL": "https://fun-innovation-8614-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-vlvhlhtstfja@example.com",
       "expiryDate": "2023-12-14",
       "status": "In use"
     },
