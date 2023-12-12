@@ -5,6 +5,258 @@ const dataJson = [
       "package": "feature-management",
       "size": 18,
       "domain": "frameworks",
+      "when": "2023-12-11T17:03:21+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T17:03:21+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T17:02:26+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T17:02:26+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T17:01:50+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T17:01:50+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:37:52+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:37:52+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:37:16+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:37:16+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:36:32+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:36:32+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:09:16+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:09:16+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:08:32+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:08:32+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:07:56+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:07:56+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-11T16:07:13+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-11T16:07:13+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-10T15:36:24+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-10T15:36:24+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-10T13:25:21+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-10T13:25:21+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-10T11:57:56+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-10T11:57:56+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-10T11:56:24+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-10T11:56:24+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
       "when": "2023-11-16T00:17:17+11:00",
       "fileCount": 40
     },
