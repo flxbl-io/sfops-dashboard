@@ -1,6 +1,6 @@
 {
-  "total": 15,
-  "inuse": 10,
+  "total": 5,
+  "inuse": 0,
   "unused": 5,
   "inprovision": 0,
   "scratchOrgDetails": [
@@ -30,14 +30,6 @@
     },
     {
       "tag": "ci",
-      "orgId": "00DH40000008feX",
-      "loginURL": "https://saas-page-8134-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-jkhk9wwcbgxo@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
       "orgId": "00D1m0000008uOC",
       "loginURL": "https://force-saas-8080-dev-ed.scratch.my.salesforce.com/",
       "username": "test-ixoolvrixm4s@example.com",
@@ -45,84 +37,12 @@
       "status": "Available"
     },
     {
-      "tag": "dev",
-      "orgId": "00DH40000008fBV",
-      "loginURL": "https://enterprise-ability-8285-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-fj8asn9z2bwv@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y0000004E4C",
-      "loginURL": "https://power-customization-4775-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-jmw59sntzw3x@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008fBJ",
-      "loginURL": "https://drive-agility-6758-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-fqneeagfmaln@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1m0000002MWB",
-      "loginURL": "https://fun-computing-4620-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ntrw4cpx0prg@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000008f8r",
-      "loginURL": "https://force-inspiration-9030-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ajpg9hmuypse@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y00000049Pr",
-      "loginURL": "https://velocity-customer-1018-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-sq1kwrwzdtpt@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008f9o",
-      "loginURL": "https://data-ability-1543-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-9fzu5jhgiyvc@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y0000004E3b",
-      "loginURL": "https://fun-innovation-8614-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-vlvhlhtstfja@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008fAI",
-      "loginURL": "https://java-connect-9567-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-rdsftkdcpxun@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y0000003uFv",
-      "loginURL": "https://business-power-65213-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ckmqrwmieyu9@example.com",
-      "expiryDate": "2023-12-14",
-      "status": "In use"
+      "tag": "ci",
+      "orgId": "00DH40000008feX",
+      "loginURL": "https://saas-page-8134-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-jkhk9wwcbgxo@example.com",
+      "expiryDate": "2023-12-19",
+      "status": "Available"
     }
   ]
 }
