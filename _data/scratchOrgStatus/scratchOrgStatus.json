@@ -1,48 +1,7 @@
 {
-  "total": 5,
+  "total": 0,
   "inuse": 0,
-  "unused": 5,
+  "unused": 0,
   "inprovision": 0,
-  "scratchOrgDetails": [
-    {
-      "tag": "ci",
-      "orgId": "00DH30000008faS",
-      "loginURL": "https://app-energy-7622-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-3asfecuvy71c@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH40000008fea",
-      "loginURL": "https://business-force-9145-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-gvzfqleqbpuj@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1m000000CmuJ",
-      "loginURL": "https://customization-business-7893-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-9tegzqmpnjou@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1m0000008uOC",
-      "loginURL": "https://force-saas-8080-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ixoolvrixm4s@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH40000008feX",
-      "loginURL": "https://saas-page-8134-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-jkhk9wwcbgxo@example.com",
-      "expiryDate": "2023-12-19",
-      "status": "Available"
-    }
-  ]
+  "scratchOrgDetails": []
 }
