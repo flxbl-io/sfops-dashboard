@@ -1,10 +1,10 @@
 [
   {
     "name": "feature-management",
-    "version": "1.2.2.1",
-    "commitId": "39bfb589146c1644526af86d4d2f92c1cfd82a9f",
+    "version": "1.4.4.1",
+    "commitId": "b253e25380d25fdf624422df652af721ef09a2d2",
     "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009Rg89AAC",
+    "subscriberVersion": "04t2w000009RgE2AAK",
     "type": "OrgDependendent"
   },
   {
