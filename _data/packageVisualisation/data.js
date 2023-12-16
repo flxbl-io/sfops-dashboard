@@ -5,6 +5,60 @@ const dataJson = [
       "package": "feature-management",
       "size": 18,
       "domain": "frameworks",
+      "when": "2023-12-16T20:12:13+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-16T20:12:13+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-16T19:58:26+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-16T19:58:26+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
+      "when": "2023-12-16T19:40:14+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2023-12-16T19:40:14+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
       "when": "2023-12-11T17:03:21+11:00",
       "fileCount": 40
     },
