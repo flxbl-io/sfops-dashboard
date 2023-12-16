@@ -38,9 +38,9 @@
     },
     {
       "tag": "dev",
-      "orgId": "00DH40000008ffS",
-      "loginURL": "https://velocity-nosoftware-4789-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-xd5zzdomktlf@example.com",
+      "orgId": "00DH30000008fZs",
+      "loginURL": "https://agility-site-916-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-rausx0w18dkr@example.com",
       "expiryDate": "2023-12-26",
       "status": "Available"
     },
@@ -54,9 +54,9 @@
     },
     {
       "tag": "dev",
-      "orgId": "00DH30000008fZs",
-      "loginURL": "https://agility-site-916-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-rausx0w18dkr@example.com",
+      "orgId": "00DH40000008ffS",
+      "loginURL": "https://velocity-nosoftware-4789-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-xd5zzdomktlf@example.com",
       "expiryDate": "2023-12-26",
       "status": "Available"
     },
