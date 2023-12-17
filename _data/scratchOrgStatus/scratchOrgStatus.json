@@ -1,72 +1,7 @@
 {
-  "total": 8,
+  "total": 0,
   "inuse": 0,
-  "unused": 8,
+  "unused": 0,
   "inprovision": 0,
-  "scratchOrgDetails": [
-    {
-      "tag": "ci",
-      "orgId": "00D1y0000003tsF",
-      "loginURL": "https://nosoftware-enterprise-8305-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-d9i41kabwbvo@example.com",
-      "expiryDate": "2023-12-21",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000008faI",
-      "loginURL": "https://efficiency-innovation-9228-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-zusdo5uk1x14@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008ffT",
-      "loginURL": "https://momentum-fun-4785-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-b1blyb9icbc3@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y0000003tUs",
-      "loginURL": "https://power-app-6342-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-rpp4y9j97pfw@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000008fZs",
-      "loginURL": "https://agility-site-916-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-rausx0w18dkr@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008fep",
-      "loginURL": "https://inspiration-customer-573-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-j3g00zh2rkhs@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000008ffS",
-      "loginURL": "https://velocity-nosoftware-4789-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-xd5zzdomktlf@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000008fQq",
-      "loginURL": "https://momentum-app-6577-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ubg7vofh8l8i@example.com",
-      "expiryDate": "2023-12-26",
-      "status": "Available"
-    }
-  ]
+  "scratchOrgDetails": []
 }
