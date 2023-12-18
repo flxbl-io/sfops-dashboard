@@ -22,17 +22,17 @@
     },
     {
       "tag": "ci",
-      "orgId": "00D1y0000003iSU",
-      "loginURL": "https://force-customer-4271-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-0rtcgieuuhww@example.com",
+      "orgId": "00DH30000008ffY",
+      "loginURL": "https://velocity-site-1494-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-dcz583z9cqid@example.com",
       "expiryDate": "2023-12-22",
       "status": "Available"
     },
     {
       "tag": "ci",
-      "orgId": "00DH30000008ffY",
-      "loginURL": "https://velocity-site-1494-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-dcz583z9cqid@example.com",
+      "orgId": "00D1y0000003iSU",
+      "loginURL": "https://force-customer-4271-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-0rtcgieuuhww@example.com",
       "expiryDate": "2023-12-22",
       "status": "Available"
     },
