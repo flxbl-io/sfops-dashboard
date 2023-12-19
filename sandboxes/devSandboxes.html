@@ -246,8 +246,8 @@ function updateExpiryDisplay() {
         $('td:eq(3)', this).text(formattedExpiryDate);
 
         // Change row color if expiry is within 3 days
-        if(daysToExpiry <= 3) {
-            $('td:eq(3)', this).text(`Expired`);
+        if(daysToExpiry <= 2) {
+            $('td:eq(3)', this).text(`Expiring Soon (${formattedExpiryDate})`);
             $('td:eq(4)', this).find('a').hide();
             $(this).css('background-color', '#ffcccc');
         } else {
