@@ -6,17 +6,17 @@
   "scratchOrgDetails": [
     {
       "tag": "ci",
-      "orgId": "00DH40000008ghx",
-      "loginURL": "https://aquarius-reservoir-864-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-1ivwpa96kvjr@example.com",
+      "orgId": "00DH30000008gon",
+      "loginURL": "https://paas-baker-5372-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-rldf7jurqjv7@example.com",
       "expiryDate": "2023-12-25",
       "status": "Available"
     },
     {
       "tag": "ci",
-      "orgId": "00DH30000008gon",
-      "loginURL": "https://paas-baker-5372-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-rldf7jurqjv7@example.com",
+      "orgId": "00DH40000008ghx",
+      "loginURL": "https://aquarius-reservoir-864-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-1ivwpa96kvjr@example.com",
       "expiryDate": "2023-12-25",
       "status": "Available"
     },
@@ -30,17 +30,17 @@
     },
     {
       "tag": "ci",
-      "orgId": "00D1y0000004NHY",
-      "loginURL": "https://nosoftware-fun-5282-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-yk6xdpi36dji@example.com",
+      "orgId": "00DH40000008ghj",
+      "loginURL": "https://laguna-newport-5078-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-9qxrbq8fkfmw@example.com",
       "expiryDate": "2023-12-25",
       "status": "Available"
     },
     {
       "tag": "ci",
-      "orgId": "00DH40000008ghj",
-      "loginURL": "https://laguna-newport-5078-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-9qxrbq8fkfmw@example.com",
+      "orgId": "00D1y0000004NHY",
+      "loginURL": "https://nosoftware-fun-5282-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-yk6xdpi36dji@example.com",
       "expiryDate": "2023-12-25",
       "status": "Available"
     },
@@ -65,14 +65,6 @@
       "orgId": "00D1y0000003i3X",
       "loginURL": "https://computing-ability-2333-dev-ed.scratch.my.salesforce.com/",
       "username": "test-gypigeyhiwxz@example.com",
-      "expiryDate": "2023-12-30",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1m000000Cmng",
-      "loginURL": "https://platform-computing-8392-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-d0fikpjplm4b@example.com",
       "expiryDate": "2023-12-30",
       "status": "Available"
     },
@@ -105,6 +97,14 @@
       "orgId": "00D1m0000002WY5",
       "loginURL": "https://momentum-site-9718-dev-ed.scratch.my.salesforce.com/",
       "username": "test-togbpawqfdjt@example.com",
+      "expiryDate": "2023-12-30",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m000000Cmng",
+      "loginURL": "https://platform-computing-8392-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-d0fikpjplm4b@example.com",
       "expiryDate": "2023-12-30",
       "status": "Available"
     },
