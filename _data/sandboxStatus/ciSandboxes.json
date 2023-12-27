@@ -16,14 +16,6 @@
     "type": "CI"
   },
   {
-    "name": "209798313",
-    "status": "InProgress",
-    "isActive": "true",
-    "domain": "CORE",
-    "created_at": "2023-12-24T06:08:43Z",
-    "type": "CI"
-  },
-  {
     "name": "256609948",
     "status": "InProgress",
     "isActive": "true",
