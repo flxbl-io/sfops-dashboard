@@ -25,7 +25,7 @@
   },
   {
     "name": "797819408",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "created_at": "2023-12-30T06:08:14Z",
@@ -33,7 +33,7 @@
   },
   {
     "name": "489389596",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "HOTFIX",
     "created_at": "2023-12-30T06:08:14Z",
