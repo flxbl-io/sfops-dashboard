@@ -54,14 +54,6 @@
     },
     {
       "tag": "dev",
-      "orgId": "00DH40000008h8Z",
-      "loginURL": "https://brooklyn-waterfall-5981-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-jyy9i2kzemlu@example.com",
-      "expiryDate": "2024-01-09",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
       "orgId": "00DH40000008h7r",
       "loginURL": "https://scorpio-vente-861-dev-ed.scratch.my.salesforce.com/",
       "username": "test-jhm7hrjyequy@example.com",
@@ -70,9 +62,9 @@
     },
     {
       "tag": "dev",
-      "orgId": "00DH40000008h70",
-      "loginURL": "https://pumpkinspice-vanilla-2373-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-ogp8ajxfakix@example.com",
+      "orgId": "00DH40000008h8Z",
+      "loginURL": "https://brooklyn-waterfall-5981-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-jyy9i2kzemlu@example.com",
       "expiryDate": "2024-01-09",
       "status": "Available"
     },
@@ -94,6 +86,14 @@
     },
     {
       "tag": "dev",
+      "orgId": "00DH40000008h70",
+      "loginURL": "https://pumpkinspice-vanilla-2373-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-ogp8ajxfakix@example.com",
+      "expiryDate": "2024-01-09",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
       "orgId": "00DH30000008hKC",
       "loginURL": "https://cappuccino-littledipper-823-dev-ed.scratch.my.salesforce.com/",
       "username": "test-1f5zyfdkhbgz@example.com",
@@ -110,17 +110,17 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1y0000003u1X",
-      "loginURL": "https://drive-connect-4681-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-zcpi8lc3apur@example.com",
+      "orgId": "00DH30000008hK9",
+      "loginURL": "https://littledipper-pisces-792-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-hbdwhievo8p5@example.com",
       "expiryDate": "2024-01-09",
       "status": "Available"
     },
     {
       "tag": "dev",
-      "orgId": "00DH30000008hK9",
-      "loginURL": "https://littledipper-pisces-792-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-hbdwhievo8p5@example.com",
+      "orgId": "00D1y0000003u1X",
+      "loginURL": "https://drive-connect-4681-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-zcpi8lc3apur@example.com",
       "expiryDate": "2024-01-09",
       "status": "Available"
     }
