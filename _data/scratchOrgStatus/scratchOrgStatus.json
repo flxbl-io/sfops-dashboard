@@ -102,17 +102,17 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1m0000002X7C",
-      "loginURL": "https://ruby-saas-9059-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-hwejnae9ywxr@example.com",
+      "orgId": "00DH30000008hK9",
+      "loginURL": "https://littledipper-pisces-792-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-hbdwhievo8p5@example.com",
       "expiryDate": "2024-01-09",
       "status": "Available"
     },
     {
       "tag": "dev",
-      "orgId": "00DH30000008hK9",
-      "loginURL": "https://littledipper-pisces-792-dev-ed.scratch.my.salesforce.com/",
-      "username": "test-hbdwhievo8p5@example.com",
+      "orgId": "00D1m0000002X7C",
+      "loginURL": "https://ruby-saas-9059-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-hwejnae9ywxr@example.com",
       "expiryDate": "2024-01-09",
       "status": "Available"
     },
