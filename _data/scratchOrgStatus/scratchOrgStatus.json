@@ -1,7 +1,128 @@
 {
-  "total": 0,
+  "total": 15,
   "inuse": 0,
-  "unused": 0,
+  "unused": 15,
   "inprovision": 0,
-  "scratchOrgDetails": []
+  "scratchOrgDetails": [
+    {
+      "tag": "ci",
+      "orgId": "00DH30000008g5f",
+      "loginURL": "https://lagoon-lagoon-1896-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-mdz4rpgk49oi@example.com",
+      "expiryDate": "2024-01-05",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000008hT9",
+      "loginURL": "https://bigdipper-waterfall-2153-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-ztlkzvkzgttj@example.com",
+      "expiryDate": "2024-01-05",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000008hSU",
+      "loginURL": "https://latte-capricorn-1808-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-s7et0k8jghmd@example.com",
+      "expiryDate": "2024-01-05",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1m000000Cn4n",
+      "loginURL": "https://business-fun-9-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-nd2id8qgagbm@example.com",
+      "expiryDate": "2024-01-05",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1y0000004Dp5",
+      "loginURL": "https://computing-fun-868-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-9si2tannt0cp@example.com",
+      "expiryDate": "2024-01-05",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000008hR5",
+      "loginURL": "https://vente-pumpkinspice-2543-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-84puhq0cjtgl@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000008hS4",
+      "loginURL": "https://littledipper-trusted-736-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-7jk9orjrh7bi@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1y0000004Don",
+      "loginURL": "https://drive-enterprise-7978-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-pgwba2wyj48o@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000008hQL",
+      "loginURL": "https://espresso-brooklyn-7763-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-dbmo93pf1eo9@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH30000008g50",
+      "loginURL": "https://strawberry-intelligence-659-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-j8ubrlasf0tr@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m000000Cn3a",
+      "loginURL": "https://ruby-flow-7973-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-izalijccxld8@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000008hPt",
+      "loginURL": "https://saltedcaramel-intelligence-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-qpepvljpfmjz@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000008hQp",
+      "loginURL": "https://chocolate-trusted-7592-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-sapoarangs9m@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m000000Cn2r",
+      "loginURL": "https://customer-enterprise-9052-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-7c1mf7bcshca@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002eVz",
+      "loginURL": "https://power-agility-9258-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-iuwfg3zblmkn@example.com",
+      "expiryDate": "2024-01-10",
+      "status": "Available"
+    }
+  ]
 }
