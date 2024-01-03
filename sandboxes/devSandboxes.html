@@ -228,7 +228,7 @@ input:checked + .slider:before {
 
         $('#totalAvailable').text(totalAvailable);
         $('#totalInProgress').text(totalInProgress);
-         $('#totalMarkedForDeletion').text(totalMarkedForDeletion);
+        $('#totalMarkedForDeletion').text(totalMarkedForDeletion);
   
     }
 
@@ -248,7 +248,6 @@ function updateExpiryDisplay() {
         // Change row color if expiry is within 3 days
         if(daysToExpiry <= 2) {
             $('td:eq(3)', this).text(`Expiring Soon (${formattedExpiryDate})`);
-            $('td:eq(4)', this).find('a').hide();
             $(this).css('background-color', '#ffcccc');
         } else {
             $('td:eq(3)', this).text(formattedExpiryDate);
