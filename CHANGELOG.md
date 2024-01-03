@@ -1,5 +1,48 @@
 # Changelog
 
+## [24.1.5](https://github.com/flxbl-io/sfops/compare/v24.1.4...v24.1.5) (2024-01-03)
+
+
+### Bug Fixes
+
+* **cicd:** fix change name to id ([737b2ed](https://github.com/flxbl-io/sfops/commit/737b2edbbc1e7f11b7fde3d151520e45b7ce7851))
+
+## [24.1.4](https://github.com/flxbl-io/sfops/compare/v24.1.3...v24.1.4) (2024-01-03)
+
+
+### Bug Fixes
+
+* **cicd:** add a workflow dispatch for debug ([9ea0bb9](https://github.com/flxbl-io/sfops/commit/9ea0bb96b8de2ac724e8266b7a5562d8b6a31c10))
+
+## [24.1.3](https://github.com/flxbl-io/sfops/compare/v24.1.2...v24.1.3) (2024-01-03)
+
+
+### Bug Fixes
+
+* **cicd:** change variable to releases_created ([64f0c20](https://github.com/flxbl-io/sfops/commit/64f0c207938fa1b14ea72b97a237d66f3d078fad))
+
+## [24.1.2](https://github.com/flxbl-io/sfops/compare/v24.1.1...v24.1.2) (2024-01-03)
+
+
+### Bug Fixes
+
+* **cicd:** remove sync from build ([349ee8a](https://github.com/flxbl-io/sfops/commit/349ee8affb7dd723cbafe968fbbf1eea18764532))
+
+## [24.1.1](https://github.com/flxbl-io/sfops/compare/v24.1.0...v24.1.1) (2024-01-03)
+
+
+### Bug Fixes
+
+* **cicd:** sync to customers only after release please action is run ([62105e8](https://github.com/flxbl-io/sfops/commit/62105e84e4d2cbb499e9e36c734ccb06640d7323))
+
+## [24.1.0](https://github.com/flxbl-io/sfops/compare/v24.0.0...v24.1.0) (2024-01-03)
+
+
+### Features
+
+* **cicd:** ensure sync only when release please is triggered ([3c724d7](https://github.com/flxbl-io/sfops/commit/3c724d77cb757f546c0e72feb7a0f428c3c38930))
+* **scripts:** ensure changelog and version is copied ([9f7b073](https://github.com/flxbl-io/sfops/commit/9f7b0736cbb272d939b0757e523813fc4492c2b0))
+
 ## 1.0.0 (2024-01-03)
 
 
