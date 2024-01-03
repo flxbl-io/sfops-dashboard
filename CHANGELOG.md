@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.1.6](https://github.com/flxbl-io/sfops/compare/v24.1.5...v24.1.6) (2024-01-03)
+
+
+### Bug Fixes
+
+* **actions:** fix issue when the email id has short names ([7125dc3](https://github.com/flxbl-io/sfops/commit/7125dc356169b7cd6f51ad428d75a283704ea7f6))
+
 ## [24.1.5](https://github.com/flxbl-io/sfops/compare/v24.1.4...v24.1.5) (2024-01-03)
 
 
