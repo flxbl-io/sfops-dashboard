@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.1.7](https://github.com/flxbl-io/sfops/compare/v24.1.6...v24.1.7) (2024-01-03)
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect substitution of '.' in dev email ([fa99680](https://github.com/flxbl-io/sfops/commit/fa996804a4f7a6ec6e0a883e8a508a13d536be93))
+
 ## [24.1.6](https://github.com/flxbl-io/sfops/compare/v24.1.5...v24.1.6) (2024-01-03)
 
 
