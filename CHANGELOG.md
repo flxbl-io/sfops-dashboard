@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.1.8](https://github.com/flxbl-io/sfops/compare/v24.1.7...v24.1.8) (2024-01-03)
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect substitution in email ([7cf2761](https://github.com/flxbl-io/sfops/commit/7cf27612d127ecc8c3f09d520ddf43f93135d41f))
+
 ## [24.1.7](https://github.com/flxbl-io/sfops/compare/v24.1.6...v24.1.7) (2024-01-03)
 
 
