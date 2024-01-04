@@ -1,7 +1,7 @@
 [
   {
     "name": "389174962",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "created_at": "2024-01-04T06:09:07Z",
@@ -25,7 +25,7 @@
   },
   {
     "name": "616701479",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
     "domain": "CORE",
     "created_at": "2024-01-04T06:09:07Z",
