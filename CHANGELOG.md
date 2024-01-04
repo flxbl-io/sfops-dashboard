@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.2.0](https://github.com/flxbl-io/sfops/compare/v24.1.9...v24.2.0) (2024-01-04)
+
+
+### Features
+
+* **actions:** impact checker to check for impacts on dependencyOn packages ([6590861](https://github.com/flxbl-io/sfops/commit/659086118be4acc158125e8fb62eed52710f46de))
+
 ## [24.1.9](https://github.com/flxbl-io/sfops/compare/v24.1.8...v24.1.9) (2024-01-04)
 
 
