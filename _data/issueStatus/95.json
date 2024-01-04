@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "95",
   "branch": "chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
   "domain": "",
@@ -37,13 +37,34 @@
     },
     "body": "Description:\n    \n    This pr will always exclude any change to\n    - sfdx-project.json\n    This is an automatically generated PR, Cherry pick auto created from commit id at https://github.com/flxbl-io/sf-core/commit/205597acf27745109067fb5499c7af9d1662fb81",
     "created_at": "2023-12-10T04:51:47Z",
-    "updated_at": "2023-12-10T05:01:39Z",
+    "updated_at": "2024-01-04T12:47:26Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "595d9415b51d620f7b1db60894d405d5c5ee7d6d",
+    "merge_commit_sha": "58f219153756fa2c1f1d3f8b625f0615d98d4f02",
     "assignee": null,
     "assignees": [],
-    "requested_reviewers": [],
+    "requested_reviewers": [
+      {
+        "login": "azlam-abdulsalam",
+        "id": 43767972,
+        "node_id": "MDQ6VXNlcjQzNzY3OTcy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43767972?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/azlam-abdulsalam",
+        "html_url": "https://github.com/azlam-abdulsalam",
+        "followers_url": "https://api.github.com/users/azlam-abdulsalam/followers",
+        "following_url": "https://api.github.com/users/azlam-abdulsalam/following{/other_user}",
+        "gists_url": "https://api.github.com/users/azlam-abdulsalam/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/azlam-abdulsalam/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/azlam-abdulsalam/subscriptions",
+        "organizations_url": "https://api.github.com/users/azlam-abdulsalam/orgs",
+        "repos_url": "https://api.github.com/users/azlam-abdulsalam/repos",
+        "events_url": "https://api.github.com/users/azlam-abdulsalam/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/azlam-abdulsalam/received_events",
+        "type": "User",
+        "site_admin": false
+      }
+    ],
     "requested_teams": [],
     "labels": [
       {
@@ -71,11 +92,11 @@
     "review_comments_url": "https://api.github.com/repos/flxbl-io/sf-core/pulls/95/comments",
     "review_comment_url": "https://api.github.com/repos/flxbl-io/sf-core/pulls/comments{/number}",
     "comments_url": "https://api.github.com/repos/flxbl-io/sf-core/issues/95/comments",
-    "statuses_url": "https://api.github.com/repos/flxbl-io/sf-core/statuses/205597acf27745109067fb5499c7af9d1662fb81",
+    "statuses_url": "https://api.github.com/repos/flxbl-io/sf-core/statuses/e11ea63292e1301480085777bca9dafa35335e42",
     "head": {
       "label": "flxbl-io:chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
       "ref": "chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
-      "sha": "205597acf27745109067fb5499c7af9d1662fb81",
+      "sha": "e11ea63292e1301480085777bca9dafa35335e42",
       "user": {
         "login": "flxbl-io",
         "id": 142315319,
@@ -163,14 +184,14 @@
         "releases_url": "https://api.github.com/repos/flxbl-io/sf-core/releases{/id}",
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
-        "updated_at": "2023-12-06T21:20:49Z",
-        "pushed_at": "2023-12-10T04:54:37Z",
+        "updated_at": "2023-12-16T08:18:30Z",
+        "pushed_at": "2024-01-04T12:47:11Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 640,
+        "size": 694,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -184,7 +205,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 10,
+        "open_issues_count": 11,
         "license": {
           "key": "other",
           "name": "Other",
@@ -198,7 +219,7 @@
         "topics": [],
         "visibility": "public",
         "forks": 0,
-        "open_issues": 10,
+        "open_issues": 11,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -206,7 +227,7 @@
     "base": {
       "label": "flxbl-io:main",
       "ref": "main",
-      "sha": "98b851bbd811e701729085ba8eebe7b23e12df33",
+      "sha": "aa98c9fe5e4d7bb909a93bf536f02ef6dc140453",
       "user": {
         "login": "flxbl-io",
         "id": 142315319,
@@ -294,14 +315,14 @@
         "releases_url": "https://api.github.com/repos/flxbl-io/sf-core/releases{/id}",
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
-        "updated_at": "2023-12-06T21:20:49Z",
-        "pushed_at": "2023-12-10T04:54:37Z",
+        "updated_at": "2023-12-16T08:18:30Z",
+        "pushed_at": "2024-01-04T12:47:11Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 640,
+        "size": 694,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -315,7 +336,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 10,
+        "open_issues_count": 11,
         "license": {
           "key": "other",
           "name": "Other",
@@ -329,7 +350,7 @@
         "topics": [],
         "visibility": "public",
         "forks": 0,
-        "open_issues": 10,
+        "open_issues": 11,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -357,7 +378,7 @@
         "href": "https://api.github.com/repos/flxbl-io/sf-core/pulls/95/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/flxbl-io/sf-core/statuses/205597acf27745109067fb5499c7af9d1662fb81"
+        "href": "https://api.github.com/repos/flxbl-io/sf-core/statuses/e11ea63292e1301480085777bca9dafa35335e42"
       }
     },
     "author_association": "NONE",
@@ -365,13 +386,13 @@
     "active_lock_reason": null,
     "merged": false,
     "mergeable": true,
-    "rebaseable": true,
+    "rebaseable": false,
     "mergeable_state": "blocked",
     "merged_by": null,
     "comments": 2,
     "review_comments": 0,
     "maintainer_can_modify": false,
-    "commits": 2,
+    "commits": 3,
     "additions": 1,
     "deletions": 1,
     "changed_files": 1
