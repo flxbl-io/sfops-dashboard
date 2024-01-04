@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.1.9](https://github.com/flxbl-io/sfops/compare/v24.1.8...v24.1.9) (2024-01-04)
+
+
+### Bug Fixes
+
+* **workflows:** validate against scratch org not getting triggered ([ebd2ec1](https://github.com/flxbl-io/sfops/commit/ebd2ec1803125ed4ef426ea71c76e0cd703794e9))
+
 ## [24.1.8](https://github.com/flxbl-io/sfops/compare/v24.1.7...v24.1.8) (2024-01-03)
 
 
