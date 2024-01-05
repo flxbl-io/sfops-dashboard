@@ -1,5 +1,15 @@
 # Changelog
 
+## [24.2.2](https://github.com/flxbl-io/sfops/compare/v24.2.1...v24.2.2) (2024-01-05)
+
+
+### Bug Fixes
+
+* **actions:** fix tag for review sandboxes ([f8b4b1a](https://github.com/flxbl-io/sfops/commit/f8b4b1a56f1c17e65197bb565cb533a55870012b))
+* **workflows:** do not trigger any branch deploy related tasks in Draft mode ([984d1ba](https://github.com/flxbl-io/sfops/commit/984d1ba2d5a859b7ed338ef26399c2ba8a213354))
+* **workflows:** ignore PR validation if the PR is marked draft ([203ff9f](https://github.com/flxbl-io/sfops/commit/203ff9f7ffeba1d2352f4f93c7ecd3c9be3fbceb))
+* **workflows:** status should not be green in draft PRs ([8e955bf](https://github.com/flxbl-io/sfops/commit/8e955bffd53a7f95984046655c59f3aaf75dfe25))
+
 ## [24.2.1](https://github.com/flxbl-io/sfops/compare/v24.2.0...v24.2.1) (2024-01-04)
 
 
