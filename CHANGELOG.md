@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.2.1](https://github.com/flxbl-io/sfops/compare/v24.2.0...v24.2.1) (2024-01-04)
+
+
+### Bug Fixes
+
+* **actions:** revert explictDependencyCheck ([72ff317](https://github.com/flxbl-io/sfops/commit/72ff3171f2418317fd25b0ad83c76c440cfedc71))
+
 ## [24.2.0](https://github.com/flxbl-io/sfops/compare/v24.1.9...v24.2.0) (2024-01-04)
 
 
