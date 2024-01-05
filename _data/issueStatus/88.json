@@ -1,5 +1,5 @@
 {
-  "status": "validation",
+  "status": "validated",
   "issue_number": "88",
   "branch": "hotfix/2",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": null,
     "created_at": "2023-12-09T09:53:37Z",
-    "updated_at": "2024-01-05T22:58:06Z",
+    "updated_at": "2024-01-05T23:00:34Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "d4506ede87f6b9b08a47d5f7ac6493b593aec518",
