@@ -1,8 +1,8 @@
 [
   {
     "name": "222316521",
-    "isActive": "true",
-    "status": "InUse",
+    "isActive": false,
+    "status": "Expired",
     "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-06T06:08:06Z",
@@ -10,8 +10,9 @@
   },
   {
     "name": "672093626",
-    "status": "Available",
     "isActive": "true",
+    "status": "InUse",
+    "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-06T06:08:07Z",
     "type": "CI"
