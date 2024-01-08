@@ -1,5 +1,18 @@
 # Changelog
 
+## [24.4.0](https://github.com/flxbl-io/sfops/compare/v24.3.1...v24.4.0) (2024-01-08)
+
+
+### Features
+
+* **docker:** ability to select customer images or older images while syncing workflows ([b9c334c](https://github.com/flxbl-io/sfops/commit/b9c334cb0d0838734c0cfd1a01e67ce3b46d1dc0))
+
+
+### Bug Fixes
+
+* **cicd:** add env variables for replacing image ([a1eac26](https://github.com/flxbl-io/sfops/commit/a1eac26ce26999ae13f1496a5484777363466fa5))
+* **cicd:** ensure different place holders are used ([28eca00](https://github.com/flxbl-io/sfops/commit/28eca006653f870fbcc11414a898a8fceefa0e93))
+
 ## [24.3.1](https://github.com/flxbl-io/sfops/compare/v24.3.0...v24.3.1) (2024-01-08)
 
 
