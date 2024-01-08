@@ -1,7 +1,48 @@
 {
-  "total": 0,
+  "total": 5,
   "inuse": 0,
-  "unused": 0,
+  "unused": 5,
   "inprovision": 0,
-  "scratchOrgDetails": []
+  "scratchOrgDetails": [
+    {
+      "tag": "ci",
+      "orgId": "00D1y0000003uIJ",
+      "loginURL": "https://speed-agility-7260-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-ytpl7w39rtzs@example.com",
+      "expiryDate": "2024-01-13",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000000p6U",
+      "loginURL": "https://pistachio-newport-1634-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-opbwoh4fj63k@example.com",
+      "expiryDate": "2024-01-13",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000000p7t",
+      "loginURL": "https://noodles-gemini-6565-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-qf6b5mds1nmj@example.com",
+      "expiryDate": "2024-01-13",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1y0000003jbW",
+      "loginURL": "https://power-flow-8184-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-xoruqeev0ui8@example.com",
+      "expiryDate": "2024-01-13",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1m0000002TNG",
+      "loginURL": "https://platform-customer-6970-dev-ed.scratch.my.salesforce.com/",
+      "username": "test-gq7endmjlij0@example.com",
+      "expiryDate": "2024-01-13",
+      "status": "Available"
+    }
+  ]
 }
