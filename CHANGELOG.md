@@ -1,5 +1,20 @@
 # Changelog
 
+## [24.3.0](https://github.com/flxbl-io/sfops/compare/v24.2.2...v24.3.0) (2024-01-06)
+
+
+### Features
+
+* **actions:** remove the need for manual reopen/close for PR during renew ([5ed50a8](https://github.com/flxbl-io/sfops/commit/5ed50a8f0bc8a37fd198cc0ba2ff0b9a1862ac6b))
+* **cicd:** add version number to sync info ([630145a](https://github.com/flxbl-io/sfops/commit/630145aa570c5ee6c646dcd517e77da0b7570681))
+* **workflows:** display a comment when no config(domain) is identified when a PR is analyzed ([22a720a](https://github.com/flxbl-io/sfops/commit/22a720a39a954b06eedd0bd9900390de9e213b15))
+* **workflows:** print name of release config used in comments ([d36d516](https://github.com/flxbl-io/sfops/commit/d36d516c78240720541184fa3e905e69d350303e))
+
+
+### Bug Fixes
+
+* **actions:** ensure exec actions within allocate jobs are timed out within 5 mins ([b7136f0](https://github.com/flxbl-io/sfops/commit/b7136f0cfb545ec6b00de23caef8fc0d4a4359d0))
+
 ## [24.2.2](https://github.com/flxbl-io/sfops/compare/v24.2.1...v24.2.2) (2024-01-05)
 
 
