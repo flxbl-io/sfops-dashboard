@@ -1,5 +1,16 @@
 # Changelog
 
+## [24.3.1](https://github.com/flxbl-io/sfops/compare/v24.3.0...v24.3.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect json parsing ([c355097](https://github.com/flxbl-io/sfops/commit/c35509726e6a1987a0d990f3d94511f6fe68a305))
+* **actions:** fix incorrect use of paginate in expiring sandboxes ([f1f7d92](https://github.com/flxbl-io/sfops/commit/f1f7d922e93eb68523d92cec0783bf8ed0e96086))
+* **actions:** remove duplication of gh merge-json ([b2f4621](https://github.com/flxbl-io/sfops/commit/b2f462136c8b2e068e3222245e6822e023ef71cc))
+* **actions:** remove incorrect spacing on log ([7af61d1](https://github.com/flxbl-io/sfops/commit/7af61d165fe280d4b00421d827e2ff4f67d889aa))
+* **workflows:** add pagination to list sandbox creation issues ([cea2cf5](https://github.com/flxbl-io/sfops/commit/cea2cf58efddc01511a319cdbc67fd77b29b8f61))
+
 ## [24.3.0](https://github.com/flxbl-io/sfops/compare/v24.2.2...v24.3.0) (2024-01-06)
 
 
