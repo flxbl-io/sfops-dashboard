@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.5.4](https://github.com/flxbl-io/sfops/compare/v24.5.3...v24.5.4) (2024-01-09)
+
+
+### Bug Fixes
+
+* **pool-create:** update to 30.2.6 ([a1ef943](https://github.com/flxbl-io/sfops/commit/a1ef943f26e14803637bf3f4c8056fdd7857c2e6))
+
 ## [24.5.3](https://github.com/flxbl-io/sfops/compare/v24.5.2...v24.5.3) (2024-01-09)
 
 
