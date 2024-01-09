@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.4.1](https://github.com/flxbl-io/sfops/compare/v24.4.0...v24.4.1) (2024-01-08)
+
+
+### Bug Fixes
+
+* **cicd:** rename the job to be explict ([d16fd7a](https://github.com/flxbl-io/sfops/commit/d16fd7a0d97ecd173e743c76b9f940151e009398))
+* **workflows:** temporarily override sfp to flxbl version ([8a8c336](https://github.com/flxbl-io/sfops/commit/8a8c3366a4053807996fa66e49a35e96237c5ddd))
+
 ## [24.4.0](https://github.com/flxbl-io/sfops/compare/v24.3.1...v24.4.0) (2024-01-08)
 
 
