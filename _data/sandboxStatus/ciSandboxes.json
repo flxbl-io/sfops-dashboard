@@ -10,8 +10,9 @@
   },
   {
     "name": "322195512",
-    "status": "Available",
     "isActive": "true",
+    "status": "InUse",
+    "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-08T06:09:18Z",
     "type": "CI"
