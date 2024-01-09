@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.5.5](https://github.com/flxbl-io/sfops/compare/v24.5.4...v24.5.5) (2024-01-09)
+
+
+### Bug Fixes
+
+* **ghmetrics:** increase the limit to 100 to ensure metrics are captured ([d2216d5](https://github.com/flxbl-io/sfops/commit/d2216d5cb9cd8930faf8f6c0d6f8603184052e97))
+
 ## [24.5.4](https://github.com/flxbl-io/sfops/compare/v24.5.3...v24.5.4) (2024-01-09)
 
 
