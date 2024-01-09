@@ -1,5 +1,21 @@
 # Changelog
 
+## [24.5.0](https://github.com/flxbl-io/sfops/compare/v24.4.2...v24.5.0) (2024-01-09)
+
+
+### Features
+
+* **actions:** optimize impacted release config check ([fa577fe](https://github.com/flxbl-io/sfops/commit/fa577feb8091a879d35d3530aa772f08fb183e7c))
+
+
+### Bug Fixes
+
+* **pr-validate:** ensure sha is used instead of ref in github context ([3efba54](https://github.com/flxbl-io/sfops/commit/3efba54592ee097851294d1380b2c9579889bf95))
+* **pr-validate:** remove the incorrect path mentioned in comment ([aac66d6](https://github.com/flxbl-io/sfops/commit/aac66d6833e98b84b20dd07f7b0a8e7122bf105c))
+* **pr-validate:** use the correct parameters and switch to the correct action ([68083e5](https://github.com/flxbl-io/sfops/commit/68083e55b8be7a060326697498cac2cf57afad7f))
+* **releaseconfig-impact:** update to bugfixed upstream of sfp ([352b5e9](https://github.com/flxbl-io/sfops/commit/352b5e93d337509961ddcade2a2a0cf9af7ab55a))
+* **renew:** ensure renew is operated even when sandbox is not assigned ([b425713](https://github.com/flxbl-io/sfops/commit/b4257134fc8c7c8d59fced5aad4e8b1358ce2b1b))
+
 ## [24.4.2](https://github.com/flxbl-io/sfops/compare/v24.4.1...v24.4.2) (2024-01-09)
 
 
