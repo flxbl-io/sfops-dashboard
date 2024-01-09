@@ -2,7 +2,7 @@
   {
     "name": "109516392",
     "isActive": "true",
-    "status": "InUse",
+    "status": "Available",
     "issue": "95",
     "domain": "CORE",
     "created_at": "2024-01-08T06:09:19Z",
@@ -11,7 +11,7 @@
   {
     "name": "322195512",
     "isActive": "true",
-    "status": "InUse",
+    "status": "Available",
     "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-08T06:09:18Z",
