@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.5.1](https://github.com/flxbl-io/sfops/compare/v24.5.0...v24.5.1) (2024-01-09)
+
+
+### Bug Fixes
+
+* **pr-validate:** update sfp to 30.2.5 ([cc55a75](https://github.com/flxbl-io/sfops/commit/cc55a753bd8297cadf503903adca438aeceb42a9))
+
 ## [24.5.0](https://github.com/flxbl-io/sfops/compare/v24.4.2...v24.5.0) (2024-01-09)
 
 
