@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.4.2](https://github.com/flxbl-io/sfops/compare/v24.4.1...v24.4.2) (2024-01-09)
+
+
+### Bug Fixes
+
+* **workflows:** add force for sfp override ([ac16634](https://github.com/flxbl-io/sfops/commit/ac166343eb675c78641d0a81fe870e5e1ff501c6))
+
 ## [24.4.1](https://github.com/flxbl-io/sfops/compare/v24.4.0...v24.4.1) (2024-01-08)
 
 
