@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.5.2](https://github.com/flxbl-io/sfops/compare/v24.5.1...v24.5.2) (2024-01-09)
+
+
+### Bug Fixes
+
+* **impact:** rollback to 30.2.4 ([c0651a2](https://github.com/flxbl-io/sfops/commit/c0651a2909701d43ea0857488a39e5bcd6c69fa3))
+
 ## [24.5.1](https://github.com/flxbl-io/sfops/compare/v24.5.0...v24.5.1) (2024-01-09)
 
 
