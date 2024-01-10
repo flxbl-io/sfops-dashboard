@@ -1,5 +1,18 @@
 # Changelog
 
+## [24.6.0](https://github.com/flxbl-io/sfops/compare/v24.5.6...v24.6.0) (2024-01-10)
+
+
+### Features
+
+* **dashboard:** ensure review sandbox display extension and immortal status ([95a33de](https://github.com/flxbl-io/sfops/commit/95a33ded90cfec9580f4fd56fc66917fd83b5650))
+* **reviewsandbox:** ability to retain a review sandbox forever ([9002186](https://github.com/flxbl-io/sfops/commit/9002186169f11b3702b00afb84279e16eae8c08c))
+
+
+### Bug Fixes
+
+* **sandboxstatus:** ensure  paginate of variables properly ([f9355da](https://github.com/flxbl-io/sfops/commit/f9355da25a7b6dc189db6e8d3b8ca1138b021016))
+
 ## [24.5.6](https://github.com/flxbl-io/sfops/compare/v24.5.5...v24.5.6) (2024-01-09)
 
 
