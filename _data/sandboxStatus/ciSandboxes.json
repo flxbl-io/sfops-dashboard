@@ -1,9 +1,10 @@
 [
   {
     "name": "125722079",
-    "isActive": "true",
-    "status": "InUse",
+    "isActive": true,
+    "status": "Available",
     "issue": "80",
+    "isExtended": true,
     "domain": "CORE",
     "created_at": "2024-01-10T06:09:15Z",
     "type": "CI"
