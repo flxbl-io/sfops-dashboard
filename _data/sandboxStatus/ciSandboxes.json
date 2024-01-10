@@ -1,8 +1,9 @@
 [
   {
     "name": "125722079",
-    "status": "Available",
     "isActive": "true",
+    "status": "InUse",
+    "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-10T06:09:15Z",
     "type": "CI"
