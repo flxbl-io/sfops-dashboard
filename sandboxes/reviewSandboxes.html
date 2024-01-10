@@ -213,7 +213,7 @@ input:checked + .slider:before {
             </thead>
             <tbody>
             {% for sandbox in site.data.sandboxStatus.ciSandboxes %}
-                <tr data-created-at="{{ sandbox.created_at }}" data-expiry="1">
+                <tr data-created-at="{{ sandbox.created_at }}" data-expiry="1" data-is-extended='{{sandbox.isExtended}}' data-is-immortal='{{sandbox.isImmortal}}'>
                 <td>{{ sandbox.domain }}</td>
                 <td>{{ sandbox.name }}</td>
                 <td>
@@ -259,29 +259,41 @@ function updateExpiryDisplay() {
     $('#sandboxTable tbody tr').each(function() {
         var createdAt = new Date($(this).data('created-at'));
         var expiryDays = parseInt($(this).data('expiry'));
-        var expiryDate = new Date(createdAt.setDate(createdAt.getDate() + expiryDays));
-        var now = new Date();
-        var timeDiff = expiryDate - now;
-
-        if (timeDiff > 0) {
-            var hours = Math.floor(timeDiff / (1000 * 60 * 60));
-            var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-            $('td:eq(4)', this).text(`${hours}h ${minutes}m`);
-        } else {
-            if ($('td:eq(2)', this).text().includes('Expired')) {
-               $('td:eq(4)', this).text('Marked for Deletion');
-            }
-            else
+        var isExtended = $(this).data('is-extended');
+       if($(this).data('is-immortal')==true)
+       {
+         $('td:eq(4)', this).text('Blocked by Ops');
+       }
+       else
+       { 
+            if($(this).data('is-extended')==true)
             {
-             $('td:eq(4)', this).text(`Expiring Soon`);
+              expiryDays = expiryDays + 1;
             }
-        }
+            var expiryDate = new Date(createdAt.setDate(createdAt.getDate() + expiryDays));
+            var now = new Date();
+            var timeDiff = expiryDate - now;
 
-        if (timeDiff <= 3 * 60 * 60 * 1000) {
-            $(this).addClass('near-expiry');
-        } else {
-            $(this).removeClass('near-expiry');
-        }
+            if (timeDiff > 0) {
+                var hours = Math.floor(timeDiff / (1000 * 60 * 60));
+                var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                $('td:eq(4)', this).text(`${hours}h ${minutes}m`);
+            } else {
+                if ($('td:eq(2)', this).text().includes('Expired')) {
+                  $('td:eq(4)', this).text('Marked for Deletion');
+                }
+                else
+                {
+                $('td:eq(4)', this).text(`Expiring Soon`);
+                }
+            }
+
+            if (timeDiff <= 3 * 60 * 60 * 1000) {
+                $(this).addClass('near-expiry');
+            } else {
+                $(this).removeClass('near-expiry');
+            }
+       }
     });
 }
 
