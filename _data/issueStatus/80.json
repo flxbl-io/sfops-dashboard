@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,10 +37,10 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-01-11T01:18:15Z",
+    "updated_at": "2024-01-11T01:32:55Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "d05f050c4831a0c7a773504776808ab35e055757",
+    "merge_commit_sha": "be09860097728c1eb2fb13bb8c59ded3c425c540",
     "assignee": null,
     "assignees": [],
     "requested_reviewers": [],
@@ -56,22 +56,13 @@
         "description": null
       },
       {
-        "id": 6416676101,
-        "node_id": "LA_kwDOKLk9E88AAAABfna1BQ",
-        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-succeeded",
-        "name": "validation-succeeded",
-        "color": "ededed",
+        "id": 6416672707,
+        "node_id": "LA_kwDOKLk9E88AAAABfnanww",
+        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-pending",
+        "name": "validation-pending",
+        "color": "FBCA04",
         "default": false,
-        "description": null
-      },
-      {
-        "id": 6416676132,
-        "node_id": "LA_kwDOKLk9E88AAAABfna1JA",
-        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-failed",
-        "name": "validation-failed",
-        "color": "ededed",
-        "default": false,
-        "description": null
+        "description": ""
       }
     ],
     "milestone": null,
