@@ -1,5 +1,21 @@
 # Changelog
 
+## [24.7.0](https://github.com/flxbl-io/sfops/compare/v24.6.1...v24.7.0) (2024-01-11)
+
+
+### Features
+
+* **validate:** add domain labels when validation is being run ([1e40818](https://github.com/flxbl-io/sfops/commit/1e40818d6404f34d359feb894b903461a3bc96cc))
+* **workflow-pr:** add concurrency control to pull request jobs ([c0bdd4a](https://github.com/flxbl-io/sfops/commit/c0bdd4ab9bf02eb205d551c9996a6d69a8a3c12d))
+* **workflow-validate:** add labels to describe various status of PR ([e7b9783](https://github.com/flxbl-io/sfops/commit/e7b97838d403d56f75257d2be9b20d3ebf1085e9))
+
+
+### Bug Fixes
+
+* **workflow-validate:** removal of labels should not fail if labels are missing ([5c19a59](https://github.com/flxbl-io/sfops/commit/5c19a59744b38040e8f414355b680be36eec39bd))
+* **workflow-validate:** remove incorrect syntax ([8656d04](https://github.com/flxbl-io/sfops/commit/8656d04de1cff9e63222b7ac92af3febfe3aefa0))
+* **workflows-validate:** fix conditions on labels due to weird gh bug ([9a86a18](https://github.com/flxbl-io/sfops/commit/9a86a18763a585b753ade16caa09f01c91f52b27))
+
 ## [24.6.1](https://github.com/flxbl-io/sfops/compare/v24.6.0...v24.6.1) (2024-01-10)
 
 
