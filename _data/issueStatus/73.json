@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "73",
   "branch": "feat/comment",
   "domain": "",
@@ -37,10 +37,10 @@
     },
     "body": null,
     "created_at": "2023-11-22T03:13:15Z",
-    "updated_at": "2024-01-11T01:26:56Z",
+    "updated_at": "2024-01-11T01:33:26Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "7c3f3599035f1de972d228796dd59e665a0409cc",
+    "merge_commit_sha": "6657b86c9f5108ad1086685d53499b7aa6724167",
     "assignee": null,
     "assignees": [],
     "requested_reviewers": [],
@@ -60,9 +60,9 @@
         "node_id": "LA_kwDOKLk9E88AAAABfnanww",
         "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-pending",
         "name": "validation-pending",
-        "color": "ededed",
+        "color": "FBCA04",
         "default": false,
-        "description": null
+        "description": ""
       }
     ],
     "milestone": null,
@@ -368,7 +368,7 @@
     "rebaseable": false,
     "mergeable_state": "blocked",
     "merged_by": null,
-    "comments": 10,
+    "comments": 11,
     "review_comments": 0,
     "maintainer_can_modify": false,
     "commits": 4,
