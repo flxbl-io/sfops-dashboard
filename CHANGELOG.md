@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.6.1](https://github.com/flxbl-io/sfops/compare/v24.6.0...v24.6.1) (2024-01-10)
+
+
+### Bug Fixes
+
+* **fetch:** respect isExtended and isImmortal ([4922866](https://github.com/flxbl-io/sfops/commit/4922866e60982638f837065550413116f8cb8683))
+
 ## [24.6.0](https://github.com/flxbl-io/sfops/compare/v24.5.6...v24.6.0) (2024-01-10)
 
 
