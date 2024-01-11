@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.7.1](https://github.com/flxbl-io/sfops/compare/v24.7.0...v24.7.1) (2024-01-11)
+
+
+### Bug Fixes
+
+* **expire:** fix incorrect variable for immortal sandbox ([62e7a61](https://github.com/flxbl-io/sfops/commit/62e7a618f6daeb448b322578ab9ce72e6c3bf295))
+
 ## [24.7.0](https://github.com/flxbl-io/sfops/compare/v24.6.1...v24.7.0) (2024-01-11)
 
 
