@@ -10,28 +10,35 @@
     "type": "CI"
   },
   {
-    "name": "476964904",
+    "name": "195119451",
+    "status": "InProgress",
     "isActive": "true",
-    "status": "Available",
-    "issue": "73",
     "domain": "CORE",
-    "created_at": "2024-01-10T06:09:15Z",
+    "created_at": "2024-01-11T06:08:55Z",
     "type": "CI"
   },
   {
-    "name": "207339179",
-    "status": "Available",
+    "name": "218235964",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "CORE",
-    "created_at": "2024-01-10T06:09:16Z",
+    "created_at": "2024-01-11T06:08:55Z",
     "type": "CI"
   },
   {
-    "name": "324953511",
-    "status": "Available",
+    "name": "407686588",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "CORE",
-    "created_at": "2024-01-10T06:09:15Z",
+    "created_at": "2024-01-11T06:08:56Z",
+    "type": "CI"
+  },
+  {
+    "name": "936831747",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "created_at": "2024-01-11T06:08:56Z",
     "type": "CI"
   },
   {
@@ -43,11 +50,11 @@
     "type": "CI"
   },
   {
-    "name": "710262290",
-    "status": "Available",
+    "name": "741472809",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "HOTFIX",
-    "created_at": "2024-01-10T06:09:15Z",
+    "created_at": "2024-01-11T06:08:56Z",
     "type": "CI"
   }
 ]
