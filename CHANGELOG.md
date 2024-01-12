@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.7.2](https://github.com/flxbl-io/sfops/compare/v24.7.1...v24.7.2) (2024-01-11)
+
+
+### Bug Fixes
+
+* **validate:** do fail fast only on validate ([d664481](https://github.com/flxbl-io/sfops/commit/d664481978303f4a9ab301cb138c82108309ef1c))
+* **workflows:** ensure pr-validate and push-to-branch fails immediately ([d0a145a](https://github.com/flxbl-io/sfops/commit/d0a145a34dad9b28b9ee509918422502c761f547))
+
 ## [24.7.1](https://github.com/flxbl-io/sfops/compare/v24.7.0...v24.7.1) (2024-01-11)
 
 
