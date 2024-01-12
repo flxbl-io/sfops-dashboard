@@ -1,10 +1,10 @@
 [
   {
     "name": "feature-management",
-    "version": "1.2.2.1",
-    "commitId": "39bfb589146c1644526af86d4d2f92c1cfd82a9f",
-    "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009Rg89AAC",
+    "version": "1.4.4.1",
+    "commitId": "b253e25380d25fdf624422df652af721ef09a2d2",
+    "isInstalledBysfp": true,
+    "subscriberVersion": "04t2w000009RgE2AAK",
     "type": "OrgDependendent"
   },
   {
@@ -13,7 +13,7 @@
     "commitId": "N/A",
     "type": "OrgDependendent",
     "subscriberVersion": "04t1P000000katQQAQ",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "sfpowerscripts-artifact",
@@ -21,7 +21,7 @@
     "commitId": "N/A",
     "type": "Unlocked",
     "subscriberVersion": "04t1P000000ka9mQAA",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "Org Expiry Notifier",
@@ -29,7 +29,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t1n0000028OJ6AAM",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "License Management App",
@@ -37,7 +37,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t30000001DX1FAAW",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "Checkout Management App",
@@ -45,15 +45,15 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04tHp000001YxM3IAK",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "pmcPartner",
-    "version": "1.89.0.1",
+    "version": "1.95.0.1",
     "commitId": "N/A",
     "type": "Managed",
-    "subscriberVersion": "04t4x000000vVTwAAM",
-    "isInstalledBySfpowerscripts": false
+    "subscriberVersion": "04t4x000000vVgbAAE",
+    "isInstalledBysfp": false
   },
   {
     "name": "PBO Guide",
@@ -61,7 +61,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t5w000003Vj4iAAC",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "DevOps Center",
@@ -69,7 +69,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t6g000008KSUVAA4",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "SFDC Channel Order",
@@ -77,6 +77,6 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t2K000000Ah1NQAS",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   }
 ]
