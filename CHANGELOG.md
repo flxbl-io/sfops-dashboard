@@ -1,5 +1,18 @@
 # Changelog
 
+## [24.8.0](https://github.com/flxbl-io/sfops/compare/v24.7.2...v24.8.0) (2024-01-12)
+
+
+### Features
+
+* **metrics:** report full workflow execution time ([cec1909](https://github.com/flxbl-io/sfops/commit/cec1909e6d0962a36ffa37e419783b28b0604fc1))
+
+
+### Bug Fixes
+
+* **metrics-workflow:** add missing flag for type ([827a8bc](https://github.com/flxbl-io/sfops/commit/827a8bc12def4a00b2c94801815c33b62d7008d0))
+* **metrics-workflow:** fix incorrect variable completion ([149c763](https://github.com/flxbl-io/sfops/commit/149c763ffe33c86e4f0c9c593fbc724bb15a6ada))
+
 ## [24.7.2](https://github.com/flxbl-io/sfops/compare/v24.7.1...v24.7.2) (2024-01-11)
 
 
