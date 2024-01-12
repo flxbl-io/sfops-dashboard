@@ -1,5 +1,18 @@
 # Changelog
 
+## [24.9.0](https://github.com/flxbl-io/sfops/compare/v24.8.0...v24.9.0) (2024-01-12)
+
+
+### Features
+
+* **metrics-workflows:** add workflow execution time metrics to build and release ([9471e2f](https://github.com/flxbl-io/sfops/commit/9471e2f0a9e55f21f2516aa148e578a09a55c57b))
+
+
+### Bug Fixes
+
+* **metrics:** use lite image ([4cfc49a](https://github.com/flxbl-io/sfops/commit/4cfc49ad690b38fedbe805c7da84c21f7f026d6c))
+* **workflow-release:** ensure safe directory is added for gh cli ([c84aa96](https://github.com/flxbl-io/sfops/commit/c84aa960ce84f6a76176e2d4257258aa72d935cc))
+
 ## [24.8.0](https://github.com/flxbl-io/sfops/compare/v24.7.2...v24.8.0) (2024-01-12)
 
 
