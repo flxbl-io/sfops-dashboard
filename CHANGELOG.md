@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.9.1](https://github.com/flxbl-io/sfops/compare/v24.9.0...v24.9.1) (2024-01-12)
+
+
+### Bug Fixes
+
+* **validate:** update to sfp 30.2.8 for dependencyOn bug ([72510cb](https://github.com/flxbl-io/sfops/commit/72510cbabd1cab2e11f47af23e38ecdee60db7cd))
+
 ## [24.9.0](https://github.com/flxbl-io/sfops/compare/v24.8.0...v24.9.0) (2024-01-12)
 
 
