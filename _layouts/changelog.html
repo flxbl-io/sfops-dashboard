@@ -225,7 +225,7 @@ layout: default
       {% assign rest = parts | slice: 1, parts.size | join: '.' %}
       {% assign resolved_file_name  = prefix | append: rest %}
 
-      {% assign yaml_data = site.data.releasedefns[page.domain][resolved_file_name] %}
+      {% assign yaml_data = site.data.releasedefns[page.branch][page.domain][resolved_file_name] %}
       console.log({{ yaml_data | jsonify }});
       {% if yaml_data %}
         yamlDataMap["{{ release_name }}"] = {{ yaml_data | jsonify }};
