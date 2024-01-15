@@ -1,5 +1,19 @@
 # Changelog
 
+## [24.10.0](https://github.com/flxbl-io/sfops/compare/v24.9.2...v24.10.0) (2024-01-15)
+
+
+### Features
+
+* **envinfo:** ensure release modal is available ([60b905b](https://github.com/flxbl-io/sfops/commit/60b905babd5ace1d50aaa6e704867479e7e2eff2))
+* **envinfos:** report deployments/releases of each environment ([8988127](https://github.com/flxbl-io/sfops/commit/8988127416f0bb5f1cd52d819e64ff1835d6f90f))
+
+
+### Bug Fixes
+
+* **dashboard:** fix defect where yaml diff is not displayed ([ceee346](https://github.com/flxbl-io/sfops/commit/ceee34698c44f424f89dd4bab30448f30f928a3b))
+* **envInfos:** fix sha becoming empty when there is no deployments ([3278af9](https://github.com/flxbl-io/sfops/commit/3278af9ccf2fc4859b6bcef99417fa648cd472c2))
+
 ## [24.9.2](https://github.com/flxbl-io/sfops/compare/v24.9.1...v24.9.2) (2024-01-12)
 
 
