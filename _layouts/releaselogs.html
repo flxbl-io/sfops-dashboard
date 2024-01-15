@@ -255,14 +255,15 @@ layout: default
              <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
            </button>
            <div class="content-detail">
-             <table class="commitTable">
-               <thead>
-                 <tr>
-                   <th>Commit Id</th<
-                   <th>Author</th>
-                   <th>Message</th>
-                 </tr>
-               </thead>
+              <table class="commitTable">
+                <thead>
+                    <tr>
+                      <th style="text-align: center;">Commit Id</th>
+                      <th style="text-align: center;">Date</th>
+                      <th style="text-align: center;">Author</th>
+                      <th style="text-align: center;">Message</th>
+                    </tr>
+                </thead>
                <tbody>
                  ${artifact.commits.map(commit => `
                    <tr>

@@ -358,35 +358,25 @@ layout: default
     }
   
     htmlContent += `</ul>`;
-    htmlContent += `<strong>Artifacts:</strong>`;
+    htmlContent += `<strong>Artifacts impacted with work items:</strong>`;
     
     release.artifacts.forEach(artifact => {
-      if (artifact.commits.length === 0) {
-        htmlContent += `<div>
-          <button class="collapsible-content" onclick="toggleCollapsible(event)">
-            <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
-          </button>
-          <div class="content-detail">
-            <h4>No diff/commit id's to display. The package build was triggered manually or some other process created a new version of the package, such as a change in sfdx-project.json or a runbook.</h4>
-            <i class="fas fa-exclamation-circle"></i>
-          </div>
-        </div>`;
-      } else {
+      if (artifact.commits.length > 0) {
         htmlContent += `<div>
           <button class="collapsible-content" onclick="toggleCollapsible(event)">
             <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
           </button>
           <div class="content-detail">
             <table class="commitTable">
-              <thead>
-                <tr>
-                  <th>Commit Id</th>
-                  <th>Date</th>
-                  <th>Author</th>
-                  <th>Message</th>
-                </tr>
-              </thead>
-              <tbody>
+                  <thead>
+                    <tr>
+                      <th style="text-align: center;">Commit Id</th>
+                      <th style="text-align: center;">Date</th>
+                      <th style="text-align: center;">Author</th>
+                      <th style="text-align: center;">Message</th>
+                    </tr>
+                </thead>
+               <tbody>
                 ${artifact.commits.map(commit => `
                   <tr>
                     <td><a href="${repoData.url}/commit/${commit.commitId}" target="_blank">${commit.commitId}</a></td>
@@ -405,10 +395,17 @@ layout: default
   
     $('#releaseModalBody').html(htmlContent);
 
+    console.log(`oldYamlData`,oldYamlData);
+    console.log(`newYamlData`,newYamlData);
+      console.log(`oldYamlData`,latestReleaseInProd);
+    console.log(`newYamlData`,releaseName);
+
     var diff = Diff.createTwoFilesPatch(latestReleaseInProd, releaseName, oldYamlData, newYamlData, "", "", {
       context: 4
     });
     
+       
+    console.log(`ssssss`,diff);
    // Update the element and apply Prism highlighting
     $('#yamlDiffData').text(diff);
     Prism.highlightElement(document.getElementById('yamlDiffData'), false);

@@ -196,6 +196,7 @@ layout: default
                     <li><a href="#devSandboxes">Dev Sandboxes</a></li>
                     <li><a href="#reviewSandboxes">Review Sandboxes</a></li>
                     <li><a href="#scratchOrgs">Scratch Orgs</a></li>
+                    <li><a href="#envSnapshot">Environment Snapshot</a></li>
                     <li><a href="#orgComparison">Org Comparison</a></li>
                 </ul>
             </li>
@@ -286,6 +287,9 @@ layout: default
             },
             'scratchOrgs': {
                 url: `${siteSuffix}/scratchorgs/index.html`
+            },
+            'envSnapshot': {
+                url: `${siteSuffix}/environments/snapshot.html`
             },
             'evolution': {
                 url: `${siteSuffix}/packageVisualisation/index.html`
