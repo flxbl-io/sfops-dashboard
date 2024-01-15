@@ -1,0 +1,50 @@
+[
+  {
+    "name": "qa",
+    "branch": "test",
+    "sbx_name": "qa",
+    "type": "test",
+    "testrun": "true",
+    "latestDeployment": {
+      "sha": "3f10b00a",
+      "url": "http://github.com/flxbl-io/sf-core/commit/3f10b00a34f05568a0056075bc5b6d31f044e02c",
+      "creator": "azlam-abdulsalam"
+    }
+  },
+  {
+    "name": "sit",
+    "sbx_name": "sit",
+    "type": "test",
+    "latestDeployment": {
+      "sha": "1b85b729",
+      "url": "http://github.com/flxbl-io/sf-core/commit/1b85b729a020446ee35504a212cc4e8d2718071d",
+      "creator": "azlam-abdulsalam"
+    }
+  },
+  {
+    "name": "staging",
+    "branch": "main",
+    "sbx_name": "staging",
+    "type": "snapshot",
+    "latestDeployment": {
+      "sha": "2ae20cd9",
+      "url": "http://github.com/flxbl-io/sf-core/commit/2ae20cd91be6d176021c63ae873ed701fb6fc6ba",
+      "creator": "azlam-abdulsalam"
+    }
+  },
+  {
+    "name": "staging2",
+    "branch": "main",
+    "sbx_name": "staging2",
+    "type": "test",
+    "latestDeployment": {}
+  },
+  {
+    "name": "prod",
+    "sbx_name": "prod",
+    "type": "release",
+    "latestDeployment": {
+      "creator": "azlam-abdulsalam"
+    }
+  }
+]
