@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.10.1](https://github.com/flxbl-io/sfops/compare/v24.10.0...v24.10.1) (2024-01-16)
+
+
+### Bug Fixes
+
+* **frontdoorurl:** fix jobs hanging while trying to update review orgs ([b6006bd](https://github.com/flxbl-io/sfops/commit/b6006bd4759a0dceac2e13db89332e62e749df63))
+* **workflow-release:** ensure owner is added so that it can commit into dashboard repo ([7db9bac](https://github.com/flxbl-io/sfops/commit/7db9bacf734fd714af3245d59ac2d39ad7337322))
+
 ## [24.10.0](https://github.com/flxbl-io/sfops/compare/v24.9.2...v24.10.0) (2024-01-15)
 
 
