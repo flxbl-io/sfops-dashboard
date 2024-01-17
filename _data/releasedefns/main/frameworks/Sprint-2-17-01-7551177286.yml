@@ -1,0 +1,11 @@
+release: Sprint-2-17-01-7551177286
+skipIfAlreadyInstalled: true
+skipArtifactUpdate: false
+artifacts:
+  feature-management: 1.4.8-2
+promotePackagesBeforeDeploymentToOrg: prod
+changelog:
+  workItemFilters:
+    - (FGK|FFK)-[0-9]{3,4}
+  workItemUrl: https://adiza.atlassian.net/browse
+  limit: 30
