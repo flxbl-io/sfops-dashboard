@@ -113,6 +113,34 @@
             ],
             "hashId": "5d3112aecec1f0bc21aa74f19cdd9a02cc6a4da1",
             "date": "Wed Jan 17 2024 05:06:00 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-17-01-7551282956"
+            ],
+            "buildNumber": 4,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "bd9bfab5",
+                    "to": "765c9b2f",
+                    "version": "1.0.30.7551282956",
+                    "repoUrl": "https://github.com/flxbl-io/sf-core",
+                    "latestCommitId": "7f439a69",
+                    "commits": [
+                        {
+                            "commitId": "7f439a69",
+                            "date": "2024-01-17T16:03:15+11:00",
+                            "author": "sfp",
+                            "message": "[FGK-1]: update label",
+                            "body": ""
+                        }
+                    ]
+                }
+            ],
+            "hashId": "f69bf286e49e39c666f5360134e56bb3011ae624",
+            "date": "Wed Jan 17 2024 05:16:26 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
