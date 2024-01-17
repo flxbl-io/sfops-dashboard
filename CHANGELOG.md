@@ -1,5 +1,17 @@
 # Changelog
 
+## [24.11.0](https://github.com/flxbl-io/sfops/compare/v24.10.1...v24.11.0) (2024-01-16)
+
+
+### Features
+
+* **expirerevieworgs:** ensure sandboxes have real usable time of 24 and 48 Hours ([ae2b3aa](https://github.com/flxbl-io/sfops/commit/ae2b3aa3c920c094907fb0aaf67130318c7019d7))
+
+
+### Bug Fixes
+
+* **deleteSandbox:** fix typo of additional space in logs ([5ebc0b8](https://github.com/flxbl-io/sfops/commit/5ebc0b8ce91950e5b9569ae2151cb3c9ea27c833))
+
 ## [24.10.1](https://github.com/flxbl-io/sfops/compare/v24.10.0...v24.10.1) (2024-01-16)
 
 
