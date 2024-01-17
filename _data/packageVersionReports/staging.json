@@ -8,6 +8,14 @@
     "type": "OrgDependendent"
   },
   {
+    "name": "unpackaged",
+    "version": "1.0.27.7549938220",
+    "commitId": "0932b752e13d5290dc0cbe776ce7de157055a44d",
+    "isInstalledBysfp": true,
+    "subscriberVersion": "N/A",
+    "type": "Source/Data"
+  },
+  {
     "name": "sfpowerscripts-artifact",
     "version": "2.0.0.1",
     "commitId": "N/A",
