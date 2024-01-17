@@ -1,10 +1,10 @@
 [
   {
     "name": "feature-management",
-    "version": "1.4.4.1",
-    "commitId": "b253e25380d25fdf624422df652af721ef09a2d2",
-    "isInstalledBySfpowerscripts": true,
-    "subscriberVersion": "04t2w000009RgE2AAK",
+    "version": "1.4.5.1",
+    "commitId": "0932b752e13d5290dc0cbe776ce7de157055a44d",
+    "isInstalledBysfp": true,
+    "subscriberVersion": "04t2w000009RgX6AAK",
     "type": "OrgDependendent"
   },
   {
@@ -13,7 +13,7 @@
     "commitId": "N/A",
     "type": "Unlocked",
     "subscriberVersion": "04t1P000000ka9mQAA",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "Org Expiry Notifier",
@@ -21,7 +21,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t1n0000028OJ6AAM",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "License Management App",
@@ -29,7 +29,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t30000001DX1FAAW",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "Checkout Management App",
@@ -37,15 +37,15 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t1Q000000kYiVQAU",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "pmcPartner",
-    "version": "1.89.0.1",
+    "version": "1.95.0.1",
     "commitId": "N/A",
     "type": "Managed",
-    "subscriberVersion": "04t4x000000vVTwAAM",
-    "isInstalledBySfpowerscripts": false
+    "subscriberVersion": "04t4x000000vVgbAAE",
+    "isInstalledBysfp": false
   },
   {
     "name": "PBO Guide",
@@ -53,7 +53,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t5w000003Vj4iAAC",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "DevOps Center",
@@ -61,7 +61,7 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t6g000008KSUVAA4",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   },
   {
     "name": "SFDC Channel Order",
@@ -69,6 +69,6 @@
     "commitId": "N/A",
     "type": "Managed",
     "subscriberVersion": "04t2K000000AgwXQAS",
-    "isInstalledBySfpowerscripts": false
+    "isInstalledBysfp": false
   }
 ]
