@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.11.1](https://github.com/flxbl-io/sfops/compare/v24.11.0...v24.11.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* **ci:** add a manual workflow dispatch ([3cd1aab](https://github.com/flxbl-io/sfops/commit/3cd1aab5314c3e1a94c067d98fa80cbad8a23e27))
+
 ## [24.11.0](https://github.com/flxbl-io/sfops/compare/v24.10.1...v24.11.0) (2024-01-16)
 
 
