@@ -1,5 +1,18 @@
 # Changelog
 
+## [24.12.0](https://github.com/flxbl-io/sfops/compare/v24.11.1...v24.12.0) (2024-01-18)
+
+
+### Features
+
+* **expiry-revieworgs:** ensure sandbox createdTime is taken to account as opposed to variable time ([d0df224](https://github.com/flxbl-io/sfops/commit/d0df224d20091b2f9a85de27d041747de57c38dd))
+* **validate:** add additional links to validation run ([0846720](https://github.com/flxbl-io/sfops/commit/084672026000f2b4b78804729aacd35200c50056))
+
+
+### Bug Fixes
+
+* **allocate-sandbox:** fix error handling ([a06125a](https://github.com/flxbl-io/sfops/commit/a06125a4a786718de98826d0bbdb5c45f43f5e2f))
+
 ## [24.11.1](https://github.com/flxbl-io/sfops/compare/v24.11.0...v24.11.1) (2024-01-17)
 
 
