@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.13.5](https://github.com/flxbl-io/sfops/compare/v24.13.4...v24.13.5) (2024-01-19)
+
+
+### Bug Fixes
+
+* **sandboxstatus:** add error handling for incorrect parsing of time ([7d0c14f](https://github.com/flxbl-io/sfops/commit/7d0c14f3a7faf4917f68157f66e76da799812ee5))
+
 ## [24.13.4](https://github.com/flxbl-io/sfops/compare/v24.13.3...v24.13.4) (2024-01-19)
 
 
