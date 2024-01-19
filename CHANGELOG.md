@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.13.3](https://github.com/flxbl-io/sfops/compare/v24.13.2...v24.13.3) (2024-01-19)
+
+
+### Bug Fixes
+
+* **deletion:** fix missing env variables deletion of component ([27f9192](https://github.com/flxbl-io/sfops/commit/27f91924ac74081de706c6fb98b56f7972983fe8))
+* **devsandbox:** add created at status ([19ba5df](https://github.com/flxbl-io/sfops/commit/19ba5df4751a1f590ace67f6d6263d8744ef04eb))
+
 ## [24.13.2](https://github.com/flxbl-io/sfops/compare/v24.13.1...v24.13.2) (2024-01-19)
 
 
