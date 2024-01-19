@@ -1,5 +1,21 @@
 # Changelog
 
+## [24.13.0](https://github.com/flxbl-io/sfops/compare/v24.12.2...v24.13.0) (2024-01-19)
+
+
+### Features
+
+* **dashboard:** add a display of created Date in dasbhoard ([d74627c](https://github.com/flxbl-io/sfops/commit/d74627cf0f5d79f7600c7c882ae2ba04686081db))
+
+
+### Bug Fixes
+
+* **review-sandbox:** remove unassign button ([0b40122](https://github.com/flxbl-io/sfops/commit/0b401223b9a317af9d1b63eb289dd23ae56876e7))
+* **status:** display N/A when createdAt is not available ([80ba0f5](https://github.com/flxbl-io/sfops/commit/80ba0f546a5616c970d1a49cda17bc54b40c5a46))
+* **status:** handle lack of created time more accurately ([b690522](https://github.com/flxbl-io/sfops/commit/b690522011e99a6612b24a30021fcd0419a89bd1))
+* **status:** rename cratedAt to Completed At ([fb30747](https://github.com/flxbl-io/sfops/commit/fb30747fad56f29bc3576094eedc9089191d4727))
+* **status:** report columns correctly for review sandbox ([a790d02](https://github.com/flxbl-io/sfops/commit/a790d0205a9774d1083a85ba9fbedb7adcf214b4))
+
 ## [24.12.2](https://github.com/flxbl-io/sfops/compare/v24.12.1...v24.12.2) (2024-01-19)
 
 
