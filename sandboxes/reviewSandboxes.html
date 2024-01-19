@@ -263,11 +263,11 @@ function updateExpiryDisplay() {
         var isExtended = $(this).data('is-extended');
        if($(this).data('is-immortal')==true)
        {
-         $('td:eq(4)', this).text('Blocked by Ops');
+         $('td:eq(5)', this).text('Blocked by Ops');
        }
        else if($(this).data('status')=='InProgress')
        {
-         $('td:eq(4)', this).text('Provisioning in Progress');
+         $('td:eq(5)', this).text('Provisioning in Progress');
        }
        else
        { 
@@ -282,14 +282,14 @@ function updateExpiryDisplay() {
             if (timeDiff > 0) {
                 var hours = Math.floor(timeDiff / (1000 * 60 * 60));
                 var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                $('td:eq(4)', this).text(`${hours}h ${minutes}m`);
+                $('td:eq(5)', this).text(`${hours}h ${minutes}m`);
             } else {
                 if ($('td:eq(2)', this).text().includes('Expired')) {
-                  $('td:eq(4)', this).text('Marked for Deletion');
+                  $('td:eq(5)', this).text('Marked for Deletion');
                 }
                 else
                 {
-                $('td:eq(4)', this).text(`Expiring Soon`);
+                $('td:eq(5)', this).text(`Expiring Soon`);
                 }
             }
 
