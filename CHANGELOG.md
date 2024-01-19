@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.13.2](https://github.com/flxbl-io/sfops/compare/v24.13.1...v24.13.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* **dev-sandboxes:** add createdAt to developer sandbox ([3982bca](https://github.com/flxbl-io/sfops/commit/3982bcade10b8e04519bf44f2c07cba45b49e85b))
+
 ## [24.13.1](https://github.com/flxbl-io/sfops/compare/v24.13.0...v24.13.1) (2024-01-19)
 
 
