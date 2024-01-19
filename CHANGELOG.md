@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.13.4](https://github.com/flxbl-io/sfops/compare/v24.13.3...v24.13.4) (2024-01-19)
+
+
+### Bug Fixes
+
+* **fetch:** Retain data on variable ([cef9f3b](https://github.com/flxbl-io/sfops/commit/cef9f3bfeca07e41cffbc47acf5bdbe5922a44ea))
+
 ## [24.13.3](https://github.com/flxbl-io/sfops/compare/v24.13.2...v24.13.3) (2024-01-19)
 
 
