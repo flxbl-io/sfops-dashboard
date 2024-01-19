@@ -1,5 +1,14 @@
 # Changelog
 
+## [24.13.1](https://github.com/flxbl-io/sfops/compare/v24.13.0...v24.13.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* **sandbox-status:** display sandbox status received from salesforce in logs ([4209a52](https://github.com/flxbl-io/sfops/commit/4209a525cf60aef85060d6e88c300281445423b1))
+* **sandbox-status:** handle exitsing conditions for immortal and Provisioning in progress ([6d37edb](https://github.com/flxbl-io/sfops/commit/6d37edb9cbfb68df603217c89bb716b547b2666c))
+* **sandbox-status:** remove unhelpful error message ([b80a887](https://github.com/flxbl-io/sfops/commit/b80a8879c40c3d599f9d9ff2784a8bfdcf269b79))
+
 ## [24.13.0](https://github.com/flxbl-io/sfops/compare/v24.12.2...v24.13.0) (2024-01-19)
 
 
