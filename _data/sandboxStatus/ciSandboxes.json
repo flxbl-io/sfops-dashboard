@@ -39,13 +39,6 @@
     "type": "CI"
   },
   {
-    "name": "573334288",
-    "status": "Available",
-    "isActive": "true",
-    "domain": "CORE",
-    "type": "CI"
-  },
-  {
     "name": "592606835",
     "status": "InProgress",
     "isActive": "true",
@@ -61,8 +54,8 @@
   },
   {
     "name": "573187672",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "domain": "HOTFIX",
     "type": "CI"
   },
