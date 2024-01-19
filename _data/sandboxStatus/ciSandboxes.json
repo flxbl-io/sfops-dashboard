@@ -1,7 +1,23 @@
 [
   {
     "name": "240468811",
-    "status": "Available",
+    "status": "InUse",
+    "isActive": "true",
+    "createdAt": 1705645265972,
+    "domain": "CORE",
+    "created_at": "2024-01-19T06:21:05.972Z",
+    "type": "CI"
+  },
+  {
+    "name": "486518695",
+    "status": "InProgress",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "709999566",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
@@ -10,6 +26,15 @@
     "name": "804702835",
     "status": "Available",
     "isActive": "true",
+    "createdAt": 1705645265972,
+    "domain": "CORE",
+    "created_at": "2024-01-19T06:21:05.972Z",
+    "type": "CI"
+  },
+  {
+    "name": "219659704",
+    "status": "InProgress",
+    "isActive": "true",
     "domain": "CORE",
     "type": "CI"
   },
@@ -17,12 +42,21 @@
     "name": "567418614",
     "status": "Available",
     "isActive": "true",
+    "createdAt": 1705645265972,
     "domain": "CORE",
+    "created_at": "2024-01-19T06:21:05.972Z",
     "type": "CI"
   },
   {
     "name": "573334288",
     "status": "Available",
+    "isActive": "true",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "592606835",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "CORE",
     "type": "CI"
@@ -37,6 +71,13 @@
   {
     "name": "573187672",
     "status": "Available",
+    "isActive": "true",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
+    "name": "625801761",
+    "status": "InProgress",
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
