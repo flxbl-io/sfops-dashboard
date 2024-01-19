@@ -206,6 +206,7 @@ input:checked + .slider:before {
                 <th>Pool</th>
                 <th>Name</th>
                 <th>Status</th>
+                <th>Created At</th>
                 <th>Assigned To</th>
                 <th>Expiry In</th>
                 <th>Actions</th>
@@ -213,7 +214,7 @@ input:checked + .slider:before {
             </thead>
             <tbody>
             {% for sandbox in site.data.sandboxStatus.ciSandboxes %}
-                <tr data-created-at="{{ sandbox.created_at }}" data-expiry="1" data-is-extended='{{sandbox.isExtended}}' data-is-immortal='{{sandbox.isImmortal}}'>
+                <tr data-status="{{sandbox.status}}" data-created-at="{{ sandbox.created_at }}" data-expiry="1" data-is-extended='{{sandbox.isExtended}}' data-is-immortal='{{sandbox.isImmortal}}'>
                 <td>{{ sandbox.domain }}</td>
                 <td>{{ sandbox.name }}</td>
                 <td>
@@ -225,6 +226,7 @@ input:checked + .slider:before {
                     <span class="status-label status-{{ sandbox.status }}">{{sandbox.status}}</span>
                 {% endif %}
                 </td>
+                <td>{{sandbox.created_at}}</td>
                 <td>
                   {% if sandbox.issue %}
                       <a href="{{ site.data.project.url }}/pull/{{sandbox.issue}}" target="_blank">#{{sandbox.issue}}<a>
@@ -234,7 +236,6 @@ input:checked + .slider:before {
                  <td>
                   {% if (sandbox.status == 'InUse' or  sandbox.status == 'Available') and  sandbox.issue %}
                     <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
-                    <a href="{{ site.data.project.url }}/pull/{{sandbox.issue}}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Unassign</a>
                    {% endif %}
                 </td>
                 </tr>
@@ -263,6 +264,10 @@ function updateExpiryDisplay() {
        if($(this).data('is-immortal')==true)
        {
          $('td:eq(4)', this).text('Blocked by Ops');
+       }
+       else if($(this).data('status')=='InProgress')
+       {
+         $('td:eq(4)', this).text('Provisioning in Progress');
        }
        else
        { 

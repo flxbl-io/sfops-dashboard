@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.12.2](https://github.com/flxbl-io/sfops/compare/v24.12.1...v24.12.2) (2024-01-19)
+
+
+### Bug Fixes
+
+* **sandbox-status:** use iso string ([8b026c0](https://github.com/flxbl-io/sfops/commit/8b026c00b6e0f6ab7bb4c76f9d758e0b28a93ee1))
+
 ## [24.12.1](https://github.com/flxbl-io/sfops/compare/v24.12.0...v24.12.1) (2024-01-19)
 
 
