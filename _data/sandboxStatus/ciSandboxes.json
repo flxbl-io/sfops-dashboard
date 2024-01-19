@@ -53,13 +53,6 @@
     "type": "CI"
   },
   {
-    "name": "573187672",
-    "status": "Expired",
-    "isActive": "false",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
     "name": "625801761",
     "status": "Available",
     "isActive": "true",
