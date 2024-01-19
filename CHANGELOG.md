@@ -1,5 +1,14 @@
 # Changelog
 
+## [24.13.6](https://github.com/flxbl-io/sfops/compare/v24.13.5...v24.13.6) (2024-01-19)
+
+
+### Bug Fixes
+
+* **pr-validate:** ensure comments in branch deploy model ([7f46d6b](https://github.com/flxbl-io/sfops/commit/7f46d6bdc1f99138fa9a164e77c52f77f716982e))
+* **pr-validate:** fix description of activity ([180eb8e](https://github.com/flxbl-io/sfops/commit/180eb8e4a883950883f3ec8310cf241796c97460))
+* **releaseSandbox:** fix variable skimming through due to gh flakines ([d1c7db1](https://github.com/flxbl-io/sfops/commit/d1c7db1f2d597f56c36ff7d813eb7bed962e5e7f))
+
 ## [24.13.5](https://github.com/flxbl-io/sfops/compare/v24.13.4...v24.13.5) (2024-01-19)
 
 
