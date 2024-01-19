@@ -1,5 +1,13 @@
 # Changelog
 
+## [24.12.1](https://github.com/flxbl-io/sfops/compare/v24.12.0...v24.12.1) (2024-01-19)
+
+
+### Bug Fixes
+
+* **sandboxstatus:** use created at from the value ([cf78897](https://github.com/flxbl-io/sfops/commit/cf7889719588576ddac1a49af1ca0c141837e4e5))
+* **status:** print error of sandbox checks ([c45e6d7](https://github.com/flxbl-io/sfops/commit/c45e6d76ae9a4e1ca84b65fd71c19478466f0185))
+
 ## [24.12.0](https://github.com/flxbl-io/sfops/compare/v24.11.1...v24.12.0) (2024-01-18)
 
 
