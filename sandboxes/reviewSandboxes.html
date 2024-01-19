@@ -259,8 +259,12 @@ const repoUrl = repoData.url;
 function updateExpiryDisplay() {
     $('#sandboxTable tbody tr').each(function() {
         var createdAt = new Date($(this).data('created-at'));
-        var expiryDays = parseInt($(this).data('expiry'));
-        var isExtended = $(this).data('is-extended');
+      if(!createdAt){
+           $('td:eq(5)', this).text('Not Available');
+            return;
+      }
+       var expiryDays = parseInt($(this).data('expiry'));
+       var isExtended = $(this).data('is-extended');
        if($(this).data('is-immortal')==true)
        {
          $('td:eq(5)', this).text('Blocked by Ops');
@@ -271,6 +275,7 @@ function updateExpiryDisplay() {
        }
        else
        { 
+          if($)
             if($(this).data('is-extended')==true)
             {
               expiryDays = expiryDays + 1;
