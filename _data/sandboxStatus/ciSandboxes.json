@@ -1,9 +1,11 @@
 [
   {
     "name": "292095078",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1705736153776,
     "domain": "CORE",
+    "created_at": "2024-01-20T07:35:53.776Z",
     "type": "CI"
   },
   {
@@ -17,9 +19,11 @@
   },
   {
     "name": "643134813",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1705736164800,
     "domain": "CORE",
+    "created_at": "2024-01-20T07:36:04.800Z",
     "type": "CI"
   },
   {
@@ -51,9 +55,11 @@
   },
   {
     "name": "529074185",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1705736174772,
     "domain": "CORE",
+    "created_at": "2024-01-20T07:36:14.772Z",
     "type": "CI"
   },
   {
