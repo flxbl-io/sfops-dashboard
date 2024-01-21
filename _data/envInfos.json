@@ -6,8 +6,8 @@
     "type": "test",
     "testrun": "true",
     "latestDeployment": {
-      "sha": "3f10b00a",
-      "url": "http://github.com/flxbl-io/sf-core/commit/3f10b00a34f05568a0056075bc5b6d31f044e02c",
+      "sha": "d324fff4",
+      "url": "http://github.com/flxbl-io/sf-core/commit/d324fff4a7bf02cb1c476cb6e682e69bdcc2dfc1",
       "creator": "azlam-abdulsalam"
     }
   },
