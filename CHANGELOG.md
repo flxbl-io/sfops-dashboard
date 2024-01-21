@@ -1,5 +1,12 @@
 # Changelog
 
+## [24.13.7](https://github.com/flxbl-io/sfops/compare/v24.13.6...v24.13.7) (2024-01-19)
+
+
+### Bug Fixes
+
+* **fetchsandbox:** assign InUse for issues properly ([4153185](https://github.com/flxbl-io/sfops/commit/4153185b8837edb0fc9f13e7f7e04305337f6410))
+
 ## [24.13.6](https://github.com/flxbl-io/sfops/compare/v24.13.5...v24.13.6) (2024-01-19)
 
 
