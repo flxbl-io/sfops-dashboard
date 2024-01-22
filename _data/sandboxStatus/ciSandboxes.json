@@ -36,15 +36,6 @@
     "type": "CI"
   },
   {
-    "name": "590269430",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1705831646092,
-    "domain": "CORE",
-    "created_at": "2024-01-21T10:07:26.092Z",
-    "type": "CI"
-  },
-  {
     "name": "558453226",
     "status": "InProgress",
     "isActive": "true",
