@@ -1,5 +1,5 @@
 {
-  "status": "validation",
+  "status": "validated",
   "issue_number": "95",
   "branch": "chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Description:\n    \n    This pr will always exclude any change to\n    - sfdx-project.json\n    This is an automatically generated PR, Cherry pick auto created from commit id at https://github.com/flxbl-io/sf-core/commit/205597acf27745109067fb5499c7af9d1662fb81",
     "created_at": "2023-12-10T04:51:47Z",
-    "updated_at": "2024-01-22T23:40:51Z",
+    "updated_at": "2024-01-22T23:44:00Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "f4f254b2eb241b6dce2b997c2897d6eda696ce4b",
@@ -67,6 +67,15 @@
     ],
     "requested_teams": [],
     "labels": [
+      {
+        "id": 6307791364,
+        "node_id": "LA_kwDOKLk9E88AAAABd_lCBA",
+        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/frameworks",
+        "name": "frameworks",
+        "color": "ededed",
+        "default": false,
+        "description": null
+      },
       {
         "id": 6308032082,
         "node_id": "LA_kwDOKLk9E88AAAABd_zuUg",
@@ -194,7 +203,7 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2023-12-16T08:18:30Z",
-        "pushed_at": "2024-01-22T23:40:45Z",
+        "pushed_at": "2024-01-22T23:43:49Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
@@ -325,7 +334,7 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2023-12-16T08:18:30Z",
-        "pushed_at": "2024-01-22T23:40:45Z",
+        "pushed_at": "2024-01-22T23:43:49Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
