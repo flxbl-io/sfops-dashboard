@@ -11,9 +11,10 @@
   },
   {
     "name": "947826538",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1705921644061,
+    "issue": "80",
     "domain": "CORE",
     "created_at": "2024-01-22T11:07:24.061Z",
     "type": "CI"
