@@ -1,5 +1,26 @@
 # Changelog
 
+## [25.0.0](https://github.com/flxbl-io/sfops/compare/v24.13.7...v25.0.0) (2024-01-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **second-gen-packages:** This is a breaking change as it changes the way the action is invoked. Users will have to update template
+
+### Features
+
+* **second-gen-packages:** allow multiple package installation in one issue ([77ea753](https://github.com/flxbl-io/sfops/commit/77ea7537c93e2fd5343a530f45566c394756d7a7))
+
+
+### Bug Fixes
+
+* **exec-package-installer:** update to inputs.dashboard repo ([7bbe20d](https://github.com/flxbl-io/sfops/commit/7bbe20d446988fe2a93ef5dc87e3bcd2570069de))
+* **package-installer:** fix variables used from job to job ([a1dbb25](https://github.com/flxbl-io/sfops/commit/a1dbb25bca497cecec74d0bd00a19a92ec69bb98))
+* **secondGenPackageInstallerAction:** Handle sfp when keys are empty ([6590b8b](https://github.com/flxbl-io/sfops/commit/6590b8bd35d3004c9ab9034886755d408b717a50))
+* **secondGenPackageInstaller:** add quotes to ensure  spaces in package names ([04afa0e](https://github.com/flxbl-io/sfops/commit/04afa0e0d6a2e40ed5f67d1b6254ceda9c46e39e))
+* **secondGenPackageInstaller:** ensure script breaks on failure ([2eea970](https://github.com/flxbl-io/sfops/commit/2eea97015fb9230a503cbfbd62155618beada284))
+* **unlocked-package-installer-workflow:** Handle arguments with the correct variable ([c5464db](https://github.com/flxbl-io/sfops/commit/c5464db5273f26bee5f15dd1ac2c56e85d781f77))
+
 ## [24.13.7](https://github.com/flxbl-io/sfops/compare/v24.13.6...v24.13.7) (2024-01-19)
 
 
