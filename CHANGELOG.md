@@ -1,5 +1,18 @@
 # Changelog
 
+## [25.1.0](https://github.com/flxbl-io/sfops/compare/v25.0.0...v25.1.0) (2024-01-22)
+
+
+### Features
+
+* add timeout for jobs ([968f2c3](https://github.com/flxbl-io/sfops/commit/968f2c3692f38ddb5cfb27c70ace584626a42053))
+
+
+### Bug Fixes
+
+* **pr-validated:** move to ff-release config ([4184511](https://github.com/flxbl-io/sfops/commit/4184511db1ef80d0afe0516ae3a071f2efcc01f3))
+* **pr-validate:** fix conditions used for validate job ([f8f09fe](https://github.com/flxbl-io/sfops/commit/f8f09fecd68428af542816e49d8d5eb6d673fb0c))
+
 ## [25.0.0](https://github.com/flxbl-io/sfops/compare/v24.13.7...v25.0.0) (2024-01-21)
 
 
