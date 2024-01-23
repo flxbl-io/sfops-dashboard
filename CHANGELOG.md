@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.1.2](https://github.com/flxbl-io/sfops/compare/v25.1.1...v25.1.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* **checkSandbox:** fix sandbox not properly return for available use cases ([2c8b782](https://github.com/flxbl-io/sfops/commit/2c8b7822825816e1d932519e33cc33144bff71a3))
+
 ## [25.1.1](https://github.com/flxbl-io/sfops/compare/v25.1.0...v25.1.1) (2024-01-23)
 
 
