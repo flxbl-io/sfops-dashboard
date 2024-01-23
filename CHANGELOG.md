@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.1.3](https://github.com/flxbl-io/sfops/compare/v25.1.2...v25.1.3) (2024-01-23)
+
+
+### Bug Fixes
+
+* **cherrypick:** add better error handling ([aa00804](https://github.com/flxbl-io/sfops/commit/aa00804f8127e5e6e3cd75f14be6b8d6dccee4cb))
+* **issue-analyzer:** fix routing to unfreeze  ([0d97afd](https://github.com/flxbl-io/sfops/commit/0d97afd83fc33ccfd3e89acafa4e13761270751a))
+
 ## [25.1.2](https://github.com/flxbl-io/sfops/compare/v25.1.1...v25.1.2) (2024-01-23)
 
 
