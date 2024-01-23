@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.1.1](https://github.com/flxbl-io/sfops/compare/v25.1.0...v25.1.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **freeze-users:** fix org alias propagagtion ([bee95ac](https://github.com/flxbl-io/sfops/commit/bee95acc10458521f359259cd4728c2028a9e330))
+* **pr-validate:** fix release of sandboxes while hotfix ([af4ee98](https://github.com/flxbl-io/sfops/commit/af4ee98fa1115069731229a8aca18372dc79a8ca))
+
 ## [25.1.0](https://github.com/flxbl-io/sfops/compare/v25.0.0...v25.1.0) (2024-01-22)
 
 
