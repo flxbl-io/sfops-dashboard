@@ -161,6 +161,26 @@
             ],
             "hashId": "3b7e36db10a0f20df672fa71cd74be23ad486ca3",
             "date": "Wed Jan 24 2024 09:34:29 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-24-01-7638331243"
+            ],
+            "buildNumber": 6,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "unpackaged",
+                    "from": "9ce757c9",
+                    "to": "47f75a46",
+                    "version": "1.0.32.7638331243",
+                    "repoUrl": "https://github.com/flxbl-io/sf-core",
+                    "latestCommitId": "7f439a69",
+                    "commits": []
+                }
+            ],
+            "hashId": "7bc8d32549afdce75917e30da3401af2682f729a",
+            "date": "Wed Jan 24 2024 10:06:03 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
