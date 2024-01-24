@@ -235,7 +235,7 @@ layout: default
         <div class="selector-container" id="testOrgSelector" style="text-align: right; display: none;">
             <span>Select an Org:</span>
             <select id="testOrgSelect">
-                {% for org in site.data.testorgs %}
+                {% for org in site.data.testRunOrgs %}
                 <option value="{{ org }}">{{ org }}</option>
                 {% endfor %}
             </select>

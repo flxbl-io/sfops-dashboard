@@ -34,94 +34,30 @@ layout: default
             <tr>
               <th>Name</th>
               <th>Date</th>
+               <th>
+                Work Items
+              </br>
+              (Introduced in this release)
+              </th>
               <th>
                 Work Items
               </br>
               (Compared to Last Deployed in Production)
               </th>
+              <th>Linked with</th>
               <th>Changed Artifacts
                   </br>
                 (Compared to Previous Release Candidate)
               </th>
+              <th>Deployed To</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {% assign domain_data = site.data.releasechangelog[page.branch][page.domain]    %}
-            {% assign accumulatedWorkItems = "" %}
-            {% assign reversed_releases = domain_data.releases | reverse %}
-
-
-            {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
-            {% assign releaseNamesInProd = "" %}
-            {% for release in releasesInProd %}
-              {% for name in release.names %}
-                {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
-              {% endfor %}
-            {% endfor %}
-
-
-            <!-- First Pass ..Accumulate Work Items   -->
-            {% for release in domain_data.releases %}
-              {% assign releaseWorkItems = release.workItems %}
-          
-              {% for workItem in releaseWorkItems %}
-                  {% assign accumulatedWorkItems = accumulatedWorkItems | append: workItem[0] | append: "," %}
-              {% endfor %}
-          
-              {% capture accumulatedWorkItemsList %}{{ accumulatedWorkItemsList }}{{ accumulatedWorkItems }}|{% endcapture %}
-            {% endfor %}
-            
-            {% assign accumulatedWorkItemsArray = accumulatedWorkItemsList | split: "|" %} 
-            {% assign accumulatedWorkItemsArray = accumulatedWorkItemsArray| reverse %}
-        
-          
-        <!-- Second Pass ..Accumulate Shipped Work Items   -->
-            {% assign latestShippedWorkItems = "" %}
-            {% for release in reversed_releases %}
-              {% assign releaseName = release.names[0] %}
-              {% assign index = forloop.index0 %}
-              {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
-
-              {% if releaseNamesInProd contains releaseName %}
-                {% for workItem in newAccumulatedWorkItems %}
-                  {% assign latestShippedWorkItems = latestShippedWorkItems | append: workItem| append: "," %}
-                {% endfor %}
-                {% break %}
-              {% endif %}
-            {% endfor %}      
-
-
-            {% assign latestShippedWorkItemArray = latestShippedWorkItems | split: "," %}
-          
-            {% for release in reversed_releases %}
-              
-              {% assign index = forloop.index0 %}
-              {% assign newAccumulatedWorkItems = accumulatedWorkItemsArray[index] | split: "," %}
-
-
-              {% assign filtered_array = "" %}   
-              {% assign unique_array = "" | split: "," %}
-
-              {% for item in newAccumulatedWorkItems %}
-                {% unless latestShippedWorkItemArray contains item %}
-                  {% unless unique_array contains item %}
-                    {% assign unique_array = unique_array | push: item %}
-                    {% assign filtered_array = filtered_array | append: item | append: "," %}
-                  {% endunless %}
-                {% endunless %}
-              {% endfor %}
-              
-
-              {% assign filtered_array = filtered_array | split: ","  %}
-
-
-            {% assign releaseName = release.names[0] %}
-            {% if releaseNamesInProd contains releaseName  %}
-              {% break %}
-            {% endif %}
-
-            <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
+            {% assign releaseData = site.data.processedChangelog[page.branch][page.domain].releases %}
+            {% assign reversed_releases = releaseData | reverse %}
+            {% for release in  reversed_releases %}
+             <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
               <td>
                 <strong>{{ release.names[0] }}</strong>
                 <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
@@ -129,17 +65,15 @@ layout: default
                 </button>
               </td>
               <td>{{ release.date | date: "%Y-%m-%d %H:%M"  }}</td>
-              <td>
+                            <td>
                 <ul class="action-links" >
                   {% assign hasItems = false %}
-                  {% for workItem in filtered_array %}
+                  {% for workItem in release.workItems %}
                     {% unless workItem == "" %}
-                        {% unless latestShippedWorkItemArray contains workItem %}
-                        <li><a href="{{ site.data.project.workItemUrl }}/{{ workItem }}" target="_blank">{{ workItem }}</a></li>
+                        <li><a href="{{ site.data.project.workItemUrl }}/{{ workItem[0] }}" target="_blank">{{ workItem[0] }}</a></li>
                         {% assign hasItems = true %}
-                        {% endunless %}
                     {% endunless %}
-                {% endfor %}
+                  {% endfor %}
 
                 {% unless hasItems %}
                 {% if releaseNamesInProd contains releaseName %}
@@ -151,15 +85,56 @@ layout: default
                 </ul>
               </td>
               <td>
+                <ul class="action-links" >
+                  {% assign hasItems = false %}
+                  {% for workItem in release.cumulativeWorkItems %}
+                    {% unless workItem == "" %}
+                        <li><a href="{{ site.data.project.workItemUrl }}/{{ workItem[0] }}" target="_blank">{{ workItem[0] }}</a></li>
+                        {% assign hasItems = true %}
+                    {% endunless %}
+                  {% endfor %}
+
+                {% unless hasItems %}
+                {% if releaseNamesInProd contains releaseName %}
+                  <span><b>Last Deployed Release,Check Release Tab</b></span>
+                  {% else %}
+                    <span>No work items detected,Click to probe!</span>
+                  {% endif %}
+                {% endunless %}
+                </ul>
+              </td>
+              <td>
+                {% for workItem in release.cumulativeWorkItems %}                  
+                    {% assign workitemId = workItem[0] %}
+                    {% assign workitemDetails = site.data.crossDomainWorkItems[page.branch][workitemId] %}
+                    {% if workitemDetails %}
+                      <ul class="action-links">
+                        {% for detail in workitemDetails %}
+                          {% if detail.domain != page.domain %}
+                          <li><a href="{{ site.url}}/releasedefns/{{page.branch}}/{{page.domain}}.html" target="_blank">{{ detail.domain }}:{{ detail.releaseName }}</a></li>
+                          {% endif %}
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                {% endfor %}
+              </td>
+              <td>
                 <ul class="action-links">
                 {% if releaseNamesInProd contains releaseName %}
                 <span><b>Last Deployed Release,Check Release Tab</b></span>
                 {% else %}
                   {% for artifact in release.artifacts %}
-                    <li>{{ artifact.name }}:{{ artifact.version }}</li>
+                     {%if artifact.from != artifact.to %}
+                      <li>{{ artifact.name }}:{{ artifact.version }}</li>
+                      {% endif %}
                   {% endfor %}
                 {% endif %}
                 </ul>
+              </td>
+              <td>
+                  {% for deployed in release.deployedTo %}
+                      <span class="badge badge-info">{{ deployed }}</span>
+                  {% endfor %}
               </td>
               <td>
                 <ul class="action-links">
@@ -171,7 +146,7 @@ layout: default
                   <li><a class="sandbox-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}"> 🌵 Get it on my Sandbox</a></li>
                 </ul>
               </td>
-            </tr>
+             </tr>
             {% endfor %}
           </tbody>
         </table>
@@ -179,26 +154,7 @@ layout: default
   </div>
 </div>
 
-<div class="modal" tabindex="-1" role="dialog" id="releaseModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Release Details</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body" id="releaseModalBody">
-        <!-- Dynamic content will be inserted here -->
-      </div>
-      <h5 style="padding: 20px;"><b>Differences between production & incoming release definitions</b></h5>
-      <pre style="padding: 20px;"><code id="yamlDiffData" class="language-diff-yaml"></code></pre>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+{% include modal.html %}
 
 <script>
 
@@ -333,95 +289,7 @@ layout: default
       return `${repoUrl}/issues/new?labels=${labels}&template=${issueTemplate}&title=${title}&${additionalParams}`;
   }
 
-  function populateModal(release) {
-    const repoData = {{ site.data.project | jsonify}}
-    const domain =  "{{ page.domain }}"
-   
-    
-    const releaseName = release.names[0];
-    const newYamlData = jsyaml.dump(yamlDataMap[releaseName]);
-    const oldYamlData = jsyaml.dump(yamlDataMap[latestReleaseInProd]);
-
-    
-    
-    
-   
-
-    let htmlContent = `<strong>Name:</strong> ${release.names[0]}  <button class="copy-button" onclick="copyToClipboard(event, '${release.names[0]}')">
-      <i class="fas fa-copy"></i>
-      </button><br>   `;
-    htmlContent += `<strong>Date:</strong> ${release.date}<br>`;
-    htmlContent += `<strong>Work Items:</strong><ul>`;
-    
-    for (const workItem in release.workItems) {
-      htmlContent+=`<li><a href="${repoData.workItemUrl}/${workItem}" target="_blank">${workItem}</a></li>`
-    }
-  
-    htmlContent += `</ul>`;
-    htmlContent += `<strong>Artifacts impacted with work items:</strong>`;
-    
-    release.artifacts.forEach(artifact => {
-      if (artifact.commits.length > 0) {
-        htmlContent += `<div>
-          <button class="collapsible-content" onclick="toggleCollapsible(event)">
-            <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
-          </button>
-          <div class="content-detail">
-            <table class="commitTable">
-                  <thead>
-                    <tr>
-                      <th style="text-align: center;">Commit Id</th>
-                      <th style="text-align: center;">Date</th>
-                      <th style="text-align: center;">Author</th>
-                      <th style="text-align: center;">Message</th>
-                    </tr>
-                </thead>
-               <tbody>
-                ${artifact.commits.map(commit => `
-                  <tr>
-                    <td><a href="${repoData.url}/commit/${commit.commitId}" target="_blank">${commit.commitId}</a></td>
-                    <td>${commit.date}</td>
-                    <td>${commit.author}</td>
-                    <td>${commit.message}</td>
-                  </tr>
-                `).join('')}
-              </tbody>
-            </table>
-          </div>
-        </div>`;
-      }
-    });
-
-  
-    $('#releaseModalBody').html(htmlContent);
-
-    console.log(`oldYamlData`,oldYamlData);
-    console.log(`newYamlData`,newYamlData);
-      console.log(`oldYamlData`,latestReleaseInProd);
-    console.log(`newYamlData`,releaseName);
-
-    var diff = Diff.createTwoFilesPatch(latestReleaseInProd, releaseName, oldYamlData, newYamlData, "", "", {
-      context: 4
-    });
-    
-       
-    console.log(`ssssss`,diff);
-   // Update the element and apply Prism highlighting
-    $('#yamlDiffData').text(diff);
-    Prism.highlightElement(document.getElementById('yamlDiffData'), false);
-  }
-  
-  // Function to toggle collapsible content
-  function toggleCollapsible(event) {
-    const content = event.target.nextElementSibling;
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  }
-  
- async function copyToClipboard(event,text) {
+  async function copyToClipboard(event,text) {
   event.stopPropagation()
     try {
         await navigator.clipboard.writeText(text);

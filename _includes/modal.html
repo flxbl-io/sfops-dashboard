@@ -1,0 +1,107 @@
+<!-- _modal.html -->
+<div class="modal" tabindex="-1" role="dialog" id="releaseModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Release Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="releaseModalBody">
+        <!-- Dynamic content will be inserted here -->
+      </div>
+      <h5 style="padding: 20px;"><b>Differences between production & incoming release definitions</b></h5>
+      <pre style="padding: 20px;"><code id="yamlDiffData" class="language-diff-yaml"></code></pre>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Functions related to the modal functionality
+
+// Function to populate the modal with release data
+function populateModal(release) {
+  const repoData = {{ site.data.project | jsonify }};
+  const domain = "{{ page.domain }}";
+  const releaseName = release.names[0];
+  const newYamlData = jsyaml.dump(yamlDataMap[releaseName]);
+  const oldYamlData = jsyaml.dump(yamlDataMap[latestReleaseInProd]);
+
+  let htmlContent = `<strong>Name:</strong> ${release.names[0]}  <button class="copy-button" onclick="copyToClipboard(event, '${release.names[0]}')">
+      <i class="fas fa-copy"></i>
+      </button><br>`;
+  htmlContent += `<strong>Date:</strong> ${release.date}<br>`;
+  htmlContent += `<strong>Work Items:</strong><ul>`;
+  
+  for (const workItem in release.workItems) {
+    htmlContent += `<li><a href="${repoData.workItemUrl}/${workItem}" target="_blank">${workItem}</a></li>`;
+  }
+
+  htmlContent += `</ul>`;
+  htmlContent += `<strong>Artifacts impacted with work items:</strong>`;
+  
+  release.artifacts.forEach(artifact => {
+    if (artifact.commits.length > 0) {
+      htmlContent += `<div>
+        <button class="collapsible-content" onclick="toggleCollapsible(event)">
+          <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
+        </button>
+        <div class="content-detail">
+          <table class="commitTable">
+                <thead>
+                  <tr>
+                    <th style="text-align: center;">Commit Id</th>
+                    <th style="text-align: center;">Date</th>
+                    <th style="text-align: center;">Author</th>
+                    <th style="text-align: center;">Message</th>
+                  </tr>
+              </thead>
+             <tbody>
+              ${artifact.commits.map(commit => `
+                <tr>
+                  <td><a href="${repoData.url}/commit/${commit.commitId}" target="_blank">${commit.commitId}</a></td>
+                  <td>${commit.date}</td>
+                  <td>${commit.author}</td>
+                  <td>${commit.message}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>`;
+    }
+  });
+
+  $('#releaseModalBody').html(htmlContent);
+  var diff = Diff.createTwoFilesPatch(latestReleaseInProd, releaseName, oldYamlData, newYamlData, "", "", {
+    context: 4
+  });
+  $('#yamlDiffData').text(diff);
+  Prism.highlightElement(document.getElementById('yamlDiffData'), false);
+}
+
+// Function to toggle collapsible content
+function toggleCollapsible(event) {
+  const content = event.target.nextElementSibling;
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+
+// Function to copy text to clipboard
+async function copyToClipboard(event, text) {
+  event.stopPropagation();
+  try {
+    await navigator.clipboard.writeText(text);
+    alert('Copied to clipboard: ' + text);
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+}
+</script>

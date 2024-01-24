@@ -33,6 +33,9 @@ jobs:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
 
+      - name: Generate Org Files
+        run: node ./_scripts/create-org-files.js
+      
       - name: Generate Release Definitions
         run: node ./_scripts/create-release-defns.js
 
@@ -50,6 +53,12 @@ jobs:
       - name: Combine Issue Status
         run: node _scripts/issue-combiner.js  
 
+      - name: Combine Release Logs
+        run: |
+           node _scripts/create-latest-release-maps.js
+           node _scripts/process-release-logs.js
+           node _scripts/create-cross-domain-workitems.js
+                    
 
 
       - name: Setup Pages
