@@ -281,10 +281,10 @@ code {
             </td>
             <td>
               {% if scratchOrg.email %}
-              <span>{{scratchOrg.email}}( <a href="{{ site.data.project.url. }}/issues/{{scratchOrg.issueNumber}}"
+              <span>{{scratchOrg.email}}( <a href="{{ site.data.project.url }}/issues/{{scratchOrg.issueNumber}}"
                   target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
               {% elsif scratchOrg.issueNumber %}
-              <span>Review( <a href="{{ site.data.project.url. }}/pull/{{scratchOrg.issueNumber}}"
+              <span>Review( <a href="{{ site.data.project.url }}/pull/{{scratchOrg.issueNumber}}"
                   target="_blank">#{{scratchOrg.issueNumber}}<a>)</span>
               {% elsif scratchOrg.status == 'In use' %}
               <span>CLI User</span>
