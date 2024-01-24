@@ -82,14 +82,5 @@
     "isActive": "true",
     "domain": "HOTFIX",
     "type": "CI"
-  },
-  {
-    "name": "722827889",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1705997586639,
-    "domain": "HOTFIX",
-    "created_at": "2024-01-23T08:13:06.639Z",
-    "type": "CI"
   }
 ]
