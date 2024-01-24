@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.1.4](https://github.com/flxbl-io/sfops/compare/v25.1.3...v25.1.4) (2024-01-23)
+
+
+### Bug Fixes
+
+* **image:** remove temporary overrides ([e5cadcb](https://github.com/flxbl-io/sfops/commit/e5cadcbc34c5be65bb736713ebab436262215d9b))
+
 ## [25.1.3](https://github.com/flxbl-io/sfops/compare/v25.1.2...v25.1.3) (2024-01-23)
 
 
