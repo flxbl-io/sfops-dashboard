@@ -1,14 +1,5 @@
 [
   {
-    "name": "336485681",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1706016962779,
-    "domain": "CORE",
-    "created_at": "2024-01-23T13:36:02.779Z",
-    "type": "CI"
-  },
-  {
     "name": "381347529",
     "status": "Available",
     "isActive": "true",
@@ -24,15 +15,6 @@
     "createdAt": 1706094562562,
     "domain": "CORE",
     "created_at": "2024-01-24T11:09:22.562Z",
-    "type": "CI"
-  },
-  {
-    "name": "553633139",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1706016973859,
-    "domain": "CORE",
-    "created_at": "2024-01-23T13:36:13.859Z",
     "type": "CI"
   },
   {
