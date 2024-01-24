@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.1.5](https://github.com/flxbl-io/sfops/compare/v25.1.4...v25.1.5) (2024-01-24)
+
+
+### Bug Fixes
+
+* **sandbox-status:** ensure createdAt can be a string ([00a09f7](https://github.com/flxbl-io/sfops/commit/00a09f7903a2529b016a1300393840d60fb827f4))
+
 ## [25.1.4](https://github.com/flxbl-io/sfops/compare/v25.1.3...v25.1.4) (2024-01-23)
 
 
