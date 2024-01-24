@@ -27,24 +27,6 @@
     "type": "CI"
   },
   {
-    "name": "929602192",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1706008156301,
-    "domain": "CORE",
-    "created_at": "2024-01-23T11:09:16.301Z",
-    "type": "CI"
-  },
-  {
-    "name": "315866743",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1706008167413,
-    "domain": "CORE",
-    "created_at": "2024-01-23T11:09:27.413Z",
-    "type": "CI"
-  },
-  {
     "name": "553633139",
     "status": "Available",
     "isActive": "true",
