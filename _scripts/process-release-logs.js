@@ -61,7 +61,7 @@ console.log('Changelogs updated and saved in processedChangelog directory.');
 // Function to truncate the changelog at a specified release and add cumulative work items
 function truncateAndAddCumulativeData(domain,changelog, releaseName) {
     let releaseIndex = releaseName ? changelog.releases.findIndex(release => release.names.includes(releaseName)) : 0;
-    if (releaseIndex === -1) {
+    if (releaseIndex === -1 || releaseIndex == 0) {
         releaseIndex = 0;
     }
     else if(releaseIndex == changelog.releases.length-1)
@@ -86,7 +86,7 @@ function truncateAndAddCumulativeData(domain,changelog, releaseName) {
         // Navigate through releaseMap and figure whether release is deployed to that env
         for( const env of Object.keys(allEnvReleaseMap))
         {
-            if(allEnvReleaseMap[env][domain].includes(release.names[0]))
+            if(allEnvReleaseMap[env][domain]?.includes(release.names[0]))
             {
                     console.log(`Found in ${env}  ${release.names[0]}`)
                     release.deployedTo.push(env)

@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.3.0](https://github.com/flxbl-io/sfops/compare/v25.2.0...v25.3.0) (2024-01-25)
+
+
+### Features
+
+* **dashboard-release:** add more contextual information to release details ([5170a50](https://github.com/flxbl-io/sfops/commit/5170a50042e8c17b32f6643250e2ca4d4b311438))
+
 ## [25.2.0](https://github.com/flxbl-io/sfops/compare/v25.1.5...v25.2.0) (2024-01-25)
 
 
