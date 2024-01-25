@@ -61,8 +61,8 @@ layout: default
               <td>
                 {% assign name_parts = release.names[0] | split: '-' %}
                 {% assign build_number = name_parts | last %}
-                <strong><a href="{{ site.data.project.url }}/actions/runs/{{ build_number }}" target="_blank">{{ release.names[0] }}</strong>
-                <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
+                  <strong><a href="{{ site.data.project.url }}/actions/runs/{{ build_number }}" target="_blank">{{ release.names[0] }}</strong></a>
+                 <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
                   <i class="fas fa-copy"></i>
                 </button>
               </td>

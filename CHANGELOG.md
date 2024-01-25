@@ -1,5 +1,19 @@
 # Changelog
 
+## [25.4.0](https://github.com/flxbl-io/sfops/compare/v25.3.2...v25.4.0) (2024-01-25)
+
+
+### Features
+
+* **dashboard-rc:** add link to action ([3dee373](https://github.com/flxbl-io/sfops/commit/3dee373d692310037e5e850ac7a51a58ddff53e7))
+* **dashboard-rc:** add links to action that build the release defn ([c4c118e](https://github.com/flxbl-io/sfops/commit/c4c118e9d60dd4c84ee202c6edd8fcd1bdaf2d3b))
+
+
+### Bug Fixes
+
+* **dashboard-rc:** fix incorrect wrap of link anchor ([fe1fb42](https://github.com/flxbl-io/sfops/commit/fe1fb429d9210f690e450d94d7bf32c409493a5d))
+* **dashboard-rc:** fix links used for linked work items ([9bf1dbd](https://github.com/flxbl-io/sfops/commit/9bf1dbd7984cbfdd824b2df89bfb1cd00bdc76ff))
+
 ## [25.3.2](https://github.com/flxbl-io/sfops/compare/v25.3.1...v25.3.2) (2024-01-25)
 
 
