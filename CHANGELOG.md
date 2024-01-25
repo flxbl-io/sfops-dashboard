@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.3.2](https://github.com/flxbl-io/sfops/compare/v25.3.1...v25.3.2) (2024-01-25)
+
+
+### Bug Fixes
+
+* **frontdoorUrl:** do not refresh if issue is closed ([7cdc068](https://github.com/flxbl-io/sfops/commit/7cdc0686148bd48fc1379569f9a286cd291b2363))
+* **workflow-release:** ensure labels are only added when a release is sucessfull ([8ca3773](https://github.com/flxbl-io/sfops/commit/8ca377316435dcab93491b933b93d5b2f6ee4e80))
+
 ## [25.3.1](https://github.com/flxbl-io/sfops/compare/v25.3.0...v25.3.1) (2024-01-25)
 
 

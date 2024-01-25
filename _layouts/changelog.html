@@ -59,7 +59,9 @@ layout: default
             {% for release in  reversed_releases %}
              <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
               <td>
-                <strong>{{ release.names[0] }}</strong>
+                {% assign name_parts = release.names[0] | split: '-' %}
+                {% assign build_number = name_parts | last %}
+                <strong><a href="{{ site.data.project.url }}/actions/runs/{{ build_number }}" target="_blank">{{ release.names[0] }}</strong>
                 <button class="copy-button" onclick="copyToClipboard(event, '{{ release.names[0] }}')">
                   <i class="fas fa-copy"></i>
                 </button>
@@ -111,7 +113,7 @@ layout: default
                       <ul class="action-links">
                         {% for detail in workitemDetails %}
                           {% if detail.domain != page.domain %}
-                          <li><a href="{{ site.url}}/releasedefns/{{page.branch}}/{{page.domain}}.html" target="_blank">{{ detail.domain }}:{{ detail.releaseName }}</a></li>
+                          <li><a href="{{ site.url}}/releasedefns/{{page.branch}}/{{detail.domain}}.html" target="_blank">{{ detail.domain }}:{{ detail.releaseName }}</a></li>
                           {% endif %}
                         {% endfor %}
                       </ul>

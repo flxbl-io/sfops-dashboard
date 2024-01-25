@@ -28,10 +28,11 @@ function populateModal(release) {
   const repoData = {{ site.data.project | jsonify }};
   const domain = "{{ page.domain }}";
   const releaseName = release.names[0];
+  const buildNumber = releaseName.split('-').pop();
   const newYamlData = jsyaml.dump(yamlDataMap[releaseName]);
   const oldYamlData = jsyaml.dump(yamlDataMap[latestReleaseInProd]);
 
-  let htmlContent = `<strong>Name:</strong> ${release.names[0]}  <button class="copy-button" onclick="copyToClipboard(event, '${release.names[0]}')">
+  let htmlContent = `<strong>Name:</strong><a href="${repoData.url}/actions/runs/${ buildNumber }" target="_blank">${release.names[0]}  <button class="copy-button" onclick="copyToClipboard(event, '${release.names[0]}')">
       <i class="fas fa-copy"></i>
       </button><br>`;
   htmlContent += `<strong>Date:</strong> ${release.date}<br>`;
