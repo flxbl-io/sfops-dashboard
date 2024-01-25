@@ -1,5 +1,21 @@
 # Changelog
 
+## [25.2.0](https://github.com/flxbl-io/sfops/compare/v25.1.5...v25.2.0) (2024-01-25)
+
+
+### Features
+
+* **dashboard:** update release candidadates to v2 ([1e29770](https://github.com/flxbl-io/sfops/commit/1e29770d9322c1d257fc9498fcf42758c7ab3845))
+* **publish:** serialize publish ([088ce77](https://github.com/flxbl-io/sfops/commit/088ce775dc9674c261c849fad75fe74d9ec3ad91))
+
+
+### Bug Fixes
+
+* **dashboard-devsbx:** fix incorrect url used in dev sandbox page ([23c835a](https://github.com/flxbl-io/sfops/commit/23c835a3c6d02dac4a41c2e7a0911d3536edd7ae))
+* **dashboard-scratchorgs:** fix incorrect url for repository in scratch org management page ([8dca734](https://github.com/flxbl-io/sfops/commit/8dca734b3a52876334264758943dba06df1587d1))
+* **delete-env:** fix typo ([df2417b](https://github.com/flxbl-io/sfops/commit/df2417b02032ebba9abe48db37c354cc9cdd9ced))
+* **publish:** add serialize to publish ([8684631](https://github.com/flxbl-io/sfops/commit/86846317f3d06c46e3b2905e130798c603a09c38))
+
 ## [25.1.5](https://github.com/flxbl-io/sfops/compare/v25.1.4...v25.1.5) (2024-01-24)
 
 

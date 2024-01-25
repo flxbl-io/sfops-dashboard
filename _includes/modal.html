@@ -51,6 +51,7 @@ function populateModal(release) {
           <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
         </button>
         <div class="content-detail">
+          <p><strong>Change: </strong><a href="${repoData.url}/compare/${artifact.from}..${artifact.to}" target="_blank">${artifact.from}..${artifact.to}</a>          <strong>Built on Commit: </strong><a href="${repoData.url}/commit/${artifact.to}" target="_blank">${artifact.to}</a></p>
           <table class="commitTable">
                 <thead>
                   <tr>
@@ -71,6 +72,24 @@ function populateModal(release) {
               `).join('')}
             </tbody>
           </table>
+        </div>
+      </div>`;
+    }
+  });
+
+
+  htmlContent += `</ul>`;
+  htmlContent += `<strong><br><br>Artifacts modified, but not detected with work items:</strong>`;
+  
+    release.artifacts.forEach(artifact => {
+    if (artifact.from !=  artifact.to && artifact.commits.length == 0) {
+      htmlContent += `<div> 
+        <button class="collapsible-content" onclick="toggleCollapsible(event)">
+          <span class="plus">+</span> ${artifact.name} (Version: ${artifact.version})
+        </button>
+        <div class="content-detail">
+          <br>
+          <p><strong>Change: </strong><a href="${repoData.url}/compare/${artifact.from}..${artifact.to}" target="_blank">${artifact.from}..${artifact.to}</a>          <strong>Built on Commit: </strong><a href="${repoData.url}/commit/${artifact.to}" target="_blank">${artifact.to}</a></p>
         </div>
       </div>`;
     }
