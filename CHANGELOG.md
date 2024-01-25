@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.3.1](https://github.com/flxbl-io/sfops/compare/v25.3.0...v25.3.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* **dashboard-candidates:** fix issue where domain is not yet released ([3ee630d](https://github.com/flxbl-io/sfops/commit/3ee630d5af2f6e817fbce7b3342fe920a59dbc2e))
+
 ## [25.3.0](https://github.com/flxbl-io/sfops/compare/v25.2.0...v25.3.0) (2024-01-25)
 
 
