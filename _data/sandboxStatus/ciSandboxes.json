@@ -53,9 +53,11 @@
   },
   {
     "name": "605392688",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706261969473,
     "domain": "CORE",
+    "created_at": "2024-01-26T09:39:29.473Z",
     "type": "CI"
   },
   {
