@@ -113,7 +113,7 @@ layout: default
                       <ul class="action-links">
                         {% for detail in workitemDetails %}
                           {% if detail.domain != page.domain %}
-                          <li><a href="{{ site.url}}/releasedefns/{{page.branch}}/{{detail.domain}}.html" target="_blank">{{ detail.domain }}:{{ detail.releaseName }}</a></li>
+                           <li><a href="{{ site.url}}/releasedefns/{{page.branch}}/{{page.domain}}.html" target="_blank">{{workitemId}}-->{{ detail.domain }}:{{ detail.releaseName }}</a></li>
                           {% endif %}
                         {% endfor %}
                       </ul>

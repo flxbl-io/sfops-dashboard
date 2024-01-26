@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.4.2](https://github.com/flxbl-io/sfops/compare/v25.4.1...v25.4.2) (2024-01-26)
+
+
+### Bug Fixes
+
+* **dashboard-release-logs:** handle when a release is never released to production ([407bbbe](https://github.com/flxbl-io/sfops/commit/407bbbe53137ed64f58b1a6b5dc4be2b7c5106e2))
+
 ## [25.4.1](https://github.com/flxbl-io/sfops/compare/v25.4.0...v25.4.1) (2024-01-25)
 
 
