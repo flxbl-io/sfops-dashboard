@@ -43,7 +43,7 @@ try {
 // Main execution loop for processing each domain within each branch
 branches.forEach(branch => {
     domains.forEach(domain => {
-        const latestRelease = latestReleaseMap['prod'][domain] || null; // Use null if latest release is not specified
+        const latestRelease = latestReleaseMap['prod'] && latestReleaseMap['prod'][domain] || null; // Use null if latest release is not specified
         try {
             updateChangelogForDomain(branch, domain, latestRelease);
             console.log(`Updated changelog for ${domain} in branch ${branch}`);

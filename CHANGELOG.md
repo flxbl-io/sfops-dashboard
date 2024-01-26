@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.4.1](https://github.com/flxbl-io/sfops/compare/v25.4.0...v25.4.1) (2024-01-25)
+
+
+### Bug Fixes
+
+* **dashboard-rc:** fix copy button used for rc links ([c10e8ae](https://github.com/flxbl-io/sfops/commit/c10e8ae49732d3e6f081afa833542f89538eca1d))
+
 ## [25.4.0](https://github.com/flxbl-io/sfops/compare/v25.3.2...v25.4.0) (2024-01-25)
 
 
