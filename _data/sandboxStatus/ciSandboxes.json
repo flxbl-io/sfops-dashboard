@@ -74,9 +74,11 @@
   },
   {
     "name": "411218862",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706253110889,
     "domain": "HOTFIX",
+    "created_at": "2024-01-26T07:11:50.889Z",
     "type": "CI"
   },
   {
