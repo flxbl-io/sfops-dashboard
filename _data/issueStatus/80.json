@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,10 +37,10 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-01-27T03:41:14Z",
+    "updated_at": "2024-01-27T03:50:30Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "cd0f1fec25357339914f40c8a37fd161529cb196",
+    "merge_commit_sha": "0002fd7b03f687a03f9c038f10fe0b0d5abd460c",
     "assignee": null,
     "assignees": [],
     "requested_reviewers": [],
@@ -56,11 +56,11 @@
         "description": null
       },
       {
-        "id": 6416676132,
-        "node_id": "LA_kwDOKLk9E88AAAABfna1JA",
-        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-failed",
-        "name": "validation-failed",
-        "color": "B60205",
+        "id": 6416672707,
+        "node_id": "LA_kwDOKLk9E88AAAABfnanww",
+        "url": "https://api.github.com/repos/flxbl-io/sf-core/labels/validation-pending",
+        "name": "validation-pending",
+        "color": "FBCA04",
         "default": false,
         "description": ""
       },
