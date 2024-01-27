@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.4.3](https://github.com/flxbl-io/sfops/compare/v25.4.2...v25.4.3) (2024-01-27)
+
+
+### Bug Fixes
+
+* **action:** prettify logs ([4b7b3ab](https://github.com/flxbl-io/sfops/commit/4b7b3ab1982a47a9b79d0526e54fc3ca512e56b9))
+* **actions:** fix incorrect references to github repo ([d1dabb0](https://github.com/flxbl-io/sfops/commit/d1dabb00dd55a5c2eceaa872c473433a6b721715))
+* **actions:** fix releasing variable with JSON ([0e43578](https://github.com/flxbl-io/sfops/commit/0e435783b1ef8ecbd1a7675c62b04eb8ba07142d))
+* **actions:** remove additional stringify ([d767bd0](https://github.com/flxbl-io/sfops/commit/d767bd043c8107fbd0634bde4f5f44d93697a15c))
+* **actions:** temporary fix to use gh api as opposed to gh cli set ([47e110e](https://github.com/flxbl-io/sfops/commit/47e110ea779cc0380631df467b49dba868ae4d41))
+* **dashboard:** add workitem id in linked with column ([b6dcab4](https://github.com/flxbl-io/sfops/commit/b6dcab44957fa71764b76fa405645819e13204e5))
+
 ## [25.4.2](https://github.com/flxbl-io/sfops/compare/v25.4.1...v25.4.2) (2024-01-26)
 
 
