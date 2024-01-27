@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.4.4](https://github.com/flxbl-io/sfops/compare/v25.4.3...v25.4.4) (2024-01-27)
+
+
+### Bug Fixes
+
+* **actions:** fix github repo reference in sfops renew ([07bba11](https://github.com/flxbl-io/sfops/commit/07bba11f465c892edb5f6c9b56478f10e777d169))
+* **actions:** fix incorrect variable reference in expiry ([1598ba3](https://github.com/flxbl-io/sfops/commit/1598ba38d705a8ee567b51d222740ab4387c313e))
+
 ## [25.4.3](https://github.com/flxbl-io/sfops/compare/v25.4.2...v25.4.3) (2024-01-27)
 
 
