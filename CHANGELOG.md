@@ -1,5 +1,18 @@
 # Changelog
 
+## [25.6.0](https://github.com/flxbl-io/sfops/compare/v25.5.0...v25.6.0) (2024-01-28)
+
+
+### Features
+
+* **review-sandbox:** move expiry to when the sandbox is first assigned ([005455d](https://github.com/flxbl-io/sfops/commit/005455d232d9b1674b64bc4d8e52b5acfc1f222b))
+
+
+### Bug Fixes
+
+* **dashboard:** display created time when assigned is not available ([b8e927b](https://github.com/flxbl-io/sfops/commit/b8e927bc64826b5a010406d57734f30a1ce75897))
+* **workflow:** remove disable artifact update during pr validate on review sandbox ([19f4ae4](https://github.com/flxbl-io/sfops/commit/19f4ae4c5f888a7838076769b88af0455c1429e8))
+
 ## [25.5.0](https://github.com/flxbl-io/sfops/compare/v25.4.4...v25.5.0) (2024-01-27)
 
 
