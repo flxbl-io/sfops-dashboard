@@ -1,5 +1,5 @@
 {
-  "status": "validation",
+  "status": "validated",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-01-28T22:05:19Z",
+    "updated_at": "2024-01-28T22:09:16Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "e705173941a9434a7200ba0198096b56537b9507",
