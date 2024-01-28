@@ -230,7 +230,15 @@ input:checked + .slider:before {
                 </td>
                 <td>{{ sandbox.requested_at | date_to_xmlschema }}</td>
                 <td>{{ sandbox.created_at | date_to_xmlschema }}</td>
-                <td>{{ sandbox.assigned_at | date_to_xmlschema }}</td>
+                {% if sandbox.issue %}
+                  {% if sandbox.assigned_at %}
+                    <td>{{ sandbox.assigned_at | date_to_xmlschema }}</td>
+                  {% else %}
+                    <td>{{ sandbox.created_at | date_to_xmlschema }}</td>
+                  {% endif %}
+                {% else %}
+                 <td></td>
+                {% endif %}
                 <td>
                   {% if sandbox.issue %}
                       <a href="{{ site.data.project.url }}/pull/{{sandbox.issue}}" target="_blank">#{{sandbox.issue}}<a>
