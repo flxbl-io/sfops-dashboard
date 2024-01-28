@@ -1,5 +1,18 @@
 # Changelog
 
+## [25.5.0](https://github.com/flxbl-io/sfops/compare/v25.4.4...v25.5.0) (2024-01-27)
+
+
+### Features
+
+* **actions:** use the time sandbox was fetched ([d662117](https://github.com/flxbl-io/sfops/commit/d6621177deaa52b61ef34b3fc756f907986742d2))
+
+
+### Bug Fixes
+
+* **actions:** fix date time parse error ([c711cb6](https://github.com/flxbl-io/sfops/commit/c711cb6fb32611a5c8abc2dd4885ac24af2b9ced))
+* **actions:** fix incorrect script invocation in release sandbox ([d4c0e6d](https://github.com/flxbl-io/sfops/commit/d4c0e6d1a586b2c01bd469cf3274085b21ccb4a9))
+
 ## [25.4.4](https://github.com/flxbl-io/sfops/compare/v25.4.3...v25.4.4) (2024-01-27)
 
 

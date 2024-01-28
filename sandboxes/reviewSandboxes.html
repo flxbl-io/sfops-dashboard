@@ -206,7 +206,9 @@ input:checked + .slider:before {
                 <th>Pool</th>
                 <th>Name</th>
                 <th>Status</th>
+                <th>Requested At</th>
                 <th>Completed At</th>
+                <th>Assigned At</th>
                 <th>Assigned To</th>
                 <th>Expiry In</th>
                 <th>Actions</th>
@@ -214,7 +216,7 @@ input:checked + .slider:before {
             </thead>
             <tbody>
             {% for sandbox in site.data.sandboxStatus.ciSandboxes %}
-                <tr data-status="{{sandbox.status}}" data-created-at="{{ sandbox.created_at }}" data-expiry="1" data-is-extended='{{sandbox.isExtended}}' data-is-immortal='{{sandbox.isImmortal}}'>
+                <tr data-status="{{sandbox.status}}" data-created-at="{{ sandbox.created_at }}" data-assigned-at="{{ sandbox.assigned_at }}" data-expiry="1" data-is-extended='{{sandbox.isExtended}}' data-is-immortal='{{sandbox.isImmortal}}'>
                 <td>{{ sandbox.domain }}</td>
                 <td>{{ sandbox.name }}</td>
                 <td>
@@ -226,7 +228,9 @@ input:checked + .slider:before {
                     <span class="status-label status-{{ sandbox.status }}">{{sandbox.status}}</span>
                 {% endif %}
                 </td>
-                <td>{{sandbox.created_at}}</td>
+                <td>{{ sandbox.requested_at | date_to_xmlschema }}</td>
+                <td>{{ sandbox.created_at | date_to_xmlschema }}</td>
+                <td>{{ sandbox.assigned_at | date_to_xmlschema }}</td>
                 <td>
                   {% if sandbox.issue %}
                       <a href="{{ site.data.project.url }}/pull/{{sandbox.issue}}" target="_blank">#{{sandbox.issue}}<a>
@@ -258,43 +262,43 @@ const repoUrl = repoData.url;
 
 function updateExpiryDisplay() {
     $('#sandboxTable tbody tr').each(function() {
-       var createdAt = new Date($(this).data('created-at'));
+
+      var assignedAtValue = $(this).data('assigned-at');
+      var assignedAt = assignedAtValue ? new Date(assignedAtValue) : new Date( $(this).data('created-at'))
+
+    
        var expiryDays = parseInt($(this).data('expiry'));
        var isExtended = $(this).data('is-extended');
        if($(this).data('is-immortal')==true)
        {
-         $('td:eq(5)', this).text('Blocked by Ops');
+         $('td:eq(7)', this).text('Blocked by Ops');
        }
        else if($(this).data('status')=='InProgress')
        {
-         $('td:eq(5)', this).text('Provisioning in Progress');
-       }
-       else if(!$(this).data('created-at')|| $(this).data('created-at')==''){
-           $('td:eq(5)', this).text('Not Available');
-            return;
+         $('td:eq(7)', this).text('Provisioning in Progress');
        }
        else
        { 
-          if($)
+          
             if($(this).data('is-extended')==true)
             {
               expiryDays = expiryDays + 1;
             }
-            var expiryDate = new Date(createdAt.setDate(createdAt.getDate() + expiryDays));
+            var expiryDate = new Date(assignedAt.setDate(assignedAt.getDate() + expiryDays));
             var now = new Date();
             var timeDiff = expiryDate - now;
 
             if (timeDiff > 0) {
                 var hours = Math.floor(timeDiff / (1000 * 60 * 60));
                 var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                $('td:eq(5)', this).text(`${hours}h ${minutes}m`);
+                $('td:eq(7)', this).text(`${hours}h ${minutes}m`);
             } else {
                 if ($('td:eq(2)', this).text().includes('Expired')) {
-                  $('td:eq(5)', this).text('Marked for Deletion');
+                  $('td:eq(7)', this).text('Marked for Deletion');
                 }
                 else
                 {
-                $('td:eq(5)', this).text(`Expiring Soon`);
+                $('td:eq(7)', this).text(`Expiring Soon`);
                 }
             }
 
@@ -304,6 +308,25 @@ function updateExpiryDisplay() {
                 $(this).removeClass('near-expiry');
             }
        }
+    });
+}
+
+function convertToLocalTime(isoDateString) {
+    if (!isoDateString) return '';
+    var localDate = new Date(isoDateString);
+    return localDate.toLocaleString();
+}
+
+function updateDateTimeDisplay() {
+    $('#sandboxTable tbody tr').each(function() {
+        // Convert Requested At, Created At, and Assigned At dates
+        var requestedAtCell = $('td:eq(3)', this);
+        var createdAtCell = $('td:eq(4)', this);
+        var assignedAtCell = $('td:eq(5)', this);
+
+        requestedAtCell.text(convertToLocalTime(requestedAtCell.text()));
+        createdAtCell.text(convertToLocalTime(createdAtCell.text()));
+        assignedAtCell.text(convertToLocalTime(assignedAtCell.text()));
     });
 }
 
@@ -354,7 +377,11 @@ $(document).ready(function() {
     }
 
     updateInfoCards();
+    updateDateTimeDisplay();
     updateExpiryDisplay();
+
+
+    
 
     // Toggle for showing expired sandboxes
     $('#toggleExpired').on('change', function () {
