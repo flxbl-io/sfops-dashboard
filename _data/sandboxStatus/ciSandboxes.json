@@ -41,16 +41,6 @@
     "type": "CI"
   },
   {
-    "name": "465911994",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1706350048997,
-    "requested_at": "2024-01-27T06:08:13Z",
-    "domain": "CORE",
-    "created_at": "2024-01-27T10:07:28.997Z",
-    "type": "CI"
-  },
-  {
     "name": "751269922",
     "status": "Available",
     "isActive": "true",
