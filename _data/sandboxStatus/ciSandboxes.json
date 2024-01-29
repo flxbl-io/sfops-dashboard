@@ -11,10 +11,12 @@
   },
   {
     "name": "223921351",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706522897217,
     "requested_at": "2024-01-29T06:08:51Z",
     "domain": "CORE",
+    "created_at": "2024-01-29T10:08:17.217Z",
     "type": "CI"
   },
   {
@@ -62,10 +64,12 @@
   },
   {
     "name": "942968587",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706522908704,
     "requested_at": "2024-01-29T06:08:52Z",
     "domain": "CORE",
+    "created_at": "2024-01-29T10:08:28.704Z",
     "type": "CI"
   },
   {
