@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.7.0](https://github.com/flxbl-io/sfops/compare/v25.6.1...v25.7.0) (2024-01-29)
+
+
+### Features
+
+* **actions:** write frontdoor urls to dashboard, to enable open action button ([fe38cdf](https://github.com/flxbl-io/sfops/commit/fe38cdf60b39cb17ce0a5cb235a929fb5ae58f97))
+
+
+### Bug Fixes
+
+* **workflows:** reinstante disable artifact update ([a7e67f8](https://github.com/flxbl-io/sfops/commit/a7e67f84aea068557adf535e1b42b2e8e8b7b25e))
+
 ## [25.6.1](https://github.com/flxbl-io/sfops/compare/v25.6.0...v25.6.1) (2024-01-28)
 
 
