@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.6.1](https://github.com/flxbl-io/sfops/compare/v25.6.0...v25.6.1) (2024-01-28)
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect variable expansion in renew sandbox ([f4171cc](https://github.com/flxbl-io/sfops/commit/f4171cc9b0f581301a5953c6575d3dd62aab8e48))
+
 ## [25.6.0](https://github.com/flxbl-io/sfops/compare/v25.5.0...v25.6.0) (2024-01-28)
 
 

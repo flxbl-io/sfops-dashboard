@@ -247,7 +247,7 @@ input:checked + .slider:before {
                 <td></td> <!-- Expiry column, filled in by JS -->
                  <td>
                   {% if (sandbox.status == 'InUse' or  sandbox.status == 'Available') and  sandbox.issue %}
-                    <a href="https://test.salesforce.com" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
+                    <a href="{{ site.data.sandboxStatus.frontDoorUrl[sandbox.name].url }}" target="_blank" class="btn btn-primary btn-sm"><i class="fas fa-external-link-alt"></i> Open</a>
                    {% endif %}
                 </td>
                 </tr>
