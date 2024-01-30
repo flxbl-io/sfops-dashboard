@@ -118,7 +118,7 @@ layout: default
               <td>{{ issueDetails.elapsedTime | divided_by: 1000 | date: '%T' }}</td>
               {% if issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'success' %}
                 <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td>
-              {% elsif issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'failed' %}
+              {% elsif issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'failure' %}
                 <td><i class="fas fa-clock" style="color:red"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
               {% elsif issueDetails.checkStatus=='in_progress' %}
                 <td><i class="fas fa-solid fa-circle-half-stroke" style="color:orange"></i></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
@@ -214,7 +214,7 @@ layout: default
         let closedPRCount = Object.keys(prStatus.closedPrs).length;
         let workItemsFailing = 0;
         for (let issue in prStatus.openPrs) {
-          if (prStatus.openPrs[issue].checkStatus == 'completed' && prStatus.openPrs[issue].checkConclusion == 'failed') {
+          if (prStatus.openPrs[issue].checkStatus == 'completed' && prStatus.openPrs[issue].checkConclusion == 'failure') {
             workItemsFailing++;
           }
         }
