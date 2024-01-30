@@ -21,6 +21,28 @@ layout: default
   #table .fas {
     margin-right: 10px; /* Space between icon and text */
   }
+.label-badge {
+  background-color: transparent; /* Transparent background */
+  color: #007bff; /* Blue text, assuming you want to keep the text color similar to the original background */
+  padding: 2px 8px; /* Padding inside the badge */
+  border-radius: 15px; /* Rounded corners */
+  font-size: 12px; /* Font size */
+  margin-right: 5px; /* Space between badges horizontally */
+  margin-bottom: 1px; /* Space below each badge */
+  display: inline-block; /* Align badges in line */
+  border: 1px solid #007bff;
+}
+.card.rounded {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for shadow effect */
+}
+
+.card-text-custom{
+    font-size:40px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 </style>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -33,115 +55,175 @@ layout: default
 <link rel="stylesheet"  type="text/css" href="{{ '/assets/css/releasetable.css' | relative_url }}">
 
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-12">
-      <table id="issueTable" class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Issue Number</th>
-            <th>Issue Title</th>
-            <th>Branch</th>
-            <th>Author</th>
-            <th>Status</th>
-            <th>Test Environment(s) Status</th>
-            <th>Elapsed Time</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-        {% if site.data.issueStatusCombined %}
-          {% for issue in site.data.issueStatusCombined %}
-          {% unless issue.status == 'ready' %}
-            <tr>
-              <td>{{ issue.issue_number }}</td>
-              <td>{{ issue.issue_details.title }}</td>
-              <td>{{ issue.branch }}</td>
-              <td>{{ issue.issue_details.user.login }}</td>
-              <td>
-                {% case issue.status %}
-                  {% when 'locked/applying patches' %}
-                    <i class="fas fa-vials status-icon"></i>
-                    <i class="fas fa-tasks status-icon"></i>
-                    Patching in test work item
-                  {% when 'validation' %}
-                    <i class="fas fa-tasks status-icon"></i>
-                    Checks In Progress / Failed
-                  {% when 'validated' %}
-                    <i class="fas fa-tasks status-icon"></i>
-                    In Review
-                  {% when 'forced' %}
-                    <i class="fas fa-person-through-window status-icon"></i>
-                    Force Pushed
-                  {% when 'locked' %}
-                    <i class="fas fa-vials status-icon"></i>
-                    In Testing
-                  {% when 'unlocked' %}
-                    <i class="fas fa-tasks status-icon"></i>
-                    In Review
-                  {% when 'build' %}
-                    <i class="fas fa-hammer status-icon"></i>
-                    {{ issue.status | capitalize }}
-                {% endcase %}
-              </td>
-              <td>
-                {% case issue.status %}
-                  {% when 'forced' %}
-                    <i class="fas fa-person-through-window status-icon"></i>
-                    Force Pushed
-                  {% when 'locked/applying patches' %}
-                  <i class="fas fa-lock status-icon"></i>
-                    Locked for Testing
-                  {% when 'locked' %}
-                    <i class="fas fa-lock status-icon"></i>
-                    Locked for Testing ( {{ issue.domain }} )
-                {% endcase %}
-              </td>
-              <td><span id="elapsed-time-{{ forloop.index }}"></span></td>
-              <td>
-                <a href="{{ issue.issue_details.html_url }}" target="_blank">View Issue</a>
-              </td>
-            </tr>   
-            {% endunless %}
-          {% endfor %}
-        {% endif %}
-        </tbody>
-      </table>
+
+ <div class="row mb-">
+  <div class="col-md-4">
+    <div class="card rounded">
+      <div class="card-body">
+        <h5 class="card-title">WorkItems In Review</h5>
+        <p class="card-text-custom" id="openPRCount"></p>
+      </div>
     </div>
   </div>
+  <div class="col-md-4">
+    <div class="card rounded">
+      <div class="card-body">
+        <h5 class="card-title">WorkItems Merged Recently</h5>
+        <p class="card-text-custom" id="closedPRCount"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card rounded">
+      <div class="card-body">
+        <h5 class="card-title">WorkItems with Failing Checks</h5>
+        <p class="card-text-custom" id="workItemsFailing"></p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+ </div>
+
+  <div class="row" style="margin-top:30px">
+      <div class="col-md-12">
+        <table id="reviewTable" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Issue Number</th>
+              <th>Issue Title</th>
+              <th>Branch</th>
+              <th>Author</th>
+              <th>Labels</th>
+              <th>Elapsed Time</th>
+              <th>Checks</th>
+              <th>Review Org</th>
+            </tr>
+          </thead>
+          <tbody>
+        
+          {% for issue in site.data.prStatus.openPrs %}
+              {% assign issueNumber= issue[0] %}
+              {% assign issueDetails = site.data.prStatus.openPrs[issueNumber] %}
+            <tr>
+              <td><a href="{{ issueDetails.linkToIssue }}" target="_blank">{{ issueNumber }}</a></td>
+              <td>{{ issueDetails.issueTitle }}</td>
+              <td>{{ issueDetails.branch }}</td>
+              <td>{{ issueDetails.author }}</td>
+              <td>
+                {% for label in issueDetails.labels %}
+                  <span class="label-badge">{{ label.key }}</span>
+                {% endfor %}
+              </td>
+              <td>{{ issueDetails.elapsedTime | divided_by: 1000 | date: '%T' }}</td>
+              {% if issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'success' %}
+                <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td>
+              {% elsif issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'failed' %}
+                <td><i class="fas fa-clock" style="color:red"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
+              {% elsif issueDetails.checkStatus=='in_progress' %}
+                <td><i class="fas fa-solid fa-circle-half-stroke" style="color:orange"></i></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
+              {% else %}
+                <td><i class="fas fa-solid fa-list" style="color:orange"></i></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td>
+              {% endif %}
+              <td>
+                {% assign matchedUrl = '' %}
+                {% for entry in site.data.sandboxStatus.frontDoorUrl %}
+                  {% if entry[1].issue == issueNumber %}
+                    {% assign matchedUrl = entry[1].url %}
+                    <a href="{{ matchedUrl }}" target="_blank">{{ entry[0] }}</a>
+                  {% endif %}
+                {% endfor %}
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  
+  </div>
+ 
+  <div class="row" style="margin-top:100px">
+    <div class="col-md-12">
+        <table id="mergedTable" class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Issue Number</th>
+              <th>Issue Title</th>
+              <th>Branch</th>
+              <th>Author</th>
+              <th>Labels</th>
+              <th>Elapsed Time</th>
+              <th>Build Status</th>
+            </tr>
+          </thead>
+          <tbody>
+        
+          {% for issue in site.data.prStatus.closedPrs %}
+              {% assign issueNumber= issue[0] %}
+              {% assign issueDetails = site.data.prStatus.closedPrs[issueNumber] %}
+            <tr>
+              <td><a href="{{ issueDetails.linkToIssue }}" target="_blank">{{ issueNumber }}</a></td>
+              <td>{{ issueDetails.issueTitle }}</td>
+              <td>{{ issueDetails.branch }}</td>
+              <td>{{ issueDetails.author }}</td>
+              <td>
+                {% for label in issueDetails.labels %}
+                  <span class="label-badge">{{ label.key }}</span>
+                {% endfor %}
+              </td>
+              <td>{{ issueDetails.elapsedTime | divided_by: 1000 | date: '%T' }}</td>
+              {% if issueDetails.mergeActionStatus=='completed'  and issueDetails.mergeActionConclusion == 'success' %}
+                <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td>
+              {% elsif issueDetails.mergeActionStatus=='completed'  and issueDetails.mergeActionConclusion == 'failed' %}
+                <td><i class="fas fa-clock" style="color:red"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td></td>
+              {% elsif issueDetails.mergeActionStatus=='in_progress' %}
+                <td><i class="fas fa-solid fa-circle-half-stroke"></i>" style="color:orange"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td></td>
+              {% else %}
+                <td><i class="fas fa-solid fa-list" style="color:orange"></i></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+  </div>
+
+ 
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-   $(document).ready(function() {
-    $('#issueTable').DataTable({
+  $(document).ready(function() {
+    $('#reviewTable').DataTable({
       "order": [[0, "desc"]] ,
-      "paging":false,
+      "paging":true,
     });
+    $('#mergedTable').DataTable({
+      "order": [[0, "desc"]] ,
+      "paging":true,
+    });
+
+    function updateInfoCards() {
+        let prStatus = {{ site.data.prStatus | jsonify }};
+        //Count the number of keys in the object
+        let openPRCount = Object.keys(prStatus.openPrs).length;
+        let closedPRCount = Object.keys(prStatus.closedPrs).length;
+        let workItemsFailing = 0;
+        for (let issue in prStatus.openPrs) {
+          if (prStatus.openPrs[issue].checkStatus == 'completed' && prStatus.openPrs[issue].checkConclusion == 'failed') {
+            workItemsFailing++;
+          }
+        }
+
+        $('#openPRCount').text(openPRCount);
+        $('#closedPRCount').text(closedPRCount);
+        $('#workItemsFailing').text(workItemsFailing);
+    }
+
+   updateInfoCards();
   });
- function formatElapsedTime(milliseconds) {
-    var seconds = Math.floor(milliseconds / 1000);
-    var minutes = Math.floor(seconds / 60);
-    var hours = Math.floor(minutes / 60);
-    var days = Math.floor(hours / 24);
-
-    seconds = seconds % 60;
-    minutes = minutes % 60;
-    hours = hours % 24;
-
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  function updateElapsedTimes() {
-    var now = new Date();
-    {% for issue in site.data.issueStatusCombined%}
-      var createdTime = new Date("{{ issue.issue_details.created_at }}");
-      var elapsedTime = now - createdTime;
-      document.getElementById('elapsed-time-{{ forloop.index }}').innerText = formatElapsedTime(elapsedTime);
-    {% endfor %}
-  }
-
-  // Update elapsed time every second
-  setInterval(updateElapsedTimes, 1000);
 </script>
