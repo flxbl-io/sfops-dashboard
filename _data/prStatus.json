@@ -1,0 +1,131 @@
+{
+  "openPrs": {
+    "73": {
+      "issueTitle": "Add an additional line to comment",
+      "branch": "feat/comment",
+      "author": "azlam-abdulsalam",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
+      "labels": [
+        {
+          "key": "frameworks",
+          "description": null
+        },
+        {
+          "key": "validation-failed",
+          "description": ""
+        }
+      ],
+      "elapsedTime": 5993647419,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
+      "merged": false,
+      "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
+      "buildActionLink": "",
+      "checkStatus": "completed",
+      "checkConclusion": "failure",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7483046148/job/20367737364"
+    },
+    "74": {
+      "issueTitle": "fix: add author",
+      "branch": "feat/add-author",
+      "author": "azlam-abdulsalam",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
+      "labels": [],
+      "elapsedTime": 5991240928,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
+      "merged": false,
+      "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
+      "buildActionLink": ""
+    },
+    "79": {
+      "issueTitle": "feat: Update FeatureChecker.cls",
+      "branch": "feat/add-comments-feature",
+      "author": "azlam-abdulsalam",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
+      "labels": [],
+      "elapsedTime": 5902382593,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
+      "merged": false,
+      "mergeCommitSha": "a9518fed5c01d068bac9f957580855538fdd5f04",
+      "buildActionLink": "",
+      "checkStatus": "completed",
+      "checkConclusion": "failure",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7000758563/job/19042216322"
+    },
+    "80": {
+      "issueTitle": "fix: add a comment to test",
+      "branch": "feat/comment-test",
+      "author": "azlam-abdulsalam",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
+      "labels": [
+        {
+          "key": "frameworks",
+          "description": null
+        },
+        {
+          "key": "validation-succeeded",
+          "description": ""
+        },
+        {
+          "key": "unpackaged",
+          "description": null
+        }
+      ],
+      "elapsedTime": 5552398067,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
+      "merged": false,
+      "mergeCommitSha": "0576bfc318954df1648652358577b74da8fb83d0",
+      "buildActionLink": "",
+      "checkStatus": "completed",
+      "checkConclusion": "success",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7689910773/job/20953170118"
+    },
+    "95": {
+      "issueTitle": "fix(frameworks): test hotfix flow [FGK-1234]",
+      "branch": "chore/auto-release-Sprint-2-10-12-7155075675-patch-7155672878",
+      "author": "sfops-bot[bot]",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/in/417233?v=4",
+      "labels": [
+        {
+          "key": "frameworks",
+          "description": null
+        },
+        {
+          "key": "autocreated",
+          "description": "Label to denote the pr was autocreated"
+        },
+        {
+          "key": "priority",
+          "description": "Label to denote the pr is high priority"
+        },
+        {
+          "key": "validation-failed",
+          "description": ""
+        }
+      ],
+      "elapsedTime": 4432533288,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
+      "merged": false,
+      "mergeCommitSha": "f4698266500009939a64aa2c0839b4fa739f6b7c",
+      "buildActionLink": "",
+      "checkStatus": "completed",
+      "checkConclusion": "failure",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7675798331/job/20922538840"
+    },
+    "114": {
+      "issueTitle": "test: test for no domain change",
+      "branch": "azlam-abdulsalam-patch-4",
+      "author": "azlam-abdulsalam",
+      "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
+      "labels": [],
+      "elapsedTime": 2120780585,
+      "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
+      "merged": false,
+      "mergeCommitSha": "6f3ba34ab28e0b81900b1cdec4b02acd50dffd75",
+      "buildActionLink": "",
+      "checkStatus": "completed",
+      "checkConclusion": "success",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7457158457/job/20288915596"
+    }
+  },
+  "closedPrs": {}
+}
