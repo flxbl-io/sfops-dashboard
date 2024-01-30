@@ -83,10 +83,12 @@
   },
   {
     "name": "940643321",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706600453774,
     "requested_at": "2024-01-30T06:08:43Z",
     "domain": "HOTFIX",
+    "created_at": "2024-01-30T07:40:53.774Z",
     "type": "CI"
   }
 ]
