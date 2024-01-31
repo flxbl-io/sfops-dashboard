@@ -20,21 +20,13 @@
     "type": "CI"
   },
   {
-    "name": "716482865",
+    "name": "788281645",
     "status": "Available",
     "isActive": "true",
-    "createdAt": 1706607493800,
-    "requested_at": "2024-01-30T06:08:44Z",
-    "domain": "CORE",
-    "created_at": "2024-01-30T09:38:13.800Z",
-    "type": "CI"
-  },
-  {
-    "name": "788281645",
-    "status": "InProgress",
-    "isActive": "true",
+    "createdAt": 1706710033782,
     "requested_at": "2024-01-31T06:08:43Z",
     "domain": "CORE",
+    "created_at": "2024-01-31T14:07:13.782Z",
     "type": "CI"
   },
   {
