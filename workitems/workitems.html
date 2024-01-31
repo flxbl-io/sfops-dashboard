@@ -53,6 +53,7 @@ layout: default
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet"  type="text/css" href="{{ '/assets/css/releasetable.css' | relative_url }}">
+<script src="https://kit.fontawesome.com/ccae0cc9ba.js" crossorigin="anonymous"></script>
 
 <div class="container-fluid">
 
@@ -69,7 +70,7 @@ layout: default
     <div class="card rounded">
       <div class="card-body">
         <h5 class="card-title">WorkItems Merged Recently</h5>
-        <p class="card-text-custom" id="closedPRCount"></p>
+        <p class="card-text-custom" id="mergedPRCount"></p>
       </div>
     </div>
   </div>
@@ -119,11 +120,13 @@ layout: default
               {% if issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'success' %}
                 <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td>
               {% elsif issueDetails.checkStatus=='completed'  and issueDetails.checkConclusion == 'failure' %}
-                <td><i class="fas fa-clock" style="color:red"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
+                <td><i class="fas fa-circle-exclamation"  style="color:red"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
+              {% elsif issueDetails.checkConclusion == 'skipped' %}
+                <td><i class="fas fa-clock" style="color:grey"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
               {% elsif issueDetails.checkStatus=='in_progress' %}
-                <td><i class="fas fa-solid fa-circle-half-stroke" style="color:orange"></i></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
+                <td><i class="fas fa-solid fa-spinner" "style="color:orange"></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td></td>
               {% else %}
-                <td><i class="fas fa-solid fa-list" style="color:orange"></i></i><a href="{{ issueDetails.validationActionLink }}" target="_blank"> Validation Job</a></td>
+               <td></td>
               {% endif %}
               <td>
                 {% assign matchedUrl = '' %}
@@ -163,6 +166,7 @@ layout: default
           {% for issue in site.data.prStatus.closedPrs %}
               {% assign issueNumber= issue[0] %}
               {% assign issueDetails = site.data.prStatus.closedPrs[issueNumber] %}
+           {% if issueDetails.merged == true %}
             <tr>
               <td><a href="{{ issueDetails.linkToIssue }}" target="_blank">{{ issueNumber }}</a></td>
               <td>{{ issueDetails.issueTitle }}</td>
@@ -175,15 +179,18 @@ layout: default
               </td>
               <td>{{ issueDetails.elapsedTime | divided_by: 1000 | date: '%T' }}</td>
               {% if issueDetails.mergeActionStatus=='completed'  and issueDetails.mergeActionConclusion == 'success' %}
-                <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td>
-              {% elsif issueDetails.mergeActionStatus=='completed'  and issueDetails.mergeActionConclusion == 'failed' %}
-                <td><i class="fas fa-clock" style="color:red"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td></td>
+                <td><i class="fas fa-check-circle" style="color:green"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td>
+              {% elsif issueDetails.mergeActionStatus=='completed'  and issueDetails.mergeActionConclusion == 'failure' %}
+                <td><i class="fas fa-circle-exclamation"  style="color:red"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td></td>
+              {% elsif issueDetails.mergeActionConclusion == 'skipped' %}
+                <td><i class="fas fa-clock" style="color:grey"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Validation Job</a></td></td>
               {% elsif issueDetails.mergeActionStatus=='in_progress' %}
-                <td><i class="fas fa-solid fa-circle-half-stroke"></i>" style="color:orange"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank">Build Job</a></td></td>
+                <td><i class="fas fa-solid fa-spinner" "style="color:orange"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td></td>
               {% else %}
-                <td><i class="fas fa-solid fa-list" style="color:orange"></i></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td>
+                <td><i class="fas fa-solid fa-list" style="color:orange"></i><a href="{{ issueDetails.buildActionLink }}" target="_blank"> Build Job</a></td>
               {% endif %}
             </tr>
+           {% endif %}
           {% endfor %}
           </tbody>
         </table>
@@ -211,7 +218,13 @@ layout: default
         let prStatus = {{ site.data.prStatus | jsonify }};
         //Count the number of keys in the object
         let openPRCount = Object.keys(prStatus.openPrs).length;
-        let closedPRCount = Object.keys(prStatus.closedPrs).length;
+        let mergedPRCount = 0
+        for (let issue in prStatus.closedPrs)
+        {
+          if (prStatus.closedPrs[issue].merged==true) {
+            mergedPRCount++;
+          }
+        }
         let workItemsFailing = 0;
         for (let issue in prStatus.openPrs) {
           if (prStatus.openPrs[issue].checkStatus == 'completed' && prStatus.openPrs[issue].checkConclusion == 'failure') {
@@ -220,7 +233,7 @@ layout: default
         }
 
         $('#openPRCount').text(openPRCount);
-        $('#closedPRCount').text(closedPRCount);
+        $('#mergedPRCount').text(mergedPRCount);
         $('#workItemsFailing').text(workItemsFailing);
     }
 

@@ -1,5 +1,23 @@
 # Changelog
 
+## [25.8.0](https://github.com/flxbl-io/sfops/compare/v25.7.0...v25.8.0) (2024-01-30)
+
+
+### Features
+
+* **workitems:** enhanced workitems with updated status and view of runs ([cde9729](https://github.com/flxbl-io/sfops/commit/cde97298a92077b787f3688488b52163b5b528b8))
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect position of invocation ([aee16e5](https://github.com/flxbl-io/sfops/commit/aee16e5622739e7e2aad2a0c80b9856e8fdb06ac))
+* **actions:** fix status used in github issues ([b07ed2a](https://github.com/flxbl-io/sfops/commit/b07ed2aa75b60564c2b178875ad3991366017886))
+* **cicd:** fix issue with GH_TOKEN used in authentication ([7b0525e](https://github.com/flxbl-io/sfops/commit/7b0525e104abc5d253e9c838b6f838e060807875))
+* **cicd:** fix workflow file ([80c1d9d](https://github.com/flxbl-io/sfops/commit/80c1d9d2c7c8af3fe357d9afee00a2be47bfd88d))
+* **deps:** updated package-lock ([d7ffd65](https://github.com/flxbl-io/sfops/commit/d7ffd654895ea77e36209fd47bba096aebb2cdf6))
+* **worfklows-createanenv:** ensure create an env workflow works if some inputs are failing ([6672d01](https://github.com/flxbl-io/sfops/commit/6672d01cf22def8291b9fe2460e2dff10f4d7a77))
+* **workflows:** revert disableartifactupdate in hotfix sandbox ([96ac124](https://github.com/flxbl-io/sfops/commit/96ac1242d6544714cb3c21d86cccb5e01a3bb1b0))
+
 ## [25.7.0](https://github.com/flxbl-io/sfops/compare/v25.6.1...v25.7.0) (2024-01-29)
 
 
