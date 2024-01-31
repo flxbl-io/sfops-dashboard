@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.8.1](https://github.com/flxbl-io/sfops/compare/v25.8.0...v25.8.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* **dashboard:** fix icons and status used in workitems ([bec4a3e](https://github.com/flxbl-io/sfops/commit/bec4a3eed05096a33a40d618f0becf77b55c9d06))
+
 ## [25.8.0](https://github.com/flxbl-io/sfops/compare/v25.7.0...v25.8.0) (2024-01-30)
 
 

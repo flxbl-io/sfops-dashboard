@@ -58,34 +58,38 @@ layout: default
 <div class="container-fluid">
 
  <div class="row mb-">
-  <div class="col-md-4">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">WorkItems In Review</h5>
-        <p class="card-text-custom" id="openPRCount"></p>
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">WorkItems In Review</h5>
+          <p class="card-text-custom" id="openPRCount"></p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">WorkItems Merged Recently</h5>
-        <p class="card-text-custom" id="mergedPRCount"></p>
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">WorkItems Merged Recently</h5>
+          <p class="card-text-custom" id="mergedPRCount"></p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <div class="card rounded">
-      <div class="card-body">
-        <h5 class="card-title">WorkItems with Failing Checks</h5>
-        <p class="card-text-custom" id="workItemsFailing"></p>
+    <div class="col-md-4">
+      <div class="card rounded">
+        <div class="card-body">
+          <h5 class="card-title">WorkItems with Failing Checks</h5>
+          <p class="card-text-custom" id="workItemsFailing"></p>
+        </div>
       </div>
     </div>
-  </div>
-
-  </div>
  </div>
 
+  <div class="row" style="margin-top:30px">
+    <div class="col-md-12">
+      <h6 class="navbar navbar-light bg-light">In Review</h6>
+    </div>
+  </div>
+ 
   <div class="row" style="margin-top:30px">
       <div class="col-md-12">
         <table id="reviewTable" class="table table-bordered">
@@ -109,7 +113,7 @@ layout: default
             <tr>
               <td><a href="{{ issueDetails.linkToIssue }}" target="_blank">{{ issueNumber }}</a></td>
               <td>{{ issueDetails.issueTitle }}</td>
-              <td>{{ issueDetails.branch }}</td>
+              <td><a href="{{ site.data.project.url}}/tree/{{ issueDetails.branch }}" target="_blank">{{ issueDetails.branch }}</a></td>
               <td>{{ issueDetails.author }}</td>
               <td>
                 {% for label in issueDetails.labels %}
@@ -147,7 +151,13 @@ layout: default
   
   </div>
  
-  <div class="row" style="margin-top:100px">
+ <div class="row" style="margin-top:100px">
+    <div class="col-md-12">
+      <h6 class="navbar navbar-light bg-light">Merged in last 48 hours</h6>
+    </div>
+  </div>
+ 
+  <div class="row" style="margin-top:30px">
     <div class="col-md-12">
         <table id="mergedTable" class="table table-bordered">
           <thead>
@@ -170,7 +180,7 @@ layout: default
             <tr>
               <td><a href="{{ issueDetails.linkToIssue }}" target="_blank">{{ issueNumber }}</a></td>
               <td>{{ issueDetails.issueTitle }}</td>
-              <td>{{ issueDetails.branch }}</td>
+              <td><a href="{{ site.data.project.url}}/tree/{{ issueDetails.branch }}" target="_blank">{{ issueDetails.branch }}</a></td>
               <td>{{ issueDetails.author }}</td>
               <td>
                 {% for label in issueDetails.labels %}
