@@ -1,5 +1,18 @@
 # Changelog
 
+## [25.10.0](https://github.com/flxbl-io/sfops/compare/v25.9.0...v25.10.0) (2024-02-01)
+
+
+### Features
+
+* **actions:** introduce a metadata scanner ([13b56d7](https://github.com/flxbl-io/sfops/commit/13b56d79ce62abf103316d2bb1b729c0ff425dbf))
+
+
+### Bug Fixes
+
+* **actions:** enhance duplicate scanner with better logs ([459ea82](https://github.com/flxbl-io/sfops/commit/459ea82d3aaa6a7ac93cf24b2eb242a0d7915a8b))
+* **dashboard:** accomdate whether a shared work item is already released ([3a3df3f](https://github.com/flxbl-io/sfops/commit/3a3df3f7b62769fb615b01688a688bc5575fdce0))
+
 ## [25.9.0](https://github.com/flxbl-io/sfops/compare/v25.8.1...v25.9.0) (2024-01-31)
 
 
