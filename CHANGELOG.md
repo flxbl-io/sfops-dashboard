@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.10.3](https://github.com/flxbl-io/sfops/compare/v25.10.2...v25.10.3) (2024-02-01)
+
+
+### Bug Fixes
+
+* **workflow:** ensure badges are removed before adding it back ([5459769](https://github.com/flxbl-io/sfops/commit/5459769c9909f49846456affcfff520d800e2521))
+
 ## [25.10.2](https://github.com/flxbl-io/sfops/compare/v25.10.1...v25.10.2) (2024-02-01)
 
 
