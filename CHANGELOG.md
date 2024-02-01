@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.9.0](https://github.com/flxbl-io/sfops/compare/v25.8.1...v25.9.0) (2024-01-31)
+
+
+### Features
+
+* **dashboard:** add headers to workitem tables ([e41897a](https://github.com/flxbl-io/sfops/commit/e41897ac8b2d182d5a7c7de8344afc20ebe8ffae))
+
 ## [25.8.1](https://github.com/flxbl-io/sfops/compare/v25.8.0...v25.8.1) (2024-01-31)
 
 
