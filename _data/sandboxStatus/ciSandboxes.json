@@ -41,8 +41,8 @@
   },
   {
     "name": "511929792",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1706701086270,
     "requested_at": "2024-01-31T06:08:43Z",
     "domain": "CORE",
