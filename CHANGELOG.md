@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.10.2](https://github.com/flxbl-io/sfops/compare/v25.10.1...v25.10.2) (2024-02-01)
+
+
+### Bug Fixes
+
+* **actions:** use non deprecated variable ([81b0600](https://github.com/flxbl-io/sfops/commit/81b06008450b590a0d001f465c9d8e343e96b794))
+
 ## [25.10.1](https://github.com/flxbl-io/sfops/compare/v25.10.0...v25.10.1) (2024-02-01)
 
 
