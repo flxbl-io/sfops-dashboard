@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.10.1](https://github.com/flxbl-io/sfops/compare/v25.10.0...v25.10.1) (2024-02-01)
+
+
+### Bug Fixes
+
+* **workflows:** add an option to continue-on-error as its a new feature ([5dfc6c4](https://github.com/flxbl-io/sfops/commit/5dfc6c4c267ab36ccca03e9c2195e2b687281e5e))
+
 ## [25.10.0](https://github.com/flxbl-io/sfops/compare/v25.9.0...v25.10.0) (2024-02-01)
 
 
