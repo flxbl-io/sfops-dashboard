@@ -61,8 +61,8 @@
   },
   {
     "name": "757131005",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1706696034601,
     "requested_at": "2024-01-31T06:08:44Z",
     "domain": "CORE",
