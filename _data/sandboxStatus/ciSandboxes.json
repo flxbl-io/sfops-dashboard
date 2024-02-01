@@ -10,16 +10,6 @@
     "type": "CI"
   },
   {
-    "name": "651143556",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1706697350963,
-    "requested_at": "2024-01-31T06:08:43Z",
-    "domain": "CORE",
-    "created_at": "2024-01-31T10:35:50.963Z",
-    "type": "CI"
-  },
-  {
     "name": "788281645",
     "status": "Available",
     "isActive": "true",
