@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.10.4](https://github.com/flxbl-io/sfops/compare/v25.10.3...v25.10.4) (2024-02-01)
+
+
+### Bug Fixes
+
+* **actions:** remove aliasfy package from duplicate detection ([e500aa1](https://github.com/flxbl-io/sfops/commit/e500aa121946a2a7e3b7d31831d4d201a566384a))
+
 ## [25.10.3](https://github.com/flxbl-io/sfops/compare/v25.10.2...v25.10.3) (2024-02-01)
 
 
