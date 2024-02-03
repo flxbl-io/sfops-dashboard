@@ -1,10 +1,12 @@
 [
   {
     "name": "592092534",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706945754892,
     "requested_at": "2024-02-03T06:08:12Z",
     "domain": "CORE",
+    "created_at": "2024-02-03T07:35:54.892Z",
     "type": "CI"
   },
   {
@@ -47,10 +49,12 @@
   },
   {
     "name": "399097768",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706945895046,
     "requested_at": "2024-02-03T06:08:11Z",
     "domain": "CORE",
+    "created_at": "2024-02-03T07:38:15.046Z",
     "type": "CI"
   },
   {
@@ -63,10 +67,12 @@
   },
   {
     "name": "256034545",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1706946054170,
     "requested_at": "2024-02-03T06:08:11Z",
     "domain": "HOTFIX",
+    "created_at": "2024-02-03T07:40:54.170Z",
     "type": "CI"
   },
   {
