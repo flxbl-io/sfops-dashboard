@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.10.5](https://github.com/flxbl-io/sfops/compare/v25.10.4...v25.10.5) (2024-02-02)
+
+
+### Bug Fixes
+
+* **workflow:** remove use of containers in merge status job ([c920c7e](https://github.com/flxbl-io/sfops/commit/c920c7e55e9445250e5bace5ce241daa2c458b65))
+
 ## [25.10.4](https://github.com/flxbl-io/sfops/compare/v25.10.3...v25.10.4) (2024-02-01)
 
 
