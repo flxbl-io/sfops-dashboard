@@ -1,5 +1,19 @@
 # Changelog
 
+## [25.11.0](https://github.com/flxbl-io/sfops/compare/v25.10.6...v25.11.0) (2024-02-05)
+
+
+### Features
+
+* **actions:** add information about changed components, package and type in PR metadata ([2c0367c](https://github.com/flxbl-io/sfops/commit/2c0367c21b1af26ab8727979cb12325dda2b0e5b))
+
+
+### Bug Fixes
+
+* **actions:** fix incorrect path used in prStatusReporter ([e05b1d7](https://github.com/flxbl-io/sfops/commit/e05b1d72a89afb400b51692143d6ed943b48dbd1))
+* **actions:** invoke SF_DISABLE_LOG on prStatusReporter ([1545c84](https://github.com/flxbl-io/sfops/commit/1545c846c96dd74637a279dbbd22e9d300d8ee9a))
+* **actions:** use current workding directory as the path for processing PR ([4b65303](https://github.com/flxbl-io/sfops/commit/4b65303c265c807b4d0069981cc2860789b17a7d))
+
 ## [25.10.6](https://github.com/flxbl-io/sfops/compare/v25.10.5...v25.10.6) (2024-02-04)
 
 
