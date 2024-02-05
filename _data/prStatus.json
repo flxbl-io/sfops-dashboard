@@ -15,14 +15,21 @@
           "description": ""
         }
       ],
-      "elapsedTime": 6475118335,
+      "elapsedTime": 6476555086,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
       "merged": false,
       "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7483046148/job/20367737364"
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7483046148/job/20367737364",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "src/frameworks/feature-management/core/main/classes/CustomMetadataFeatureSettingsProvider.cls"
+        ]
+      }
     },
     "74": {
       "issueTitle": "fix: add author",
@@ -30,11 +37,18 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 6472711965,
+      "elapsedTime": 6474148277,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
       "merged": false,
       "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
-      "buildActionLink": ""
+      "buildActionLink": "",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "src/frameworks/feature-management/core/main/classes/CustomMetadataFeatureSettingsProvider.cls"
+        ]
+      }
     },
     "79": {
       "issueTitle": "feat: Update FeatureChecker.cls",
@@ -42,14 +56,21 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 6383853739,
+      "elapsedTime": 6385289623,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
       "merged": false,
       "mergeCommitSha": "a9518fed5c01d068bac9f957580855538fdd5f04",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7000758563/job/19042216322"
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7000758563/job/19042216322",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "src/frameworks/feature-management/core/main/classes/FeatureChecker.cls"
+        ]
+      }
     },
     "80": {
       "issueTitle": "fix: add a comment to test",
@@ -70,14 +91,21 @@
           "description": null
         }
       ],
-      "elapsedTime": 6033869355,
+      "elapsedTime": 6035304787,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
       "merged": false,
       "mergeCommitSha": "0576bfc318954df1648652358577b74da8fb83d0",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "success",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7689910773/job/20953170118"
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7689910773/job/20953170118",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "src/frameworks/feature-management/core/main/classes/Feature.cls"
+        ]
+      }
     },
     "95": {
       "issueTitle": "fix(frameworks): test hotfix flow [FGK-1234]",
@@ -102,14 +130,21 @@
           "description": ""
         }
       ],
-      "elapsedTime": 4914004679,
+      "elapsedTime": 4915439159,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
       "merged": false,
       "mergeCommitSha": "f4698266500009939a64aa2c0839b4fa739f6b7c",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7675798331/job/20922538840"
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7675798331/job/20922538840",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "src/frameworks/feature-management/features/main/classes/AlwaysDisabledFeature.cls"
+        ]
+      }
     },
     "114": {
       "issueTitle": "test: test for no domain change",
@@ -122,14 +157,21 @@
           "description": null
         }
       ],
-      "elapsedTime": 2602252113,
+      "elapsedTime": 2603685673,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
       "merged": false,
       "mergeCommitSha": "d8fc7bb2a1f977202ea1a7ac8885f418b8aa98b8",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "success",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7736745574/job/21094588379"
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/7736745574/job/21094588379",
+      "files": {
+        "added": [],
+        "deleted": [],
+        "modified": [
+          "README.md"
+        ]
+      }
     }
   },
   "closedPrs": {}
