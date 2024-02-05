@@ -1,5 +1,14 @@
 # Changelog
 
+## [25.10.6](https://github.com/flxbl-io/sfops/compare/v25.10.5...v25.10.6) (2024-02-04)
+
+
+### Bug Fixes
+
+* **actions:** fix GithubMetrics Reporter with multiple items ([e9498af](https://github.com/flxbl-io/sfops/commit/e9498af752c7ca837ac37c9a1e554d5bc8eb7cff))
+* **actions:** fix incorrect syntax ([50b1977](https://github.com/flxbl-io/sfops/commit/50b1977fa153a15d60085dfc9999589964bd2e03))
+* **workflows-build:** update build workflow to fail fast ([f7f0893](https://github.com/flxbl-io/sfops/commit/f7f08937c83f44b001f5fb21c989c6e2a9ffd6fb))
+
 ## [25.10.5](https://github.com/flxbl-io/sfops/compare/v25.10.4...v25.10.5) (2024-02-02)
 
 
