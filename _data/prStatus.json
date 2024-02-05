@@ -15,7 +15,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 6486752762,
+      "elapsedTime": 6487369677,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
       "merged": false,
       "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
@@ -30,7 +30,18 @@
           "src/frameworks/feature-management/core/main/classes/CustomMetadataFeatureSettingsProvider.cls"
         ]
       },
-      "metadata": {}
+      "metadata": {
+        "feature-management": {
+          "added": [],
+          "modified": [
+            {
+              "name": "CustomMetadataFeatureSettingsProvider",
+              "type": "ApexClass"
+            }
+          ],
+          "deleted": []
+        }
+      }
     },
     "74": {
       "issueTitle": "fix: add author",
@@ -38,7 +49,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 6484345727,
+      "elapsedTime": 6484963200,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
       "merged": false,
       "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
@@ -50,7 +61,18 @@
           "src/frameworks/feature-management/core/main/classes/CustomMetadataFeatureSettingsProvider.cls"
         ]
       },
-      "metadata": {}
+      "metadata": {
+        "feature-management": {
+          "added": [],
+          "modified": [
+            {
+              "name": "CustomMetadataFeatureSettingsProvider",
+              "type": "ApexClass"
+            }
+          ],
+          "deleted": []
+        }
+      }
     },
     "79": {
       "issueTitle": "feat: Update FeatureChecker.cls",
@@ -58,7 +80,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 6395487196,
+      "elapsedTime": 6396104841,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
       "merged": false,
       "mergeCommitSha": "a9518fed5c01d068bac9f957580855538fdd5f04",
@@ -73,7 +95,18 @@
           "src/frameworks/feature-management/core/main/classes/FeatureChecker.cls"
         ]
       },
-      "metadata": {}
+      "metadata": {
+        "feature-management": {
+          "added": [],
+          "modified": [
+            {
+              "name": "FeatureChecker",
+              "type": "ApexClass"
+            }
+          ],
+          "deleted": []
+        }
+      }
     },
     "80": {
       "issueTitle": "fix: add a comment to test",
@@ -94,7 +127,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 6045502555,
+      "elapsedTime": 6046120345,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
       "merged": false,
       "mergeCommitSha": "0576bfc318954df1648652358577b74da8fb83d0",
@@ -109,7 +142,18 @@
           "src/frameworks/feature-management/core/main/classes/Feature.cls"
         ]
       },
-      "metadata": {}
+      "metadata": {
+        "feature-management": {
+          "added": [],
+          "modified": [
+            {
+              "name": "Feature",
+              "type": "ApexClass"
+            }
+          ],
+          "deleted": []
+        }
+      }
     },
     "95": {
       "issueTitle": "fix(frameworks): test hotfix flow [FGK-1234]",
@@ -134,7 +178,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 4925637722,
+      "elapsedTime": 4926255651,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
       "merged": false,
       "mergeCommitSha": "f4698266500009939a64aa2c0839b4fa739f6b7c",
@@ -149,7 +193,18 @@
           "src/frameworks/feature-management/features/main/classes/AlwaysDisabledFeature.cls"
         ]
       },
-      "metadata": {}
+      "metadata": {
+        "feature-management": {
+          "added": [],
+          "modified": [
+            {
+              "name": "AlwaysDisabledFeature",
+              "type": "ApexClass"
+            }
+          ],
+          "deleted": []
+        }
+      }
     },
     "114": {
       "issueTitle": "test: test for no domain change",
@@ -162,7 +217,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 2613884763,
+      "elapsedTime": 2614503015,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
       "merged": false,
       "mergeCommitSha": "d8fc7bb2a1f977202ea1a7ac8885f418b8aa98b8",
