@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.11.1](https://github.com/flxbl-io/sfops/compare/v25.11.0...v25.11.1) (2024-02-05)
+
+
+### Bug Fixes
+
+* **actions:** remove the use of the basePath ([5144588](https://github.com/flxbl-io/sfops/commit/5144588fadebf959b3b34e9688cd630f15e6987c))
+
 ## [25.11.0](https://github.com/flxbl-io/sfops/compare/v25.10.6...v25.11.0) (2024-02-05)
 
 
