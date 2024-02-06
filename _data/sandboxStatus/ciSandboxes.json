@@ -1,15 +1,5 @@
 [
   {
-    "name": "167111871",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1707131297104,
-    "requested_at": "2024-02-05T06:09:11Z",
-    "domain": "CORE",
-    "created_at": "2024-02-05T11:08:17.104Z",
-    "type": "CI"
-  },
-  {
     "name": "417226276",
     "status": "Available",
     "isActive": "true",
