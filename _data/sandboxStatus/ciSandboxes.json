@@ -76,16 +76,6 @@
     "type": "CI"
   },
   {
-    "name": "781671238",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1707120777540,
-    "requested_at": "2024-02-05T06:09:10Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-05T08:12:57.540Z",
-    "type": "CI"
-  },
-  {
     "name": "835048222",
     "status": "Available",
     "isActive": "true",
