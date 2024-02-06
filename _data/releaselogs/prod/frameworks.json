@@ -37,16 +37,23 @@
                     ],
                     "buildNumber": 5,
                     "hashId": "9cc5864514f7e56ea10b3b3cae3ca7334505a48e"
+                },
+                {
+                    "names": [
+                        "Sprint-2-24-01-7638331243"
+                    ],
+                    "buildNumber": 6,
+                    "hashId": "67dc77e7c1a9de543f890a9888b16b40d5e728c2"
                 }
             ],
             "latestRelease": {
                 "names": [
-                    "Sprint-2-16-12-7231035246"
+                    "Sprint-2-24-01-7638331243"
                 ],
-                "buildNumber": 5,
-                "hashId": "9cc5864514f7e56ea10b3b3cae3ca7334505a48e"
+                "buildNumber": 6,
+                "hashId": "67dc77e7c1a9de543f890a9888b16b40d5e728c2"
             },
-            "retryCount": 1
+            "retryCount": 0
         }
     ],
     "releases": [
@@ -227,6 +234,26 @@
             ],
             "hashId": "9cc5864514f7e56ea10b3b3cae3ca7334505a48e",
             "date": "Fri Jan 12 2024 01:36:53 GMT+0000 (Coordinated Universal Time)"
+        },
+        {
+            "names": [
+                "Sprint-2-24-01-7638331243"
+            ],
+            "buildNumber": 6,
+            "workItems": {},
+            "artifacts": [
+                {
+                    "name": "feature-management",
+                    "from": "b253e253",
+                    "to": "47f75a46",
+                    "version": "1.4.10.1",
+                    "repoUrl": "https://github.com/flxbl-io/sf-core",
+                    "latestCommitId": "9bb0aa59",
+                    "commits": []
+                }
+            ],
+            "hashId": "67dc77e7c1a9de543f890a9888b16b40d5e728c2",
+            "date": "Tue Feb 06 2024 21:01:10 GMT+0000 (Coordinated Universal Time)"
         }
     ]
 }
