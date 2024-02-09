@@ -32,12 +32,12 @@ layout: default
     }
 
     .closed-board h2 {
-    color: #495057; /* Dark grey color for the section header */
+    color: #495057; 
     margin-bottom: 20px;
     }
 
     .closed-board .pr {
-     border: 1px solid #00ff00; /* Slightly darker border for closed PR cards */
+     border: 1px solid #00ff00; 
     }
 
     .metadata-category h4 {
@@ -161,14 +161,18 @@ layout: default
           <div class="metadata-category">
             <h5><i class="fas fa-box-open"></i>{{ category[0] }}</h5>
             {% if category[1].added.size > 0 %}
+            <ul class="pr-components added-components">
               {% for component in category[1].added %}
                  <li class="added"><i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})</li>
               {% endfor %}
+             </ul>
             {% endif %}
             {% if category[1].modified.size > 0 %}
+             <ul class="pr-components modified-components">
              {% for component in category[1].modified %}
                 <li class="modified"><i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})</li>
              {% endfor %}
+             </ul>
             {% endif %}
           </div>
         {% endfor %}

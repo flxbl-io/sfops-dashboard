@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.12.1](https://github.com/flxbl-io/sfops/compare/v25.12.0...v25.12.1) (2024-02-09)
+
+
+### Bug Fixes
+
+* **actions:** fix pr status reporter to normalize paths before comparison ([c964e5c](https://github.com/flxbl-io/sfops/commit/c964e5c4dd9364a8b900549e58a7f05256a71d36))
+
 ## [25.12.0](https://github.com/flxbl-io/sfops/compare/v25.11.2...v25.12.0) (2024-02-09)
 
 
