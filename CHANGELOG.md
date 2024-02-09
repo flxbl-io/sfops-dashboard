@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.11.2](https://github.com/flxbl-io/sfops/compare/v25.11.1...v25.11.2) (2024-02-06)
+
+
+### Bug Fixes
+
+* **actions:** releaselogsReporter, ensure files are only copied if it exists ([7bbcab2](https://github.com/flxbl-io/sfops/commit/7bbcab2cbc24a78dfeefa89e5dca6245f96f477f))
+* **actions:** releaseToOrgMapReporter, remove incorrect script being used to commit ([8a84f46](https://github.com/flxbl-io/sfops/commit/8a84f46ac5b09a5bc58411b5bfd002fae1ccdeaf))
+
 ## [25.11.1](https://github.com/flxbl-io/sfops/compare/v25.11.0...v25.11.1) (2024-02-05)
 
 

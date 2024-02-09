@@ -1,0 +1,180 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PR Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+   .closed-board {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax values as per your design */
+        gap: 20px; /* Maintain consistent gap between cards */
+        background-color: #e9ecef; /* Light grey background for differentiation */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .closed-board h2 {
+    color: #495057; /* Dark grey color for the section header */
+    margin-bottom: 20px;
+    }
+
+    .closed-board .pr {
+     border: 1px solid #00ff00; /* Slightly darker border for closed PR cards */
+    }
+
+    .metadata-category h4 {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .metadata-category h4 i {
+      margin-right: 5px;
+      color: #6c757d;
+    }
+    .metadata-category h4,
+    .metadata-category li {
+     word-wrap: break-word; 
+    }
+
+    .metadata-category li {
+      word-break: break-all; /* Use this for breaking non-standard words like URLs or API strings */
+    }
+
+    .pr {
+      border: 1px solid #000000;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+    .pr:hover {
+      transform: translateY(-5px);
+    }
+    .pr-header {
+      font-size: 18px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pr-header a {
+      text-decoration: none;
+      color: #007bff;
+    }
+    .pr-meta {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .pr-components {
+      list-style: none;
+      padding: 0;
+    }
+    .pr-components li {
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+    }
+    .pr-components li i {
+      margin-right: 8px;
+    }
+    .added { background-color: #eaffea; }
+    .modified { background-color: #fff3cd; }
+    .deleted { background-color: #ffdada; }
+  </style>
+</head>
+<body>
+
+<div class="board">
+  {% for pr in site.data.prStatus.openPrs  %}
+    {% assign issueNumber = pr[0] %}
+    {% assign issueDetails = site.data.prStatus.openPrs[issueNumber] %}
+  <div class="pr">
+      <div class="pr-header">
+        {{ issueDetails.issueTitle }}
+        <a href="{{ issueDetails.linkToIssue }}" target="_blank">#{{ issueNumber }}</a>
+      </div>
+    <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
+   <div class="metadata-section">
+    {% for category in issueDetails.metadata %}
+    <div class="metadata-category">
+      <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
+      {% if category[1].added.size > 0 %}
+      <ul class="pr-components added-components">
+        {% for component in category[1].added %}
+          <li class="added"><i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      {% if category[1].modified.size > 0 %}
+      <ul class="pr-components modified-components">
+        {% for component in category[1].modified %}
+        <li class="modified"><i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  
+  </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Closed PRs Section -->
+<div class="closed-board">
+  {% for pr in site.data.prStatus.closedPrs %}
+    {% assign issueNumber = pr[0] %}
+    {% assign issueDetails = pr[1] %}
+    <div class="pr">
+      <div class="pr-header">
+        {{ issueDetails.issueTitle }}
+        <a href="{{ issueDetails.linkToIssue }}" target="_blank">#{{ issueNumber }}</a>
+      </div>
+      <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
+      <div class="metadata-section">
+        {% for category in issueDetails.metadata %}
+          <div class="metadata-category">
+            <h5><i class="fas fa-box-open"></i>{{ category[0] }}</h5>
+            {% if category[1].added.size > 0 %}
+              {% for component in category[1].added %}
+                 <li class="added"><i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})</li>
+              {% endfor %}
+            {% endif %}
+            {% if category[1].modified.size > 0 %}
+             {% for component in category[1].modified %}
+                <li class="modified"><i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})</li>
+             {% endfor %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+</body>
+</html>
