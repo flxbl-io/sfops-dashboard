@@ -96,16 +96,6 @@
     "type": "CI"
   },
   {
-    "name": "782024057",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1707378022959,
-    "requested_at": "2024-02-08T06:09:32Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-08T07:40:22.959Z",
-    "type": "CI"
-  },
-  {
     "name": "820029913",
     "status": "Available",
     "isActive": "true",
