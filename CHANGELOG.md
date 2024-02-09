@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.12.0](https://github.com/flxbl-io/sfops/compare/v25.11.2...v25.12.0) (2024-02-09)
+
+
+### Features
+
+* **dashboard:** add a metadata component centric view ([b1116de](https://github.com/flxbl-io/sfops/commit/b1116deecaabd6a4ac4600c8fe0601465a16a027))
+
+
+### Bug Fixes
+
+* **dashboard:** change menu title of eyeview ([d9c2096](https://github.com/flxbl-io/sfops/commit/d9c2096a3437e9431e6201e53603a135cafff6f2))
+
 ## [25.11.2](https://github.com/flxbl-io/sfops/compare/v25.11.1...v25.11.2) (2024-02-06)
 
 
