@@ -188,7 +188,7 @@ layout: default
             <li><span><i class="fas fa-laptop-code"></i> Development</span>
                 <ul class='submenu'>
                     <li><a href="#workItems">Work Items</a></li>
-                    <li><a href="#eyeView">Pull Request View</a></li>
+                    <li><a href="#eyeView">Impacted Components</a></li>
                     <li><a href="#packages">Packages</a></li>
                 </ul>
             </li>
