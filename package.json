@@ -1,0 +1,15 @@
+{
+  "name": "sfops-dev-central",
+  "version": "0.0.1",
+  "description": "This repo is to host github pages and display various development related dashboards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSL-1.0",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.4.2",
+    "prettier": "^3.2.5"
+  }
+}

@@ -188,7 +188,7 @@ layout: default
             <li><span><i class="fas fa-laptop-code"></i> Development</span>
                 <ul class='submenu'>
                     <li><a href="#workItems">Work Items</a></li>
-                    <li><a href="#eyeView">Impacted Components</a></li>
+                    <li><a href="#eyeView">Eye View</a></li>
                     <li><a href="#packages">Packages</a></li>
                 </ul>
             </li>
@@ -215,6 +215,7 @@ layout: default
             </li>
              <li><span><i class="fas fa-circle-info"></i> Support</span>
                  <ul class='submenu'>
+                    <li><a href="#sfopsChangelog">Changelog</a></li>
                     <li><a href="#flxblKnowledge">Reference Guide</a></li>
                     <li><a href="#flxblSupport">Chat with us</a></li>
                     <li><a href="#flxblIssue">Log an issue</a></li>
@@ -335,6 +336,9 @@ layout: default
             },
             'platformOverview': {
                 url: '{{ dashboard.platform_overview_dashboard_url }}'
+            },
+            'sfopsChangelog': {
+               url: `${siteSuffix}/sfops/changelog.html`
             },
             'flxblKnowledge': {
                 stageUrl: `${siteSuffix}/stage/`,

@@ -59,7 +59,10 @@ jobs:
            node _scripts/process-release-logs.js
            node _scripts/create-cross-domain-workitems.js
                     
-
+      - name: Copy Changelog
+        run: |
+           cp -f CHANGELOG.md  sfops/CHANGELOG.md
+                    
 
       - name: Setup Pages
         id: pages

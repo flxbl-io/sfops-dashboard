@@ -1,0 +1,56 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+
+  h1:first-of-type {
+    background-color: #f8f9fa; /* Light grey background, similar to bg-light */
+    color: #5a5a5a; /* Slightly darker text color for contrast */
+    padding: 10px 15px; /* Similar padding to a navbar */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 20px; /* Add some bottom margin */
+    border-radius: 5px; /* Optional: rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: slight shadow for depth */
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  /* Paragraph */
+  p {
+    margin-bottom: 20px;
+  }
+  
+  /* Lists */
+  ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* Code blocks */
+  pre, code {
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+  }
+  
+  pre {
+    margin-bottom: 20px;
+  }
+  
+  /* Links */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
