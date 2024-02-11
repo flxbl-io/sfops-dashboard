@@ -990,7 +990,7 @@
 * close pending actions workflo ([25d3343](https://github.com/flxbl-io/sfops/commit/25d3343d201c8eb410becb8ddbbfb04871590127))
 * comment used on branchDeploy ([f24ed95](https://github.com/flxbl-io/sfops/commit/f24ed95166a78abc6a5a91dcbd20687ca3be43b3))
 * comments flowing out when org is not available ([cd360a4](https://github.com/flxbl-io/sfops/commit/cd360a4c93086211254ef428ae68144c3ec9953a))
-* composite action do not support ${{ ([5207a4c](https://github.com/flxbl-io/sfops/commit/5207a4cd5b5bfe81f39b755a2ae4efc19d812df7))
+* composite action do not support ([5207a4c](https://github.com/flxbl-io/sfops/commit/5207a4cd5b5bfe81f39b755a2ae4efc19d812df7))
 * converge push to branch ([8e4704a](https://github.com/flxbl-io/sfops/commit/8e4704ac3e832ff7489fd049e107bf24e9c3e906))
 * create-dev-sandbox ([21ebdc5](https://github.com/flxbl-io/sfops/commit/21ebdc59529dbe99dcf4e55bcce53e341352df30))
 * **createDevSandbox:** fix incorrect variables used ([6d0c37a](https://github.com/flxbl-io/sfops/commit/6d0c37af68c4397e21a215041f4acff6011359ba))
