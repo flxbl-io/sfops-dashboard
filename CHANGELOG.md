@@ -1,5 +1,19 @@
 # Changelog
 
+## [25.13.0](https://github.com/flxbl-io/sfops/compare/v25.12.1...v25.13.0) (2024-02-11)
+
+
+### Features
+
+* **dashboard:** display a changelog in the website ([963e1ed](https://github.com/flxbl-io/sfops/commit/963e1edea8ba3be552eb29f3533eab82eba21772))
+
+
+### Bug Fixes
+
+* **ci:** add changelog as the default readme ([ab32005](https://github.com/flxbl-io/sfops/commit/ab32005c16350df1d149ec4a4d34e9a0a3c5df61))
+* **dashboard:** fix link to stylesheet ([4979401](https://github.com/flxbl-io/sfops/commit/49794011d5ce9531c47a5333cc1a690d48724236))
+* **dashboard:** remove incorrect rendering of list view in impacted component view ([672fbde](https://github.com/flxbl-io/sfops/commit/672fbde721aee9b43cf2c15a42779dbadb9c4a55))
+
 ## [25.12.1](https://github.com/flxbl-io/sfops/compare/v25.12.0...v25.12.1) (2024-02-09)
 
 
