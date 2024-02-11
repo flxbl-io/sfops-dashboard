@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.14.0](https://github.com/flxbl-io/sfops/compare/v25.13.0...v25.14.0) (2024-02-11)
+
+
+### Features
+
+* **dashboard:** add info cards to orgComparison view ([8e901bf](https://github.com/flxbl-io/sfops/commit/8e901bfb03b8682802dbf1b0894f3a99190f3045))
+
 ## [25.13.0](https://github.com/flxbl-io/sfops/compare/v25.12.1...v25.13.0) (2024-02-11)
 
 

@@ -16,24 +16,24 @@ layout: default
     }
     .board {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      padding: 12px;
     }
 
    .closed-board {
         margin-top: 20vh;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax values as per your design */
-        gap: 20px; /* Maintain consistent gap between cards */
-        background-color: #e9ecef; /* Light grey background for differentiation */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px; 
+        background-color: #e9ecef; 
         padding: 20px;
         border-radius: 10px;
     }
 
     .closed-board h2 {
     color: #495057; 
-    margin-bottom: 20px;
+    margin-bottom: 14px;
     }
 
     .closed-board .pr {
@@ -66,15 +66,15 @@ layout: default
       background-color: #ffffff;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 15px;
+      padding: 10px;
       transition: transform 0.2s;
     }
     .pr:hover {
       transform: translateY(-5px);
     }
     .pr-header {
-      font-size: 18px;
-      margin-bottom: 10px;
+      font-size: 12px;
+      margin-bottom: 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -84,7 +84,7 @@ layout: default
       color: #007bff;
     }
     .pr-meta {
-      font-size: 14px;
+      font-size: 10px;
       color: #666;
       margin-bottom: 15px;
     }
@@ -102,9 +102,9 @@ layout: default
     .pr-components li i {
       margin-right: 8px;
     }
-    .added { background-color: #eaffea; }
-    .modified { background-color: #fff3cd; }
-    .deleted { background-color: #ffdada; }
+    .added {  font-size: 11px; background-color: #eaffea; }
+    .modified { font-size: 11px; background-color: #fff3cd; }
+    .deleted { font-size: 11px; background-color: #ffdada; }
   </style>
 </head>
 <body>
@@ -122,7 +122,7 @@ layout: default
    <div class="metadata-section">
     {% for category in issueDetails.metadata %}
     <div class="metadata-category">
-      <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
+      <h6><i class="fas fa-box-open"></i>{{ category[0] }}</h6>
       {% if category[1].added.size > 0 %}
       <ul class="pr-components added-components">
         {% for component in category[1].added %}
@@ -159,7 +159,7 @@ layout: default
       <div class="metadata-section">
         {% for category in issueDetails.metadata %}
           <div class="metadata-category">
-            <h5><i class="fas fa-box-open"></i>{{ category[0] }}</h5>
+            <h6><i class="fas fa-box-open"></i>{{ category[0] }}</h6>
             {% if category[1].added.size > 0 %}
             <ul class="pr-components added-components">
               {% for component in category[1].added %}
