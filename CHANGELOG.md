@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.14.1](https://github.com/flxbl-io/sfops/compare/v25.14.0...v25.14.1) (2024-02-11)
+
+
+### Bug Fixes
+
+* **dasbhoard:** fix sizing used of cards in 100% view ([6b50ce0](https://github.com/flxbl-io/sfops/commit/6b50ce00cf7e4c1f2d7952f2903474dc6d728d85))
+
 ## [25.14.0](https://github.com/flxbl-io/sfops/compare/v25.13.0...v25.14.0) (2024-02-11)
 
 

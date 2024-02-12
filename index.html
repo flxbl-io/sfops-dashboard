@@ -435,30 +435,49 @@ layout: default
             
         }
 
-        window.onload = function() {    
-
+        window.onload = function() {
             var links = document.querySelectorAll('.vertical-nav ul li ul li a');
+            var currentHash = window.location.hash.substring(1) || 'default'; // default page when no hash
+
+            for (var j = 0; j < links.length; j++) {
+                links[j].classList.remove('selected');
+            }
+
             for (var i = 0; i < links.length; i++) {
+                var hash = links[i].getAttribute('href').substring(1);
+                if (hash === currentHash) {
+                    links[i].classList.add('selected'); // Highlight the active link
+                }
+
                 links[i].addEventListener('click', function(event) {
                     var hash = this.getAttribute('href').substring(1);
                     showTab(hash);
 
-                    var selectedLinks = document.querySelectorAll('.vertical-nav ul li ul li a.selected');
-                    for (var j = 0; j < selectedLinks.length; j++) {
-                        selectedLinks[j].classList.remove('selected');
+                    for (var j = 0; j < links.length; j++) {
+                        links[j].classList.remove('selected');
                     }
                     this.classList.add('selected');
 
                     event.preventDefault();
                 });
             }
-            var currentHash = window.location.hash.substring(1) || 'default'; // default page when no hash
+
             showTab(currentHash);
         };
+
 
         window.onhashchange = function() {
             var hash = window.location.hash.substring(1) || 'default'; // default page when no hash changes
             showTab(hash);
+
+            var links = document.querySelectorAll('.vertical-nav ul li ul li a');
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove('selected');
+                var linkHash = links[i].getAttribute('href').substring(1);
+                if (linkHash === hash) {
+                    links[i].classList.add('selected');
+                }
+            }
         };
 
         document.getElementById('testOrgSelect')?.addEventListener('change', function() {
