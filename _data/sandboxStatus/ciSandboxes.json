@@ -11,8 +11,8 @@
   },
   {
     "name": "731578048",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1707636966343,
     "requested_at": "2024-02-11T06:09:09Z",
     "domain": "CORE",
@@ -89,8 +89,8 @@
   },
   {
     "name": "803259671",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1707635651712,
     "requested_at": "2024-02-11T06:09:09Z",
     "domain": "HOTFIX",
