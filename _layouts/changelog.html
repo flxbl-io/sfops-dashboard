@@ -57,7 +57,7 @@ layout: default
             {% assign releaseData = site.data.processedChangelog[page.branch][page.domain].releases %}
             {% assign reversed_releases = releaseData | reverse %}
             {% for release in  reversed_releases %}
-             <tr data-hashid="{{ release.hashId }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
+             <tr data-hashid="{{ release.hashId }}" data-domain="{{ page.domain }}" data-workitems="{{ release.workItems | jsonify | escape  }}">
               <td>
                 {% assign name_parts = release.names[0] | split: '-' %}
                 {% assign build_number = name_parts | last %}
@@ -160,24 +160,38 @@ layout: default
 
 {% include modal.html %}
 
+<div id="initiateReleaseModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🙋🏽 Initiate Release!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="releaseModalMessage"></p>  
+        <ul id="linkedReleaseItemsList" class="list-group">
+          <!-- Linked work items will be added here dynamically -->
+        </ul>
+        <p id="infoMessage"></p>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button id="confirmButton" type="button" class="btn btn-primary">Create Release</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
 
-  var yamlDataMap = {};
-  var latestReleaseInProd; 
-  {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
-  {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
-  {% assign reversed_releases = domain_data.releases | reverse %}
-  {% assign releaseNamesInProd = "" %}
-  {% for release in releasesInProd %}
-    {% for name in release.names %}
-      {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
-    {% endfor %}
-  {% endfor %}
 
- 
+  var yamlDataMap = {};
+  var crossDomainWorkItems = {}
   
   {% assign reversed_releases = domain_data.releases | reverse %}
- 
   {% for release in reversed_releases %}
       {% assign release_name = release.names[0] %}
       {% assign parts = release_name | split: '.' %}
@@ -186,24 +200,17 @@ layout: default
       {% assign resolved_file_name  = prefix | append: rest %}
 
       {% assign yaml_data = site.data.releasedefns[page.branch][page.domain][resolved_file_name] %}
-      console.log({{ yaml_data | jsonify }});
       {% if yaml_data %}
         yamlDataMap["{{ release_name }}"] = {{ yaml_data | jsonify }};
       {% endif %}
-
-      {% if releaseNamesInProd contains release_name %}
-         latestReleaseInProd="{{ release_name }}"
-         console.log("latestReleaseInProd",latestReleaseInProd);
-       {% break %}
-      {% endif %}
-
   {% endfor %}
 
+  crossDomainWorkItems = {{ site.data.crossDomainWorkItems[page.branch] | jsonify }}
 
   let releaseDataMap = []
   $(document).ready(function () {
 
-    {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
+    {% assign domain_data = site.data.processedChangelog[page.branch][page.domain] %}
     {% for release in domain_data.releases %}
       releaseDataMap["{{ release.hashId }}"] = {{ release | jsonify }};
     {% endfor %}
@@ -220,19 +227,23 @@ layout: default
         return; // Skip if it's an action link click
       }
 
-      const releaseId = $(this).data('hashid');
+      console.log(`Initiate release clicked`)
+      const releaseId = $(this).closest('tr').data('hashid');
+      const domain = $(this).closest('tr').data('domain');
       const releaseData = releaseDataMap[releaseId];
-      populateModal(releaseData);
-      $('#releaseModal').modal('show');
+     
     });
-
 
     $('#releasesTable').on('click', '.initiate-release', function () {
-      const name = $(this).data('name');
-      const domain = $(this).data('domain');
-      const url = generateUrl('initiate', name, domain);
-      window.open(url, '_blank');
+      console.log(`Initiate release clicked`)
+      const releaseId = $(this).closest('tr').data('hashid');
+      const domain = $(this).closest('tr').data('domain');
+      const releaseData = releaseDataMap[releaseId];
+     
+      // Populate and show the new modal instead of opening a new URL
+      populateAndShowInitiateReleaseModal(releaseData,domain);
     });
+
 
     $('#releasesTable').on('click', '.rollback-release', function () {
       const name = $(this).data('name');
@@ -262,7 +273,7 @@ layout: default
 
 
 
-  function generateUrl(action, name, domain) {
+  function generateUrl(action, selectedReleases,selectedDomains) {
       const repoData = {{ site.data.project | jsonify}}
       const repoUrl = repoData.url;
       let issueTemplate;
@@ -273,34 +284,93 @@ layout: default
         case 'initiate':
           issueTemplate = 'request-a-release-release-envs.yml';
           labels="ops%2Cops-release-request"
-          title=`Ops+-+Release+a+domain+into+staging%2Fprod+${domain}+${name}`
-          additionalParams = `domain=${domain}&releasedefn=${name}`
-          break;
-        case 'rollback':
-           issueTemplate = 'request-a-release-branch.yml';
-           labels="dev%2Cdev-release-branch-request"
-           title=`Dev+-+Request+a+release+branch+from+a+release definition+${domain}+${name}`
-           additionalParams = `domain=${domain}&releasedefn=${name}` 
+          title=`Ops+-+Release+a+domain+into+staging%2Fprod+${selectedDomains.join(',')}`
+          additionalParams = `domain=${selectedDomains.join(',')}&releasedefn=${selectedReleases.join(',')}`;
           break;
         case 'sandbox':
           issueTemplate = 'request-a-release.yml';
           labels='labels=ops%2Cops-release-request-non-pipeline-env';
           title='Ops+-+Request+a+release+into+an+org'
-          additionalParams = `domain=${domain}&releasedefn=${name}`;
+          additionalParams = `domain=${selectedDomains.join(',')}&releasedefn=${selectedReleases.join(',')}`;
           break;
       }
 
       return `${repoUrl}/issues/new?labels=${labels}&template=${issueTemplate}&title=${title}&${additionalParams}`;
   }
 
-  async function copyToClipboard(event,text) {
-  event.stopPropagation()
-    try {
-        await navigator.clipboard.writeText(text);
-        alert('Copied to clipboard: ' + text);
-    } catch (err) {
-        console.error('Failed to copy text: ', err);
+
+
+  function populateAndShowInitiateReleaseModal(releaseData, currentDomain) {
+    const domainReleaseMap = new Map();
+    const releaseModalMessage = $('#releaseModalMessage');
+    let releaseModalMessageText = `You are about to initiate a release for <b>${currentDomain}:${releaseData.names[0]}</b>`;
+    releaseModalMessageText += `<br>Please confirm to continue</br>`;
+    releaseModalMessage.html(releaseModalMessageText);
+    const listElement = $('#linkedReleaseItemsList');
+    listElement.empty(); // Clear existing items
+
+    // Default release domain and name, always selected and disabled
+    listElement.append(`<li class="list-group-item"><strong>${currentDomain}</strong></li>`);
+    listElement.append(`<li class="list-group-item">
+                  <input type="radio" name="releaseSelection${currentDomain}" value="${currentDomain}:${releaseData.names[0]}" checked disabled> ${releaseData.names[0]}
+              </li>`);
+
+    for (let workItem of Object.keys(releaseData.cumulativeWorkItems)) {
+        if (crossDomainWorkItems[workItem]) {
+            crossDomainWorkItems[workItem].forEach(item => {
+                if (item.released !== true) {
+                    if (!domainReleaseMap.has(item.domain)) {
+                        domainReleaseMap.set(item.domain, new Set());
+                    }
+                    domainReleaseMap.get(item.domain).add(item.releaseName);
+                }
+            });
+        }
     }
+
+    domainReleaseMap.forEach((releaseNames, domain) => {
+        if (domain != currentDomain) {
+            listElement.append(`<li class="list-group-item"><strong>${domain}</strong></li>`);
+            listElement.append(`<li class="list-group-item">
+                    <input type="radio" name="releaseSelection${domain}" value="none" checked> None
+                </li>`);
+            releaseNames.forEach(releaseName => {
+                listElement.append(`<li class="list-group-item">
+                    <input type="radio" name="releaseSelection${domain}" value="${domain}:${releaseName}"> ${releaseName}
+                </li>`);
+            });
+        }
+    });
+
+    $('#confirmButton').off('click').on('click', function() {
+        let selectedReleases = [];
+        let selectedDomains=[]
+        domainReleaseMap.forEach((_, domain) => {
+            const selectedValue = $('input[name="releaseSelection' + domain + '"]:checked').val();
+            if (selectedValue !== "none") {
+                selectedReleases.push(selectedValue);
+                selectedDomains.push(domain)
+            }
+        });
+
+        const url = generateUrl('initiate', selectedReleases,selectedDomains);
+        window.open(url, '_blank'); // Open the generated URL in a new tab
+        $('#initiateReleaseModal').modal('hide'); // Hide the modal
+    });
+
+    $('#initiateReleaseModal').modal('show');
+  }
+
+
+
+  async function copyToClipboard(event,text) {
+    event.stopPropagation()
+      try {
+          await navigator.clipboard.writeText(text);
+          alert('Copied to clipboard: ' + text);
+      } catch (err) {
+          console.error('Failed to copy text: ', err);
+      }
   }
   
 </script>

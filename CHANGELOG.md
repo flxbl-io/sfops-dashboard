@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.14.2](https://github.com/flxbl-io/sfops/compare/v25.14.1...v25.14.2) (2024-02-12)
+
+
+### Bug Fixes
+
+* **dashboard:** fix selector not getting highlighted in navbar when directly navigated ([96edacb](https://github.com/flxbl-io/sfops/commit/96edacbe9a0c68055267b2209ca7c5c35a8a80f6))
+
 ## [25.14.1](https://github.com/flxbl-io/sfops/compare/v25.14.0...v25.14.1) (2024-02-11)
 
 
