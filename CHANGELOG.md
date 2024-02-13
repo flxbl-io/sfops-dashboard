@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.3](https://github.com/flxbl-io/sfops/compare/v25.16.2...v25.16.3) (2024-02-13)
+
+
+### Bug Fixes
+
+* **dc-releasecandidates:** fix button title used ([4e8fa0f](https://github.com/flxbl-io/sfops/commit/4e8fa0faab1c5d9d6fb49ad101b23acdfaf7cf6f))
+
 ## [25.16.2](https://github.com/flxbl-io/sfops/compare/v25.16.1...v25.16.2) (2024-02-13)
 
 

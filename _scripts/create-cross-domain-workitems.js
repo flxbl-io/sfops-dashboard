@@ -39,15 +39,14 @@ for (const branch of branches) {
             const domainReleaseChangelog = JSON.parse(fs.readFileSync(filePath, 'utf8'));
 
             for (const release of domainReleaseChangelog.releases) {
-                for (const workItemKey in release.workItems) {
+                for (const workItemKey in release.cumulativeWorkItems) {
                     const workItemDetail = {
                         domain: domain,
                         releaseName: release.names[0] // Assuming first name in the names array is the primary name
                     };
 
-                    if(workItemsEverReleased[domain]?.includes(workItemKey))
-                    {
-                     workItemDetail['released']=true;
+                    if(workItemsEverReleased[domain]?.includes(workItemKey)) {
+                      workItemDetail['released']=true;
                     }
                     if (workitemMap.hasOwnProperty(workItemKey)) {
                         // If already present in this branch, add the new detail to the existing array

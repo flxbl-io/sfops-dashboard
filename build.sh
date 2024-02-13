@@ -8,6 +8,8 @@ node _scripts/issue-combiner.js
 node _scripts/create-latest-release-maps.js
 node _scripts/process-release-logs.js
 node _scripts/create-cross-domain-workitems.js
-                    
+
+# Copy Changelog.md file from root to site directory
+cp CHANGELOG.md sfops/CHANGELOG.md         
 
 bundle exec jekyll serve
