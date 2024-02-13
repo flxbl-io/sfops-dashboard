@@ -204,7 +204,11 @@ layout: default
             </ul>
           </div>
           <div class="col-md-6">
-            <p><b>Work Items:</b></p>
+            <p><b>Indicative Work Items:</b></p>
+            <p><small>Please note this is an indicative calculation, actual work items are listed in the dryrun</small></p>
+            <p><small><i class="fas fa-check-circle status-icon initial-status"></i> Amber check: Releasing this candiate will create a partial deployment of the workitem</small></p>
+            <p><small><i class="fas fa-check-circle status-icon linked-status"></i> Green check: Releasing this candiate will create a full deployment of the workitem</small></p>
+            <p><small><i class="fas fa-link link-status-icon"></i> Link: This work item is linked to another release candidate in a different domain</small></p>
             <ul id="workItemsList" class="list-group">
                 <!-- Work items will be added here dynamically -->
             </ul>
@@ -226,6 +230,7 @@ layout: default
   var yamlDataMap = {};
   var crossDomainWorkItems = {}
   var latestReleaseInProd; 
+
 
   {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
   {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
@@ -370,20 +375,8 @@ layout: default
           <input type="radio" name="releaseSelection${currentDomain}" value="${currentDomain}:${releaseData.names[0]}" checked disabled> ${releaseData.names[0]}
       </li>`);
 
-      // Populate work items list with current domain's cumulative work items
-      Object.entries(releaseData.cumulativeWorkItems).forEach(([workItemId, commitIds]) => {
-          const jiraLink = `{{ site.data.project.workItemUrl }}/${workItemId}`; 
-          workItemsList.append(`
-            <li class="list-group-item work-item" data-workitem="${workItemId}">
-                <div class="work-item-content">
-                    <a href="${jiraLink}" target="_blank">${workItemId}</a>
-                    <div class="icons-container">
-                        <i class="fas fa-circle status-icon initial-status"></i>
-                        <!-- Link icon is conditionally added here -->
-                    </div>
-                </div>
-            </li>`);
-      });
+    
+
 
       // Handle other domains' releases
       for (let workItemId of Object.keys(releaseData.cumulativeWorkItems)) {
@@ -414,12 +407,73 @@ layout: default
           });
       });
 
+      const workItemsSet = new Set();
+      Object.entries(releaseData.cumulativeWorkItems).forEach(([workItemId, commitIds]) => {
+              workItemsSet.add(workItemId);
+      });
+      workItemsSet.forEach(workItemId => {
+            const jiraLink = `{{ site.data.project.workItemUrl }}/${workItemId}`;
+              // Create the HTML string for the work item
+              const workItemHtml = `
+                  <li class="list-group-item work-item" data-workitem="${workItemId}">
+                      <div class="work-item-content">
+                          <a href="${jiraLink}" target="_blank">${workItemId}</a>
+                          <div class="icons-container">
+                              <i class="fas fa-check-circle status-icon initial-status"></i>
+                              <!-- Link icon is conditionally added here -->
+                          </div>
+                      </div>
+                  </li>`;
+            workItemsList.append(workItemHtml);
+        });
+
+
       // Handle radio change event for dynamic status update
       $('input[type="radio"]').change(function() {
-          updateWorkItemStatuses(workItemsList,crossDomainWorkItems, currentDomain);
+
+          const workItemsSet = new Set();
+          Object.entries(releaseData.cumulativeWorkItems).forEach(([workItemId, commitIds]) => {
+              workItemsSet.add(workItemId);
+          });
+          workItemsList.empty();
+          domainReleaseMap.forEach((_, domain) => {
+              const selectedValue = $('input[name="releaseSelection' + domain + '"]:checked').val();
+              if (selectedValue !== "none") {
+                    domainReleaseMap.forEach((releaseNames, domain) => {
+                      // Iterate over each releaseName in the current domain's set
+                      releaseNames.forEach(releaseName => {
+                        for (let workItemId of Object.keys(crossDomainWorkItems)) {
+                        if(crossDomainWorkItems[workItemId].some(item => item.domain === domain && item.releaseName === selectedValue.split(':')[1])) {
+                            console.log("workItemId",workItemId,selectedValue,releaseName, domain);
+                            workItemsSet.add(workItemId);
+                          }
+                        }
+                    });
+                  });
+              }
+          });
+          workItemsSet.forEach(workItemId => {
+            const jiraLink = `{{ site.data.project.workItemUrl }}/${workItemId}`;
+              // Create the HTML string for the work item
+              const workItemHtml = `
+                  <li class="list-group-item work-item" data-workitem="${workItemId}">
+                      <div class="work-item-content">
+                          <a href="${jiraLink}" target="_blank">${workItemId}</a>
+                          <div class="icons-container">
+                              <i class="fas  fa-check-circle  status-icon initial-status"></i>
+                              <!-- Link icon is conditionally added here -->
+                          </div>
+                      </div>
+                  </li>`;
+            workItemsList.append(workItemHtml);
+          });
+
+          updateWorkItemStatuses(workItemsList,crossDomainWorkItems, currentDomain,releaseData);
+       
+
       });
 
-      updateWorkItemStatuses(workItemsList, crossDomainWorkItems,currentDomain); // Initial status update
+      updateWorkItemStatuses(workItemsList, crossDomainWorkItems,currentDomain,releaseData); // Initial status update
 
       let selectedReleases = [];
       let selectedDomains = [];
@@ -444,7 +498,7 @@ layout: default
 
       $('#initiateReleaseModal').modal('show');
 
-      function updateWorkItemStatuses(workItemsList, crossDomainWorkItems, currentDomain) {
+      function updateWorkItemStatuses(workItemsList, crossDomainWorkItems, currentDomain,releaseData) {
           workItemsList.find('.work-item').each(function() {
               const workItemElement = $(this);
               const workItemId = workItemElement.data('workitem');

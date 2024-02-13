@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.1](https://github.com/flxbl-io/sfops/compare/v25.16.0...v25.16.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* **actions:** add continue on error to release-to-an-env ([e855ae5](https://github.com/flxbl-io/sfops/commit/e855ae5b11c9a0c870c04decdb09ab36de074df1))
+
 ## [25.16.0](https://github.com/flxbl-io/sfops/compare/v25.15.1...v25.16.0) (2024-02-13)
 
 
