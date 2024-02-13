@@ -81,10 +81,12 @@
   },
   {
     "name": "699753663",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1707810450060,
     "requested_at": "2024-02-13T06:09:37Z",
     "domain": "HOTFIX",
+    "created_at": "2024-02-13T07:47:30.060Z",
     "type": "CI"
   },
   {
