@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.4](https://github.com/flxbl-io/sfops/compare/v25.16.3...v25.16.4) (2024-02-13)
+
+
+### Bug Fixes
+
+* **dc-releasecandidates:** fix workitems displayed across all available release candidates ([a87dc36](https://github.com/flxbl-io/sfops/commit/a87dc36170d5c6ea266489c238a84fbc54d03a0d))
+
 ## [25.16.3](https://github.com/flxbl-io/sfops/compare/v25.16.2...v25.16.3) (2024-02-13)
 
 
