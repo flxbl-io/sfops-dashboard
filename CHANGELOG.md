@@ -1,5 +1,19 @@
 # Changelog
 
+## [25.15.0](https://github.com/flxbl-io/sfops/compare/v25.14.2...v25.15.0) (2024-02-12)
+
+
+### Features
+
+* **release:** add support for releasing multiple domains in one transaction ([e442677](https://github.com/flxbl-io/sfops/commit/e44267796837e2d86713448d2f2858942233f2e9))
+
+
+### Bug Fixes
+
+* **act-findReleaseDefn:** fix incorrect syntax used in findReleaseDefns ([6845e8a](https://github.com/flxbl-io/sfops/commit/6845e8a7fc8fd3d2cab7eb03d8e846d59cc413d9))
+* **templates:** ensure a placeholder is added to request-a-release template ([8b97463](https://github.com/flxbl-io/sfops/commit/8b974633f190bc7efbb1c258934962407d743f2f))
+* **wf-releases:** pass the arguments as string into release workflows ([b1e3955](https://github.com/flxbl-io/sfops/commit/b1e3955c79557ab41352d2d895eefa883b6940c5))
+
 ## [25.14.2](https://github.com/flxbl-io/sfops/compare/v25.14.1...v25.14.2) (2024-02-12)
 
 

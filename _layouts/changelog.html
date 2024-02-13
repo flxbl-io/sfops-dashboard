@@ -190,6 +190,18 @@ layout: default
 
   var yamlDataMap = {};
   var crossDomainWorkItems = {}
+  var latestReleaseInProd; 
+
+  {% assign domain_data = site.data.releasechangelog[page.branch][page.domain] %}
+  {% assign releasesInProd = site.data.releaselogs.prod[page.domain].orgs[0].releases  %}
+  {% assign reversed_releases = domain_data.releases | reverse %}
+  {% assign releaseNamesInProd = "" %}
+  {% for release in releasesInProd %}
+    {% for name in release.names %}
+      {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
+    {% endfor %}
+  {% endfor %}
+  
   
   {% assign reversed_releases = domain_data.releases | reverse %}
   {% for release in reversed_releases %}
@@ -202,6 +214,11 @@ layout: default
       {% assign yaml_data = site.data.releasedefns[page.branch][page.domain][resolved_file_name] %}
       {% if yaml_data %}
         yamlDataMap["{{ release_name }}"] = {{ yaml_data | jsonify }};
+      {% endif %}
+
+      {% if releaseNamesInProd contains release_name %}
+         latestReleaseInProd="{{ release_name }}"
+       {% break %}
       {% endif %}
   {% endfor %}
 
@@ -226,16 +243,16 @@ layout: default
       if ($(event.target).closest('.action-links').length) {
         return; // Skip if it's an action link click
       }
-
-      console.log(`Initiate release clicked`)
       const releaseId = $(this).closest('tr').data('hashid');
       const domain = $(this).closest('tr').data('domain');
       const releaseData = releaseDataMap[releaseId];
+      console.log("latestReleaseInProd",latestReleaseInProd);
+      populateModal(releaseData);
+      $('#releaseModal').modal('show');
      
     });
 
     $('#releasesTable').on('click', '.initiate-release', function () {
-      console.log(`Initiate release clicked`)
       const releaseId = $(this).closest('tr').data('hashid');
       const domain = $(this).closest('tr').data('domain');
       const releaseData = releaseDataMap[releaseId];

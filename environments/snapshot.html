@@ -14,22 +14,38 @@ layout: default
 </head>
 
 <style>
-    .container {
+   .container {
       max-width: 100%; /* Ensures the container takes full width if needed */
     }
-  /* existing styles */
-  .environment-card {
-    border-color: #007bff; /* Example color */
-  }
-
-  .add-icons {
-    font-size: 24px;
-    color: #28a745; 
-  }
-  .delete-icons {
-    font-size: 24px;
-    color: red;
-  }
+    .environment-card {
+      border: 1px solid #ddd;
+      padding: 0.75rem;
+    }
+    
+    .environment-card .card-title {
+      font-size: 18px;
+    }
+    
+    .environment-card .card-body {
+      padding: 0.5rem;
+    }
+    
+    .add-icons, .delete-icons {
+      font-size: 12px;
+    }
+    
+    .add-delete-icons {
+      margin-bottom: 0.5rem;
+    }
+    
+    .col-md-4.mb-2 {
+      margin-bottom: 1rem;
+      padding: 0 0.5rem;
+    }
+    
+    .environment-card .card-text, .environment-card .card-link, .environment-card .btn {
+      font-size: 11px;
+    }
 </style>
 
 <div class="container mt-4">
