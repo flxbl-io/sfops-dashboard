@@ -25,7 +25,32 @@ layout: default
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/diff-highlight/prism-diff-highlight.min.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.1.0/diff.js"></script>
+<style>
+.initial-status {
+    color: orange; /* Gray color for initial status, indicating no action or default state */
+}
 
+.linked-status {
+    color: #28a745; /* Green color for linked status, indicating associated or active state */
+ }
+ .work-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-wrap: nowrap;
+  }
+
+  .icons-container {
+      display: flex;
+      gap: 8px; 
+  }
+
+  /* Ensure icons are aligned and have a fixed width if needed */
+  .status-icon, .link-status-icon {
+      min-width: 5px;
+      text-align: center;
+  }
+</style>
 <div class="container-fluid">
   <div class="row">
       <div class="col-md-12">
@@ -171,10 +196,20 @@ layout: default
       </div>
       <div class="modal-body">
         <p id="releaseModalMessage"></p>  
-        <ul id="linkedReleaseItemsList" class="list-group">
-          <!-- Linked work items will be added here dynamically -->
-        </ul>
-        <p id="infoMessage"></p>  
+        <div class="row"> 
+          <div class="col-md-6">
+            <p><b>Release Candidates</b></p>  
+            <ul id="linkedReleaseItemsList" class="list-group">
+              <!-- Linked work items will be added here dynamically -->
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p><b>Work Items:</b></p>
+            <ul id="workItemsList" class="list-group">
+                <!-- Work items will be added here dynamically -->
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -201,7 +236,7 @@ layout: default
       {% capture releaseNamesInProd %}{{ releaseNamesInProd }}{{ name }},{% endcapture %}
     {% endfor %}
   {% endfor %}
-  
+
   
   {% assign reversed_releases = domain_data.releases | reverse %}
   {% for release in reversed_releases %}
@@ -284,7 +319,8 @@ layout: default
       this.data()[1] = localDate;
       this.invalidate(); // Invalidate to re-draw
     });  
-  
+
+   
    
   });
 
@@ -315,69 +351,151 @@ layout: default
       return `${repoUrl}/issues/new?labels=${labels}&template=${issueTemplate}&title=${title}&${additionalParams}`;
   }
 
-
-
   function populateAndShowInitiateReleaseModal(releaseData, currentDomain) {
-    const domainReleaseMap = new Map();
-    const releaseModalMessage = $('#releaseModalMessage');
-    let releaseModalMessageText = `You are about to initiate a release for <b>${currentDomain}:${releaseData.names[0]}</b>`;
-    releaseModalMessageText += `<br>Please confirm to continue</br>`;
-    releaseModalMessage.html(releaseModalMessageText);
-    const listElement = $('#linkedReleaseItemsList');
-    listElement.empty(); // Clear existing items
+      const domainReleaseMap = new Map();
+      const releaseModalMessage = $('#releaseModalMessage');
+      let releaseModalMessageText = `You are about to initiate a release for <b>${currentDomain}:${releaseData.names[0]}</b>.`;
+      releaseModalMessageText += `</br><b>Please confirm to continue.</b></br>`;
+      releaseModalMessage.html(releaseModalMessageText);
 
-    // Default release domain and name, always selected and disabled
-    listElement.append(`<li class="list-group-item"><strong>${currentDomain}</strong></li>`);
-    listElement.append(`<li class="list-group-item">
-                  <input type="radio" name="releaseSelection${currentDomain}" value="${currentDomain}:${releaseData.names[0]}" checked disabled> ${releaseData.names[0]}
-              </li>`);
+      const releaseSelectionList = $('#linkedReleaseItemsList');
+      releaseSelectionList.empty(); // Clear existing items
 
-    for (let workItem of Object.keys(releaseData.cumulativeWorkItems)) {
-        if (crossDomainWorkItems[workItem]) {
-            crossDomainWorkItems[workItem].forEach(item => {
-                if (item.released !== true) {
-                    if (!domainReleaseMap.has(item.domain)) {
-                        domainReleaseMap.set(item.domain, new Set());
-                    }
-                    domainReleaseMap.get(item.domain).add(item.releaseName);
-                }
-            });
-        }
-    }
+      const workItemsList = $('#workItemsList');
+      workItemsList.empty(); // Clear existing items
 
-    domainReleaseMap.forEach((releaseNames, domain) => {
-        if (domain != currentDomain) {
-            listElement.append(`<li class="list-group-item"><strong>${domain}</strong></li>`);
-            listElement.append(`<li class="list-group-item">
-                    <input type="radio" name="releaseSelection${domain}" value="none" checked> None
-                </li>`);
-            releaseNames.forEach(releaseName => {
-                listElement.append(`<li class="list-group-item">
-                    <input type="radio" name="releaseSelection${domain}" value="${domain}:${releaseName}"> ${releaseName}
-                </li>`);
-            });
-        }
-    });
+      // Populate release selections
+      releaseSelectionList.append(`<li class="list-group-item"><strong>${currentDomain}</strong></li>`);
+      releaseSelectionList.append(`<li class="list-group-item">
+          <input type="radio" name="releaseSelection${currentDomain}" value="${currentDomain}:${releaseData.names[0]}" checked disabled> ${releaseData.names[0]}
+      </li>`);
 
-    $('#confirmButton').off('click').on('click', function() {
-        let selectedReleases = [];
-        let selectedDomains=[]
-        domainReleaseMap.forEach((_, domain) => {
-            const selectedValue = $('input[name="releaseSelection' + domain + '"]:checked').val();
-            if (selectedValue !== "none") {
-                selectedReleases.push(selectedValue);
-                selectedDomains.push(domain)
-            }
-        });
+      // Populate work items list with current domain's cumulative work items
+      Object.entries(releaseData.cumulativeWorkItems).forEach(([workItemId, commitIds]) => {
+          const jiraLink = `{{ site.data.project.workItemUrl }}/${workItemId}`; 
+          workItemsList.append(`
+            <li class="list-group-item work-item" data-workitem="${workItemId}">
+                <div class="work-item-content">
+                    <a href="${jiraLink}" target="_blank">${workItemId}</a>
+                    <div class="icons-container">
+                        <i class="fas fa-circle status-icon initial-status"></i>
+                        <!-- Link icon is conditionally added here -->
+                    </div>
+                </div>
+            </li>`);
+      });
 
-        const url = generateUrl('initiate', selectedReleases,selectedDomains);
-        window.open(url, '_blank'); // Open the generated URL in a new tab
-        $('#initiateReleaseModal').modal('hide'); // Hide the modal
-    });
+      // Handle other domains' releases
+      for (let workItemId of Object.keys(releaseData.cumulativeWorkItems)) {
+          if (crossDomainWorkItems[workItemId]) {
+              crossDomainWorkItems[workItemId].forEach(item => {
+                  if (item.released !== true && item.domain !== currentDomain) {
+                      if (!domainReleaseMap.has(item.domain)) {
+                          domainReleaseMap.set(item.domain, new Set());
+                      }
+                      domainReleaseMap.get(item.domain).add(item.releaseName);
+                  }
+              });
+          }
+      }
 
-    $('#initiateReleaseModal').modal('show');
+      // Populate other domains' releases and linked work items
+      domainReleaseMap.forEach((releaseNames, domain) => {
+          releaseSelectionList.append(`<li class="list-group-item"><strong>${domain}</strong></li>`);
+          releaseSelectionList.append(`<li class="list-group-item">
+              <input type="radio" name="releaseSelection${domain}" value="none" checked> None
+          </li>`);
+
+          releaseNames.forEach(releaseName => {
+              const itemHtml = `<li class="list-group-item">
+                  <input type="radio" name="releaseSelection${domain}" value="${domain}:${releaseName}"> ${releaseName}
+              </li>`;
+              releaseSelectionList.append(itemHtml);
+          });
+      });
+
+      // Handle radio change event for dynamic status update
+      $('input[type="radio"]').change(function() {
+          updateWorkItemStatuses(workItemsList,crossDomainWorkItems, currentDomain);
+      });
+
+      updateWorkItemStatuses(workItemsList, crossDomainWorkItems,currentDomain); // Initial status update
+
+      let selectedReleases = [];
+      let selectedDomains = [];
+
+      selectedDomains.push(currentDomain);
+      selectedReleases.push(`${currentDomain}:${releaseData.names[0]}`);
+
+      $('#confirmButton').off('click').on('click', function() {
+          domainReleaseMap.forEach((_, domain) => {
+              const selectedValue = $('input[name="releaseSelection' + domain + '"]:checked').val();
+              if (selectedValue !== "none") {
+                  selectedReleases.push(selectedValue);
+                  selectedDomains.push(domain);
+              }
+          });
+
+          const url = generateUrl('initiate', selectedReleases, selectedDomains);
+          window.open(url, '_blank'); 
+
+          $('#initiateReleaseModal').modal('hide'); // Hide the modal
+      });
+
+      $('#initiateReleaseModal').modal('show');
+
+      function updateWorkItemStatuses(workItemsList, crossDomainWorkItems, currentDomain) {
+          workItemsList.find('.work-item').each(function() {
+              const workItemElement = $(this);
+              const workItemId = workItemElement.data('workitem');
+              const relatedItems = crossDomainWorkItems[workItemId] || [];
+
+              let isLinked = relatedItems.some(item => item.domain !== currentDomain && !item.released);
+
+              // Update the linked status icon based on isLinked
+              if (isLinked) {
+                  if (!workItemElement.find('.link-status-icon').length) {
+                      workItemElement.append('<i class="fas fa-link link-status-icon" aria-hidden="false"></i>');
+                  }
+              } else {
+                  workItemElement.find('.link-status-icon').remove();
+                  workItemElement.find('.status-icon').addClass('linked-status').removeClass('initial-status');
+                  return;
+              }
+
+              let isNonLinked = relatedItems.length === 0; // True if there are no related items
+              let allLinkedSelected = false; // Start with false
+
+              // Group related items by domain
+              let itemsByDomain = relatedItems.reduce((acc, item) => {
+                  if (item.domain !== currentDomain && !item.released) {
+                      acc[item.domain] = acc[item.domain] || [];
+                      acc[item.domain].push(item);
+                  }
+                  return acc;
+              }, {});
+
+              // Check if at least one item in each domain has its corresponding release selected and matching
+              allLinkedSelected = Object.keys(itemsByDomain).length > 0 && Object.keys(itemsByDomain).every(domain => {
+                  return itemsByDomain[domain].some(item => {
+                      const selectedReleaseForDomain = $('input[name="releaseSelection' + domain + '"]:checked').val();
+                      return selectedReleaseForDomain && selectedReleaseForDomain !== 'none' && selectedReleaseForDomain.split(':')[1] === item.releaseName;
+                  });
+              });
+
+              // Update the status icon based on the checks
+              const statusIcon = workItemElement.find('.status-icon');
+              if (isNonLinked || allLinkedSelected) {
+                  statusIcon.addClass('linked-status').removeClass('initial-status');
+              } else {
+                  statusIcon.addClass('initial-status').removeClass('linked-status');
+              }
+          });
+      }
+
+
   }
-
+   
 
 
   async function copyToClipboard(event,text) {
@@ -389,5 +507,4 @@ layout: default
           console.error('Failed to copy text: ', err);
       }
   }
-  
 </script>

@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.15.1](https://github.com/flxbl-io/sfops/compare/v25.15.0...v25.15.1) (2024-02-13)
+
+
+### Bug Fixes
+
+* **db-releasecandidates:** fix release candidates details not being displayed ([f625b54](https://github.com/flxbl-io/sfops/commit/f625b540bda3a45f611fd96febd6bf2072d51969))
+* **snapshot:** revise styling to make it concise ([386010e](https://github.com/flxbl-io/sfops/commit/386010ed9c8f957acacd84b8728dfdebf0e42857))
+
 ## [25.15.0](https://github.com/flxbl-io/sfops/compare/v25.14.2...v25.15.0) (2024-02-12)
 
 
