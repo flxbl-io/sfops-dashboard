@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.2](https://github.com/flxbl-io/sfops/compare/v25.16.1...v25.16.2) (2024-02-13)
+
+
+### Bug Fixes
+
+* **dc-releasecandidates:** display independent work items belonging to other RC ([613faf0](https://github.com/flxbl-io/sfops/commit/613faf0eb10fe6c1d69b9b3da86ecf5f6a791b07))
+
 ## [25.16.1](https://github.com/flxbl-io/sfops/compare/v25.16.0...v25.16.1) (2024-02-13)
 
 
