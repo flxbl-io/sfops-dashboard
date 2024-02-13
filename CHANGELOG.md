@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.0](https://github.com/flxbl-io/sfops/compare/v25.15.1...v25.16.0) (2024-02-13)
+
+
+### Features
+
+* **dc-releasecandidates:** display workitems impacted by selection of linked release candidates ([f189f51](https://github.com/flxbl-io/sfops/commit/f189f5146b206b4a056c632de0a2fb37bdd6c534))
+
 ## [25.15.1](https://github.com/flxbl-io/sfops/compare/v25.15.0...v25.15.1) (2024-02-13)
 
 
