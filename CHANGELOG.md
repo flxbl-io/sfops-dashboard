@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.5](https://github.com/flxbl-io/sfops/compare/v25.16.4...v25.16.5) (2024-02-13)
+
+
+### Bug Fixes
+
+* **dc-releasecandidate:** fix button title used in workitem calculator ([d320240](https://github.com/flxbl-io/sfops/commit/d32024041ad1429c25f9d285fec03ae2c5d5e380))
+
 ## [25.16.4](https://github.com/flxbl-io/sfops/compare/v25.16.3...v25.16.4) (2024-02-13)
 
 
