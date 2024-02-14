@@ -170,7 +170,7 @@ layout: default
                 {% if releaseNamesInProd contains releaseName %}
                   <li><a class="rollback-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">🔄 Attempt a patch</a></li>
                 {% else %}
-                    <li><a class="initiate-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">✅ Initiate Release</a></li>
+                    <li><a class="initiate-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}">🙋🏽 Initiate Release</a></li>
                 {% endif %}
                   <li><a class="sandbox-release" data-name="{{ release.names[0] }}" data-domain="{{ page.domain }}"> 🌵 Get it on my Sandbox</a></li>
                 </ul>
@@ -189,7 +189,7 @@ layout: default
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">🙋🏽 Initiate Release!</h5>
+        <h5 class="modal-title" id="releaseModalTitle">🙋🏽 Initiate Release!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -198,7 +198,8 @@ layout: default
         <p id="releaseModalMessage"></p>  
         <div class="row"> 
           <div class="col-md-6">
-            <p><b>Release Candidates</b></p>  
+            <p><b>Selected Release Candidate:</b></p>  
+            <p><small>Select any linked release candidates (if applicable)</small></p>
             <ul id="linkedReleaseItemsList" class="list-group">
               <!-- Linked work items will be added here dynamically -->
             </ul>
@@ -217,7 +218,7 @@ layout: default
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button id="confirmButton" type="button" class="btn btn-primary">Initiate Release</button>
+        <button id="confirmButton" type="button" class="btn btn-primary">Create Release</button>
       </div>
     </div>
   </div>
@@ -298,7 +299,7 @@ layout: default
       const releaseData = releaseDataMap[releaseId];
      
       // Populate and show the new modal instead of opening a new URL
-      populateAndShowInitiateReleaseModal(releaseData,domain);
+      populateAndShowInitiateReleaseModal(releaseData,domain,'initiate');
     });
 
 
@@ -310,10 +311,10 @@ layout: default
     });
 
     $('#releasesTable').on('click', '.sandbox-release', function () {
-      const name = $(this).data('name');
-      const domain = $(this).data('domain');
-      const url = generateUrl('sandbox', name, domain);
-      window.open(url, '_blank');
+      const releaseId = $(this).closest('tr').data('hashid');
+      const domain = $(this).closest('tr').data('domain');
+      const releaseData = releaseDataMap[releaseId];
+      populateAndShowInitiateReleaseModal(releaseData,domain,'sandbox');
     });
 
 
@@ -348,7 +349,7 @@ layout: default
         case 'sandbox':
           issueTemplate = 'request-a-release.yml';
           labels='labels=ops%2Cops-release-request-non-pipeline-env';
-          title='Ops+-+Request+a+release+into+an+org'
+          title=`Ops+-+Request+a+release+into+an+org+${selectedDomains.join(',')}`
           additionalParams = `domain=${selectedDomains.join(',')}&releasedefn=${selectedReleases.join(',')}`;
           break;
       }
@@ -356,11 +357,19 @@ layout: default
       return `${repoUrl}/issues/new?labels=${labels}&template=${issueTemplate}&title=${title}&${additionalParams}`;
   }
 
-  function populateAndShowInitiateReleaseModal(releaseData, currentDomain) {
+  function populateAndShowInitiateReleaseModal(releaseData, currentDomain,action) {
       const domainReleaseMap = new Map();
+      const releaseModalTitle = $('#releaseModalTitle');
       const releaseModalMessage = $('#releaseModalMessage');
       let releaseModalMessageText = `You are about to initiate a release for <b>${currentDomain}:${releaseData.names[0]}</b>.`;
-      releaseModalMessageText += `</br><b>Please confirm to continue.</b></br>`;
+      if(action === 'sandbox'){
+         releaseModalTitle.html('🌵 Get this release on to my Sandbox!');
+         releaseModalMessageText += `into <b>a non-pipeline environment</b>`;
+      }else{
+        releaseModalTitle.html('🙋🏽 Initiate Release!');
+         releaseModalMessageText += `into <b>Release Environments</b>`;
+      }
+      releaseModalMessageText += `.Please confirm to continue</br>`;
       releaseModalMessage.html(releaseModalMessageText);
 
       const releaseSelectionList = $('#linkedReleaseItemsList');
@@ -490,7 +499,7 @@ layout: default
               }
           });
 
-          const url = generateUrl('initiate', selectedReleases, selectedDomains);
+          const url = generateUrl(action, selectedReleases, selectedDomains);
           window.open(url, '_blank'); 
 
           $('#initiateReleaseModal').modal('hide'); // Hide the modal
