@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.6](https://github.com/flxbl-io/sfops/compare/v25.16.5...v25.16.6) (2024-02-14)
+
+
+### Bug Fixes
+
+* **wf-release:** handle incorrect labelling on the issue ([ed15553](https://github.com/flxbl-io/sfops/commit/ed15553c3d9442103788104351719c2b6367d386))
+
 ## [25.16.5](https://github.com/flxbl-io/sfops/compare/v25.16.4...v25.16.5) (2024-02-13)
 
 
