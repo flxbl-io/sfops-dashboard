@@ -205,32 +205,54 @@ layout: default
   {% for pr in site.data.prStatus.closedPrs %}
     {% assign issueNumber = pr[0] %}
     {% assign issueDetails = pr[1] %}
-    <div class="pr">
+    <div class="pr" id="pr-{{ issueNumber }}">
       <div class="pr-header">
         {{ issueDetails.issueTitle }}
         <a href="{{ issueDetails.linkToIssue }}" target="_blank">#{{ issueNumber }}</a>
       </div>
       <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
-      <div class="metadata-section">
+       <div class="metadata-section">
         {% for category in issueDetails.metadata %}
-          <div class="metadata-category">
-            <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
-            {% if category[1].added.size > 0 %}
-            <ul class="pr-components added-components">
-              {% for component in category[1].added %}
-                 <li class="added"><i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})</li>
-              {% endfor %}
-             </ul>
-            {% endif %}
-            {% if category[1].modified.size > 0 %}
-             <ul class="pr-components modified-components">
-             {% for component in category[1].modified %}
-                <li class="modified"><i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})</li>
-             {% endfor %}
-             </ul>
-            {% endif %}
-          </div>
-        {% endfor %}
+           <div class="metadata-category">
+             <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
+             
+             <!-- Added Components -->
+             {% if category[1].added.size > 0 %}
+               <ul class="pr-components added-components">
+                 {% for component in category[1].added %}
+                   {% if component.conflicts.size > 0 %}
+                     {% assign borderColor = 'border: 2px solid ' | append: component.conflicts[0].color %}
+                     <li class="added" style="{{ borderColor }}" data-conflicts="{{ component.conflicts | map: 'prNumber' | join: ',' }}"  data-original-color="{{ component.conflicts[0].color }}" onclick="highlightConflicts(this)">
+                       <i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})
+                     </li>
+                   {% else %}
+                     <li class="added">
+                       <i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})
+                     </li>
+                   {% endif %}
+                 {% endfor %}
+               </ul>
+             {% endif %}
+             
+             <!-- Modified Components -->
+             {% if category[1].modified.size > 0 %}
+               <ul class="pr-components modified-components">
+                 {% for component in category[1].modified %}
+                   {% if component.conflicts.size > 0 %}
+                     {% assign borderColor = 'border: 2px solid ' | append: component.conflicts[0].color %}
+                     <li class="modified" style="{{ borderColor }}" data-conflicts="{{ component.conflicts | map: 'prNumber' | join: ',' }}"  data-original-color="{{ component.conflicts[0].color }}" onclick="highlightConflicts(this)">
+                       <i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})
+                     </li>
+                   {% else %}
+                     <li class="modified">
+                       <i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})
+                     </li>
+                   {% endif %}
+                 {% endfor %}
+               </ul>
+             {% endif %}
+           </div>
+       {% endfor %}
       </div>
     </div>
   {% endfor %}
