@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.16.7](https://github.com/flxbl-io/sfops/compare/v25.16.6...v25.16.7) (2024-02-14)
+
+
+### Bug Fixes
+
+* **act-releasetoorgmapreporter:** ensure all release logs that are part of the release is copied ([cf62272](https://github.com/flxbl-io/sfops/commit/cf62272dafe6d16f6c06dded592f007efae1c744))
+
 ## [25.16.6](https://github.com/flxbl-io/sfops/compare/v25.16.5...v25.16.6) (2024-02-14)
 
 

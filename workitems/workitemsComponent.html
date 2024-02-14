@@ -9,28 +9,48 @@ layout: default
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PR Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <style>
     body {
       background-color: #f0f0f0;
       font-family: Arial, sans-serif;
     }
-    .board {
+    legend {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+    }
+    .legend-color {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .board, .closed-board {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-      padding: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 10px;
+      padding: 20px;
     }
 
-   .closed-board {
-        margin-top: 20vh;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 20px; 
-        background-color: #e9ecef; 
-        padding: 20px;
-        border-radius: 10px;
+    .board-header, .closed-board-header {
+      font-size: 24px;
+      margin: 0 20px 20px 20px;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     .closed-board h2 {
     color: #495057; 
     margin-bottom: 14px;
@@ -44,6 +64,7 @@ layout: default
       display: flex;
       align-items: center;
       font-weight: bold;
+      font-size: 11px;
       color: #333;
       margin-bottom: 10px;
     }
@@ -102,50 +123,84 @@ layout: default
     .pr-components li i {
       margin-right: 8px;
     }
+    .pr-components li[data-conflicts][data-original-color] {
+      cursor: pointer;
+    }
     .added {  font-size: 11px; background-color: #eaffea; }
     .modified { font-size: 11px; background-color: #fff3cd; }
     .deleted { font-size: 11px; background-color: #ffdada; }
+    .pr.dimmed {
+      opacity: 0.2;
+    }
+
+    .pr.highlight {
+      outline: 2px solid gold; /* Or any highlight style you prefer */
+    }
   </style>
 </head>
 <body>
 
+
+<h6 class="navbar navbar-light bg-light">Pull Requests (In Review)</h6>
 <div class="board">
   {% for pr in site.data.prStatus.openPrs  %}
     {% assign issueNumber = pr[0] %}
     {% assign issueDetails = site.data.prStatus.openPrs[issueNumber] %}
-  <div class="pr">
+  <div class="pr" id="pr-{{ issueNumber }}">
       <div class="pr-header">
         {{ issueDetails.issueTitle }}
         <a href="{{ issueDetails.linkToIssue }}" target="_blank">#{{ issueNumber }}</a>
       </div>
     <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
-   <div class="metadata-section">
-    {% for category in issueDetails.metadata %}
-    <div class="metadata-category">
-      <h6><i class="fas fa-box-open"></i>{{ category[0] }}</h6>
-      {% if category[1].added.size > 0 %}
-      <ul class="pr-components added-components">
-        {% for component in category[1].added %}
-          <li class="added"><i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})</li>
+    <div class="metadata-section">
+         {% for category in issueDetails.metadata %}
+            <div class="metadata-category">
+              <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
+              
+              <!-- Added Components -->
+              {% if category[1].added.size > 0 %}
+                <ul class="pr-components added-components">
+                  {% for component in category[1].added %}
+                    {% if component.conflicts.size > 0 %}
+                      {% assign borderColor = 'border: 2px solid ' | append: component.conflicts[0].color %}
+                      <li class="added" style="{{ borderColor }}" data-conflicts="{{ component.conflicts | map: 'prNumber' | join: ',' }}"  data-original-color="{{ component.conflicts[0].color }}" onclick="highlightConflicts(this)">
+                        <i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})
+                      </li>
+                    {% else %}
+                      <li class="added">
+                        <i class="fas fa-plus-circle"></i>{{ component.name }} ({{ component.type }})
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+              
+              <!-- Modified Components -->
+              {% if category[1].modified.size > 0 %}
+                <ul class="pr-components modified-components">
+                  {% for component in category[1].modified %}
+                    {% if component.conflicts.size > 0 %}
+                      {% assign borderColor = 'border: 2px solid ' | append: component.conflicts[0].color %}
+                      <li class="modified" style="{{ borderColor }}" data-conflicts="{{ component.conflicts | map: 'prNumber' | join: ',' }}"  data-original-color="{{ component.conflicts[0].color }}" onclick="highlightConflicts(this)">
+                        <i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})
+                      </li>
+                    {% else %}
+                      <li class="modified">
+                        <i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
         {% endfor %}
-      </ul>
-      {% endif %}
-      {% if category[1].modified.size > 0 %}
-      <ul class="pr-components modified-components">
-        {% for component in category[1].modified %}
-        <li class="modified"><i class="fas fa-edit"></i>{{ component.name }} ({{ component.type }})</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
     </div>
-    {% endfor %}
-  
-  </div>
   </div>
   {% endfor %}
 </div>
 
 <!-- Closed PRs Section -->
+<h6 class="navbar navbar-light bg-light">Pull Requests (Closed in last 48 Hours)</h6>
 <div class="closed-board">
   {% for pr in site.data.prStatus.closedPrs %}
     {% assign issueNumber = pr[0] %}
@@ -159,7 +214,7 @@ layout: default
       <div class="metadata-section">
         {% for category in issueDetails.metadata %}
           <div class="metadata-category">
-            <h6><i class="fas fa-box-open"></i>{{ category[0] }}</h6>
+            <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
             {% if category[1].added.size > 0 %}
             <ul class="pr-components added-components">
               {% for component in category[1].added %}
@@ -182,3 +237,54 @@ layout: default
 </div>
 </body>
 </html>
+<script>
+  function highlightConflicts(clickedElement) {
+    const originalColor = clickedElement.getAttribute('data-original-color');
+    const conflicts = clickedElement.getAttribute('data-conflicts').split(',');
+
+    // Remove all borders and dim all PR cards
+    document.querySelectorAll('.pr').forEach(pr => pr.classList.add('dimmed'));
+    document.querySelectorAll('.pr-components li[data-conflicts]').forEach(li => {
+      li.style.removeProperty('border');
+    });
+
+    // Highlight the clicked component
+    clickedElement.style.border = '2px solid ' + originalColor;
+    clickedElement.closest('.pr').classList.remove('dimmed');
+    clickedElement.closest('.pr').classList.add('highlight');
+
+    // Process other conflicted components
+    document.querySelectorAll('.pr-components li[data-conflicts]').forEach(li => {
+      const liConflicts = li.getAttribute('data-conflicts').split(',');
+      const liColor = li.getAttribute('data-original-color');
+      if (liColor === originalColor) {
+        li.style.border = '2px solid ' + originalColor;
+        // Highlight the PR cards that contain related conflicted components
+        liConflicts.forEach(conflictPrId => {
+          const conflictPr = document.querySelector('#pr-' + conflictPrId);
+          if (conflictPr) {
+            conflictPr.classList.remove('dimmed');
+            conflictPr.classList.add('highlight');
+          }
+        });
+      }
+    });
+
+    // Prevent event propagation to avoid immediate reset
+    event.stopPropagation();
+  }
+
+  // Reset functionality when clicking outside conflicted components
+  document.addEventListener('click', function() {
+    // Remove dimming and highlighting from all PR cards
+    document.querySelectorAll('.pr').forEach(pr => {
+      pr.classList.remove('dimmed', 'highlight');
+    });
+
+    // Restore original borders for conflicted components
+    document.querySelectorAll('.pr-components li[data-conflicts]').forEach(li => {
+      const originalColor = li.getAttribute('data-original-color');
+      li.style.border = '2px solid ' + originalColor;
+    });
+  });
+</script>
