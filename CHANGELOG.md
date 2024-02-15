@@ -1,5 +1,18 @@
 # Changelog
 
+## [25.17.0](https://github.com/flxbl-io/sfops/compare/v25.16.7...v25.17.0) (2024-02-14)
+
+
+### Features
+
+* **dc-releasecandidate:** add multi-domain release into individual sandbox ([cd67ea5](https://github.com/flxbl-io/sfops/commit/cd67ea524077a199faad8c007e84306fd2b52a52))
+* **dc,act-eyeview:** add conflict markers for PRs that have same components ([501f86c](https://github.com/flxbl-io/sfops/commit/501f86ca29677b4dda1f2ad6f8b4b8f82f521536))
+
+
+### Bug Fixes
+
+* **dc-eyeview:** ensure closed pr items are marked as well ([a635d5e](https://github.com/flxbl-io/sfops/commit/a635d5e2cc8e15b77cf602b693f17b56b09100bb))
+
 ## [25.16.7](https://github.com/flxbl-io/sfops/compare/v25.16.6...v25.16.7) (2024-02-14)
 
 
