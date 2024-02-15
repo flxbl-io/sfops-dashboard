@@ -96,15 +96,5 @@
     "domain": "HOTFIX",
     "created_at": "2024-02-15T07:16:45.355Z",
     "type": "CI"
-  },
-  {
-    "name": "477928770",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1707894882039,
-    "requested_at": "2024-02-14T06:09:42Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-14T07:14:42.039Z",
-    "type": "CI"
   }
 ]
