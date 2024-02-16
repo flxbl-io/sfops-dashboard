@@ -10,7 +10,9 @@ layout: default
   <title>PR Dashboard</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/ccae0cc9ba.js" crossorigin="anonymous"></script>
+
   <style>
     body {
       background-color: #f0f0f0;
@@ -148,9 +150,49 @@ layout: default
     {% assign issueDetails = site.data.prStatus.openPrs[issueNumber] %}
   <div class="pr" id="pr-{{ issueNumber }}">
       <div class="pr-header">
-        {{ issueDetails.issueTitle }}
-        <a href="{{ issueDetails.linkToIssue }}" target="_blank">#{{ issueNumber }}</a>
+        <div>{{ issueDetails.issueTitle }}</div>
+          <div>
+            <a href="{{ issueDetails.linkToIssue }}" target="_blank" style="font-size: 12px;">#{{ issueNumber }}</a>
+        </div>
       </div>
+      <div style="display: flex; margin-top: 5px;">
+        <span>
+          {% if issueDetails.commitsAhead %}
+            <i class="fas fa-arrow-up" style="color: green; font-size: 12px;" title="Commits Ahead"></i> {{ issueDetails.commitsAhead }}
+          {% else %}
+            N/A
+          {% endif %}
+        </span>
+        <span style="margin-left: 10px;">
+          {% if issueDetails.commitsBehind %}
+            <i class="fas fa-arrow-down" style="color: red; font-size: 12px;"  title="Commits Behind"></i> {{ issueDetails.commitsBehind }}
+          {% else %}
+            N/A
+          {% endif %}
+        </span>
+        <span style="margin-left: 10px;">
+          {% if issueDetails.checkStatus == 'completed' and issueDetails.checkConclusion == 'success' %}
+            <i class="fas fa-check-circle" style="color:green" title="Checks Passed"></i>
+          {% elsif issueDetails.checkStatus == 'completed' and issueDetails.checkConclusion == 'failure' %}
+            <i class="fas fa-circle-exclamation" style="color:red" title="Checks Failed"></i>
+          {% elsif issueDetails.checkConclusion == 'skipped' %}
+            <i class="fas fa-clock" style="color:grey" title="Checks Skipped"></i>
+          {% elsif issueDetails.checkStatus == 'in_progress' %}
+            <i class="fas fa-solid fa-spinner" style="color:orange" title="Checks In Progress"></i>
+          {% endif %}
+        </span>
+        <span style="margin-left: 10px;">
+          {% assign matchedUrl = '' %}
+          {% for entry in site.data.sandboxStatus.frontDoorUrl %}
+            {% if entry[1].issue == issueNumber %}
+              {% assign matchedUrl = entry[1].url %}
+              <a href="{{ matchedUrl }}" target="_blank" title="Review Sandbox">
+                <i class="fas fa-cloud" style="color: #17a2b8; font-size: 16px;" title="Review Sandbox"></i>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </span>        
+    </div>
     <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
     <div class="metadata-section">
          {% for category in issueDetails.metadata %}

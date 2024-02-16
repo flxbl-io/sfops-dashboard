@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.17.1](https://github.com/flxbl-io/sfops/compare/v25.17.0...v25.17.1) (2024-02-15)
+
+
+### Bug Fixes
+
+* **wf-pushtobranch:** build workflow time not getting reported ([c491bb6](https://github.com/flxbl-io/sfops/commit/c491bb6a6c996089873ff6421cc10adcd2ffb3c4))
+
 ## [25.17.0](https://github.com/flxbl-io/sfops/compare/v25.16.7...v25.17.0) (2024-02-14)
 
 
