@@ -38,26 +38,6 @@
     "type": "CI"
   },
   {
-    "name": "278429309",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708071051207,
-    "requested_at": "2024-02-16T06:08:45Z",
-    "domain": "CORE",
-    "created_at": "2024-02-16T08:10:51.207Z",
-    "type": "CI"
-  },
-  {
-    "name": "713685188",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708071062067,
-    "requested_at": "2024-02-16T06:08:45Z",
-    "domain": "CORE",
-    "created_at": "2024-02-16T08:11:02.067Z",
-    "type": "CI"
-  },
-  {
     "name": "910016839",
     "status": "Available",
     "isActive": "true",
