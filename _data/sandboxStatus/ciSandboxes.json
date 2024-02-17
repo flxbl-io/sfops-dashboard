@@ -1,10 +1,12 @@
 [
   {
     "name": "392578147",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1708157289152,
     "requested_at": "2024-02-17T06:08:48Z",
     "domain": "CORE",
+    "created_at": "2024-02-17T08:08:09.152Z",
     "type": "CI"
   },
   {
@@ -97,10 +99,12 @@
   },
   {
     "name": "985840332",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1708157444721,
     "requested_at": "2024-02-17T06:08:46Z",
     "domain": "HOTFIX",
+    "created_at": "2024-02-17T08:10:44.721Z",
     "type": "CI"
   }
 ]
