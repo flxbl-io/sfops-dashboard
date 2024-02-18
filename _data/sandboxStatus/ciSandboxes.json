@@ -59,8 +59,8 @@
   },
   {
     "name": "985840332",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1708157444721,
     "requested_at": "2024-02-17T06:08:46Z",
     "domain": "HOTFIX",
