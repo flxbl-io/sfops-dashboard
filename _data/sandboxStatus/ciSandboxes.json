@@ -56,15 +56,5 @@
     "domain": "HOTFIX",
     "created_at": "2024-02-18T08:40:34.566Z",
     "type": "CI"
-  },
-  {
-    "name": "985840332",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1708157444721,
-    "requested_at": "2024-02-17T06:08:46Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-17T08:10:44.721Z",
-    "type": "CI"
   }
 ]
