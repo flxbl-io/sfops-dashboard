@@ -8,15 +8,20 @@ layout: default
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PR Dashboard</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/ccae0cc9ba.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
 
   <style>
     body {
       background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
     }
     legend {
       display: flex;
@@ -83,6 +88,14 @@ layout: default
     .metadata-category li {
       word-break: break-all; /* Use this for breaking non-standard words like URLs or API strings */
     }
+    .metadata-category {
+      cursor: pointer; 
+      padding: 5px; 
+    }
+    .metadata-category h4:hover {
+      background-color: #f0f0f0; 
+    }
+
 
     .pr {
       border: 1px solid #000000;
@@ -150,7 +163,7 @@ layout: default
     {% assign issueDetails = site.data.prStatus.openPrs[issueNumber] %}
   <div class="pr" id="pr-{{ issueNumber }}">
       <div class="pr-header">
-        <div>{{ issueDetails.issueTitle }}</div>
+        <div class="issueTitle">{{ issueDetails.issueTitle }}</div>
           <div>
             <a href="{{ issueDetails.linkToIssue }}" target="_blank" style="font-size: 12px;">#{{ issueNumber }}</a>
         </div>
@@ -196,7 +209,7 @@ layout: default
     <div class="pr-meta">Author: {{ issueDetails.author }}, Branch: {{ issueDetails.branch }}</div>
     <div class="metadata-section">
          {% for category in issueDetails.metadata %}
-            <div class="metadata-category">
+            <div class="metadata-category"onclick="highlightByPackage(this)">
               <h4><i class="fas fa-box-open"></i>{{ category[0] }}</h4>
               
               <!-- Added Components -->
@@ -338,6 +351,29 @@ layout: default
     event.stopPropagation();
   }
 
+  function highlightByPackage(clickedCategory) {
+  const packageName = clickedCategory.querySelector('h4').textContent.trim();
+  // Dim all PR cards initially
+  document.querySelectorAll('.pr').forEach(pr => pr.classList.add('dimmed'));
+
+  // Iterate over all packages in all PR cards
+  document.querySelectorAll('.metadata-category').forEach(category => {
+    const categoryName = category.querySelector('h4').textContent.trim();
+    if (categoryName === packageName) {
+      // Highlight this PR card and components of the matching package
+      const prCard = category.closest('.pr');
+      prCard.classList.remove('dimmed');
+      prCard.classList.add('highlight');
+    }
+  });
+
+  // Stop propagation and prevent default to avoid any parent elements from receiving the click event
+  event.stopPropagation();
+  event.preventDefault();
+  }
+
+
+
   // Reset functionality when clicking outside conflicted components
   document.addEventListener('click', function() {
     // Remove dimming and highlighting from all PR cards
@@ -351,4 +387,5 @@ layout: default
       li.style.border = '2px solid ' + originalColor;
     });
   });
+
 </script>

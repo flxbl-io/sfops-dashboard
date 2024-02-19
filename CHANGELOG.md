@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.18.0](https://github.com/flxbl-io/sfops/compare/v25.17.1...v25.18.0) (2024-02-16)
+
+
+### Features
+
+* **dc-eyeview:** add additional icons to denote status of PRs ([71b6d84](https://github.com/flxbl-io/sfops/commit/71b6d842fca078d852eedb2aa1f577725e72ef74))
+
 ## [25.17.1](https://github.com/flxbl-io/sfops/compare/v25.17.0...v25.17.1) (2024-02-15)
 
 
