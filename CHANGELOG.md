@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.19.1](https://github.com/flxbl-io/sfops/compare/v25.19.0...v25.19.1) (2024-02-20)
+
+
+### Bug Fixes
+
+* **act-updategitrepo:** add a timeoout to all terminal operations ([af26986](https://github.com/flxbl-io/sfops/commit/af269865f399213ba802c156f1eb8f9df4950b49))
+
 ## [25.19.0](https://github.com/flxbl-io/sfops/compare/v25.18.0...v25.19.0) (2024-02-20)
 
 
