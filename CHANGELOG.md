@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.19.2](https://github.com/flxbl-io/sfops/compare/v25.19.1...v25.19.2) (2024-02-20)
+
+
+### Bug Fixes
+
+* **act-createcisandbox:** handle error code 1, when cli gets locked during parallel execution ([442b824](https://github.com/flxbl-io/sfops/commit/442b8243b44879f8b922a29e07c69d3415c5b284))
+
 ## [25.19.1](https://github.com/flxbl-io/sfops/compare/v25.19.0...v25.19.1) (2024-02-20)
 
 
