@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.19.0](https://github.com/flxbl-io/sfops/compare/v25.18.0...v25.19.0) (2024-02-20)
+
+
+### Features
+
+* **dc-eyeview:** filter by packages by clicking on package header ([d706d8c](https://github.com/flxbl-io/sfops/commit/d706d8ce2ba8584b22f3e912b4b32b47da6020a6))
+
+
+### Bug Fixes
+
+* **act-fetchsandbox, act-expire:** fix logs to denote assignment time ([f64b82d](https://github.com/flxbl-io/sfops/commit/f64b82d473b31eb1e645e108767c0e93a4248d2d))
+
 ## [25.18.0](https://github.com/flxbl-io/sfops/compare/v25.17.1...v25.18.0) (2024-02-16)
 
 
