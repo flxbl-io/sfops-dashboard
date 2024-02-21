@@ -21,8 +21,8 @@
   },
   {
     "name": "895752261",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1708425529100,
     "requested_at": "2024-02-20T06:09:50Z",
     "domain": "CORE",
@@ -59,8 +59,8 @@
   },
   {
     "name": "876699211",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1708425671716,
     "requested_at": "2024-02-20T06:09:50Z",
     "domain": "CORE",
