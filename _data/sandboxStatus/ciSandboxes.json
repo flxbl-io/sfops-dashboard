@@ -20,16 +20,6 @@
     "type": "CI"
   },
   {
-    "name": "895752261",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1708425529100,
-    "requested_at": "2024-02-20T06:09:50Z",
-    "domain": "CORE",
-    "created_at": "2024-02-20T10:38:49.100Z",
-    "type": "CI"
-  },
-  {
     "name": "220050871",
     "status": "InProgress",
     "isActive": "true",
@@ -55,16 +45,6 @@
     "requested_at": "2024-02-21T06:10:02Z",
     "domain": "CORE",
     "created_at": "2024-02-21T08:40:36.445Z",
-    "type": "CI"
-  },
-  {
-    "name": "876699211",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1708425671716,
-    "requested_at": "2024-02-20T06:09:50Z",
-    "domain": "CORE",
-    "created_at": "2024-02-20T10:41:11.716Z",
     "type": "CI"
   },
   {
