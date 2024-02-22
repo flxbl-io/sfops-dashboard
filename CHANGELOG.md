@@ -1,5 +1,20 @@
 # Changelog
 
+## [25.20.0](https://github.com/flxbl-io/sfops/compare/v25.19.3...v25.20.0) (2024-02-22)
+
+
+### Features
+
+* **sfp:** core update to Feb24 version of sfp for flow automation ([fc3d042](https://github.com/flxbl-io/sfops/commit/fc3d0421c2f5a71f1d7ff6d7a019f376aea56c48))
+
+## [25.19.3](https://github.com/flxbl-io/sfops/compare/v25.19.2...v25.19.3) (2024-02-20)
+
+
+### Bug Fixes
+
+* **act-checkcisandbox:** add log grouping to make logs concise ([1f9c9b1](https://github.com/flxbl-io/sfops/commit/1f9c9b1ffab2f8cfdfd668f4b456b94b28e206aa))
+* **act-createsandbox:** add log grouping ([ff8d130](https://github.com/flxbl-io/sfops/commit/ff8d130a9718dcc7b7280f2846b9761ffdd4e8c3))
+
 ## [25.19.2](https://github.com/flxbl-io/sfops/compare/v25.19.1...v25.19.2) (2024-02-20)
 
 
