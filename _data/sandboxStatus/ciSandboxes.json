@@ -1,5 +1,13 @@
 [
   {
+    "name": "191146124",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:15:14Z",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "303685940",
     "status": "Available",
     "isActive": "true",
@@ -7,6 +15,14 @@
     "requested_at": "2024-02-22T06:09:04Z",
     "domain": "CORE",
     "created_at": "2024-02-22T08:08:48.694Z",
+    "type": "CI"
+  },
+  {
+    "name": "507630546",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:22:59Z",
+    "domain": "CORE",
     "type": "CI"
   },
   {
@@ -20,6 +36,14 @@
     "type": "CI"
   },
   {
+    "name": "636916405",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:22:59Z",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "765817595",
     "status": "Available",
     "isActive": "true",
@@ -27,6 +51,14 @@
     "requested_at": "2024-02-21T06:10:01Z",
     "domain": "CORE",
     "created_at": "2024-02-21T07:36:40.632Z",
+    "type": "CI"
+  },
+  {
+    "name": "774642465",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:15:14Z",
+    "domain": "CORE",
     "type": "CI"
   },
   {
@@ -48,6 +80,14 @@
     "type": "CI"
   },
   {
+    "name": "307063247",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:15:15Z",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "444453138",
     "status": "Available",
     "isActive": "true",
@@ -55,6 +95,14 @@
     "requested_at": "2024-02-21T06:10:03Z",
     "domain": "CORE",
     "created_at": "2024-02-21T09:10:36.298Z",
+    "type": "CI"
+  },
+  {
+    "name": "473678798",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:15:15Z",
+    "domain": "CORE",
     "type": "CI"
   },
   {
@@ -88,6 +136,14 @@
     "type": "CI"
   },
   {
+    "name": "211972254",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:22:59Z",
+    "domain": "HOTFIX",
+    "type": "CI"
+  },
+  {
     "name": "314866335",
     "status": "Available",
     "isActive": "true",
@@ -105,6 +161,14 @@
     "requested_at": "2024-02-21T06:10:02Z",
     "domain": "HOTFIX",
     "created_at": "2024-02-21T07:18:38.611Z",
+    "type": "CI"
+  },
+  {
+    "name": "985867482",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-02-22T09:15:13Z",
+    "domain": "HOTFIX",
     "type": "CI"
   }
 ]
