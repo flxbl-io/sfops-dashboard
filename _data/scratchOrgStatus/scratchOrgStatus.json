@@ -1,17 +1,9 @@
 {
-  "total": 15,
+  "total": 5,
   "inuse": 0,
-  "unused": 15,
+  "unused": 5,
   "inprovision": 0,
   "scratchOrgDetails": [
-    {
-      "tag": "ci",
-      "orgId": "00DH40000000sJt",
-      "loginURL": "https://site-momentum-7724-dev-ed.scratch.my.salesforce.com",
-      "username": "test-gtovgvp8j316@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    },
     {
       "tag": "ci",
       "orgId": "00D1m0000002fIm",
@@ -22,9 +14,9 @@
     },
     {
       "tag": "ci",
-      "orgId": "00DH30000000j3T",
-      "loginURL": "https://intelligence-dyno-3399-dev-ed.scratch.my.salesforce.com",
-      "username": "test-bqqyxm9odggl@example.com",
+      "orgId": "00DH40000000sJt",
+      "loginURL": "https://site-momentum-7724-dev-ed.scratch.my.salesforce.com",
+      "username": "test-gtovgvp8j316@example.com",
       "expiryDate": "2024-02-27",
       "status": "Available"
     },
@@ -38,90 +30,18 @@
     },
     {
       "tag": "ci",
-      "orgId": "00DH40000000sJp",
-      "loginURL": "https://flow-app-7211-dev-ed.scratch.my.salesforce.com",
-      "username": "test-8nbjor8dla0w@example.com",
+      "orgId": "00DH30000000j3T",
+      "loginURL": "https://intelligence-dyno-3399-dev-ed.scratch.my.salesforce.com",
+      "username": "test-bqqyxm9odggl@example.com",
       "expiryDate": "2024-02-27",
       "status": "Available"
     },
     {
-      "tag": "dev",
-      "orgId": "00D1y000000HCDN",
-      "loginURL": "https://java-speed-6878-dev-ed.scratch.my.salesforce.com",
-      "username": "test-tdlhk16e9svd@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000000izV",
-      "loginURL": "https://baybridge-basslake-2910-dev-ed.scratch.my.salesforce.com",
-      "username": "test-j69rvifyfy6z@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000000iw8",
-      "loginURL": "https://virgo-goldengate-7107-dev-ed.scratch.my.salesforce.com",
-      "username": "test-fxvvldp4omqk@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000000iXA",
-      "loginURL": "https://orion-littledipper-2305-dev-ed.scratch.my.salesforce.com",
-      "username": "test-bzagzb05ks2h@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HJGg",
-      "loginURL": "https://ability-force-4509-dev-ed.scratch.my.salesforce.com",
-      "username": "test-b4gnioxa0khi@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000000sJT",
-      "loginURL": "https://fun-app-8651-dev-ed.scratch.my.salesforce.com",
-      "username": "test-34aruk8iwgxw@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000000izH",
-      "loginURL": "https://americano-espresso-2342-dev-ed.scratch.my.salesforce.com",
-      "username": "test-rutgzwvca2tt@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HCCu",
-      "loginURL": "https://app-innovation-5860-dev-ed.scratch.my.salesforce.com",
-      "username": "test-m0o9znoelddf@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000000s9T",
-      "loginURL": "https://fun-fun-36122-dev-ed.scratch.my.salesforce.com",
-      "username": "test-osjdav0po62m@example.com",
-      "expiryDate": "2024-03-03",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HCC9",
-      "loginURL": "https://velocity-computing-8164-dev-ed.scratch.my.salesforce.com",
-      "username": "test-eju3exby402l@example.com",
-      "expiryDate": "2024-03-03",
+      "tag": "ci",
+      "orgId": "00DH40000000sJp",
+      "loginURL": "https://flow-app-7211-dev-ed.scratch.my.salesforce.com",
+      "username": "test-8nbjor8dla0w@example.com",
+      "expiryDate": "2024-02-27",
       "status": "Available"
     }
   ]
