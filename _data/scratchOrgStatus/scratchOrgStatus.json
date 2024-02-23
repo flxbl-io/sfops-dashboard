@@ -1,48 +1,7 @@
 {
-  "total": 5,
+  "total": 0,
   "inuse": 0,
-  "unused": 5,
+  "unused": 0,
   "inprovision": 0,
-  "scratchOrgDetails": [
-    {
-      "tag": "ci",
-      "orgId": "00D1m0000002fIm",
-      "loginURL": "https://business-data-7074-dev-ed.scratch.my.salesforce.com",
-      "username": "test-wta8pdcvin1n@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH40000000sJt",
-      "loginURL": "https://site-momentum-7724-dev-ed.scratch.my.salesforce.com",
-      "username": "test-gtovgvp8j316@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH30000000iQ3",
-      "loginURL": "https://lake-aries-9603-dev-ed.scratch.my.salesforce.com",
-      "username": "test-lx1npnntlyrt@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH30000000j3T",
-      "loginURL": "https://intelligence-dyno-3399-dev-ed.scratch.my.salesforce.com",
-      "username": "test-bqqyxm9odggl@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH40000000sJp",
-      "loginURL": "https://flow-app-7211-dev-ed.scratch.my.salesforce.com",
-      "username": "test-8nbjor8dla0w@example.com",
-      "expiryDate": "2024-02-27",
-      "status": "Available"
-    }
-  ]
+  "scratchOrgDetails": []
 }
