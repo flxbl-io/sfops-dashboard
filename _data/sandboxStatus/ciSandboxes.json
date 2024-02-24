@@ -58,16 +58,6 @@
     "type": "CI"
   },
   {
-    "name": "460662507",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708672507870,
-    "requested_at": "2024-02-23T06:09:28Z",
-    "domain": "CORE",
-    "created_at": "2024-02-23T07:15:07.870Z",
-    "type": "CI"
-  },
-  {
     "name": "520838421",
     "status": "Available",
     "isActive": "true",
@@ -75,16 +65,6 @@
     "requested_at": "2024-02-24T06:08:29Z",
     "domain": "CORE",
     "created_at": "2024-02-24T07:15:04.403Z",
-    "type": "CI"
-  },
-  {
-    "name": "850207494",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708672518176,
-    "requested_at": "2024-02-23T06:09:28Z",
-    "domain": "CORE",
-    "created_at": "2024-02-23T07:15:18.176Z",
     "type": "CI"
   },
   {
