@@ -1,7 +1,128 @@
 {
-  "total": 0,
+  "total": 15,
   "inuse": 0,
-  "unused": 0,
+  "unused": 15,
   "inprovision": 0,
-  "scratchOrgDetails": []
+  "scratchOrgDetails": [
+    {
+      "tag": "ci",
+      "orgId": "00DH30000000jG8",
+      "loginURL": "https://vente-scorpio-8497-dev-ed.scratch.my.salesforce.com",
+      "username": "test-zlsb0qlo79ka@example.com",
+      "expiryDate": "2024-03-01",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000000sQf",
+      "loginURL": "https://page-app-3004-dev-ed.scratch.my.salesforce.com",
+      "username": "test-nxp5htp16acx@example.com",
+      "expiryDate": "2024-03-01",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1y0000004Cc5",
+      "loginURL": "https://drive-fun-5645-dev-ed.scratch.my.salesforce.com",
+      "username": "test-beattdlnyxgd@example.com",
+      "expiryDate": "2024-03-01",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH40000000sNX",
+      "loginURL": "https://speed-customer-1710-dev-ed.scratch.my.salesforce.com",
+      "username": "test-atopjhoyjqth@example.com",
+      "expiryDate": "2024-03-01",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00DH30000000iW1",
+      "loginURL": "https://latte-broth-7143-dev-ed.scratch.my.salesforce.com",
+      "username": "test-m4hmszrfxf3q@example.com",
+      "expiryDate": "2024-03-01",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH30000000isH",
+      "loginURL": "https://vente-manhattan-178-dev-ed.scratch.my.salesforce.com",
+      "username": "test-3lcffuammqdj@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000000sN0",
+      "loginURL": "https://innovation-inspiration-2606-dev-ed.scratch.my.salesforce.com",
+      "username": "test-qihmnevntcb5@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002i3b",
+      "loginURL": "https://computing-dream-5437-dev-ed.scratch.my.salesforce.com",
+      "username": "test-1axs5twjig4r@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002jUy",
+      "loginURL": "https://velocity-force-8196-dev-ed.scratch.my.salesforce.com",
+      "username": "test-fmlg6ugha4je@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002jUr",
+      "loginURL": "https://fun-connect-3216-dev-ed.scratch.my.salesforce.com",
+      "username": "test-aterpec67nyl@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000000sHG",
+      "loginURL": "https://nosoftware-enterprise-7877-dev-ed.scratch.my.salesforce.com",
+      "username": "test-h0uszulhfov6@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000000sHB",
+      "loginURL": "https://inspiration-customer-1386-dev-ed.scratch.my.salesforce.com",
+      "username": "test-faxscp7oyvmw@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000000s6G",
+      "loginURL": "https://app-site-5874-dev-ed.scratch.my.salesforce.com",
+      "username": "test-urf6uusrhwji@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002fgQ",
+      "loginURL": "https://computing-customization-805-dev-ed.scratch.my.salesforce.com",
+      "username": "test-opqej7dlaxab@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002fl6",
+      "loginURL": "https://fun-page-1162-dev-ed.scratch.my.salesforce.com",
+      "username": "test-hazgdpit0f6i@example.com",
+      "expiryDate": "2024-03-06",
+      "status": "Available"
+    }
+  ]
 }
