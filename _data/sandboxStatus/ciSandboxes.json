@@ -1,7 +1,7 @@
 [
   {
     "name": "321702879",
-    "status": "InUse",
+    "status": "Available",
     "isActive": "true",
     "createdAt": 1708938486235,
     "assignedAt": 1708956864631,
@@ -14,7 +14,7 @@
   },
   {
     "name": "811209533",
-    "status": "InUse",
+    "status": "Available",
     "isActive": "true",
     "createdAt": 1708936787049,
     "assignedAt": 1708956871815,
