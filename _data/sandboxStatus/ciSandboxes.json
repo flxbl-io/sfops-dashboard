@@ -14,10 +14,13 @@
   },
   {
     "name": "811209533",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1708936787049,
+    "assignedAt": 1708956871815,
+    "issue": "80",
     "requested_at": "2024-02-26T06:09:41Z",
+    "assigned_at": "2024-02-26T14:14:31.815Z",
     "domain": "CORE",
     "created_at": "2024-02-26T08:39:47.049Z",
     "type": "CI"
