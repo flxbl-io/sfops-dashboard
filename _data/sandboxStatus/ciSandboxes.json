@@ -1,10 +1,13 @@
 [
   {
     "name": "321702879",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1708938486235,
+    "assignedAt": 1708956864631,
+    "issue": "114",
     "requested_at": "2024-02-26T06:09:41Z",
+    "assigned_at": "2024-02-26T14:14:24.631Z",
     "domain": "CORE",
     "created_at": "2024-02-26T09:08:06.235Z",
     "type": "CI"
