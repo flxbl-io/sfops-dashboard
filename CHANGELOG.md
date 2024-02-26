@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.20.1](https://github.com/flxbl-io/sfops/compare/v25.20.0...v25.20.1) (2024-02-22)
+
+
+### Bug Fixes
+
+* **act-createcisandbox:** handle error code 1 when file is locked by sf cli ([10fbe0f](https://github.com/flxbl-io/sfops/commit/10fbe0f596ee2b418cb729f633e4382e6a7432e8))
+* **act-reportgithubmetrics:** fix pagination causing issues with metrics not reported correctly ([8d6159b](https://github.com/flxbl-io/sfops/commit/8d6159be5dd5f3ad4c86b86828f54f554e7aad20))
+
 ## [25.20.0](https://github.com/flxbl-io/sfops/compare/v25.19.3...v25.20.0) (2024-02-22)
 
 
