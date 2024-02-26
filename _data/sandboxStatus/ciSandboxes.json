@@ -1,15 +1,5 @@
 [
   {
-    "name": "195300684",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708846569907,
-    "requested_at": "2024-02-25T06:08:53Z",
-    "domain": "CORE",
-    "created_at": "2024-02-25T07:36:09.907Z",
-    "type": "CI"
-  },
-  {
     "name": "321702879",
     "status": "Available",
     "isActive": "true",
@@ -27,16 +17,6 @@
     "requested_at": "2024-02-26T06:09:41Z",
     "domain": "CORE",
     "created_at": "2024-02-26T08:39:47.049Z",
-    "type": "CI"
-  },
-  {
-    "name": "853909722",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708846578867,
-    "requested_at": "2024-02-25T06:08:53Z",
-    "domain": "CORE",
-    "created_at": "2024-02-25T07:36:18.867Z",
     "type": "CI"
   },
   {
@@ -75,16 +55,6 @@
     "requested_at": "2024-02-25T06:08:53Z",
     "domain": "CORE",
     "created_at": "2024-02-25T07:39:04.684Z",
-    "type": "CI"
-  },
-  {
-    "name": "911970292",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1708845398488,
-    "requested_at": "2024-02-25T06:08:54Z",
-    "domain": "CORE",
-    "created_at": "2024-02-25T07:16:38.488Z",
     "type": "CI"
   },
   {
