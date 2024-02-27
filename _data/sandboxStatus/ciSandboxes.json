@@ -22,10 +22,12 @@
   },
   {
     "name": "721528878",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1709028627693,
     "requested_at": "2024-02-27T06:09:35Z",
     "domain": "CORE",
+    "created_at": "2024-02-27T10:10:27.693Z",
     "type": "CI"
   },
   {
