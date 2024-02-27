@@ -14,10 +14,12 @@
   },
   {
     "name": "488765552",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1709035785256,
     "requested_at": "2024-02-27T06:09:34Z",
     "domain": "CORE",
+    "created_at": "2024-02-27T12:09:45.256Z",
     "type": "CI"
   },
   {
@@ -99,16 +101,6 @@
     "requested_at": "2024-02-27T06:09:34Z",
     "domain": "HOTFIX",
     "created_at": "2024-02-27T07:43:22.305Z",
-    "type": "CI"
-  },
-  {
-    "name": "758828803",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1708931732039,
-    "requested_at": "2024-02-26T06:09:38Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-26T07:15:32.039Z",
     "type": "CI"
   }
 ]
