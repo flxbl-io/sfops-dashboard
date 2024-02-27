@@ -65,8 +65,8 @@
   },
   {
     "name": "530261595",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1708940304783,
     "requested_at": "2024-02-26T06:09:40Z",
     "domain": "CORE",
