@@ -88,16 +88,6 @@
     "type": "CI"
   },
   {
-    "name": "458254784",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1709019802305,
-    "requested_at": "2024-02-27T06:09:34Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-02-27T07:43:22.305Z",
-    "type": "CI"
-  },
-  {
     "name": "794438997",
     "status": "Available",
     "isActive": "true",
