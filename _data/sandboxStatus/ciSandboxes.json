@@ -31,8 +31,8 @@
   },
   {
     "name": "721528878",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1709028627693,
     "requested_at": "2024-02-27T06:09:35Z",
     "domain": "CORE",
