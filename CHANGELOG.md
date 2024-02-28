@@ -1,5 +1,30 @@
 # Changelog
 
+## [25.21.1](https://github.com/flxbl-io/sfops/compare/v25.21.0...v25.21.1) (2024-02-27)
+
+
+### Bug Fixes
+
+* **sfp:** update to v36.0.4 for sfp ([093d0e8](https://github.com/flxbl-io/sfops/commit/093d0e8caa90680e87ed1d63a83d921a8ad4e164))
+
+## [25.21.0](https://github.com/flxbl-io/sfops/compare/v25.20.1...v25.21.0) (2024-02-27)
+
+
+### Features
+
+* **cicd:** add seggregation between development and latest images ([84f79dd](https://github.com/flxbl-io/sfops/commit/84f79dd2a8cdb2536d6650053c596b0192f828f6))
+* **cicd:** build with exact version of sfp images ([2ecf17b](https://github.com/flxbl-io/sfops/commit/2ecf17be1afc9214078b28402ad46e8b577cedfb))
+
+
+### Bug Fixes
+
+* **cicd:** add a needs of development to tag image stage ([3520f20](https://github.com/flxbl-io/sfops/commit/3520f20975dbc8b5e84d9e0a3bf30bda22c62d5b))
+* **cicd:** fix the name of workflow to a generic one as this is generic ([823f0c0](https://github.com/flxbl-io/sfops/commit/823f0c09a776a95a4adeb37c261a74704c81b642))
+* **docs:** update readme with instructions on update ([1b9d355](https://github.com/flxbl-io/sfops/commit/1b9d355039b72d91b268fa3ae891443e8916aa06))
+* **sfp:** update command usage references to sfp as aligned sfp february version ([96859fe](https://github.com/flxbl-io/sfops/commit/96859fe1f73cf3c01cfa5690f0f05965e09c7f57))
+* **sf:** update usage of sf cli to  sf org  login  sfdx-url ([e106bce](https://github.com/flxbl-io/sfops/commit/e106bce9007fbf7d3e346dac7c6878a66ab6f839))
+* **wf-validate:** remove deprecated variable used in sfp ([69e943d](https://github.com/flxbl-io/sfops/commit/69e943db6d0105936133eacbeedecf921ff8f4c7))
+
 ## [25.20.1](https://github.com/flxbl-io/sfops/compare/v25.20.0...v25.20.1) (2024-02-22)
 
 
