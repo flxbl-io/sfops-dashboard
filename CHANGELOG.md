@@ -1,5 +1,20 @@
 # Changelog
 
+## [25.21.3](https://github.com/flxbl-io/sfops/compare/v25.21.2...v25.21.3) (2024-02-28)
+
+
+### Bug Fixes
+
+* **sfp:** update to 36.0.7 ([953cb97](https://github.com/flxbl-io/sfops/commit/953cb97496423772bff7f205bc043ae54077a5b0))
+
+## [25.21.2](https://github.com/flxbl-io/sfops/compare/v25.21.1...v25.21.2) (2024-02-28)
+
+
+### Bug Fixes
+
+* **act-checkcisandboxstatus:** add better error handling for user creation ([d37b5c0](https://github.com/flxbl-io/sfops/commit/d37b5c04f38933efffa33b3feda7481eb47b690c))
+* **docker:** update sfp to 36.0.6 for https://github.com/flxbl-io/sfp/issues/25 ([1103fbe](https://github.com/flxbl-io/sfops/commit/1103fbec4797ceb18e73ac03991b10fcba7e140c))
+
 ## [25.21.1](https://github.com/flxbl-io/sfops/compare/v25.21.0...v25.21.1) (2024-02-27)
 
 
