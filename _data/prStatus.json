@@ -15,7 +15,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 8581925019,
+      "elapsedTime": 8583882124,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
       "merged": false,
       "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
@@ -57,7 +57,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 8579518365,
+      "elapsedTime": 8581475336,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
       "merged": false,
       "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
@@ -96,7 +96,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 8490659876,
+      "elapsedTime": 8492616666,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
       "merged": false,
       "mergeCommitSha": "6647a0525355345d3b5af25c8687d8228c928d49",
@@ -146,7 +146,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 8140675292,
+      "elapsedTime": 8142631831,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
       "merged": false,
       "mergeCommitSha": "9fc9f5efdc5395068039f685ffba7a8ac3044174",
@@ -200,7 +200,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 7020810604,
+      "elapsedTime": 7022767071,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
       "merged": false,
       "mergeCommitSha": "f4698266500009939a64aa2c0839b4fa739f6b7c",
@@ -238,7 +238,11 @@
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [
         {
-          "key": "validation-failed",
+          "key": "frameworks",
+          "description": null
+        },
+        {
+          "key": "validation-succeeded",
           "description": ""
         },
         {
@@ -246,14 +250,14 @@
           "description": null
         }
       ],
-      "elapsedTime": 4709057831,
+      "elapsedTime": 4711014035,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
       "merged": false,
-      "mergeCommitSha": "766c92e425414bac5071f0bba16fad5cd347c60c",
+      "mergeCommitSha": "2406da4a7ea2a3aab1fc05fdee42baed8e84e32f",
       "buildActionLink": "",
       "checkStatus": "completed",
-      "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8050220679/job/21985580609",
+      "checkConclusion": "success",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8095178456/job/22121774217",
       "files": {
         "added": [],
         "deleted": [],
@@ -261,8 +265,8 @@
           "README.md"
         ]
       },
-      "commitsAhead": 2,
-      "commitsBehind": 2,
+      "commitsAhead": 3,
+      "commitsBehind": 0,
       "metadata": {}
     }
   },
