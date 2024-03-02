@@ -22,17 +22,17 @@
     },
     {
       "tag": "ci",
-      "orgId": "00DH40000000sd1",
-      "loginURL": "https://energy-platform-83872-dev-ed.scratch.my.salesforce.com",
-      "username": "test-1jqrp4sineww@example.com",
+      "orgId": "00D1y000000HSLf",
+      "loginURL": "https://innovation-customization50-dev-ed.scratch.my.salesforce.com",
+      "username": "test-vqkljwgk8ooh@example.com",
       "expiryDate": "2024-03-07",
       "status": "Available"
     },
     {
       "tag": "ci",
-      "orgId": "00D1y000000HSLf",
-      "loginURL": "https://innovation-customization50-dev-ed.scratch.my.salesforce.com",
-      "username": "test-vqkljwgk8ooh@example.com",
+      "orgId": "00DH40000000sd1",
+      "loginURL": "https://energy-platform-83872-dev-ed.scratch.my.salesforce.com",
+      "username": "test-1jqrp4sineww@example.com",
       "expiryDate": "2024-03-07",
       "status": "Available"
     },
@@ -70,6 +70,22 @@
     },
     {
       "tag": "dev",
+      "orgId": "00DH40000000sXp",
+      "loginURL": "https://ruby-customer-5364-dev-ed.scratch.my.salesforce.com",
+      "username": "test-hymen4akfqvk@example.com",
+      "expiryDate": "2024-03-12",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002iOL",
+      "loginURL": "https://business-ruby-5787-dev-ed.scratch.my.salesforce.com",
+      "username": "test-6zyhe6exav6u@example.com",
+      "expiryDate": "2024-03-12",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
       "orgId": "00D1m0000002iP9",
       "loginURL": "https://drive-momentum-6344-dev-ed.scratch.my.salesforce.com",
       "username": "test-nvsxnnr9x9ld@example.com",
@@ -86,25 +102,9 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1m0000002iOL",
-      "loginURL": "https://business-ruby-5787-dev-ed.scratch.my.salesforce.com",
-      "username": "test-6zyhe6exav6u@example.com",
-      "expiryDate": "2024-03-12",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000000sXp",
-      "loginURL": "https://ruby-customer-5364-dev-ed.scratch.my.salesforce.com",
-      "username": "test-hymen4akfqvk@example.com",
-      "expiryDate": "2024-03-12",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1m0000002f3z",
-      "loginURL": "https://saas-customization-3001-dev-ed.scratch.my.salesforce.com",
-      "username": "test-drxo7fgtakom@example.com",
+      "orgId": "00D1m0000002iAD",
+      "loginURL": "https://force-power-1561-dev-ed.scratch.my.salesforce.com",
+      "username": "test-i2wevhoyqmq6@example.com",
       "expiryDate": "2024-03-12",
       "status": "Available"
     },
@@ -118,9 +118,9 @@
     },
     {
       "tag": "dev",
-      "orgId": "00D1m0000002iAD",
-      "loginURL": "https://force-power-1561-dev-ed.scratch.my.salesforce.com",
-      "username": "test-i2wevhoyqmq6@example.com",
+      "orgId": "00D1m0000002f3z",
+      "loginURL": "https://saas-customization-3001-dev-ed.scratch.my.salesforce.com",
+      "username": "test-drxo7fgtakom@example.com",
       "expiryDate": "2024-03-12",
       "status": "Available"
     }
