@@ -68,16 +68,6 @@
     "type": "CI"
   },
   {
-    "name": "970990959",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1709541328681,
-    "requested_at": "2024-03-04T06:36:04Z",
-    "domain": "CORE",
-    "created_at": "2024-03-04T08:35:28.681Z",
-    "type": "CI"
-  },
-  {
     "name": "651094764",
     "status": "Available",
     "isActive": "true",
