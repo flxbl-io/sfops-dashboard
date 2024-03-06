@@ -11,8 +11,8 @@
   },
   {
     "name": "419167617",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1709624225477,
     "requested_at": "2024-03-05T06:09:12Z",
     "domain": "CORE",
