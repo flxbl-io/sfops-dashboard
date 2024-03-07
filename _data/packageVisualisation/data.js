@@ -5,6 +5,24 @@ const dataJson = [
       "package": "feature-management",
       "size": 18,
       "domain": "frameworks",
+      "when": "2024-03-07T17:56:41+11:00",
+      "fileCount": 40
+    },
+    {
+      "path": "unpackaged",
+      "package": "unpackaged",
+      "size": 10,
+      "domain": "unpackaged",
+      "when": "2024-03-07T17:56:41+11:00",
+      "fileCount": 3
+    }
+  ],
+  [
+    {
+      "path": "src/frameworks/feature-management",
+      "package": "feature-management",
+      "size": 18,
+      "domain": "frameworks",
       "when": "2024-03-01T00:52:36+11:00",
       "fileCount": 40
     },
