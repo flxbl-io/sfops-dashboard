@@ -1,5 +1,27 @@
 # Changelog
 
+## [25.21.6](https://github.com/flxbl-io/sfops/compare/v25.21.5...v25.21.6) (2024-03-01)
+
+
+### Bug Fixes
+
+* **wf-hotfix:** fix hotfix workflows due to an issue with sfp ([3d0acd7](https://github.com/flxbl-io/sfops/commit/3d0acd7b7b0adbeab70b7faa8db37e460d4df54a))
+
+## [25.21.5](https://github.com/flxbl-io/sfops/compare/v25.21.4...v25.21.5) (2024-02-29)
+
+
+### Bug Fixes
+
+* **sfp:** upgrade to 36.0.9 of sfp ([d7f591f](https://github.com/flxbl-io/sfops/commit/d7f591f74ef6cc63de82e86ea7316d54e18def5d))
+
+## [25.21.4](https://github.com/flxbl-io/sfops/compare/v25.21.3...v25.21.4) (2024-02-29)
+
+
+### Bug Fixes
+
+* **act-deleteSandbox:** fix incorrect login command used ([63316ba](https://github.com/flxbl-io/sfops/commit/63316bae242ece8310f1f362324cbbdc392b13b7))
+* **sfp:** update sfp to 36.0.9 for upstream fixes ([c1228c3](https://github.com/flxbl-io/sfops/commit/c1228c35ec2a53a5adc9e6a351a80f349cc8b02c))
+
 ## [25.21.3](https://github.com/flxbl-io/sfops/compare/v25.21.2...v25.21.3) (2024-02-28)
 
 
