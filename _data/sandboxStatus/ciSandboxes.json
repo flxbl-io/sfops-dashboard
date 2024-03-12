@@ -1,25 +1,5 @@
 [
   {
-    "name": "178137139",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1710144555938,
-    "requested_at": "2024-03-11T06:09:21Z",
-    "domain": "CORE",
-    "created_at": "2024-03-11T08:09:15.938Z",
-    "type": "CI"
-  },
-  {
-    "name": "188117170",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1710149801836,
-    "requested_at": "2024-03-11T06:09:21Z",
-    "domain": "CORE",
-    "created_at": "2024-03-11T09:36:41.836Z",
-    "type": "CI"
-  },
-  {
     "name": "190699261",
     "status": "Available",
     "isActive": "true",
@@ -46,16 +26,6 @@
     "type": "CI"
   },
   {
-    "name": "247519008",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1710149809705,
-    "requested_at": "2024-03-11T06:09:21Z",
-    "domain": "CORE",
-    "created_at": "2024-03-11T09:36:49.705Z",
-    "type": "CI"
-  },
-  {
     "name": "262787560",
     "status": "Available",
     "isActive": "true",
@@ -63,16 +33,6 @@
     "requested_at": "2024-03-12T06:09:42Z",
     "domain": "CORE",
     "created_at": "2024-03-12T11:07:50.590Z",
-    "type": "CI"
-  },
-  {
-    "name": "334534358",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1710144563046,
-    "requested_at": "2024-03-11T06:09:21Z",
-    "domain": "CORE",
-    "created_at": "2024-03-11T08:09:23.046Z",
     "type": "CI"
   },
   {
@@ -91,16 +51,6 @@
     "isActive": "true",
     "requested_at": "2024-03-12T06:09:40Z",
     "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "865688613",
-    "status": "Expired",
-    "isActive": "false",
-    "createdAt": 1710140953652,
-    "requested_at": "2024-03-11T06:09:20Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-03-11T07:09:13.652Z",
     "type": "CI"
   }
 ]
