@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.4](https://github.com/flxbl-io/sfops/compare/v25.22.3...v25.22.4) (2024-03-12)
+
+
+### Bug Fixes
+
+* **wf-build:** fix issue with sfp do not having the shortcode -r on changelog ([509ec40](https://github.com/flxbl-io/sfops/commit/509ec406e84cd79c68f9f16d195861e1032b0ea3))
+
 ## [25.22.3](https://github.com/flxbl-io/sfops/compare/v25.22.2...v25.22.3) (2024-03-12)
 
 
