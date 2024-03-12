@@ -1,5 +1,40 @@
 # Changelog
 
+## [25.22.0](https://github.com/flxbl-io/sfops/compare/v25.21.6...v25.22.0) (2024-03-12)
+
+
+### Features
+
+* **act-checksandboxstatus:** move to sfops for faster processing of sandbox status ([c718ba3](https://github.com/flxbl-io/sfops/commit/c718ba319a9ac988246fb6c36c20caf2cd2eb8e2))
+* **act-deletesandbox:** move to sfops delete sandbox ([2bc3859](https://github.com/flxbl-io/sfops/commit/2bc3859ed2ee5cd53ea067e78a91d30915928f15))
+* **act-wf-all:** update to sfops login and switch to light images for faster executions ([d3d1b50](https://github.com/flxbl-io/sfops/commit/d3d1b501b533aa86b0bede6562d779c4aa0c6931))
+* **docker:** add sfops cli to images ([6847263](https://github.com/flxbl-io/sfops/commit/6847263bfbfe2f5d60ceb328bcff140fdc69e1c5))
+* **docker:** ensure only provided sfops cli version is used ([1f08506](https://github.com/flxbl-io/sfops/commit/1f0850657837e3d0b8fce51ee2d37a9eb557b937))
+* **sfops-cli:** use only release tagged versions ([76e7cf2](https://github.com/flxbl-io/sfops/commit/76e7cf24dc79fcc1737d941609bc6c938ed83f38))
+* **wf-acceslevel:** Add workflow for handling elevated access level requests ([61628dd](https://github.com/flxbl-io/sfops/commit/61628ddb23a413cd6bd26eee4d98802eeef6425e))
+* **wf-sandbox:** change to lite version for faster execution ([2ec9c34](https://github.com/flxbl-io/sfops/commit/2ec9c34d380060df4f19d6823a34202ae973b5ea))
+
+
+### Bug Fixes
+
+* **act-checkcisandboxstatus:** move to sfops cli based auth ([f708127](https://github.com/flxbl-io/sfops/commit/f7081274d5924e71eed533efb73b284ee3c40b1c))
+* **act-checkCiSandboxStatus:** reduce average creation time ([f708127](https://github.com/flxbl-io/sfops/commit/f7081274d5924e71eed533efb73b284ee3c40b1c))
+* **act-closestale:** fix missing path in github action trigger ([c4f8e05](https://github.com/flxbl-io/sfops/commit/c4f8e057759c20b6617be858bd02c7184572e788))
+* **act-refreshfrontdoorurl:** switch to sfops cli auth ([f56e27e](https://github.com/flxbl-io/sfops/commit/f56e27e503f8bf7c78b1218072a8dc6d30a5b3fc))
+* **act-wf-all:** update to  correct usage of docker container string ([46a1770](https://github.com/flxbl-io/sfops/commit/46a1770096f4816fb423c5472b30325dde840d4a))
+* **cicd:** fix docker image token ([04427f3](https://github.com/flxbl-io/sfops/commit/04427f3196185703b564cd575b8c766973c1c0f4))
+* **cicd:** fix github token ([dab4798](https://github.com/flxbl-io/sfops/commit/dab4798b762f43d7d260f5444b1be90741d72a88))
+* **ci:** externalize version of image used during build ([68907c4](https://github.com/flxbl-io/sfops/commit/68907c49b807689830b84af0b7fae61d1181a886))
+* **ci:** revert to version in code for better traceability ([69f9bba](https://github.com/flxbl-io/sfops/commit/69f9bba52b4e79b1faf1e50f2206536193228c9f))
+* **docker:** add pnpm for building sfops cli ([78e425b](https://github.com/flxbl-io/sfops/commit/78e425b73c09230f14801488e07dfb68a9d16d95))
+* **docker:** fix position of ARGS ([68a79ad](https://github.com/flxbl-io/sfops/commit/68a79ad4e5e8c209f8a388943139f809fa860090))
+* **docker:** update docker files with redeclaration of ARG ([b0b1f5f](https://github.com/flxbl-io/sfops/commit/b0b1f5fbccaa9eba5bdc73908dfa500fc45a21a7))
+* **sfops:** update to 1.2.2 which handles sandbox error ([8c54436](https://github.com/flxbl-io/sfops/commit/8c54436a936d03c8f3764b6c7d67cb51dbf5a543))
+* **wf-elevate:** typos and labels ([1dc3269](https://github.com/flxbl-io/sfops/commit/1dc3269d88a05f1d2c2389769fc1108dad566bc7))
+* **wf-elevate:** update to sfops cli 1.1.0 ([e8148dc](https://github.com/flxbl-io/sfops/commit/e8148dcad9b143f298f808f677126cad2d1a740f))
+* **wf-issue-analyzer:** remove delete/test delete as it has hit too many limits ([53e7988](https://github.com/flxbl-io/sfops/commit/53e7988322843dd9beaef62190c8e07601d43fd8))
+* **wf-validate:** use sfops to authenticate to org ([cf14466](https://github.com/flxbl-io/sfops/commit/cf14466d3f5120b1e77d09b6c597c7097f9bfec3))
+
 ## [25.21.6](https://github.com/flxbl-io/sfops/compare/v25.21.5...v25.21.6) (2024-03-01)
 
 
