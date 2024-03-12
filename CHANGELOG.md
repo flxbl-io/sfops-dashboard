@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.3](https://github.com/flxbl-io/sfops/compare/v25.22.2...v25.22.3) (2024-03-12)
+
+
+### Bug Fixes
+
+* **act-authtoenv:** fix incorrect alias derefrencing ([9086970](https://github.com/flxbl-io/sfops/commit/908697009001fc75b2626d927226848d11853444))
+
 ## [25.22.2](https://github.com/flxbl-io/sfops/compare/v25.22.1...v25.22.2) (2024-03-12)
 
 
