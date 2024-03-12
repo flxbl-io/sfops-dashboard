@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.1](https://github.com/flxbl-io/sfops/compare/v25.22.0...v25.22.1) (2024-03-12)
+
+
+### Bug Fixes
+
+* **act-checkcisandboxstatus:** use devhub alias as opposed to incorrect variable ([3269450](https://github.com/flxbl-io/sfops/commit/3269450e6de0e24286b76cdbe5892ad416da20e6))
+
 ## [25.22.0](https://github.com/flxbl-io/sfops/compare/v25.21.6...v25.22.0) (2024-03-12)
 
 
