@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.5](https://github.com/flxbl-io/sfops/compare/v25.22.4...v25.22.5) (2024-03-12)
+
+
+### Bug Fixes
+
+* **wf-build:** add skipifalready installed to build/deploy ([2e79419](https://github.com/flxbl-io/sfops/commit/2e7941904e625d4d744f9ad3f08c804bbec7771d))
+
 ## [25.22.4](https://github.com/flxbl-io/sfops/compare/v25.22.3...v25.22.4) (2024-03-12)
 
 
