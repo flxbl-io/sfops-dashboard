@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.6](https://github.com/flxbl-io/sfops/compare/v25.22.5...v25.22.6) (2024-03-12)
+
+
+### Bug Fixes
+
+* **wf-build:** fix incorrect build command ([db130e2](https://github.com/flxbl-io/sfops/commit/db130e205e0265915372684057e04732dbb28018))
+
 ## [25.22.5](https://github.com/flxbl-io/sfops/compare/v25.22.4...v25.22.5) (2024-03-12)
 
 
