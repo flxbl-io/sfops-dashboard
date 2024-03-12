@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.2](https://github.com/flxbl-io/sfops/compare/v25.22.1...v25.22.2) (2024-03-12)
+
+
+### Bug Fixes
+
+* **wf-elevate:** fix the path to actions that used for elevate ([cdbfd80](https://github.com/flxbl-io/sfops/commit/cdbfd80facbc014530bb2394b900afc4c1112d32))
+
 ## [25.22.1](https://github.com/flxbl-io/sfops/compare/v25.22.0...v25.22.1) (2024-03-12)
 
 
