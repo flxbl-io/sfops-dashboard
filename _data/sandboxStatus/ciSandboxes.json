@@ -1,8 +1,8 @@
 [
   {
     "name": "178137139",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1710144555938,
     "requested_at": "2024-03-11T06:09:21Z",
     "domain": "CORE",
@@ -67,8 +67,8 @@
   },
   {
     "name": "334534358",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1710144563046,
     "requested_at": "2024-03-11T06:09:21Z",
     "domain": "CORE",
