@@ -18,11 +18,12 @@
     "requester": "azlam-abdulsalam",
     "email": "azlam@adiza.dev",
     "issueNumber": "138",
-    "status": "InProgress",
+    "status": "Assigned",
     "isActive": "true",
+    "createdAt": 1710219167302,
     "requested_at": "2024-03-12T02:40:40Z",
     "domain": "",
-    "created_at": "2024-03-12T02:40:40Z",
+    "created_at": "2024-03-12T04:52:47.302Z",
     "type": "Developer"
   }
 ]
