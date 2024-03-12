@@ -95,8 +95,8 @@
   },
   {
     "name": "865688613",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1710140953652,
     "requested_at": "2024-03-11T06:09:20Z",
     "domain": "HOTFIX",
