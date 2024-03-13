@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.9](https://github.com/flxbl-io/sfops/compare/v25.22.8...v25.22.9) (2024-03-13)
+
+
+### Bug Fixes
+
+* **wf-pr-validate:** move to sfops for login ([e79e2f7](https://github.com/flxbl-io/sfops/commit/e79e2f7fe1d2efb2c9cfc6b9e5dcf2c34e6b2be6))
+
 ## [25.22.8](https://github.com/flxbl-io/sfops/compare/v25.22.7...v25.22.8) (2024-03-13)
 
 
