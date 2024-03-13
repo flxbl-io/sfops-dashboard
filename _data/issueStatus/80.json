@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,10 +37,10 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-03-13T04:02:21Z",
+    "updated_at": "2024-03-13T06:43:29Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "38209a57a2ceaeff56c9708c63675faf6c29df98",
+    "merge_commit_sha": "d073e43c410be7cfeded0321758499e42efe3c09",
     "assignee": null,
     "assignees": [],
     "requested_reviewers": [],
@@ -179,7 +179,7 @@
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 760,
+        "size": 762,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -193,7 +193,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 12,
+        "open_issues_count": 13,
         "license": {
           "key": "other",
           "name": "Other",
@@ -207,7 +207,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 12,
+        "open_issues": 13,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -310,7 +310,7 @@
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 760,
+        "size": 762,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -324,7 +324,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 12,
+        "open_issues_count": 13,
         "license": {
           "key": "other",
           "name": "Other",
@@ -338,7 +338,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 12,
+        "open_issues": 13,
         "watchers": 0,
         "default_branch": "main"
       }
