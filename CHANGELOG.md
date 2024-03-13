@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.7](https://github.com/flxbl-io/sfops/compare/v25.22.6...v25.22.7) (2024-03-12)
+
+
+### Bug Fixes
+
+* **wf-validate:** rollback to sf login ([8f1b75c](https://github.com/flxbl-io/sfops/commit/8f1b75c4aeff73303dbc0998963841bf158870cc))
+
 ## [25.22.6](https://github.com/flxbl-io/sfops/compare/v25.22.5...v25.22.6) (2024-03-12)
 
 
