@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.22.8](https://github.com/flxbl-io/sfops/compare/v25.22.7...v25.22.8) (2024-03-13)
+
+
+### Bug Fixes
+
+* **wf-elevate:** fix messages used while elevating ([654c308](https://github.com/flxbl-io/sfops/commit/654c308afdbe535763e7ff88f21601076b711072))
+
 ## [25.22.7](https://github.com/flxbl-io/sfops/compare/v25.22.6...v25.22.7) (2024-03-12)
 
 
