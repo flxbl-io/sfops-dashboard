@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,10 +37,10 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-03-01T00:29:34Z",
+    "updated_at": "2024-03-13T03:49:39Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "298bdaa5f1cdd490299a21718871f32d3eb23658",
+    "merge_commit_sha": "38209a57a2ceaeff56c9708c63675faf6c29df98",
     "assignee": null,
     "assignees": [],
     "requested_reviewers": [],
@@ -80,11 +80,11 @@
     "review_comments_url": "https://api.github.com/repos/flxbl-io/sf-core/pulls/80/comments",
     "review_comment_url": "https://api.github.com/repos/flxbl-io/sf-core/pulls/comments{/number}",
     "comments_url": "https://api.github.com/repos/flxbl-io/sf-core/issues/80/comments",
-    "statuses_url": "https://api.github.com/repos/flxbl-io/sf-core/statuses/e353a7d36b526067b808ff5511374de4fae6b78c",
+    "statuses_url": "https://api.github.com/repos/flxbl-io/sf-core/statuses/1d57400f585b95c372e279f92ba8bf1304c9237d",
     "head": {
       "label": "flxbl-io:feat/comment-test",
       "ref": "feat/comment-test",
-      "sha": "e353a7d36b526067b808ff5511374de4fae6b78c",
+      "sha": "1d57400f585b95c372e279f92ba8bf1304c9237d",
       "user": {
         "login": "flxbl-io",
         "id": 142315319,
@@ -173,13 +173,13 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2024-02-09T07:57:11Z",
-        "pushed_at": "2024-03-01T00:22:00Z",
+        "pushed_at": "2024-03-13T03:49:20Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 768,
+        "size": 760,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -193,7 +193,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 15,
+        "open_issues_count": 12,
         "license": {
           "key": "other",
           "name": "Other",
@@ -207,7 +207,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 15,
+        "open_issues": 12,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -215,7 +215,7 @@
     "base": {
       "label": "flxbl-io:main",
       "ref": "main",
-      "sha": "4d4092f6704d0a8afb2a085fecf83e95deaae7ca",
+      "sha": "73a0c1e98290b7014331e05d934c0383b7daf53c",
       "user": {
         "login": "flxbl-io",
         "id": 142315319,
@@ -304,13 +304,13 @@
         "deployments_url": "https://api.github.com/repos/flxbl-io/sf-core/deployments",
         "created_at": "2023-08-25T23:15:35Z",
         "updated_at": "2024-02-09T07:57:11Z",
-        "pushed_at": "2024-03-01T00:22:00Z",
+        "pushed_at": "2024-03-13T03:49:20Z",
         "git_url": "git://github.com/flxbl-io/sf-core.git",
         "ssh_url": "git@github.com:flxbl-io/sf-core.git",
         "clone_url": "https://github.com/flxbl-io/sf-core.git",
         "svn_url": "https://github.com/flxbl-io/sf-core",
         "homepage": "https://flxbl-io.github.io/sfops-dashboard/",
-        "size": 768,
+        "size": 760,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "Apex",
@@ -324,7 +324,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 15,
+        "open_issues_count": 12,
         "license": {
           "key": "other",
           "name": "Other",
@@ -338,7 +338,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 15,
+        "open_issues": 12,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -366,7 +366,7 @@
         "href": "https://api.github.com/repos/flxbl-io/sf-core/pulls/80/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/flxbl-io/sf-core/statuses/e353a7d36b526067b808ff5511374de4fae6b78c"
+        "href": "https://api.github.com/repos/flxbl-io/sf-core/statuses/1d57400f585b95c372e279f92ba8bf1304c9237d"
       }
     },
     "author_association": "CONTRIBUTOR",
@@ -380,7 +380,7 @@
     "comments": 38,
     "review_comments": 0,
     "maintainer_can_modify": false,
-    "commits": 11,
+    "commits": 12,
     "additions": 2,
     "deletions": 1,
     "changed_files": 1
