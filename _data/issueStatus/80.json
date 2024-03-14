@@ -1,5 +1,5 @@
 {
-  "status": "validated",
+  "status": "validation",
   "issue_number": "80",
   "branch": "feat/comment-test",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Update comment to test sfops",
     "created_at": "2023-11-27T05:47:23Z",
-    "updated_at": "2024-03-13T06:52:15Z",
+    "updated_at": "2024-03-14T03:09:30Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "d073e43c410be7cfeded0321758499e42efe3c09",
@@ -193,7 +193,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 13,
+        "open_issues_count": 12,
         "license": {
           "key": "other",
           "name": "Other",
@@ -207,7 +207,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 13,
+        "open_issues": 12,
         "watchers": 0,
         "default_branch": "main"
       }
@@ -324,7 +324,7 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 13,
+        "open_issues_count": 12,
         "license": {
           "key": "other",
           "name": "Other",
@@ -338,7 +338,7 @@
         "topics": [],
         "visibility": "private",
         "forks": 0,
-        "open_issues": 13,
+        "open_issues": 12,
         "watchers": 0,
         "default_branch": "main"
       }
