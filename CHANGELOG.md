@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.23.3](https://github.com/flxbl-io/sfops/compare/v25.23.2...v25.23.3) (2024-03-14)
+
+
+### Bug Fixes
+
+* **wf-apextest:** ensure sbx name is respected by apex tests ([47a4157](https://github.com/flxbl-io/sfops/commit/47a4157cb532cd364e82760d28b640699f48feb2))
+
 ## [25.23.2](https://github.com/flxbl-io/sfops/compare/v25.23.1...v25.23.2) (2024-03-14)
 
 
