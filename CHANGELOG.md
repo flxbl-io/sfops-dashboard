@@ -1,5 +1,20 @@
 # Changelog
 
+## [25.23.0](https://github.com/flxbl-io/sfops/compare/v25.22.12...v25.23.0) (2024-03-14)
+
+
+### Features
+
+* **act-checksandboxstatus:** move to sfops cli for user creation ([5828e86](https://github.com/flxbl-io/sfops/commit/5828e86a4c1669f24591e643ad781842a476045f))
+* **sfops-cli:** update to 1.4.0 ([807dbaa](https://github.com/flxbl-io/sfops/commit/807dbaa4d30e156e781fb0786abd5e1bd98c5243))
+
+
+### Bug Fixes
+
+* **act-checkcisandbox:** remove build of create all users ([c47804e](https://github.com/flxbl-io/sfops/commit/c47804e3b1f0e00f68ffef3e73f0a437b47506c1))
+* add trivy to docker build ([9baa1f4](https://github.com/flxbl-io/sfops/commit/9baa1f4dd4ea3340c497a7ab293ac882e47dd3f1))
+* **cicd:** ensure release-please is only triggered on merge ([d58cd61](https://github.com/flxbl-io/sfops/commit/d58cd616b335fc13d65867a21a659bf651294b93))
+
 ## [25.22.12](https://github.com/flxbl-io/sfops/compare/v25.22.11...v25.22.12) (2024-03-13)
 
 
