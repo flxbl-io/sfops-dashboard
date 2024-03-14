@@ -1,5 +1,17 @@
 # Changelog
 
+## [25.24.0](https://github.com/flxbl-io/sfops/compare/v25.23.4...v25.24.0) (2024-03-14)
+
+
+### Features
+
+* **sfops-cli:** update to 1.4.3 ([a7822b4](https://github.com/flxbl-io/sfops/commit/a7822b4ce57db38afe8ccef9f2e4ad9b5dcc81a5))
+
+
+### Bug Fixes
+
+* **act-checkSandboxStatus:** fix incorrect alias and add error messages ([1ca3319](https://github.com/flxbl-io/sfops/commit/1ca33197f3b2c609c20dce8aaf613c64cf4b047f))
+
 ## [25.23.4](https://github.com/flxbl-io/sfops/compare/v25.23.3...v25.23.4) (2024-03-14)
 
 
