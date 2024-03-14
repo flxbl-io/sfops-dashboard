@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.23.4](https://github.com/flxbl-io/sfops/compare/v25.23.3...v25.23.4) (2024-03-14)
+
+
+### Bug Fixes
+
+* **wf-apex-test:** fix incorrect $ before env name ([96abb67](https://github.com/flxbl-io/sfops/commit/96abb6776ce82adce1ee2d16c3870d488f983338))
+
 ## [25.23.3](https://github.com/flxbl-io/sfops/compare/v25.23.2...v25.23.3) (2024-03-14)
 
 
