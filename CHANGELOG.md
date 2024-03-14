@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.24.1](https://github.com/flxbl-io/sfops/compare/v25.24.0...v25.24.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* **act-checksandboxStatus:** fix incorrect dereference ([0078df8](https://github.com/flxbl-io/sfops/commit/0078df8dcf54e93533d363fff2c820f1e9f66049))
+
 ## [25.24.0](https://github.com/flxbl-io/sfops/compare/v25.23.4...v25.24.0) (2024-03-14)
 
 
