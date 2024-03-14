@@ -1,5 +1,26 @@
 # Changelog
 
+## [25.22.12](https://github.com/flxbl-io/sfops/compare/v25.22.11...v25.22.12) (2024-03-13)
+
+
+### Bug Fixes
+
+* **sfops-cli:** update version to 1.3.1 ([acfcdc2](https://github.com/flxbl-io/sfops/commit/acfcdc291a9fead74d211132951a5db448058a21))
+
+## [25.22.11](https://github.com/flxbl-io/sfops/compare/v25.22.10...v25.22.11) (2024-03-13)
+
+
+### Bug Fixes
+
+* **sfops-cli:** update to 1.3.0 ([5cfaeb5](https://github.com/flxbl-io/sfops/commit/5cfaeb5af6a35c034ed9e260f0a6e77577734844))
+
+## [25.22.10](https://github.com/flxbl-io/sfops/compare/v25.22.9...v25.22.10) (2024-03-13)
+
+
+### Bug Fixes
+
+* **act-checkcisandboxstatus:** fix incorrect dereference ([d5611ba](https://github.com/flxbl-io/sfops/commit/d5611ba2e54b77ccbd3fc33d1941efdd5e099a7d))
+
 ## [25.22.9](https://github.com/flxbl-io/sfops/compare/v25.22.8...v25.22.9) (2024-03-13)
 
 
