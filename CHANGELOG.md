@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.23.1](https://github.com/flxbl-io/sfops/compare/v25.23.0...v25.23.1) (2024-03-14)
+
+
+### Bug Fixes
+
+* **wf-pre-release:** change to sfops lite image for faster response ([c2cdc41](https://github.com/flxbl-io/sfops/commit/c2cdc4169751119379e799eb7b04735889dee603))
+
 ## [25.23.0](https://github.com/flxbl-io/sfops/compare/v25.22.12...v25.23.0) (2024-03-14)
 
 
