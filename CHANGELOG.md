@@ -1,5 +1,12 @@
 # Changelog
 
+## [25.23.2](https://github.com/flxbl-io/sfops/compare/v25.23.1...v25.23.2) (2024-03-14)
+
+
+### Bug Fixes
+
+* **auth:** remove devhub_username output from actions ([25592e2](https://github.com/flxbl-io/sfops/commit/25592e2d935e9989ea54cf498ba03f532c4e6638))
+
 ## [25.23.1](https://github.com/flxbl-io/sfops/compare/v25.23.0...v25.23.1) (2024-03-14)
 
 
