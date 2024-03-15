@@ -1,5 +1,22 @@
 # Changelog
 
+## [26.0.0](https://github.com/flxbl-io/sfops/compare/v25.25.0...v26.0.0) (2024-03-15)
+
+
+### Features
+
+* **publish:** add a continue on error to enable retry on publish ([c84f058](https://github.com/flxbl-io/sfops/commit/c84f058e59fd424ceb457bdd13c7a2101c3a0a11))
+* **sfops-cli:** update to 1.5.0 ([db4fec6](https://github.com/flxbl-io/sfops/commit/db4fec60b0feb69bba70520149783321b072e69a))
+
+
+## [25.25.0](https://github.com/flxbl-io/sfops/compare/v25.24.2...v25.25.0) (2024-03-15)
+
+
+### Features
+
+* **publish:** add a continue on error to enable retry on publish ([c84f058](https://github.com/flxbl-io/sfops/commit/c84f058e59fd424ceb457bdd13c7a2101c3a0a11))
+* **sfops-cli:** update to 1.5.0 ([db4fec6](https://github.com/flxbl-io/sfops/commit/db4fec60b0feb69bba70520149783321b072e69a))
+
 ## [25.24.2](https://github.com/flxbl-io/sfops/compare/v25.24.1...v25.24.2) (2024-03-14)
 
 
