@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.1.1](https://github.com/flxbl-io/sfops/compare/v26.1.0...v26.1.1) (2024-03-15)
+
+
+### Bug Fixes
+
+* **sfp-artifact-installer:** use revised sfp commands ([7c15f41](https://github.com/flxbl-io/sfops/commit/7c15f413f5c7ffc1b9f9fa17fa5c204f1d66aafb))
+
 ## [26.1.0](https://github.com/flxbl-io/sfops/compare/v26.0.0...v26.1.0) (2024-03-15)
 
 
