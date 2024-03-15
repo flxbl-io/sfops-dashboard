@@ -1,5 +1,13 @@
 # Changelog
 
+## [25.24.2](https://github.com/flxbl-io/sfops/compare/v25.24.1...v25.24.2) (2024-03-14)
+
+
+### Bug Fixes
+
+* **act-checksandboxstatus:** add additional logging ([b2cf316](https://github.com/flxbl-io/sfops/commit/b2cf316ee882ec2b21fe0dbf369b10df4d0be3c5))
+* **cicd:** remove trigger on every push ([f2770c6](https://github.com/flxbl-io/sfops/commit/f2770c6adf186da7b1acbd56916e6c075341f553))
+
 ## [25.24.1](https://github.com/flxbl-io/sfops/compare/v25.24.0...v25.24.1) (2024-03-14)
 
 
