@@ -1,18 +1,22 @@
 [
   {
     "name": "107761031",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1710493683865,
     "requested_at": "2024-03-15T06:09:41Z",
     "domain": "CORE",
+    "created_at": "2024-03-15T09:08:03.865Z",
     "type": "CI"
   },
   {
     "name": "528501422",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1710493691349,
     "requested_at": "2024-03-15T06:09:40Z",
     "domain": "CORE",
+    "created_at": "2024-03-15T09:08:11.349Z",
     "type": "CI"
   },
   {
