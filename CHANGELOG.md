@@ -1,5 +1,17 @@
 # Changelog
 
+## [26.1.0](https://github.com/flxbl-io/sfops/compare/v26.0.0...v26.1.0) (2024-03-15)
+
+
+### Features
+
+* **wf-build:** move to faster docker image ([3c60d4e](https://github.com/flxbl-io/sfops/commit/3c60d4e2137f5f45bc2fccadc27cc3c762bb463b))
+
+
+### Bug Fixes
+
+* update changelog to be accurate ([61c10a7](https://github.com/flxbl-io/sfops/commit/61c10a706a2e451e1ee5848fdb9822a072277250))
+
 ## [26.0.0](https://github.com/flxbl-io/sfops/compare/v25.25.0...v26.0.0) (2024-03-15)
 
 
