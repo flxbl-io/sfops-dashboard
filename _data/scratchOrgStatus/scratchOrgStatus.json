@@ -22,6 +22,14 @@
     },
     {
       "tag": "ci",
+      "orgId": "00D1y0000004Dvo",
+      "loginURL": "https://drive-business-3057-dev-ed.scratch.my.salesforce.com",
+      "username": "test-qzuxylsf3jua@example.com",
+      "expiryDate": "2024-03-17",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
       "orgId": "00D1y0000004JX9",
       "loginURL": "https://force-business-126-dev-ed.scratch.my.salesforce.com",
       "username": "test-yy0p1qupzbjt@example.com",
@@ -33,14 +41,6 @@
       "orgId": "00D1y000000H8OU",
       "loginURL": "https://energy-data-2893-dev-ed.scratch.my.salesforce.com",
       "username": "test-lpxjczyvaxms@example.com",
-      "expiryDate": "2024-03-17",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1y0000004Dvo",
-      "loginURL": "https://drive-business-3057-dev-ed.scratch.my.salesforce.com",
-      "username": "test-qzuxylsf3jua@example.com",
       "expiryDate": "2024-03-17",
       "status": "Available"
     }
