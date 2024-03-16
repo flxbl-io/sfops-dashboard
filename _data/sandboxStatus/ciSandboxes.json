@@ -91,10 +91,12 @@
   },
   {
     "name": "442706380",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1710572901814,
     "requested_at": "2024-03-16T06:08:58Z",
     "domain": "HOTFIX",
+    "created_at": "2024-03-16T07:08:21.814Z",
     "type": "CI"
   }
 ]
