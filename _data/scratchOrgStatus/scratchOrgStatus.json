@@ -1,15 +1,87 @@
 {
-  "total": 5,
+  "total": 15,
   "inuse": 0,
-  "unused": 5,
+  "unused": 15,
   "inprovision": 0,
   "scratchOrgDetails": [
     {
-      "tag": "ci",
-      "orgId": "00D1y00000047wo",
-      "loginURL": "https://efficiency-customer-5267-dev-ed.scratch.my.salesforce.com",
-      "username": "test-uouxpzgkbegn@example.com",
-      "expiryDate": "2024-03-17",
+      "tag": "dev",
+      "orgId": "00D1m0000003CAS",
+      "loginURL": "https://enterprise-force-3461-dev-ed.scratch.my.salesforce.com",
+      "username": "test-yvgh3dgsvxch@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000003C9x",
+      "loginURL": "https://momentum-enterprise-9435-dev-ed.scratch.my.salesforce.com",
+      "username": "test-mjqohq4acsdm@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH30000000kPr",
+      "loginURL": "https://tonkatsu-integrate-8006-dev-ed.scratch.my.salesforce.com",
+      "username": "test-ainv0ob7jcrt@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1y000000HKO4",
+      "loginURL": "https://drive-nosoftware-1956-dev-ed.scratch.my.salesforce.com",
+      "username": "test-byzc3l4gmhzk@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000003C8Y",
+      "loginURL": "https://momentum-inspiration-8383-dev-ed.scratch.my.salesforce.com",
+      "username": "test-lvzc0h9q9r23@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1m0000002ikl",
+      "loginURL": "https://flow-platform-4992-dev-ed.scratch.my.salesforce.com",
+      "username": "test-sjsxddlyjieu@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00D1y0000004Ddy",
+      "loginURL": "https://computing-force-5827-dev-ed.scratch.my.salesforce.com",
+      "username": "test-kgzfwohfxxoe@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH30000000jnj",
+      "loginURL": "https://espresso-baybridge-549-dev-ed.scratch.my.salesforce.com",
+      "username": "test-8catjmgggkhw@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH40000000tcu",
+      "loginURL": "https://java-nosoftware-3278-dev-ed.scratch.my.salesforce.com",
+      "username": "test-idwsxtuy389t@example.com",
+      "expiryDate": "2024-03-27",
+      "status": "Available"
+    },
+    {
+      "tag": "dev",
+      "orgId": "00DH30000000jnA",
+      "loginURL": "https://process-nitro-1461-dev-ed.scratch.my.salesforce.com",
+      "username": "test-zqrps8gowote@example.com",
+      "expiryDate": "2024-03-27",
       "status": "Available"
     },
     {
@@ -22,9 +94,9 @@
     },
     {
       "tag": "ci",
-      "orgId": "00D1y0000004JX9",
-      "loginURL": "https://force-business-126-dev-ed.scratch.my.salesforce.com",
-      "username": "test-yy0p1qupzbjt@example.com",
+      "orgId": "00D1y00000047wo",
+      "loginURL": "https://efficiency-customer-5267-dev-ed.scratch.my.salesforce.com",
+      "username": "test-uouxpzgkbegn@example.com",
       "expiryDate": "2024-03-17",
       "status": "Available"
     },
@@ -41,6 +113,14 @@
       "orgId": "00D1y0000004Dvo",
       "loginURL": "https://drive-business-3057-dev-ed.scratch.my.salesforce.com",
       "username": "test-qzuxylsf3jua@example.com",
+      "expiryDate": "2024-03-17",
+      "status": "Available"
+    },
+    {
+      "tag": "ci",
+      "orgId": "00D1y0000004JX9",
+      "loginURL": "https://force-business-126-dev-ed.scratch.my.salesforce.com",
+      "username": "test-yy0p1qupzbjt@example.com",
       "expiryDate": "2024-03-17",
       "status": "Available"
     }
