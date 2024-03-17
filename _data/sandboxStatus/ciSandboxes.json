@@ -16,16 +16,6 @@
     "type": "CI"
   },
   {
-    "name": "953591103",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1710576561449,
-    "requested_at": "2024-03-16T06:08:58Z",
-    "domain": "CORE",
-    "created_at": "2024-03-16T08:09:21.449Z",
-    "type": "CI"
-  },
-  {
     "name": "109472162",
     "status": "InProgress",
     "isActive": "true",
@@ -39,16 +29,6 @@
     "isActive": "true",
     "requested_at": "2024-02-07T06:08:55Z",
     "domain": "CORE",
-    "type": "CI"
-  },
-  {
-    "name": "888515482",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1710576570161,
-    "requested_at": "2024-03-16T06:08:58Z",
-    "domain": "CORE",
-    "created_at": "2024-03-16T08:09:30.161Z",
     "type": "CI"
   },
   {
