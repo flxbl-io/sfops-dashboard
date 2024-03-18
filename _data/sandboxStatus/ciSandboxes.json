@@ -17,12 +17,13 @@
   },
   {
     "name": "540888272",
-    "status": "Available",
-    "isActive": false,
+    "status": "InUse",
+    "isActive": true,
     "createdAt": 1710708265371,
-    "assignedAt": 1710745535524,
+    "assignedAt": 1710747666259,
+    "issue": "144",
     "requested_at": "2024-03-17T06:09:45Z",
-    "assigned_at": "2024-03-18T07:05:35.524Z",
+    "assigned_at": "2024-03-18T07:41:06.259Z",
     "domain": "CORE",
     "created_at": "2024-03-17T20:44:25.371Z",
     "type": "CI"
