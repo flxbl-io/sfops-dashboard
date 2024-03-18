@@ -1,13 +1,13 @@
 [
   {
     "name": "297450528",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1710709769020,
-    "assignedAt": 1710743933230,
-    "issue": "141",
+    "assignedAt": 1710747351391,
+    "issue": "144",
     "requested_at": "2024-03-17T06:09:45Z",
-    "assigned_at": "2024-03-18T06:38:53.230Z",
+    "assigned_at": "2024-03-18T07:35:51.391Z",
     "domain": "CORE",
     "created_at": "2024-03-17T21:09:29.020Z",
     "type": "CI"
@@ -31,10 +31,9 @@
   {
     "name": "540888272",
     "status": "Available",
-    "isActive": "true",
+    "isActive": false,
     "createdAt": 1710708265371,
     "assignedAt": 1710745535524,
-    "issue": "143",
     "requested_at": "2024-03-17T06:09:45Z",
     "assigned_at": "2024-03-18T07:05:35.524Z",
     "domain": "CORE",
