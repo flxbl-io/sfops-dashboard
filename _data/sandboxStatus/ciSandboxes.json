@@ -1,8 +1,8 @@
 [
   {
     "name": "297450528",
-    "status": "InUse",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": false,
     "createdAt": 1710709769020,
     "assignedAt": 1710747351391,
     "issue": "144",
@@ -86,10 +86,12 @@
   },
   {
     "name": "380205994",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1710747407177,
     "requested_at": "2024-03-18T06:09:53Z",
     "domain": "HOTFIX",
+    "created_at": "2024-03-18T07:36:47.177Z",
     "type": "CI"
   },
   {
