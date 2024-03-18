@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.2.1](https://github.com/flxbl-io/sfops/compare/v26.2.0...v26.2.1) (2024-03-18)
+
+
+### Bug Fixes
+
+* **sbx-pools:** fix sbx name not retured to reassign sandbox ([6ab541d](https://github.com/flxbl-io/sfops/commit/6ab541d64f65c28efedd4725be52911c9ec464f3))
+
 ## [26.2.0](https://github.com/flxbl-io/sfops/compare/v26.1.3...v26.2.0) (2024-03-18)
 
 
