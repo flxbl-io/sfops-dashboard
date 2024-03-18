@@ -1,5 +1,18 @@
 # Changelog
 
+## [26.2.0](https://github.com/flxbl-io/sfops/compare/v26.1.3...v26.2.0) (2024-03-18)
+
+
+### Features
+
+* **sbx-pool:** Allow to return back to pool ([51522a7](https://github.com/flxbl-io/sfops/commit/51522a72d42339a451b7062c04cbebe2aa6b9ffe))
+
+
+### Bug Fixes
+
+* **lockResource:** update message to provide more details ([7683adf](https://github.com/flxbl-io/sfops/commit/7683adfe3ece525bc120d6d4fe1ba5bf158bb2ce))
+* **sbx-pools:** handle isActive while returning to pool as well as log messages ([e092a00](https://github.com/flxbl-io/sfops/commit/e092a009b80d97c66b15664702a664cfb7b508eb))
+
 ## [26.1.3](https://github.com/flxbl-io/sfops/compare/v26.1.2...v26.1.3) (2024-03-18)
 
 
