@@ -27,8 +27,8 @@
     "sbx_name": "staging",
     "type": "snapshot",
     "latestDeployment": {
-      "sha": "bc51313f",
-      "url": "http://github.com/flxbl-io/sf-core/commit/bc51313f0fabc895754755138ca307d6832ce8ae",
+      "sha": "88f42fa7",
+      "url": "http://github.com/flxbl-io/sf-core/commit/88f42fa75fc35fe85b5d747d2737ac2aab5baa34",
       "creator": "azlam-abdulsalam"
     }
   },
