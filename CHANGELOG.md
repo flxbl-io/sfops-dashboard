@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.1.3](https://github.com/flxbl-io/sfops/compare/v26.1.2...v26.1.3) (2024-03-18)
+
+
+### Bug Fixes
+
+* **act-auth:** remove dependency on sf ([12982da](https://github.com/flxbl-io/sfops/commit/12982da7f7937602055dd21ad59f5ac089f93ede))
+
 ## [26.1.2](https://github.com/flxbl-io/sfops/compare/v26.1.1...v26.1.2) (2024-03-15)
 
 
