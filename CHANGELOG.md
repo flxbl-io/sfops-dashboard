@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.1.2](https://github.com/flxbl-io/sfops/compare/v26.1.1...v26.1.2) (2024-03-15)
+
+
+### Bug Fixes
+
+* **wf-build:** revert to full image ([532c8d7](https://github.com/flxbl-io/sfops/commit/532c8d7faa92edb3de727227f91c59566ea18761))
+
 ## [26.1.1](https://github.com/flxbl-io/sfops/compare/v26.1.0...v26.1.1) (2024-03-15)
 
 
