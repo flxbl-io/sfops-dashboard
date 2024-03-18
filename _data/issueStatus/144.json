@@ -1,5 +1,5 @@
 {
-  "status": "ready",
+  "status": "build",
   "issue_number": "144",
   "branch": "revert-143-revert-142-revert-141-azlam-abdulsalam-patch-5",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Reverts flxbl-io/sf-core#143",
     "created_at": "2024-03-18T07:11:31Z",
-    "updated_at": "2024-03-18T07:36:19Z",
+    "updated_at": "2024-03-18T07:37:09Z",
     "closed_at": "2024-03-18T07:36:19Z",
     "merged_at": "2024-03-18T07:36:19Z",
     "merge_commit_sha": "88f42fa75fc35fe85b5d747d2737ac2aab5baa34",
@@ -387,7 +387,7 @@
       "type": "User",
       "site_admin": false
     },
-    "comments": 2,
+    "comments": 3,
     "review_comments": 0,
     "maintainer_can_modify": false,
     "commits": 1,
