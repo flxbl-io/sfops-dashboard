@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.3.1](https://github.com/flxbl-io/sfops/compare/v26.3.0...v26.3.1) (2024-03-19)
+
+
+### Bug Fixes
+
+* **push-to-branch:** add continue-on-error on to remove current assignment ([932d091](https://github.com/flxbl-io/sfops/commit/932d09164b8a18acb767826be7da671d8215069e))
+
 ## [26.3.0](https://github.com/flxbl-io/sfops/compare/v26.2.2...v26.3.0) (2024-03-18)
 
 
