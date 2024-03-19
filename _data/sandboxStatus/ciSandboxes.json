@@ -11,8 +11,8 @@
   },
   {
     "name": "448060710",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1710754681360,
     "assignedAt": 1710769760995,
     "issue": "145",
