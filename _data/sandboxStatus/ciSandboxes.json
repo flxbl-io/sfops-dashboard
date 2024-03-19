@@ -76,8 +76,8 @@
   },
   {
     "name": "380205994",
-    "status": "Available",
-    "isActive": "true",
+    "status": "Expired",
+    "isActive": "false",
     "createdAt": 1710747407177,
     "requested_at": "2024-03-18T06:09:53Z",
     "domain": "HOTFIX",
