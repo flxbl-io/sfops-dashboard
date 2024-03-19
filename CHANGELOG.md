@@ -1,5 +1,27 @@
 # Changelog
 
+## [26.3.0](https://github.com/flxbl-io/sfops/compare/v26.2.2...v26.3.0) (2024-03-18)
+
+
+### Features
+
+* **sfp:** increment to 37.1.3 ([b80499d](https://github.com/flxbl-io/sfops/commit/b80499d8545c8454343aa43d97ae89d62a64ddf6))
+
+
+### Bug Fixes
+
+* **cicd:** add an alpha tag ([5327062](https://github.com/flxbl-io/sfops/commit/53270621653fad9e84932b7bba61046b82b01e91))
+* **cicd:** change dependency to alpha ([d84fadb](https://github.com/flxbl-io/sfops/commit/d84fadb99887def92c2b98b5119dcc3059045f15))
+
+## [26.2.2](https://github.com/flxbl-io/sfops/compare/v26.2.1...v26.2.2) (2024-03-18)
+
+
+### Bug Fixes
+
+* **auth:** switch to sfops auth to delete scratch orgs ([f8ee811](https://github.com/flxbl-io/sfops/commit/f8ee8111919bd910ba829804b13f5e04261afe8a))
+* **lock:** change randomness between 30 to 100 seconds ([28de771](https://github.com/flxbl-io/sfops/commit/28de77136b0f65e91f5ea5487966670a2f1bd069))
+* **sfp:** update to sfp March 24 ([b07382c](https://github.com/flxbl-io/sfops/commit/b07382cb3a320c00cdb32c0d8494509f40f74867))
+
 ## [26.2.1](https://github.com/flxbl-io/sfops/compare/v26.2.0...v26.2.1) (2024-03-18)
 
 
