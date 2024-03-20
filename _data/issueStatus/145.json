@@ -1,5 +1,5 @@
 {
-  "status": "validation",
+  "status": "validated",
   "issue_number": "145",
   "branch": "revert-144-revert-143-revert-142-revert-141-azlam-abdulsalam-patch-5",
   "domain": "",
@@ -37,7 +37,7 @@
     },
     "body": "Reverts flxbl-io/sf-core#144",
     "created_at": "2024-03-18T07:44:15Z",
-    "updated_at": "2024-03-20T10:02:18Z",
+    "updated_at": "2024-03-20T10:06:30Z",
     "closed_at": null,
     "merged_at": null,
     "merge_commit_sha": "acf5ef23dd2b7de4af6ee5cc366eb49c695f8a0d",
