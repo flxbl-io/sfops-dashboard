@@ -15,7 +15,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 10308044725,
+      "elapsedTime": 10309926858,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
       "merged": false,
       "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
@@ -57,7 +57,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 10305637969,
+      "elapsedTime": 10307520096,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
       "merged": false,
       "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
@@ -96,7 +96,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 10216779475,
+      "elapsedTime": 10218661413,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
       "merged": false,
       "mergeCommitSha": "6647a0525355345d3b5af25c8687d8228c928d49",
@@ -146,7 +146,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 9866794775,
+      "elapsedTime": 9868676502,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
       "merged": false,
       "mergeCommitSha": "515b7227b2e8e1f5b36de9fb009117180485390c",
@@ -200,7 +200,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 8746930015,
+      "elapsedTime": 8748811622,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
       "merged": false,
       "mergeCommitSha": "fc6f55b1d63834dd832b64a52e3d42fa0cc866d5",
@@ -250,7 +250,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 6435177207,
+      "elapsedTime": 6437058575,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
       "merged": false,
       "mergeCommitSha": "e25f7d35cb7f40b63082c188aaea35cd8d8374cf",
@@ -280,7 +280,7 @@
           "description": null
         },
         {
-          "key": "validation-failed",
+          "key": "validation-succeeded",
           "description": ""
         },
         {
@@ -288,14 +288,14 @@
           "description": null
         }
       ],
-      "elapsedTime": 182980522,
+      "elapsedTime": 184861739,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/145",
       "merged": false,
-      "mergeCommitSha": "a705e6bf05c8fa21333e14b10d3eac0c547687e3",
+      "mergeCommitSha": "6e14424e3bc56deeee5b34e8aa5f43f71c7afe14",
       "buildActionLink": "",
       "checkStatus": "completed",
-      "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8357324437/job/22876423081",
+      "checkConclusion": "success",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8357582461/job/22877765812",
       "files": {
         "added": [],
         "deleted": [],
@@ -357,7 +357,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 187141877,
+      "elapsedTime": 189024467,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/141",
       "merged": true,
       "mergeCommitSha": "c19afa7fae156131170fe03c85910521ce72e162",
@@ -424,7 +424,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 186089865,
+      "elapsedTime": 187972401,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/142",
       "merged": true,
       "mergeCommitSha": "88b90d0a5796a934e8ab708b3c59966576eface2",
@@ -491,7 +491,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 185603872,
+      "elapsedTime": 187486307,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/143",
       "merged": true,
       "mergeCommitSha": "bc51313f0fabc895754755138ca307d6832ce8ae",
@@ -558,7 +558,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 184949863,
+      "elapsedTime": 186832158,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/144",
       "merged": true,
       "mergeCommitSha": "88f42fa75fc35fe85b5d747d2737ac2aab5baa34",
