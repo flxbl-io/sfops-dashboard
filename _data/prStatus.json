@@ -15,7 +15,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 10306345638,
+      "elapsedTime": 10308044725,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/73",
       "merged": false,
       "mergeCommitSha": "6657b86c9f5108ad1086685d53499b7aa6724167",
@@ -57,7 +57,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 10303938834,
+      "elapsedTime": 10305637969,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/74",
       "merged": false,
       "mergeCommitSha": "03f522dad10b7765818ec4ae34264d12b503916a",
@@ -96,7 +96,7 @@
       "author": "azlam-abdulsalam",
       "authorAvatarUrl": "https://avatars.githubusercontent.com/u/43767972?v=4",
       "labels": [],
-      "elapsedTime": 10215080335,
+      "elapsedTime": 10216779475,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/79",
       "merged": false,
       "mergeCommitSha": "6647a0525355345d3b5af25c8687d8228c928d49",
@@ -146,7 +146,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 9865095717,
+      "elapsedTime": 9866794775,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/80",
       "merged": false,
       "mergeCommitSha": "515b7227b2e8e1f5b36de9fb009117180485390c",
@@ -200,7 +200,7 @@
           "description": ""
         }
       ],
-      "elapsedTime": 8745231019,
+      "elapsedTime": 8746930015,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/95",
       "merged": false,
       "mergeCommitSha": "fc6f55b1d63834dd832b64a52e3d42fa0cc866d5",
@@ -250,7 +250,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 6433478203,
+      "elapsedTime": 6435177207,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/114",
       "merged": false,
       "mergeCommitSha": "e25f7d35cb7f40b63082c188aaea35cd8d8374cf",
@@ -280,7 +280,7 @@
           "description": null
         },
         {
-          "key": "validation-pending",
+          "key": "validation-failed",
           "description": ""
         },
         {
@@ -288,14 +288,14 @@
           "description": null
         }
       ],
-      "elapsedTime": 181281600,
+      "elapsedTime": 182980522,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/145",
       "merged": false,
-      "mergeCommitSha": "acf5ef23dd2b7de4af6ee5cc366eb49c695f8a0d",
+      "mergeCommitSha": "a705e6bf05c8fa21333e14b10d3eac0c547687e3",
       "buildActionLink": "",
       "checkStatus": "completed",
       "checkConclusion": "failure",
-      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8356934349/job/22875198733",
+      "validationActionLink": "https://github.com/flxbl-io/sf-core/actions/runs/8357324437/job/22876423081",
       "files": {
         "added": [],
         "deleted": [],
@@ -357,7 +357,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 185442616,
+      "elapsedTime": 187141877,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/141",
       "merged": true,
       "mergeCommitSha": "c19afa7fae156131170fe03c85910521ce72e162",
@@ -424,7 +424,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 184390720,
+      "elapsedTime": 186089865,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/142",
       "merged": true,
       "mergeCommitSha": "88b90d0a5796a934e8ab708b3c59966576eface2",
@@ -491,7 +491,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 183904816,
+      "elapsedTime": 185603872,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/143",
       "merged": true,
       "mergeCommitSha": "bc51313f0fabc895754755138ca307d6832ce8ae",
@@ -558,7 +558,7 @@
           "description": null
         }
       ],
-      "elapsedTime": 183250765,
+      "elapsedTime": 184949863,
       "linkToIssue": "https://github.com/flxbl-io/sf-core/pull/144",
       "merged": true,
       "mergeCommitSha": "88f42fa75fc35fe85b5d747d2737ac2aab5baa34",
