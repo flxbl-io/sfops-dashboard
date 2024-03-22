@@ -1,5 +1,30 @@
 # Changelog
 
+## [26.4.0](https://github.com/flxbl-io/sfops/compare/v26.3.1...v26.4.0) (2024-03-22)
+
+
+### Features
+
+* **lock:** add additional info on which one is locked ([131c38c](https://github.com/flxbl-io/sfops/commit/131c38ce8cd21212d5337a06632625097debdcda))
+* **sfp:** update to 38.1.0 for performant validation ([8037aba](https://github.com/flxbl-io/sfops/commit/8037abad609ebb8b38325836fdbb1138a7eb9bf4))
+* **sfp:** update to v38.1.2 for upstream sfp changes ([ef7061d](https://github.com/flxbl-io/sfops/commit/ef7061d5270088b89ed454d35393f399ccce81ad))
+
+
+### Bug Fixes
+
+* **cicd:** add an option for alpha customers ([6d46f3c](https://github.com/flxbl-io/sfops/commit/6d46f3c4087b8f22a5ac782fbd5157d6bc0c8ccc))
+* **fetchsandbox:** fix incorrect loging while waiting for assigned sandbox ([5f772e8](https://github.com/flxbl-io/sfops/commit/5f772e8b0835838aee58374e37938aa4de7e1ea5))
+* **fetchsandbox:** fix issue finally where fetch is not timing out ([35d5bc5](https://github.com/flxbl-io/sfops/commit/35d5bc5c0ff1f0764f75f7cbad12ae1e43edea42))
+* **fetchSandbox:** update error logs ([9e0152f](https://github.com/flxbl-io/sfops/commit/9e0152f6d60d2e4e24f89d76f4ce14a593c4907c))
+* **pmd:** fix pmd to a specific version ([2892477](https://github.com/flxbl-io/sfops/commit/2892477cbab899eb6768b7a7f31717cb47326748))
+* **pr-validate:** add missing names for steps ([13e5b9d](https://github.com/flxbl-io/sfops/commit/13e5b9d5c60c93df264fcb270f00544a8a30a9b2))
+* **sfp:** rollback to 38.1.2 ([53fe769](https://github.com/flxbl-io/sfops/commit/53fe76948b77539b34c3d2213af7c5188f45b201))
+* **sfp:** update sfp to v38.2.3 ([a6d3adb](https://github.com/flxbl-io/sfops/commit/a6d3adb93497302f7de3297d73941ccea05af1ed))
+* **sfp:** update to latest sfp ([9c48177](https://github.com/flxbl-io/sfops/commit/9c48177be94103eaba98fdd9c5984ce2150aac02))
+* **sfp:** update to v38.2.1 ([cf59536](https://github.com/flxbl-io/sfops/commit/cf59536f060974acfeb08ded67dbe3b1cc290052))
+* **validate:** reduce timeouts on waits ([e69b213](https://github.com/flxbl-io/sfops/commit/e69b213b11e06fd5a997d9220de441aef7a652db))
+* **wf-validate:** move to sha ([fa03f3f](https://github.com/flxbl-io/sfops/commit/fa03f3f20ff46da7d524f7919edf195b07385a40))
+
 ## [26.3.1](https://github.com/flxbl-io/sfops/compare/v26.3.0...v26.3.1) (2024-03-19)
 
 
