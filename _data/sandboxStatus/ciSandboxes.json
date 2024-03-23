@@ -14,7 +14,7 @@
   },
   {
     "name": "504529939",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1711095006052,
     "assignedAt": 1711153906142,
@@ -27,7 +27,7 @@
   },
   {
     "name": "782477839",
-    "status": "InUse",
+    "status": "Available",
     "isActive": "true",
     "createdAt": 1711092988275,
     "assignedAt": 1711154014439,
