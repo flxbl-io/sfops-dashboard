@@ -1,1 +1,14 @@
-{}
+{
+  "504529939": {
+    "url": "https://adizatech--504529939.sandbox.my.salesforce.com/secur/frontdoor.jsp?sid=00D0T0000000ecP!AQwAQM_QKZcZnGSAgtoQ7LqN0JulOwZXOKd5tLfdWIZKcxeN46ZOJk3ppJvHCD11uoE6iZINNZFGCWaTLqyxUiTA4kuczYPU",
+    "username": "azlam@adiza.dev.504529939",
+    "orgId": "504529939",
+    "issue": "114"
+  },
+  "782477839": {
+    "url": "https://adizatech--782477839.sandbox.my.salesforce.com/secur/frontdoor.jsp?sid=00DF70000009vdh!ARIAQOH6GsT2U._Xv_kixczVSKcSDOG3HdqHGpXgTylPbcnikt.kjGsaWFDFsZgoG8vIoTESqNwgCIAkqFNQRwrk5G64HxkF",
+    "username": "azlam@adiza.dev.782477839",
+    "orgId": "782477839",
+    "issue": "145"
+  }
+}
