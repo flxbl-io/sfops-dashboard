@@ -1,70 +1,14 @@
 {
-  "total": 15,
+  "total": 3,
   "inuse": 0,
-  "unused": 15,
+  "unused": 3,
   "inprovision": 0,
   "scratchOrgDetails": [
     {
-      "tag": "ci",
-      "orgId": "00DH30000000kEZ",
-      "loginURL": "https://bigdipper-saltedcaramel-541-dev-ed.scratch.my.salesforce.com",
-      "username": "test-9l5emvl3e3n4@example.com",
-      "expiryDate": "2024-03-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1m0000003CW1",
-      "loginURL": "https://innovation-customization194-dev-ed.scratch.my.salesforce.com",
-      "username": "test-3prej8ljxwvf@example.com",
-      "expiryDate": "2024-03-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1m0000002iBN",
-      "loginURL": "https://site-innovation-8360-dev-ed.scratch.my.salesforce.com",
-      "username": "test-khpsbnrirubs@example.com",
-      "expiryDate": "2024-03-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00DH30000000kXG",
-      "loginURL": "https://deploy-laguna-4119-dev-ed.scratch.my.salesforce.com",
-      "username": "test-p42mutla2rie@example.com",
-      "expiryDate": "2024-03-27",
-      "status": "Available"
-    },
-    {
-      "tag": "ci",
-      "orgId": "00D1m0000002jPo",
-      "loginURL": "https://business-app-4900-dev-ed.scratch.my.salesforce.com",
-      "username": "test-oqgqci6xxtlf@example.com",
-      "expiryDate": "2024-03-27",
-      "status": "Available"
-    },
-    {
       "tag": "dev",
-      "orgId": "00DH40000000tsK",
-      "loginURL": "https://flow-java-8888-dev-ed.scratch.my.salesforce.com",
-      "username": "test-aspxjpfuz5yz@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1m0000002fxS",
-      "loginURL": "https://innovation-velocity-72512-dev-ed.scratch.my.salesforce.com",
-      "username": "test-rqmk2aybpp2a@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HTWe",
-      "loginURL": "https://page-efficiency-2445-dev-ed.scratch.my.salesforce.com",
-      "username": "test-rcpaxahgd6it@example.com",
+      "orgId": "00D1y000000HKgP",
+      "loginURL": "https://velocity-dream-4727-dev-ed.scratch.my.salesforce.com",
+      "username": "test-gx8ov6n8duyw@example.com",
       "expiryDate": "2024-04-01",
       "status": "Available"
     },
@@ -81,46 +25,6 @@
       "orgId": "00DH30000000kk3",
       "loginURL": "https://bigdipper-dyno-5205-dev-ed.scratch.my.salesforce.com",
       "username": "test-hdswh1f2vayi@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH40000000tk9",
-      "loginURL": "https://fun-dream-3391-dev-ed.scratch.my.salesforce.com",
-      "username": "test-r5rzsvo2qjvr@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y00000048Z3",
-      "loginURL": "https://customer-connect-4488-dev-ed.scratch.my.salesforce.com",
-      "username": "test-qnrnrlidu044@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HTVs",
-      "loginURL": "https://data-data-1673-dev-ed.scratch.my.salesforce.com",
-      "username": "test-vzsl3semdln8@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HKgP",
-      "loginURL": "https://velocity-dream-4727-dev-ed.scratch.my.salesforce.com",
-      "username": "test-gx8ov6n8duyw@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000Gype",
-      "loginURL": "https://customization-site-3982-dev-ed.scratch.my.salesforce.com",
-      "username": "test-ch5gynzv52u3@example.com",
       "expiryDate": "2024-04-01",
       "status": "Available"
     }
