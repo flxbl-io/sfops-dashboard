@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.4.1](https://github.com/flxbl-io/sfops/compare/v26.4.0...v26.4.1) (2024-03-23)
+
+
+### Bug Fixes
+
+* **wr-30mins:** update name of job ([0857d8b](https://github.com/flxbl-io/sfops/commit/0857d8bd4e95cc208b12e2996133d757171bd607))
+
 ## [26.4.0](https://github.com/flxbl-io/sfops/compare/v26.3.1...v26.4.0) (2024-03-22)
 
 
