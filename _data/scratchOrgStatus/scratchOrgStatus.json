@@ -1,32 +1,7 @@
 {
-  "total": 3,
+  "total": 0,
   "inuse": 0,
-  "unused": 3,
+  "unused": 0,
   "inprovision": 0,
-  "scratchOrgDetails": [
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HKgP",
-      "loginURL": "https://velocity-dream-4727-dev-ed.scratch.my.salesforce.com",
-      "username": "test-gx8ov6n8duyw@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00D1y000000HZms",
-      "loginURL": "https://drive-nosoftware-1951-dev-ed.scratch.my.salesforce.com",
-      "username": "test-za6ahsjyazwp@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    },
-    {
-      "tag": "dev",
-      "orgId": "00DH30000000kk3",
-      "loginURL": "https://bigdipper-dyno-5205-dev-ed.scratch.my.salesforce.com",
-      "username": "test-hdswh1f2vayi@example.com",
-      "expiryDate": "2024-04-01",
-      "status": "Available"
-    }
-  ]
+  "scratchOrgDetails": []
 }
