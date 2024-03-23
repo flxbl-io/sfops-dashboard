@@ -94,20 +94,12 @@
   },
   {
     "name": "526690016",
-    "status": "InProgress",
-    "isActive": "true",
-    "requested_at": "2024-03-23T06:11:25Z",
-    "domain": "HOTFIX",
-    "type": "CI"
-  },
-  {
-    "name": "824709876",
     "status": "Available",
     "isActive": "true",
-    "createdAt": 1711093023128,
-    "requested_at": "2024-03-22T06:09:28Z",
+    "createdAt": 1711181316641,
+    "requested_at": "2024-03-23T06:11:25Z",
     "domain": "HOTFIX",
-    "created_at": "2024-03-22T07:37:03.128Z",
+    "created_at": "2024-03-23T08:08:36.641Z",
     "type": "CI"
   }
 ]
