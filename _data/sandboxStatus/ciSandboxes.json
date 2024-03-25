@@ -1,5 +1,13 @@
 [
   {
+    "name": "120290748",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-03-25T06:10:01Z",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
     "name": "448060710",
     "status": "Expired",
     "isActive": "false",
@@ -10,6 +18,14 @@
     "assigned_at": "2024-03-18T13:49:20.995Z",
     "domain": "CORE",
     "created_at": "2024-03-18T09:38:01.360Z",
+    "type": "CI"
+  },
+  {
+    "name": "619691007",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-03-25T06:10:01Z",
+    "domain": "CORE",
     "type": "CI"
   },
   {
@@ -30,6 +46,22 @@
     "requested_at": "2024-03-24T06:09:09Z",
     "domain": "CORE",
     "created_at": "2024-03-24T07:08:01.687Z",
+    "type": "CI"
+  },
+  {
+    "name": "115098044",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-03-25T06:10:00Z",
+    "domain": "CORE",
+    "type": "CI"
+  },
+  {
+    "name": "156270987",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-03-25T06:10:01Z",
+    "domain": "CORE",
     "type": "CI"
   },
   {
@@ -78,6 +110,14 @@
     "requested_at": "2024-03-24T06:09:09Z",
     "domain": "HOTFIX",
     "created_at": "2024-03-24T07:37:35.220Z",
+    "type": "CI"
+  },
+  {
+    "name": "972552794",
+    "status": "InProgress",
+    "isActive": "true",
+    "requested_at": "2024-03-25T06:10:00Z",
+    "domain": "HOTFIX",
     "type": "CI"
   }
 ]
