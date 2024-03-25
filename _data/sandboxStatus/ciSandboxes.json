@@ -1,10 +1,12 @@
 [
   {
     "name": "120290748",
-    "status": "InProgress",
+    "status": "Available",
     "isActive": "true",
+    "createdAt": 1711354238015,
     "requested_at": "2024-03-25T06:10:01Z",
     "domain": "CORE",
+    "created_at": "2024-03-25T08:10:38.015Z",
     "type": "CI"
   },
   {
@@ -28,16 +30,6 @@
     "requested_at": "2024-03-25T06:10:01Z",
     "domain": "CORE",
     "created_at": "2024-03-25T07:37:01.005Z",
-    "type": "CI"
-  },
-  {
-    "name": "731681491",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1711267693518,
-    "requested_at": "2024-03-24T06:09:09Z",
-    "domain": "CORE",
-    "created_at": "2024-03-24T08:08:13.518Z",
     "type": "CI"
   },
   {
@@ -76,26 +68,6 @@
     "requested_at": "2024-03-18T06:09:55Z",
     "domain": "CORE",
     "created_at": "2024-03-18T08:08:54.547Z",
-    "type": "CI"
-  },
-  {
-    "name": "869499613",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1711267701856,
-    "requested_at": "2024-03-24T06:09:10Z",
-    "domain": "CORE",
-    "created_at": "2024-03-24T08:08:21.856Z",
-    "type": "CI"
-  },
-  {
-    "name": "115446948",
-    "status": "Available",
-    "isActive": "true",
-    "createdAt": 1711265855220,
-    "requested_at": "2024-03-24T06:09:09Z",
-    "domain": "HOTFIX",
-    "created_at": "2024-03-24T07:37:35.220Z",
     "type": "CI"
   },
   {
