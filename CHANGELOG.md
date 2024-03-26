@@ -1,5 +1,13 @@
 # Changelog
 
+## [26.4.2](https://github.com/flxbl-io/sfops/compare/v26.4.1...v26.4.2) (2024-03-26)
+
+
+### Bug Fixes
+
+* **devsbsx:** delete github vars when a sandbox is getting deleted ([77b642d](https://github.com/flxbl-io/sfops/commit/77b642d23ed316063ff66a16b3e755f312d2d882))
+* **frontdoorurl:** fix typo on comment ([e18d296](https://github.com/flxbl-io/sfops/commit/e18d2960c59f054010636db92a5d940f3bdcb28f))
+
 ## [26.4.1](https://github.com/flxbl-io/sfops/compare/v26.4.0...v26.4.1) (2024-03-23)
 
 
