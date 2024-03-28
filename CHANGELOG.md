@@ -1,5 +1,12 @@
 # Changelog
 
+## [26.4.3](https://github.com/flxbl-io/sfops/compare/v26.4.2...v26.4.3) (2024-03-26)
+
+
+### Bug Fixes
+
+* **reviewsbx:** add output to display delete log ([48ab02b](https://github.com/flxbl-io/sfops/commit/48ab02bf496b2c6e9f13777b0f43ff5ac0ace97e))
+
 ## [26.4.2](https://github.com/flxbl-io/sfops/compare/v26.4.1...v26.4.2) (2024-03-26)
 
 
