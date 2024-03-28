@@ -14,10 +14,13 @@
   },
   {
     "name": "776466537",
-    "status": "Available",
+    "status": "InUse",
     "isActive": "true",
     "createdAt": 1711532213443,
+    "assignedAt": 1711591000465,
+    "issue": "145",
     "requested_at": "2024-03-27T06:09:38Z",
+    "assigned_at": "2024-03-28T01:56:40.465Z",
     "domain": "CORE",
     "created_at": "2024-03-27T09:36:53.443Z",
     "type": "CI"
